@@ -36,7 +36,17 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('testi') }}">Testi</a>
+                        <li>
+                            <a href="#">Tipet</a>
+                        </li>
+                        <li>
+                            <a href="#">Rreth nesh</a></li>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,5 +86,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+    @yield('scripts')
 </body>
 </html>

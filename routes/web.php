@@ -18,3 +18,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['test' => 'test'], function(){
+
+	// show patients list
+Route::get('/testi', 'testController@create')->name('testi');
+//post the patients deetails to the database and return to patients
+Route::post('/result', 'testController@introExtroQuestions');
+
+});
+
+
+
