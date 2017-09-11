@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Input;
 
 class testController extends Controller
 {
+
+
        /**
      * Display a listing of the resource.
      *
@@ -26,7 +28,10 @@ class testController extends Controller
      */
     public function create()
     {
-        return view('testi.create');
+            $spajtohem = "S'pajtohem";
+            $pajtohem = "Pajtohem";
+
+        return view('testi.create', compact('spajtohem', 'pajtohem'));
     }
 
     /**
@@ -84,7 +89,6 @@ class testController extends Controller
     public function introExtroQuestions()
     {
 
-
     $q1 = Input::get('q1');
     $q2 = Input::get('q2');
     $q3 = Input::get('q3');
@@ -129,8 +133,7 @@ class testController extends Controller
     $endresult = $finalProcentRez . "% " . $introExtro;
 
 
-// Determine if the user is an intuitive person or an sensorik
-
+    // Determine if the user is an intuitive person or an sensorik
     $nsq1 = Input::get('nsq1');
     $nsq2 = Input::get('nsq2');
     $nsq3 = Input::get('nsq3');
@@ -144,7 +147,7 @@ class testController extends Controller
     $nsq11 = Input::get('nsq11');
 
     //add the inpute values
-    $nsresult = $q1 + $q2 + $q3 + $q4 + $q5 + $q6 + $q7 + $q8 + $q9 + $q10 + $q11;
+    $nsresult = $nsq1 + $nsq2 + $nsq3 + $nsq4 + $nsq5 + $nsq6 + $nsq7 + $nsq8 + $nsq9 + $nsq10 + $nsq11;
 
       //Determine of the results are introvertet or extrovertet
     if ($nsresult < 0) {
@@ -174,7 +177,7 @@ class testController extends Controller
 
     $nsendresult = $nsfinalProcentRez . "% " . $intuSens;
 
-    if ($intuSens == "Intuitive" && $introExtro == "Extrovert") {
+    if ($intuSens == "Intuitive" && $introExtro == "Extrovert"){
         $finalType = "ENXX";
     }elseif($intuSens == "Intuitive" && $introExtro == "Introvert"){
             $finalType = "INXX";
@@ -184,7 +187,7 @@ class testController extends Controller
         $finalType = "ISXX";
     }
 
-    return view('testi.result', compact('endresult', 'introExtro', 'finalProcentRez', "nsendresult", "intuSens", "nsfinalProcentRez", "finalType" ));
+    return view('testi.result', compact('endresult', 'introExtro', 'finalProcentRez', "nsendresult", "intuSens", "nsfinalProcentRez", "finalType"));
     }
 
 }//end of class

@@ -36,3 +36,9 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+@mixin default-box($argument, $argumentTwo) {
+	-webkit-box-shadow: $argument, $argumentTwo;
+	-moz-box-shadow: $argument, $argumentTwo;
+	box-shadow: $argument, $argumentTwo;
+}
