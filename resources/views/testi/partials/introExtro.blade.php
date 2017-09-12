@@ -3,7 +3,7 @@
             <h3>Pyetja 1</h3>
             <fieldset  class="test-field pull-left" id="group1">
                 <p>{{ $spajtohem }}</p>
-                <input type="radio"  name="q1" id="q1option1" class="left" value="-3">
+                <input  type="radio"  name="q1" id="q1option1" class="left" value="-3">
 
                 <input type="radio"  name="q1" id="q1option2" class="left" value="-2">
 
