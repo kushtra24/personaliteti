@@ -158,7 +158,6 @@ class testController extends Controller
         $intuSens = "Shqisor";
     }
 
-    // get the procentage of 30 as maximum nsresult
     $nsprocent = 3.0303 * $nsresult;
 
     // Round up the double-number to the nearest integer
@@ -188,3 +187,4 @@ class testController extends Controller
     }
 
 }//end of class
+
