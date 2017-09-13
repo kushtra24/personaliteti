@@ -8430,3 +8430,13 @@ input[type="radio"]:nth-child(-n+4) {
   text-align: center;
 }
 
+.testing-page input[type="submit"] {
+  margin: 22px 0;
+  -webkit-transition: .4s background-color ease-out;
+  transition: .4s background-color ease-out;
+}
+
+.testing-page input[type="submit"]:hover {
+  background-color: #20895e;
+}
+

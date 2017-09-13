@@ -2,7 +2,7 @@
 
            
 @section('content')
-<div class="container">
+<div class="container testing-page">
 
     <div class="row">
       
@@ -47,14 +47,16 @@
 
               <div role="tabpanel" class="tab-pane fade lastSet" id="lastSet">
                    @include('testi.partials.judgingPerspecting')
-                  <div class="form-group">
-                  <input type="submit" class="btn btn-success" value="Perfundo">
-                  </div>
+                  <input type="submit" class="btn btn-primary btn-lg btn-block" value="Perfundo">
               </div>
               
               <div class="form-group">
-                <a id="goBack" class="tab-prev btn btn-warning hide" data-toggle="tooltip" data-placement="top" title="Ktheu">Ktheu</a>
-                <a id="goforward" class="tab-forward btn btn-success pull-right" data-toggle="tooltip" data-placement="top" title="Vazhdo">Vazhdo</a>
+              <div class="col-md-6">
+                <a id="goBack" class="tab-prev btn btn-warning btn-lg btn-block hide" data-toggle="tooltip" data-placement="top" title="Ktheu">Ktheu</a>
+              </div>
+              <div class="col-md-6">
+                <a id="goforward" class="tab-forward btn btn-success btn-lg btn-block" data-toggle="tooltip" data-placement="top" title="Vazhdo">Vazhdo</a>
+              </div>
               </div>
 
               </div><!-- end of teb content -->
@@ -71,7 +73,18 @@
   </div>
 </div>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+<div class="container">
+<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="5"></div>
+</div>
 @endsection
 
 @section('scripts')
@@ -86,84 +99,6 @@ $("input[type='radio']").on('click',function(){
       $("#progress-container").removeClass("hide");
    } $(this).addClass('checked');
 });
-
-function changePasswordProgressBar(ev) {
-    // less than 8 characters
-    var wrost = 5,
-        // minimum 8 characters
-        bad = /^(?=.{6,}).*/,
-        //Alpha Numeric plus minimum 8
-        good = /^(?=.*?[a-z]).{5,}$/, //pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{6,}$"
-        //Must contain at least one upper case letter, one lower case letter and (one number OR one special char).
-        better = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/,
-        betterOne = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-+/=)(]).{8,}$/,
-        betterTwo = /^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-+/=)(]).{8,}$/,
-        betterthree = /^(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-+/=)(]).{8,}$/,
-        //Must contain at least one upper case letter, one lower case letter and (one number AND one special char).
-        best = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-/=)+(]).{8,}$/,
-        password = $(ev.target).val(),
-        strength = '0',
-        progressClass = 'progress-bar progress-bar-',
-        ariaMsg = '0% Complete (danger)',
-        $progressBarElement = $('#password-progress-bar'),
-        $something = $('#changethecolor');
-
-    if (best.test(password) === true) {
-        strength = '100%';
-        progressClass += 'success';
-        ariaMsg = '100% Complete';
-    } else if (better.test(password) === true) {
-        strength = '80%';
-        progressClass += 'info';
-        ariaMsg = 'Almost Complete';
-    } else if (betterOne.test(password) === true) {
-        strength = '80%';
-        progressClass += 'info';
-        ariaMsg = 'Almost Complete';
-    } 
-    else if (betterTwo.test(password) === true) {
-        strength = '80%';
-        progressClass += 'info';
-        ariaMsg = 'Almost Complete';
-    }
-    else if (betterthree.test(password) === true) {
-        strength = '80%';
-        progressClass += 'info';
-        ariaMsg = 'Almost Complete';
-    }
-    else if (good.test(password) === true) {
-        strength = '50%';
-        progressClass += 'warning';
-        ariaMsg = '50% Complete';
-    } else if (bad.test(password) === true) {
-        strength = '30%';
-        progressClass += 'warning';
-        ariaMsg = 'Still too low';
-    } else if (password.length >= 1 && password.length <= wrost) {
-        strength = '10%';
-        progressClass += 'danger';
-        ariaMsg = 'Too low';
-    } else if (password.length < 1) {
-        strength = '0';
-        progressClass += 'danger';
-        ariaMsg = '0% Complete';
-    }
-
-    $progressBarElement.removeClass().addClass(progressClass);
-    $progressBarElement.attr('aria-valuenow', strength);
-    $progressBarElement.css('width', strength);
-    $progressBarElement.find('span.sr-only').text(ariaMsg);
-}
-    
-$(document).ready(function () {
-    $(".pwd").first().on('keyup', changePasswordProgressBar);
-});
-
-
-
-
-
-
 
 // go forward button
 $('.tab-forward').click(function(){
