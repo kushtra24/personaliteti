@@ -8,7 +8,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Personaliteti.com') }}</title>
+
+    <!-- font awesome  -->
+    <script src="https://use.fontawesome.com/94c81482d0.js"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -83,6 +86,41 @@
 
         @yield('content')
     </div>
+
+<footer>
+    <div class="container">
+        <div class="col-md-5">
+                <img src="https://laracasts.com/images/logo-footer.png" alt="footer logo" class="img img-responsive">
+            
+            <p>Get a concrete, accurate description of who you are and why you do things the way you do, for free.</p>
+            <div class="footer-solcial-icons">
+                <a href="#"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+
+            </div>
+        </div>
+        <div class="col-md-2 col-md-offset-1">
+            
+            <h4>
+                <a href="https://www.16personalities.com/articles" title="Articles">Articles</a>
+            </h4>
+            <nav class="highlighted">
+                                    <a href="/articles/personality-bites-the-types-and-stress-eating">Personality Bites: The Types and Stress Eating</a>
+                                    <a href="/articles/whats-wrong-with-ferris-bueller-rule-bending-by-personality-type">What’s Wrong with Ferris Bueller? Rule Bending by Personality Type</a>
+                                    <a href="/articles/when-in-rome-which-personality-types-do-as-the-romans-do">When in Rome: Which Personality Types Do as the Romans Do?</a>
+                                    <a href="/articles/the-perfectionism-and-the-turbulent-identity">The Perfectionism and the Turbulent Identity</a>
+                                    <a href="/articles/waiting-to-respond-who-listens-and-who-doesnt-during-a-conversation">Waiting to Respond: Who Listens and Who Doesn’t During a Conversation</a>
+                            </nav>
+
+        </div>
+        <div class="col-md-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eaque expedita eligendi molestias minus autem sint quo praesentium maxime, voluptates, sit vitae. Minus distinctio pariatur repudiandae nulla reiciendis dolorum quod!</div>
+        <div class="col-md-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ratione, magnam, suscipit perspiciatis ducimus nam adipisci doloremque sunt, tenetur eos in. Sed autem quo aspernatur accusantium molestiae, dicta et. Sit.</div>
+
+        <div class="col-md-6"> <p> &copy; Personaliteti.com <?php echo date("Y"); ?>. Të gjitha të drejtat e rezervuara. </p></div>
+        <div class="col-md-6"> <p class="pull-right"> Designed and developed by: <a href="http://kushtrim.com"> Kushtrim.com</a></p> </div>
+    </div>
+</footer>
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

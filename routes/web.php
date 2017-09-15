@@ -22,10 +22,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['test' => 'test'], function(){
 
+
+// Route::get('/testi', [
+// 	'uses' => 'testController@create',
+// 	'as' => 'testi',
+// 	'middleware' => 'roles',
+// 	'roles' => ['user', 'Author']
+// 	]);
+
+
 	// show patients list
 Route::get('/testi', 'testController@create')->name('testi');
+
 //post the patients deetails to the database and return to patients
 Route::post('/result', 'testController@introExtroQuestions');
+
 
 });
 

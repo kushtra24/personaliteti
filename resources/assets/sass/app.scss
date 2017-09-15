@@ -85,6 +85,19 @@ input[type="radio"] {
 	text-align: center;
 }
 
+.testing-page{
+	input[type="submit"]{
+		// width: 100%;
+		// padding: 15px 0;
+		margin: 22px 0;
+		// font-weight: bold;
+		transition: .4s background-color ease-out;
+		&:hover{
+			background-color: #20895e;
+		}
+	}
+}
+
 	// input[value="2"]:checked{
 	// 	background: red;
 	// 	@include default-box(inset 0 0 0 0.4em white, 0 0 0 0.3em red);
