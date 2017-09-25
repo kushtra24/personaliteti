@@ -18,10 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+//Route::get('/home', 'HomeController@show');
 
 Route::group(['test' => 'test'], function(){
-
 
 // Route::get('/testi', [
 // 	'uses' => 'testController@create',
@@ -30,12 +29,12 @@ Route::group(['test' => 'test'], function(){
 // 	'roles' => ['user', 'Author']
 // 	]);
 
-
 	// show patients list
-Route::get('/testi', 'testController@create')->name('testi');
+Route::get('/testi', 'testController@doTheTest')->name('testi');
 
 //post the patients deetails to the database and return to patients
 Route::post('/result', 'testController@introExtroQuestions');
+Route::post('/home', 'testController@introExtroQuestions');
 
 
 });
