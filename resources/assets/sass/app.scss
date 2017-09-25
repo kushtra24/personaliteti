@@ -9,6 +9,86 @@
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 
+.btn{
+	background-color: transparent;
+    border-width: 2px;
+	transition: .3s background-color ease-out;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 11px 24px;
+	margin: 10px;
+	&:hover{
+		color: #fff;
+	}
+	span{
+		&:after {
+		  content: '\00bb';
+		  position: absolute;
+		  opacity: 0;
+		  top: 0;
+		  right: -20px;
+		  transition: 0.5s;
+		}
+	}
+}
+
+.btn-primary{
+	color: $brand-primary;
+	border-color: $brand-primary;
+    &:hover{
+		background-color: $brand-primary;
+		border-color: $brand-primary;
+		color: #fff;
+    }
+}
+
+.btn-default{
+	color: $brand-default;
+	border-color: $brand-default;
+    &:hover{
+		background-color: $brand-default;
+		border-color: $brand-default;
+		color: #fff;
+    }
+}
+
+.btn-danger{
+	color: $brand-danger;
+	border-color: $brand-danger;
+    &:hover{
+		background-color: $brand-danger;
+		border-color: $brand-danger;
+		color: #fff;
+    }
+}
+
+.btn-success{
+	color: $brand-success;
+	border-color: $brand-success;
+    &:hover{
+		background-color: $brand-success;
+		border-color: $brand-success;
+		color: #fff;
+    }
+}
+
+
+
+.btn-warning{
+	color: $brand-warning;
+	border-color: $brand-warning;
+	a{
+    	color: $brand-warning;
+	}
+    &:hover{
+		background-color: $brand-warning;
+		border-color: $brand-warning;
+		color: #fff;
+    }
+}
+
+
 // Testing page
 // Input design
 
@@ -85,20 +165,60 @@ input[type="radio"] {
 	text-align: center;
 }
 
-.testing-page{
-	input[type="submit"]{
-		// width: 100%;
-		// padding: 15px 0;
-		margin: 22px 0;
-		// font-weight: bold;
-		transition: .4s background-color ease-out;
-		&:hover{
-			background-color: #20895e;
-		}
-	}
-}
+// .testing-page{
+// 	input[type="submit"]{
+// 		// width: 100%;
+// 		// padding: 15px 0;
+// 		margin: 22px 0;
+// 		// font-weight: bold;
+// 		transition: .4s background-color ease-out;
+// 		&:hover{
+// 			background-color: #20895e;
+// 		}
+// 	}
+// }
 
 	// input[value="2"]:checked{
 	// 	background: red;
 	// 	@include default-box(inset 0 0 0 0.4em white, 0 0 0 0.3em red);
 	// }
+
+
+
+// __________________________________________________________________________________________Footer
+
+
+footer{
+	margin: 25px 0;
+	h4{
+		margin: 0 0 10px 0;
+		a{
+			&:hover{
+			text-decoration: none;
+			}
+		}
+	}
+	ul{
+		-webkit-margin-before: 0;
+		-webkit-margin-after: 0;
+		-webkit-padding-start: 0;
+		li{
+			list-style: none;
+			a{
+				color: #616161;
+				&:hover{
+					text-decoration: none;
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+// __________________________________________________________________________________________Results
+
+.progress-bar{
+	&.Extrovert{
+		background-color: $brand-primary;
+	}
+}

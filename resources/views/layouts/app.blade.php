@@ -32,7 +32,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'Personaliteti') }}
                     </a>
                 </div>
 
@@ -43,12 +43,13 @@
                             <a href="/">Home</a>
                         </li>
                         <li>
-                            <a href="{{ route('testi') }}">Testi</a>
-                        <li>
                             <a href="#">Tipet</a>
                         </li>
                         <li>
                             <a href="#">Rreth nesh</a></li>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a></li>
                         </li>
                     </ul>
 
@@ -56,16 +57,18 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('login') }}">Kyqu</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->first_name }} {{ Auth::user()->last_name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+
                                     <li>
+                                        <a href="/home">Profile</a>
+
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -88,36 +91,61 @@
     </div>
 
 <footer>
+    <hr>
     <div class="container">
-        <div class="col-md-5">
+        <div class="row">
+        <div class="col-md-3">
                 <img src="https://laracasts.com/images/logo-footer.png" alt="footer logo" class="img img-responsive">
             
-            <p>Get a concrete, accurate description of who you are and why you do things the way you do, for free.</p>
+            <p>Merr një përshkrim të vetvëtes, njihu më tepër rreth fuqive dhe dobësive tuaja.</p>
             <div class="footer-solcial-icons">
-                <a href="#"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
-
+                <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
             </div>
+            <a href="/testi" class="btn btn-default">Fillo testin</a>
         </div>
-        <div class="col-md-2 col-md-offset-1">
+        <div class="col-md-3">
             
             <h4>
-                <a href="https://www.16personalities.com/articles" title="Articles">Articles</a>
+                <a href="https://www.16personalities.com/blog" title="Articles">Artikujt</a>
             </h4>
-            <nav class="highlighted">
-                                    <a href="/articles/personality-bites-the-types-and-stress-eating">Personality Bites: The Types and Stress Eating</a>
-                                    <a href="/articles/whats-wrong-with-ferris-bueller-rule-bending-by-personality-type">What’s Wrong with Ferris Bueller? Rule Bending by Personality Type</a>
-                                    <a href="/articles/when-in-rome-which-personality-types-do-as-the-romans-do">When in Rome: Which Personality Types Do as the Romans Do?</a>
-                                    <a href="/articles/the-perfectionism-and-the-turbulent-identity">The Perfectionism and the Turbulent Identity</a>
-                                    <a href="/articles/waiting-to-respond-who-listens-and-who-doesnt-during-a-conversation">Waiting to Respond: Who Listens and Who Doesn’t During a Conversation</a>
-                            </nav>
+            <ul>
+                <li> <a href="#"> This is an aticle title that needs to change</a></li>
+                <li> <a href="#"> This is an aticle title that needs to change</a></li>
+                <li> <a href="#"> This is an aticle title that needs to change</a></li>
+                <li> <a href="#"> This is an aticle title that needs to change</a></li>
+            </ul>
 
         </div>
-        <div class="col-md-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eaque expedita eligendi molestias minus autem sint quo praesentium maxime, voluptates, sit vitae. Minus distinctio pariatur repudiandae nulla reiciendis dolorum quod!</div>
-        <div class="col-md-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ratione, magnam, suscipit perspiciatis ducimus nam adipisci doloremque sunt, tenetur eos in. Sed autem quo aspernatur accusantium molestiae, dicta et. Sit.</div>
 
-        <div class="col-md-6"> <p> &copy; Personaliteti.com <?php echo date("Y"); ?>. Të gjitha të drejtat e rezervuara. </p></div>
-        <div class="col-md-6"> <p class="pull-right"> Designed and developed by: <a href="http://kushtrim.com"> Kushtrim.com</a></p> </div>
+        <div class="col-md-3">
+
+            <h4>
+                <a href="https://www.16personalities.com/articles" title="Articles">Më shum</a>
+            </h4>
+            <ul>
+                <li> <a href="#"> Teoria Jonë</a></li>
+                <li> <a href="#"> login</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+
+            <h4>
+                <a href="https://www.16personalities.com/articles" title="Articles">E nevojshme</a>
+            </h4>
+                <ul>
+                    <li> <a href="#"> Kontakt</a></li>
+                    <li> <a href="#"> Kushtet e përdorimit</a></li>
+                    <li> <a href="#"> Politika e privatesisë</a></li>
+                </ul>
+        </div>
+    </div>
+    <hr>
+        <div class="row">
+            <div class="col-md-6"> <p> &copy; Personaliteti.com <?php echo date("Y"); ?>. Të gjitha të drejtat e rezervuara. </p></div>
+            <div class="col-md-6"> <p class="pull-right"> Designed and developed by: <a href="http://kushtrim.net" target="_blank"> Kushtrim.net</a></p> </div>
+        </div>
     </div>
 </footer>
 

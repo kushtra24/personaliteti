@@ -68,6 +68,7 @@
 
 
 <div class="progress-container hide" id="progress-container" style="position: fixed; bottom: 0; left: 15px; z-index: 10000;">
+    <strong>Keni filluar mire</strong>
   <div class="progress" style="width: 473px;">
     <div class="progress-bar progress-bar-striped active" id="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" sty></div>
   </div>
