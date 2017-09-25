@@ -4,10 +4,12 @@
 
 <div class="container">
 
-This is the first page
+	<div class="heading">
+		<h1>Eshte Mahnistese te Lexosh dicka qe te pershkruan aq mire</h1>
+		<h4>Fillo tesin e personalitetit dhe mahnitu me saktesine qe ofron resultati juaj i personalitetit</h4>
 
-    <?php $name = Cookie::get('final_Type', 'Unknown');
-echo "Hello $name";
-?>
-
+		<a href="{{ route('testi') }}" class="btn btn-primary">Fillo Testing</a>
+		<br><small>Pa pages, nuk eshte e nevojshme regjistrimi</small>
+	</div>
+	
 @endsection

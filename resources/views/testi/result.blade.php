@@ -36,6 +36,9 @@
     </div>
   </div>
 
+<p>Regjistrohu tani per t'i ruajtur keto resultate</p>
+<a href="{{ route('register') }}" class="btn btn-primary">Regjistrohu</a>
+
 </div>
 
 @endsection
