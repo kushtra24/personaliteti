@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use App\TestResults;
 use Illuminate\Cookie\CookieJar;
 use Auth;
+
 class RegisterController extends Controller
 {
     /*

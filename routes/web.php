@@ -32,8 +32,10 @@ Route::group(['test' => 'test'], function(){
 	// show patients list
 Route::get('/testi', 'testController@doTheTest')->name('testi');
 
+
 //post the patients deetails to the database and return to patients
 Route::post('/result', 'testController@introExtroQuestions');
+Route::get('/result', 'testController@introExtroQuestions');
 Route::post('/home', 'testController@introExtroQuestions');
 
 

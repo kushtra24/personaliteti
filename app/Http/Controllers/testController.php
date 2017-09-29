@@ -6,9 +6,10 @@ use App\testresults;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Cookie\CookieJar;
+use Illuminate\Support\Facades\Cookie;
 use App\User;
 use Auth;
-
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
 class testController extends Controller
 {
@@ -17,6 +18,7 @@ class testController extends Controller
     private $nsfinalProcentRez;
     private $ftfinalProcentRez;
     private $rolename;
+
 
     /**
      * Show the form for creating a new resource.
@@ -82,7 +84,6 @@ class testController extends Controller
         //
     }
 
-
     /**
      * Remove the specified resource from storage.
      *
@@ -117,9 +118,25 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $cookieJar->queue(cookie('rolename', $rolenames, 45000));
     }
 
-    return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, "rolenames" => $rolenames ]);
+    if (Auth::check()) {
+        $store = new TestResults;
+        $store->user_id = Auth::user()->id;
+        $store->finaltype = Cookie::get('finaltype', 'Coockies janë çkyqur');
+        $store->intro_extro = Cookie::get('introExtro', 'Coockies janë çkyqur');
+        $store->first_final_procent_rez = Cookie::get('FirstfinalProcentRez', 'Coockies janë çkyqur');
+        $store->intu_sens = Cookie::get('intuSens', 'Coockies janë çkyqur');
+        $store->ns_final_procent_rez = Cookie::get('nsfinalProcentRez', 'Coockies janë çkyqur');
+        $store->feeling_thinking = Cookie::get('feelingThinking', 'Coockies janë çkyqur');
+        $store->ft_final_procent_rez = Cookie::get('ftfinalProcentRez', 'Coockies janë çkyqur');
+        $store->judging_perspecting = Cookie::get('judgingPerspecting', 'Coockies janë çkyqur');
+        $store->jp_final_procent_rez = Cookie::get('jpfinalProcentRez', 'Coockies janë çkyqur');
+        $store->save();
+    }
+
+    return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, "rolenames" => $rolenames]);
 
 } //end of function
+
 
 
 //Evaluates the section of extrovert or introvert, working with the partial introExtro.blade.php testi > partials

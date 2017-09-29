@@ -67,10 +67,10 @@
 </div>{{-- conteiner --}}
 
 
-<div class="progress-container hide" id="progress-container" style="position: fixed; bottom: 0; left: 15px; z-index: 10000;">
-    <strong>Keni filluar mire</strong>
+<div class="progress-container hide" id="progress-container" style="position: fixed; bottom: 18px; left: 15px; z-index: 10000; background-color: #fff; padding: 13px 38px; border: 2px solid #f1f1f1;">
+   <strong class="progress-status">Edhe 4/4</strong> <span class="pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> <i class="progress-minutes">~ 10 min</i></span>
   <div class="progress" style="width: 473px;">
-    <div class="progress-bar progress-bar-striped active" id="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" sty></div>
+    <div class="progress-bar progress-bar-striped active" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
   </div>
 </div>
 
@@ -97,9 +97,30 @@ $("input[type='radio']").on('click',function(){
    if($(this).parent().find('.checked').length ==0){
       progressProcent = progressProcent + 2.27272727;
       $("#progress-bar").css('width', progressProcent + '%');
+      $("#how-much-progress").text(100 - progressProcent + '%');
       $("#progress-container").removeClass("hide");
    } $(this).addClass('checked');
 });
+
+
+var count=1;
+$('.tab-forward').click(function() {
+    if(count==1){
+        $('.progress-status').text('Edhe 3/4');
+        $('.progress-minutes').text(' ~ 7:30 min');
+
+    }
+    if(count==2){
+        $('.progress-status').text('Vetem edhe 1/4');
+        $('.progress-minutes').text(' ~ 5:00 min');
+    }
+    if(count==3){
+        $('.progress-status').text('E Fundit');
+        $('.progress-minutes').text(' ~ 2.30 min');
+    }
+    count++;
+});
+
 
 // go forward button
 $('.tab-forward').click(function(){
