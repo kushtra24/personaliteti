@@ -9,7 +9,7 @@ use Illuminate\Cookie\CookieJar;
 use Illuminate\Support\Facades\Cookie;
 use App\User;
 use Auth;
-use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
+//use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
 class testController extends Controller
 {
@@ -359,6 +359,10 @@ public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgin
         $this->finalType = "Pa definim";
     }
 
+}
+
+public function cantAccess(){
+    return "Sorry you can't access this page like this";
 }
 
 
