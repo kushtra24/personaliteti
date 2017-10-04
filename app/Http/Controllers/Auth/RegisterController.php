@@ -11,6 +11,9 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use App\TestResults;
 use Illuminate\Cookie\CookieJar;
 use Auth;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
+use App\Jobs\SendVerificationEmail;
 
 class RegisterController extends Controller
 {
@@ -75,7 +78,9 @@ class RegisterController extends Controller
         $user->age = $data['age'];
         $user->email = $data['email'];
         $user->password = bcrypt($data['password']);
+        $user->email_token = base64_encode($data['email']);
         $user->save();
+
         $user->roles()->attach(Role::where('name', 'User')->first());
 
         // Store the values of the cookies into the database depending on the current user that is loged in
@@ -94,4 +99,34 @@ class RegisterController extends Controller
 
         return $user;
     }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        event(new Registered($user = $this->create($request->all())));
+        dispatch(new SendVerificationEmail($user));
+        return view('email.verification');
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param $token
+     * @return \Illuminate\Http\Response
+     */
+    public function verify($token)
+    {
+        $user = User::where('email_token', $token)->first();
+        $user->verified = 1;
+        if($user->save()){
+            return view('email.emailconfirm',['user'=>$user]);
+        }
+    }
+
 }

@@ -21,7 +21,7 @@ class Testresults extends Migration
             $table->tinyInteger('first_final_procent_rez');
             $table->string('intu_sens');
             $table->tinyInteger('ns_final_procent_rez');
-            $table->string('feeling_sensing');
+            $table->string('feeling_thinking');
             $table->tinyInteger('ft_final_procent_rez');
             $table->string('judging_perspecting');
             $table->tinyInteger('jp_final_procent_rez');

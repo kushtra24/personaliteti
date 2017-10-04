@@ -11,28 +11,21 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/home', 'HomeController@show');
+
 Route::group(['test' => 'test'], function(){
-// Route::get('/testi', [
-// 	'uses' => 'testController@create',
-// 	'as' => 'testi',
-// 	'middleware' => 'roles',
-// 	'roles' => ['user', 'Author']
-// 	]);
-	// show patients list
-Route::get('/testi', 'testController@doTheTest')->name('testi');
-//post the patients deetails to the database and return to patients
-Route::post('/result', 'testController@introExtroQuestions');
-Route::get('/result', 'testController@cantAccess');
-Route::post('/home', 'testController@introExtroQuestions');
+    Route::get('/testi', 'testController@doTheTest')->name('testi');
+    //post the patients deetails to the database and return to patients
+    Route::post('/result', 'testController@introExtroQuestions');
+    Route::get('/result', 'testController@introExtroQuestionsResult');
+    Route::post('/home', 'testController@introExtroQuestions');
 });
-
-
+Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 

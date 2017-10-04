@@ -84,6 +84,27 @@ class testController extends Controller
         //
     }
 
+    public function introExtroQuestionsResult(){
+
+        if(Cookie::get('finaltype')){
+
+            $this->extrovertOrintrovert();
+
+            $this->intuitiveOrSensing();
+
+            $this->feelingOrThinking();
+
+            $this->judgingOrperspecting();
+
+            $this->finalTypeName($this->introExtro, $this->intuSens, $this->feelingThinking, $this->judgingPerspecting);
+
+            $rolenames = $this->rolename;
+
+            return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, "rolenames" => $rolenames]);
+        }
+        return redirect('/');
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -118,6 +139,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $cookieJar->queue(cookie('rolename', $rolenames, 45000));
     }
 
+
     if (Auth::check()) {
         $store = new TestResults;
         $store->user_id = Auth::user()->id;
@@ -132,6 +154,8 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $store->jp_final_procent_rez = Cookie::get('jpfinalProcentRez', 'Coockies janë çkyqur');
         $store->save();
     }
+
+    //DB::table('users')->whereId(Auth::user()->id)->increment('position');
 
     return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, "rolenames" => $rolenames]);
 
@@ -333,8 +357,8 @@ public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgin
     elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
         $this->finalType = "ISFJ";
     }
-    elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
-        $this->finalType = "ISFJ";
+    elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Gjykues (Judging)"){
+        $this->finalType = "ISTJ";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
         $this->finalType = "ESTJ";
@@ -362,7 +386,7 @@ public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgin
 }
 
 public function cantAccess(){
-    return "Sorry you can't access this page like this";
+    return "Më vjen keq nuk mund të kyqeni në këtë faqe në atë mënyrë";
 }
 
 
