@@ -29,3 +29,6 @@ Route::group(['test' => 'test'], function(){
 });
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
+
+Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
+

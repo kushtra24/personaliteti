@@ -34,7 +34,7 @@
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{--{{ config('app.name', 'Personaliteti') }}--}}
-                        <img src="{{asset('images/personaliteti-logo.png')}}" height="30px">
+                        <img src="{{asset('images/personaliteti-logo.png')}}" height="30px" alt="personaliteti.com">
                     </a>
                 </div>
 
