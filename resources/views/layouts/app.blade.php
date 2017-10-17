@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('style')
 </head>
 <body>
     <div id="app">
@@ -32,7 +33,8 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Personaliteti') }}
+                        {{--{{ config('app.name', 'Personaliteti') }}--}}
+                        <img src="{{asset('images/personaliteti-logo.png')}}" height="30px">
                     </a>
                 </div>
 
@@ -95,14 +97,17 @@
     <div class="container">
         <div class="row">
         <div class="col-md-3">
-                <img src="https://laracasts.com/images/logo-footer.png" alt="footer logo" class="img img-responsive">
-            
-            <p>Merr një përshkrim të vetvëtes, njihu më tepër rreth fuqive dhe dobësive tuaja.</p>
+            <!-- Branding Image -->
+            <a class="" href="{{ url('/') }}">
+                {{--{{ config('app.name', 'Personaliteti') }}--}}
+                <img src="{{asset('images/personaliteti-logo.png')}}" height="40px">
+            </a>
+            <p class="footer-description">Merr një përshkrim të vetvëtes, njihu më tepër rreth fuqive dhe dobësive tuaja.</p>
             <div class="footer-solcial-icons">
                 <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
             </div>
-            <a href="/testi" class="btn btn-default">Fillo testin</a>
+            {{--<a href="/testi" class="btn btn-default">Fillo testin</a>--}}
         </div>
         <div class="col-md-3">
             
@@ -125,7 +130,7 @@
             </h4>
             <ul>
                 <li> <a href="#"> Teoria Jonë</a></li>
-                <li> <a href="#"> login</a></li>
+                <li> <a href="{{ route('login') }}"> Kyqu</a></li>
             </ul>
         </div>
 

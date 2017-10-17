@@ -13,12 +13,17 @@ use Auth;
 
 class testController extends Controller
 {
-    private $finalType;
+    public $finalType;
     private $finalProcentRez;
     private $nsfinalProcentRez;
     private $ftfinalProcentRez;
-    private $rolename;
-
+    private $rol_name;
+    private $introExtro;
+    private $intuSens;
+    private $feelingThinking;
+    private $judgingPerspecting;
+    private $FirstfinalProcentRez;
+    private $jpfinalProcentRez;
 
     /**
      * Show the form for creating a new resource.
@@ -86,21 +91,9 @@ class testController extends Controller
 
     public function introExtroQuestionsResult(){
 
+//        dd($this->introExtro);
         if(Cookie::get('finaltype')){
-
-            $this->extrovertOrintrovert();
-
-            $this->intuitiveOrSensing();
-
-            $this->feelingOrThinking();
-
-            $this->judgingOrperspecting();
-
-            $this->finalTypeName($this->introExtro, $this->intuSens, $this->feelingThinking, $this->judgingPerspecting);
-
-            $rolenames = $this->rolename;
-
-            return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, "rolenames" => $rolenames]);
+            return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, 'rol_name' => $this->rol_name]);
         }
         return redirect('/');
     }
@@ -124,40 +117,39 @@ public function introExtroQuestions(CookieJar $cookieJar)
 
     $this->finalTypeName($this->introExtro, $this->intuSens, $this->feelingThinking, $this->judgingPerspecting);
 
-    $rolenames = $this->rolename;
-
-    if($this->finalType){
-        $cookieJar->queue(cookie('finaltype', $this->finalType, 45000));
-        $cookieJar->queue(cookie('introExtro', $this->introExtro, 45000));
-        $cookieJar->queue(cookie('FirstfinalProcentRez', $this->FirstfinalProcentRez, 45000));
-        $cookieJar->queue(cookie('intuSens', $this->intuSens, 45000));
-        $cookieJar->queue(cookie('nsfinalProcentRez', $this->nsfinalProcentRez, 45000));
-        $cookieJar->queue(cookie('feelingThinking', $this->feelingThinking, 45000));
-        $cookieJar->queue(cookie('ftfinalProcentRez', $this->ftfinalProcentRez, 45000));
-        $cookieJar->queue(cookie('judgingPerspecting', $this->judgingPerspecting, 45000));
-        $cookieJar->queue(cookie('jpfinalProcentRez', $this->jpfinalProcentRez, 45000));
-        $cookieJar->queue(cookie('rolename', $rolenames, 45000));
-    }
-
-
     if (Auth::check()) {
-        $store = new TestResults;
+        $store = new TestResults();
         $store->user_id = Auth::user()->id;
-        $store->finaltype = Cookie::get('finaltype', 'Coockies janë çkyqur');
-        $store->intro_extro = Cookie::get('introExtro', 'Coockies janë çkyqur');
-        $store->first_final_procent_rez = Cookie::get('FirstfinalProcentRez', 'Coockies janë çkyqur');
-        $store->intu_sens = Cookie::get('intuSens', 'Coockies janë çkyqur');
-        $store->ns_final_procent_rez = Cookie::get('nsfinalProcentRez', 'Coockies janë çkyqur');
-        $store->feeling_thinking = Cookie::get('feelingThinking', 'Coockies janë çkyqur');
-        $store->ft_final_procent_rez = Cookie::get('ftfinalProcentRez', 'Coockies janë çkyqur');
-        $store->judging_perspecting = Cookie::get('judgingPerspecting', 'Coockies janë çkyqur');
-        $store->jp_final_procent_rez = Cookie::get('jpfinalProcentRez', 'Coockies janë çkyqur');
+        $store->finaltype = $this->finalType;
+        $store->intro_extro = $this->introExtro;
+        $store->first_final_procent_rez = $this->FirstfinalProcentRez;
+        $store->intu_sens = $this->intuSens;
+        $store->ns_final_procent_rez = $this->nsfinalProcentRez;
+        $store->feeling_thinking = $this->feelingThinking;
+        $store->ft_final_procent_rez = $this->ftfinalProcentRez;
+        $store->judging_perspecting = $this->judgingPerspecting;
+        $store->jp_final_procent_rez = $this->jpfinalProcentRez;
+        $store->rol_name = $this->rol_name;
         $store->save();
     }
 
-    //DB::table('users')->whereId(Auth::user()->id)->increment('position');
+    if (!Auth::check()){
+        Cookie::queue(Cookie::make('finaltype', $this->finalType, 3000));
+        Cookie::queue(Cookie::make('introExtro', $this->introExtro, 3000));
+        Cookie::queue(Cookie::make('FirstfinalProcentRez', $this->FirstfinalProcentRez, 3000));
+        Cookie::queue(Cookie::make('intuSens', $this->intuSens, 3000));
+        Cookie::queue(Cookie::make('nsfinalProcentRez', $this->nsfinalProcentRez, 3000));
+        Cookie::queue(Cookie::make('feelingThinking', $this->feelingThinking, 3000));
+        Cookie::queue(Cookie::make('ftfinalProcentRez', $this->ftfinalProcentRez, 3000));
+        Cookie::queue(Cookie::make('judgingPerspecting', $this->judgingPerspecting, 3000));
+        Cookie::queue(Cookie::make('jpfinalProcentRez', $this->jpfinalProcentRez, 3000));
+        Cookie::queue(Cookie::make('rol_name', $this->rol_name, 3000));
+    }
 
-    return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, "rolenames" => $rolenames]);
+    //DB::table('users')->whereId(Auth::user()->id)->increment('position');
+    return $this->introExtroQuestionsResult();
+
+//    return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, "rolenames" => $rolenames]);
 
 } //end of function
 
@@ -183,6 +175,7 @@ public function extrovertOrintrovert(){
     //Determine of the results are introvertet or extrovertet
     if ($result < 0) {
         $this->introExtro = "Extrovert";
+
     }
     elseif ($result === 0) {
         $result = 1;
@@ -235,6 +228,7 @@ public function intuitiveOrSensing(){
 
     $this->nsfinalProcentRez = $this->finalProcentRez;
 
+    return  $this->nsfinalProcentRez;
 //    $this->nsendresult = $this->finalProcentRez . "% " . $this->intuSens;
 }
 
@@ -272,6 +266,7 @@ public function intuitiveOrSensing(){
 
         $this->ftfinalProcentRez = $this->finalProcentRez;
 
+        return $this->ftfinalProcentRez;
 //        $this->ftendresult = $this->finalProcentRez . "% " . $this->feelingThinking;
     }
 
@@ -309,6 +304,7 @@ public function intuitiveOrSensing(){
 
         $this->jpfinalProcentRez = $this->finalProcentRez;
 
+        return $this->jpfinalProcentRez;
 //        $this->jpendresult = $this->finalProcentRez . "% " . $this->judgingPerspecting;
     }
 
@@ -332,52 +328,67 @@ public function evaluate($result){
 public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgingPerspecting){
     if ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Gjykues (Judging)"){
         $this->finalType = "INTJ";
+        $this->rol_name = "Arkitekti";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Perspektivë"){
         $this->finalType = "INTP";
+        $this->rol_name ="Racionali";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Gjykues (Judging)"){
         $this->finalType = "ENTJ";
+        $this->rol_name ="Komanderi";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Perspektivë"){
         $this->finalType = "ENTP";
+        $this->rol_name ="Debatisti";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
         $this->finalType = "INFJ";
+        $this->rol_name ="Diplomati";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Perspektivë"){
         $this->finalType = "INFP";
+        $this->rol_name ="Mediatori";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
         $this->finalType = "ENFJ";
+        $this->rol_name ="Protagonisti";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Perspektivë"){
         $this->finalType = "ENFP";
+        $this->rol_name ="Mikpritesi";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
         $this->finalType = "ISFJ";
+        $this->rol_name ="Logjistiku";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Gjykues (Judging)"){
         $this->finalType = "ISTJ";
+        $this->rol_name ="Mbrojtesi";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
         $this->finalType = "ESTJ";
+        $this->rol_name ="Ekzekutivi";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
         $this->finalType = "ESFJ";
+        $this->rol_name ="Konsulenti";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Perspektivë"){
         $this->finalType = "ISTP";
+        $this->rol_name ="Virtuozi";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Perspektivë"){
         $this->finalType = "ISFP";
-
+        $this->rol_name ="Adventuristi";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Perspektivë"){
         $this->finalType = "ESTP";
+        $this->rol_name ="Ndermarresi";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Perspektivë"){
         $this->finalType = "ESFP";
+        $this->rol_name ="Lozenjeri";
     }
     else {
         $this->finalType = "Pa definim";
@@ -388,7 +399,6 @@ public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgin
 public function cantAccess(){
     return "Më vjen keq nuk mund të kyqeni në këtë faqe në atë mënyrë";
 }
-
 
 }//end of class
 

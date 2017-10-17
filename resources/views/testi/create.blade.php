@@ -94,14 +94,13 @@
 
 progressProcent = 0;
 $("input[type='radio']").on('click',function(){
-   if($(this).parent().find('.checked').length ==0){
+   if($(this).parent().hasClass('checked') == false){
       progressProcent = progressProcent + 2.27272727;
       $("#progress-bar").css('width', progressProcent + '%');
       $("#how-much-progress").text(100 - progressProcent + '%');
       $("#progress-container").removeClass("hide");
-   } $(this).addClass('checked');
+   } $(this).parent().addClass('checked');
 });
-
 
 var count=1;
 $('.tab-forward').click(function() {

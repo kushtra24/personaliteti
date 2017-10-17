@@ -25,7 +25,8 @@ class HomeController extends Controller
     public function index()
     {
 //        $user = User::all();
-        return view('home');
+        $results = auth()->user()->testResults->last();
+        return view('home')->with('results', $results );
     }
 
     /**

@@ -95,7 +95,9 @@ class RegisterController extends Controller
         $store->ft_final_procent_rez = Cookie::get('ftfinalProcentRez', 'Coockies janë çkyqur');
         $store->judging_perspecting = Cookie::get('judgingPerspecting', 'Coockies janë çkyqur');
         $store->jp_final_procent_rez = Cookie::get('jpfinalProcentRez', 'Coockies janë çkyqur');
+        $store->rol_name = Cookie::get('rol_name', 'Coockies janë çkyqur');
         $store->save();
+
 
         return $user;
     }
