@@ -4,9 +4,10 @@
 
 <div class="container">
 
-<h1>Ti je një: {{ $finalType }}</h1>
+<h1>Ti je një: @if ($finalType == null) {{ Cookie::get('finaltype') }} @else {{ $finalType }} @endif</h1>
 
-<h3> {{ $FirstfinalProcentRez }}% {{ $introExtro }}</h3>
+  @if($FirstfinalProcentRez)
+<h3> {{ $FirstfinalProcentRez }}% {{ $introExtro }} </h3>
 <h3>{{ $nsfinalProcentRez }}% {{ $intuSens }}</h3>
 <h3> {{ $ftfinalProcentRez }}% {{$feelingThinking}}</h3>
 <h3>{{ $jpfinalProcentRez }}% {{$judgingPerspecting}}</h3>
@@ -50,17 +51,33 @@
     </div>
         <span>{{ 100 - $jpfinalProcentRez }}% {{ $judgingPerspecting === "Perspektivë" ? "Gjykues" : "Perspektivë" }}</span>
   </div>
+    @else
+    <div class="alert alert-info" role="alert">Vazhdo Regjistrimi resultatet e juaja jane ende aktive</div>
+  @endif
+{{--Email Has been taken error msg--}}
 
-<p>Regjistrohu tani per t'i ruajtur keto resultate</p>
+@if ($errors->has('email'))
+  <span class="help-block">
+    <div class="alert alert-danger" role="alert">{{ $errors->first('email') }}</div>
+  </span>
+@endif
+
+@if ($errors->has('password'))
+  <span class="help-block">
+    <div class="alert alert-danger" role="alert">{{ $errors->first('password') }}</div>
+  </span>
+@endif
+
 
 @if (Auth::check())
   <a href="{{ route('register') }}" class="btn btn-primary">Shko në profil</a>
 @else
+    <p>Regjistrohu tani per t'i ruajtur keto resultate</p>
     <button id="show_register" class="btn btn-primary">Regjistrohu</button>
 @endif
 
 
-  <div id="registerForma" class="col-md-8 col-md-offset-2 hide">
+  <div id="registerForma" class="col-md-12 hide">
     <div class="panel panel-default">
       <div class="panel-heading">Regjistrohu</div>
 
@@ -76,8 +93,8 @@
 
               @if ($errors->has('first_name'))
                 <span class="help-block">
-                                        <strong>{{ $errors->first('first_name') }}</strong>
-                                    </span>
+                    <strong>{{ $errors->first('first_name') }}</strong>
+                </span>
               @endif
             </div>
           </div>
