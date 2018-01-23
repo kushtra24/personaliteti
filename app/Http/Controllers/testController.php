@@ -178,8 +178,7 @@ public function extrovertOrintrovert(){
 
     }
     elseif ($result === 0) {
-        $result = 1;
-        $this->introExtro = "Extrovert";
+        $this->introExtro = "Padefinim";
     }
     else{
         $this->introExtro = "Introvert";
@@ -391,7 +390,7 @@ public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgin
         $this->rol_name ="Lozenjeri";
     }
     else {
-        $this->finalType = "Pa definim";
+        $this->finalType = "Pa definim - Nuk ju keni pergjigjur pyetjeve apo keni lene shum pyetje neotrale";
     }
 
 }
