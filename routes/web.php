@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/tipet', 'tipetController@index')->name('tipet');
 //Route::get('/home', 'HomeController@show');
 
 Route::group(['test' => 'test'], function(){
@@ -27,5 +28,6 @@ Route::group(['test' => 'test'], function(){
     Route::get('/result', 'testController@introExtroQuestionsResult');
     Route::post('/home', 'testController@introExtroQuestions');
 });
+
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 

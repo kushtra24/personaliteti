@@ -11,7 +11,8 @@
     <title>{{ config('app.name', 'Personaliteti.com') }}</title>
 
     <!-- font awesome  -->
-    <script src="https://use.fontawesome.com/94c81482d0.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -45,7 +46,7 @@
                             <a href="/">Home</a>
                         </li>
                         <li>
-                            <a href="#">Tipet</a>
+                            <a href="/tipet">Tipet</a>
                         </li>
                         <li>
                             <a href="#">Rreth nesh</a></li>
