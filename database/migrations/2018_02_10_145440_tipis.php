@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Tipet extends Migration
+class Tipis extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Tipet extends Migration
      */
     public function up()
     {
-        Schema::create('tipet', function (Blueprint $table) {
+        Schema::create('tipis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('type');
             $table->string('name');

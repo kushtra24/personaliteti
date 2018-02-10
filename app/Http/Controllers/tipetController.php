@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Tipi;
 
 class tipetController extends Controller
 {
@@ -15,8 +15,23 @@ class tipetController extends Controller
      */
     public function index()
     {
-        return view('tipet');
+        $tipet = Tipi::all();
+
+        return view('tipet.tipet', compact('tipet'));
     }
     
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $tipi = Tipi::find($id);
+
+        return view('tipet.tipi', compact('tipi'));
+    }
+
 
 }

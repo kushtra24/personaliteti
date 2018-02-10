@@ -12,12 +12,20 @@
 
 	<section id="the-types">
 
+		@foreach ($tipet as $tipi)
+			{{-- <a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+				<h4>{{ $tipi->name }}</h4>
+				<img src="{{ $tipi->type_img }}" alt="tipi">
+			</a> --}}
+		@endforeach
+
 		<div id="organize" class="type-group row">
 			<h1><strong>Organizim</strong></h1>
 				<div class="col-md-3">
-					<a href="#">
-						<h4>INTJ</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
+					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+						<h4>{{ $tipi->type }}</h4>
+						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<p>{{ $tipi->name }}</p>
 					</a>
 				</div>
 				<div class="col-md-3">

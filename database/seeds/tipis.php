@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class tipet extends Seeder
+class tipis extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class tipet extends Seeder
      */
     public function run()
     {
-        $type = new tipet();
+        $type = new tipis();
         $type->type = 'INTJ';
         $type->name = 'Arcitect';
         $type->description = 'This is a short description of the Arcitect';
