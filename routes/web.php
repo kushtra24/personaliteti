@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/profile', 'userController@index')->name('profile');
 //Route::get('/home', 'HomeController@show');
 
 Route::group(['test' => 'test'], function(){
@@ -27,13 +27,16 @@ Route::group(['test' => 'test'], function(){
     Route::post('/result', 'testController@introExtroQuestions');
     Route::get('/result', 'testController@introExtroQuestionsResult');
     Route::post('/home', 'testController@introExtroQuestions');
+    Route::get('/admintesti', 'testController@edit');
 });
 
-    Route::post('/profile', 'userController@index');
+    
 
 Route::group(['tipet' => 'tipet'], function(){
 	Route::get('/tipet', 'tipetController@index')->name('tipet');
-	Route::get('/tipi/{id}', 'tipetController@show')->name('tipi');
+    Route::get('/tipi/{id}', 'tipetController@show')->name('tipi');
+    Route::get('/admintipet', 'tipetController@showTypes')->name('admintipet');
+	Route::get('/admintipet/{id}', 'tipetController@edit')->name('admintipet');
 });
 
 // Route::group(['admin' => 'admin'], function(){

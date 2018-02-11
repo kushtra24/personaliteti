@@ -70,7 +70,10 @@
                                 <ul class="dropdown-menu" role="menu">
 
                                     <li>
-                                        <a href="/home">Profile</a>
+                                        <a href="/profile">Profili</a>
+                                         @if (Auth::user() && Auth::user()->hasAnyRole('User')) 
+                                            <a href="/home">Resultatet</a>
+                                         @endif
 
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

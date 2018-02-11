@@ -81,10 +81,10 @@
                         </li>
                         @if (Auth::user() && Auth::user()->hasAnyRole('Admin'))                        
                              <li>
-                                <a href="/adminTipet"><i class="fa fa-dashboard fa-fw"></i> Tipet</a>
+                                <a href="/admintipet"><i class="fa fa-dashboard fa-fw"></i> Tipet</a>
                             </li> 
                             <li>
-                                <a href="/adminTesti"><i class="fa fa-dashboard fa-fw"></i> Testi</a>
+                                <a href="/admintesti"><i class="fa fa-dashboard fa-fw"></i> Testi</a>
                             </li>                       
                         @endif
                         <li>

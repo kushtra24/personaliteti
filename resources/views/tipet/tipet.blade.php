@@ -12,125 +12,82 @@
 
 	<section id="the-types">
 
-		@foreach ($tipet as $tipi)
-			{{-- <a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
-				<h4>{{ $tipi->name }}</h4>
-				<img src="{{ $tipi->type_img }}" alt="tipi">
-			</a> --}}
-		@endforeach
-
-		<div id="organize" class="type-group row">
-			<h1><strong>Organizim</strong></h1>
-				<div class="col-md-3">
+		{{-- @foreach ($tipet as $tipi)
+			@if($tipi->id <= 4)
+			<div class="col-md-3">
 					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
 						<h4>{{ $tipi->type }}</h4>
 						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
 						<p>{{ $tipi->name }}</p>
 					</a>
 				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>INFJ</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
+			@endif
+		@endforeach --}}
+
+		<div id="organize" class="type-group row">
+			<h1><strong>Organizim</strong></h1>
+				
+				@foreach ($tipet as $tipi)
+			@if($tipi->id <= 4)
+			<div class="col-md-3">
+					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+						<h4>{{ $tipi->type }}</h4>
+						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<p>{{ $tipi->name }}</p>
 					</a>
 				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ISTJ</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ISFJ</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
+			@endif
+		@endforeach
 		</div>
 
 
 		<div id="vetvetja" class="type-group row">
 			<h1><strong>Vetvetja</strong></h1>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>INTP</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
+
+			@foreach ($tipet as $tipi)
+			@if($tipi->id > 4 && $tipi->id < 9 )
+			<div class="col-md-3">
+					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+						<h4>{{ $tipi->type }}</h4>
+						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<p>{{ $tipi->name }}</p>
 					</a>
 				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>INFP</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ISTP</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ISFP</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
+			@endif
+			@endforeach
+				
 		</div>
 
 		<div id="shoqeri" class="type-group row">
 			<h1><strong>Shoqeri</strong></h1>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ENTJ</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
+
+			@foreach ($tipet as $tipi)
+			@if($tipi->id > 8 && $tipi->id < 13 )
+			<div class="col-md-3">
+					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+						<h4>{{ $tipi->type }}</h4>
+						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<p>{{ $tipi->name }}</p>
 					</a>
 				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ENFJ</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ESTJ</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ESFJ</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
+			@endif
+			@endforeach
+
 		</div>
 
 		<div id="mbledhje" class="type-group row">
 			<h1><strong>Mbledhje</strong></h1>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ENTP</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
+				@foreach ($tipet as $tipi)
+			@if($tipi->id > 12 && $tipi->id < 17 )
+			<div class="col-md-3">
+					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+						<h4>{{ $tipi->type }}</h4>
+						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<p>{{ $tipi->name }}</p>
 					</a>
 				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ENFP</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ESTP</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="#">
-						<h4>ESFP</h4>
-						<img src="{{asset('images/tipet.png')}}" alt="tipi">
-					</a>
-				</div>
+			@endif
+			@endforeach
 		</div>
 
 	</section>
