@@ -6,9 +6,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Dashboard</h1>
-                    @if (Auth::user() && Auth::user()->role == 'admin')
-                        <p> 'THIS IS WHAT I WANT ONLY ADMIN USERS TO SEE!'</p>
-                    @endif
+                    
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

@@ -55,11 +55,16 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="{{ route('logout') }}"
+                        <li>
+                            <a href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                                <i class="fa fa-sign-out fa-fw"></i>Logout
+                                Logout
                             </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -73,14 +78,18 @@
                     <ul class="nav" id="side-menu">
                         <li>
                             <a href="admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                        </li>  
-                         <li>
-                            <a href="/adminTipet"><i class="fa fa-dashboard fa-fw"></i> Tipet</a>
-                        </li> 
+                        </li>
+                        @if (Auth::user() && Auth::user()->hasAnyRole('Admin'))                        
+                             <li>
+                                <a href="/adminTipet"><i class="fa fa-dashboard fa-fw"></i> Tipet</a>
+                            </li> 
+                            <li>
+                                <a href="/adminTesti"><i class="fa fa-dashboard fa-fw"></i> Testi</a>
+                            </li>                       
+                        @endif
                         <li>
-                            <a href="/adminTesti"><i class="fa fa-dashboard fa-fw"></i> Testi</a>
-                        </li>                       
-                        
+                            <a href="/adminTesti"><i class="fa fa-dashboard fa-fw"></i> Artikujë</a>
+                        </li> 
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

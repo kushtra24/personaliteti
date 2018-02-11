@@ -29,18 +29,47 @@ Route::group(['test' => 'test'], function(){
     Route::post('/home', 'testController@introExtroQuestions');
 });
 
+    Route::post('/profile', 'userController@index');
+
 Route::group(['tipet' => 'tipet'], function(){
 	Route::get('/tipet', 'tipetController@index')->name('tipet');
 	Route::get('/tipi/{id}', 'tipetController@show')->name('tipi');
 });
 
-Route::get('admin', ['middleware' => 'admin', function () {
-    //
-}]);
-
-Route::group(['admin' => 'admin'], function(){
-	Route::get('/admin', 'adminController@index')->name('admin');
-});
+// Route::group(['admin' => 'admin'], function(){
+// 	Route::get('/admin', 'adminController@index')->name('admin');
+// });
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
+
+// User role authentification and access gration
+Route::group(['middleware' => 'web'], function () {
+
+    // Route::get('/', function () {
+    //     return view('index');
+    // })->name('main');
+
+    // Route::get('/author', [
+    //     'uses' => 'AppController@getAuthorPage',
+    //     'as' => 'author',
+    //     'middleware' => 'roles',
+    //     'roles' => ['Admin', 'Author']
+    // ]);
+
+    // Route::get('/author/createArticle', [
+    //     'uses' => 'AppController@getGenerateArticle',
+    //     'as' => 'author.article',
+    //     'middleware' => 'roles',
+    //     'roles' => ['Admin', 'Author']
+    // ]);
+
+    Route::get('/admin', [
+        'uses' => 'adminController@index',
+        'as' => 'admin',
+        'middleware' => 'roles',
+        'roles' => ['Admin', 'Author']
+    ]);
+
+
+});
