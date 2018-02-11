@@ -14,40 +14,47 @@
             <div class="row">
                 <div class="col-lg-8">
                     
-                    {{-- @foreach(Auth::user()->testResults->reverse() as $testResult)
-                        <table class="table table-hover">
-                            <tr>
-                                <td>E kriuar me: </td>
-                                <td>{{ $testResult->created_at }} </td>
-                            </tr>
-                            <tr>
-                                <td>Roli:  </td>
-                                <td>{{ $testResult->rol_name }} </td>
-                            </tr>
-                            <tr>
-                                <td>Codi</td>
+<form method="POST" action="" class="form-horizontal" enctype="multipart/form-data" >
+  {{ csrf_field() }}
+        <div class="patients-overview">
+            <p style=" color: orange; text-align: right;"><strong>Notice: </strong>All Orange fields are mandatory</p>
+
+    <div class="form-group">
+      <label for="FileNo" class="col-sm-3 control-label">Kodi</label>
+        <div class="col-sm-9">
+
+      <input type="text" class="form-control" name="lastName" id="LastName" value="{{ $tipi->type }}" placeholder="Kodi">
+       </div>
+    </div>
+
+    <div class="form-group">
+      <label for="FileNo" class="col-sm-3 control-label">Emri</label>
+        <div class="col-sm-9">
+
+      <input type="text" class="form-control" name="lastName" id="LastName" value="{{ $tipi->name }}" placeholder="Emri">
+       </div>
+    </div>
+
+    <div class="form-group">
+      <label for="FileNo" class="col-sm-3 control-label">Pershkrimi</label>
+        <div class="col-sm-9">
+
+      <textarea class="form-control" rows="3">{{ $tipi->description }}</textarea>
+       </div>
+    </div>
 
 
-                                <td>{{ $testResult->finaltype }}</td>
-                            </tr>
-                            <tr>
-                                <td>Codi</td>
-                                <td>{{ $testResult->intro_extro }} {{ $testResult->first_final_procent_rez }}% </td>
-                            </tr>
-                            <tr>
-                                <td>Roli:</td>
-                                <td>{{ $testResult->intu_sens }} {{ $testResult->ns_final_procent_rez }} %</td>
-                            </tr>
-                            <tr>
-                                <td>Roli:</td>
-                                <td>{{ $testResult->feeling_thinking }} {{ $testResult->ft_final_procent_rez }}% </td>
-                            </tr>
-                            <tr>
-                                <td>Roli:</td>
-                                <td>{{ $testResult->judging_perspecting }} {{ $testResult->jp_final_procent_rez }}%</td>
-                            </tr>
-                        </table>
-                        @endforeach --}}
+</div><!-- patients-overview -->
+
+
+
+               </div>
+               <div class="col-xs-12">
+                <button type="submit" class="btn btn-primary pull-right">Submit Change</button>
+               </div>
+        </div>
+
+</form>
                     
                 </div>
                 <!-- /.col-lg-8 -->
