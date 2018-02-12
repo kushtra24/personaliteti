@@ -84,8 +84,11 @@
                                 <a href="/admintipet"><i class="fa fa-dashboard fa-fw"></i> Tipet</a>
                             </li> 
                             <li>
-                                <a href="/admintesti"><i class="fa fa-dashboard fa-fw"></i> Testi</a>
-                            </li>                       
+                                <a href="/pyetjet"><i class="fa fa-dashboard fa-fw"></i> Pyetjet</a>
+                            </li>
+                            <li>
+                                <a href="/faqet"><i class="fa fa-dashboard fa-fw"></i> Faqet</a>
+                            </li>                
                         @endif
                         <li>
                             <a href="/adminTesti"><i class="fa fa-dashboard fa-fw"></i> Artikujë</a>

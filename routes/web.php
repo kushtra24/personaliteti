@@ -27,8 +27,15 @@ Route::group(['test' => 'test'], function(){
     Route::post('/result', 'testController@introExtroQuestions');
     Route::get('/result', 'testController@introExtroQuestionsResult');
     Route::post('/home', 'testController@introExtroQuestions');
-    Route::get('/admintesti', 'testController@edit');
+    // Route::get('/admintesti', 'testController@edit');
 });
+
+Route::group(['question' => 'question'], function(){
+    Route::get('/pyetjet', 'QuestionsController@index');
+    Route::get('/pyetjet/{id}', 'QuestionsController@show');
+    Route::get('/pyetjet/{id}/edit', 'QuestionsController@edit');
+});
+
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
@@ -37,7 +44,7 @@ Route::group(['tipet' => 'tipet'], function(){
     Route::get('/tipi/{id}', 'tipetController@show')->name('tipi');
     Route::get('/admintipet', 'tipetController@showTypes')->name('admintipet');
 	Route::get('/admintipet/{id}', 'tipetController@edit')->name('admintipet');
-    // Route::post('/admintipet/{id}', 'tipetController@update');
+    Route::post('/admintipet/{id}/update', 'tipetController@update')->name('admintipet.update');
 });
 
 // Route::group(['admin' => 'admin'], function(){

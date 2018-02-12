@@ -59,7 +59,32 @@ class tipetController extends Controller
         return view('tipet.edit', compact('tipi'));
     }
 
-      
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //Updating the fields to the database based on the id
+        $tipi = Tipi::find($id);
+
+        //image
+        if($request->hasFile('file')){
+            $filename = $request->file->getClientOriginalName();
+            $request->file->storeAs('public/images', $filename);
+        }
+
+        $tipi->type = $request['type'];
+        $tipi->name = $request['name'];
+        $tipi->description = $request['description'];
+
+        $tipi->save();
+
+        return view('tipet.tipi', compact('tipi'));
+    }
     
 
 
