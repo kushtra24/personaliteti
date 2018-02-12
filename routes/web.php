@@ -28,6 +28,3 @@ Route::group(['test' => 'test'], function(){
     Route::post('/home', 'testController@introExtroQuestions');
 });
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
-
-Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
-

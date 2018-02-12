@@ -10,6 +10,7 @@
 
 		<a href="{{ route('testi') }}" class="btn btn-primary">Fillo Testing</a>
 		<br><small>Pa pages, nuk eshte e nevojshme regjistrimi</small>
+		<img src="{{ asset('assets/images/test.png') }}" alt="welcome image">
 	</div>
 	
 @endsection
