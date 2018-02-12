@@ -29,11 +29,8 @@ Route::group(['test' => 'test'], function(){
     Route::post('/home', 'testController@introExtroQuestions');
     Route::get('/admintesti', 'testController@edit');
 });
-<<<<<<< HEAD
-Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
-=======
 
-    
+Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 Route::group(['tipet' => 'tipet'], function(){
 	Route::get('/tipet', 'tipetController@index')->name('tipet');
@@ -79,4 +76,3 @@ Route::group(['middleware' => 'web'], function () {
 
 
 });
->>>>>>> b8247ce9da66db127a96c713f3f9ffd62d955f26

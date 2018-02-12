@@ -31,6 +31,6 @@ class Tipis extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tipis');
     }
 }

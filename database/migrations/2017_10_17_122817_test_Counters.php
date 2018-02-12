@@ -25,6 +25,6 @@ class TestCounters extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('test_Counters');
     }
 }

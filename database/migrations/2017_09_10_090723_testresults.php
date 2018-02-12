@@ -37,6 +37,6 @@ class Testresults extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('test_results');
     }
 }
