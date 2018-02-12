@@ -52,3 +52,17 @@
         <!-- /#page-wrapper -->
 
 @endsection
+
+@section('style')
+
+<style>
+
+.setting{
+  display: none;
+}
+
+.testing-table:hover .setting{
+  display: block;
+}
+</style>
+@endsection

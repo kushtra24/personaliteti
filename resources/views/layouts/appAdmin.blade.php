@@ -18,7 +18,7 @@
     <!-- font awesome  -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     
-
+  <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     @yield('style')

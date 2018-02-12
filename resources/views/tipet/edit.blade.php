@@ -1,6 +1,5 @@
 @extends('layouts.appAdmin')
 
-
 @section('dashboard')
  <div id="page-wrapper">
             <div class="row">
@@ -14,53 +13,55 @@
             <div class="row">
                 <div class="col-lg-8">
                     
-<form method="POST" action="" class="form-horizontal" enctype="multipart/form-data" >
-  {{ csrf_field() }}
-        <div class="patients-overview">
-            <p style=" color: orange; text-align: right;"><strong>Notice: </strong>All Orange fields are mandatory</p>
+                    <form method="POST" action="{{-- {{ route('admintipet', [$id]) }} --}}" class="form-horizontal" enctype="multipart/form-data" >
+                      {{ csrf_field() }}
 
-    <div class="form-group">
-      <label for="FileNo" class="col-sm-3 control-label">Kodi</label>
-        <div class="col-sm-9">
+                        <div class="form-group">
+                          <label for="FileNo" class="col-sm-3 control-label">Kodi</label>
+                            <div class="col-sm-9">
 
-      <input type="text" class="form-control" name="lastName" id="LastName" value="{{ $tipi->type }}" placeholder="Kodi">
-       </div>
-    </div>
+                          <input type="text" class="form-control" name="lastName" id="LastName" value="{{ $tipi->type }}" placeholder="Kodi">
+                           </div>
+                        </div>
 
-    <div class="form-group">
-      <label for="FileNo" class="col-sm-3 control-label">Emri</label>
-        <div class="col-sm-9">
+                        <div class="form-group">
+                          <label for="FileNo" class="col-sm-3 control-label">Emri</label>
+                            <div class="col-sm-9">
 
-      <input type="text" class="form-control" name="lastName" id="LastName" value="{{ $tipi->name }}" placeholder="Emri">
-       </div>
-    </div>
+                          <input type="text" class="form-control" name="lastName" id="LastName" value="{{ $tipi->name }}" placeholder="Emri">
+                           </div>
+                        </div>
 
-    <div class="form-group">
-      <label for="FileNo" class="col-sm-3 control-label">Pershkrimi</label>
-        <div class="col-sm-9">
+                        <div class="form-group">
+                          <label for="FileNo" class="col-sm-3 control-label">Pershkrimi</label>
+                            <div class="col-sm-9">
 
-      <textarea class="form-control" rows="3">{{ $tipi->description }}</textarea>
-       </div>
-    </div>
+                          <textarea name="content" id="editor">{{ $tipi->description }}</textarea>
+                           </div>
+                        </div>
 
+                          <button type="submit" class="btn btn-primary pull-right">Submit Change</button>
 
-</div><!-- patients-overview -->
-
-
-
-               </div>
-               <div class="col-xs-12">
-                <button type="submit" class="btn btn-primary pull-right">Submit Change</button>
-               </div>
-        </div>
-
-</form>
+                    </form>
                     
                 </div>
                 <!-- /.col-lg-8 -->
             </div>
             <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
+</div>
+<!-- /#page-wrapper -->
+
+@endsection
+
+@section('adminscripts')
+
+
+  <script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 
 @endsection

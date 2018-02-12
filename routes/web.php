@@ -37,6 +37,7 @@ Route::group(['tipet' => 'tipet'], function(){
     Route::get('/tipi/{id}', 'tipetController@show')->name('tipi');
     Route::get('/admintipet', 'tipetController@showTypes')->name('admintipet');
 	Route::get('/admintipet/{id}', 'tipetController@edit')->name('admintipet');
+    // Route::post('/admintipet/{id}', 'tipetController@update');
 });
 
 // Route::group(['admin' => 'admin'], function(){
