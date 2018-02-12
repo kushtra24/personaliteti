@@ -54,7 +54,7 @@ class User extends Authenticatable
             return false;
     }//end of HasRole
 
-    public function  testResults(){
+    public function testResults(){
         return $this->hasMany(TestResults::Class);
     }
 //'App\testResults', 'user_id', 'id'

@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'userController@index')->name('profile');
 //Route::get('/home', 'HomeController@show');
 
 Route::group(['test' => 'test'], function(){
@@ -26,5 +27,56 @@ Route::group(['test' => 'test'], function(){
     Route::post('/result', 'testController@introExtroQuestions');
     Route::get('/result', 'testController@introExtroQuestionsResult');
     Route::post('/home', 'testController@introExtroQuestions');
+    Route::get('/admintesti', 'testController@edit');
 });
+<<<<<<< HEAD
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
+=======
+
+    
+
+Route::group(['tipet' => 'tipet'], function(){
+	Route::get('/tipet', 'tipetController@index')->name('tipet');
+    Route::get('/tipi/{id}', 'tipetController@show')->name('tipi');
+    Route::get('/admintipet', 'tipetController@showTypes')->name('admintipet');
+	Route::get('/admintipet/{id}', 'tipetController@edit')->name('admintipet');
+});
+
+// Route::group(['admin' => 'admin'], function(){
+// 	Route::get('/admin', 'adminController@index')->name('admin');
+// });
+
+Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
+
+
+// User role authentification and access gration
+Route::group(['middleware' => 'web'], function () {
+
+    // Route::get('/', function () {
+    //     return view('index');
+    // })->name('main');
+
+    // Route::get('/author', [
+    //     'uses' => 'AppController@getAuthorPage',
+    //     'as' => 'author',
+    //     'middleware' => 'roles',
+    //     'roles' => ['Admin', 'Author']
+    // ]);
+
+    // Route::get('/author/createArticle', [
+    //     'uses' => 'AppController@getGenerateArticle',
+    //     'as' => 'author.article',
+    //     'middleware' => 'roles',
+    //     'roles' => ['Admin', 'Author']
+    // ]);
+
+    Route::get('/admin', [
+        'uses' => 'adminController@index',
+        'as' => 'admin',
+        'middleware' => 'roles',
+        'roles' => ['Admin', 'Author']
+    ]);
+
+
+});
+>>>>>>> b8247ce9da66db127a96c713f3f9ffd62d955f26

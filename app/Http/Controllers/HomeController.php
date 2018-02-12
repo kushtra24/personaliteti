@@ -18,7 +18,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the personality types list
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,6 +28,18 @@ class HomeController extends Controller
         $results = auth()->user()->testResults->last();
         return view('home')->with('results', $results );
     }
+
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function tipet()
+    {
+        return view('tipet');
+    }
+    
 
     /**
      * Display the specified resource.

@@ -1,6 +1,7 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
 
 // Variables
 @import "variables";
@@ -8,6 +9,17 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+.navbar-default {
+    background-color: inherit;
+    border-color: inherit;
+    border: none;
+    margin: 30px 0;
+    a{
+    	font-family: 'Montserrat', sans-serif;
+    	font-size: 18px;
+    	text-transform: uppercase;
+    }
+}
 
 .btn{
 	background-color: transparent;
@@ -165,6 +177,46 @@ input[type="radio"] {
 	text-align: center;
 }
 
+
+#heading-welcomepage{
+	text-align: center;
+	h1{
+		font-family: 'Montserrat', sans-serif;
+		text-align: center;
+		font-size: 55px;
+	}
+	h4{
+		font-family: 'Montserrat', sans-serif;
+		text-align: center;
+		font-size: 18px;
+	}
+	a{
+		text-align: cneter;
+	}
+}
+
+#welcome-content-middle{
+	text-align: center;
+	i{
+		margin: 55px 0 0;
+		color: red;
+		-webkit-animation: rotation 2s infinite linear;
+	}
+	p{
+		width: 550px;
+		margin: 0 auto;
+	}
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
 // .testing-page{
 // 	input[type="submit"]{
 // 		// width: 100%;
@@ -225,4 +277,13 @@ footer{
 	&.Extrovert{
 		background-color: #8eb4cb;
 	}
+}
+// __________________________________________________________________________________________Tipet
+
+#the-types{
+	text-align: center;
+}
+
+.type-group {
+    margin: 50px 0;
 }

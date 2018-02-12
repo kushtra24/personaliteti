@@ -1,0 +1,95 @@
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container">
+
+	<section id="heading-welcomepage">
+		<h1>Tipet e Personaliteteve</h1>
+		<h4>Keto jane tipet e personaliteteve ne nje vend, shtypni mbi te per te lexuar me shum</h4>
+		<hr>
+	</section>
+
+	<section id="the-types">
+
+		{{-- @foreach ($tipet as $tipi)
+			@if($tipi->id <= 4)
+			<div class="col-md-3">
+					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+						<h4>{{ $tipi->type }}</h4>
+						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<p>{{ $tipi->name }}</p>
+					</a>
+				</div>
+			@endif
+		@endforeach --}}
+
+		<div id="organize" class="type-group row">
+			<h1><strong>Organizim</strong></h1>
+				
+				@foreach ($tipet as $tipi)
+			@if($tipi->id <= 4)
+			<div class="col-md-3">
+					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+						<h4>{{ $tipi->type }}</h4>
+						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<p>{{ $tipi->name }}</p>
+					</a>
+				</div>
+			@endif
+		@endforeach
+		</div>
+
+
+		<div id="vetvetja" class="type-group row">
+			<h1><strong>Vetvetja</strong></h1>
+
+			@foreach ($tipet as $tipi)
+			@if($tipi->id > 4 && $tipi->id < 9 )
+			<div class="col-md-3">
+					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+						<h4>{{ $tipi->type }}</h4>
+						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<p>{{ $tipi->name }}</p>
+					</a>
+				</div>
+			@endif
+			@endforeach
+				
+		</div>
+
+		<div id="shoqeri" class="type-group row">
+			<h1><strong>Shoqeri</strong></h1>
+
+			@foreach ($tipet as $tipi)
+			@if($tipi->id > 8 && $tipi->id < 13 )
+			<div class="col-md-3">
+					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+						<h4>{{ $tipi->type }}</h4>
+						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<p>{{ $tipi->name }}</p>
+					</a>
+				</div>
+			@endif
+			@endforeach
+
+		</div>
+
+		<div id="mbledhje" class="type-group row">
+			<h1><strong>Mbledhje</strong></h1>
+				@foreach ($tipet as $tipi)
+			@if($tipi->id > 12 && $tipi->id < 17 )
+			<div class="col-md-3">
+					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
+						<h4>{{ $tipi->type }}</h4>
+						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<p>{{ $tipi->name }}</p>
+					</a>
+				</div>
+			@endif
+			@endforeach
+		</div>
+
+	</section>
+	
+@endsection

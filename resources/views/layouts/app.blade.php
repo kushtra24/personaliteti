@@ -8,10 +8,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Personaliteti.com') }}</title>
+    <title>{{ config('app.name', 'Personaliteti') }}</title>
 
     <!-- font awesome  -->
-    <script src="https://use.fontawesome.com/94c81482d0.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -45,7 +46,7 @@
                             <a href="/">Home</a>
                         </li>
                         <li>
-                            <a href="#">Tipet</a>
+                            <a href="/tipet">Tipet</a>
                         </li>
                         <li>
                             <a href="#">Rreth nesh</a></li>
@@ -69,7 +70,10 @@
                                 <ul class="dropdown-menu" role="menu">
 
                                     <li>
-                                        <a href="/home">Profile</a>
+                                        <a href="/profile">Profili</a>
+                                         @if (Auth::user() && Auth::user()->hasAnyRole('User')) 
+                                            <a href="/home">Resultatet</a>
+                                         @endif
 
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
