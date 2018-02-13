@@ -22,7 +22,8 @@ Route::get('/profile', 'userController@index')->name('profile');
 //Route::get('/home', 'HomeController@show');
 
 Route::group(['test' => 'test'], function(){
-    Route::get('/testi', 'testController@doTheTest')->name('testi');
+    Route::get('/testip', 'testController@doTheTest')->name('testi');
+    // Route::get('/testi', 'testController@showQuestions')->name('showQuestions');
     //post the patients deetails to the database and return to patients
     Route::post('/result', 'testController@introExtroQuestions');
     Route::get('/result', 'testController@introExtroQuestionsResult');

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Cookie\CookieJar;
 use Illuminate\Support\Facades\Cookie;
 use App\User;
+use App\Question;
 use Auth;
 //use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
@@ -36,10 +37,13 @@ class testController extends Controller
     }
 
     public function doTheTest(){
+
+        $questions = Question::all();
+
         $spajtohem = "S'pajtohem";
         $pajtohem = "Pajtohem";
 
-        return view('testi.create', compact('spajtohem', 'pajtohem'));
+        return view('testi.create', compact('spajtohem', 'pajtohem', 'questions'));
     }
 
     /**
@@ -65,6 +69,7 @@ class testController extends Controller
 
         return view('home', compact('user'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

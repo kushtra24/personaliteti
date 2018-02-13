@@ -1,4 +1,12 @@
 
+        
+        @foreach( $questions as $question)
+
+        <p>{{ $question->question }}</p>
+        <p>{{ $question->purpose }}</p>
+
+        @endforeach
+
         <div class="question form-group">
             <h3>Pyetja 1</h3>
             <fieldset  class="test-field pull-left" id="group1">
