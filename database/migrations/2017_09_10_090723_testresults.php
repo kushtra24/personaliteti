@@ -25,7 +25,7 @@ class Testresults extends Migration
             $table->tinyInteger('ft_final_procent_rez');
             $table->string('judging_perspecting');
             $table->tinyInteger('jp_final_procent_rez');
-            $table->string('rol_name');
+            $table->string('rol_name')->nullable();
             $table->timestamps();
         });
     }

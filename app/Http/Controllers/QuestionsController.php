@@ -36,9 +36,22 @@ class QuestionsController extends Controller
      */
     public function store(Request $request)
     {        
-        $store->finaltype = $this->finalType;
-        $store->intro_extro = $this->introExtro;
+
+        $store = new Question;
+
+        $store->question = $request['pyetja'];
+        $store->purpose = $request['purpose'];
         $store->save();
+
+        if ($store->save()) {
+        $request->session()->flash('message.level', 'success');
+        $request->session()->flash('message.content', 'Question eshte publikuar me sukses');
+        } else {
+            $request->session()->flash('message.level', 'danger');
+            $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
+        }
+
+        return view('questions.create');
     }
 
     /**
@@ -76,7 +89,21 @@ class QuestionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $questions = Question::find($id);
+
+        $questions->question = $request['pyetja'];
+        $questions->purpose = $request['purpose'];
+        $questions->save();
+
+        if ($questions->save()) {
+        $request->session()->flash('message.level', 'success');
+        $request->session()->flash('message.content', 'Question eshte publikuar me sukses');
+        } else {
+            $request->session()->flash('message.level', 'danger');
+            $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
+        }
+
+        return view('questions.edit', compact('questions'));
     }
 
     /**
@@ -87,6 +114,10 @@ class QuestionsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $questions = Question::find($id);
+
+        $questions->delete();
+
+        return back();
     }
 }
