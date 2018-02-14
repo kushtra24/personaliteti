@@ -161,22 +161,16 @@ public function introExtroQuestions(CookieJar $cookieJar)
 
 
 //Evaluates the section of extrovert or introvert, working with the partial introExtro.blade.php testi > partials
-public function extrovertOrintrovert(){
+public function extrovertOrintrovert()
+{
+    $result = 0;
 
-    $q1 = Input::get('q1');
-    $q2 = Input::get('q2');
-    $q3 = Input::get('q3');
-    $q4 = Input::get('q4');
-    $q5 = Input::get('q5');
-    $q6 = Input::get('q6');
-    $q7 = Input::get('q7');
-    $q8 = Input::get('q8');
-    $q9 = Input::get('q9');
-    $q10 = Input::get('q10');
-    $q11 = Input::get('q11');
+    if($extroIntro = request()->input('q.extroIntro')){
+        foreach($extroIntro as $question){
+            $result = $result + $question;
+        }
+    }
 
-    //add the inpute values
-    $result = $q1 + $q2 + $q3 + $q4 + $q5 + $q6 + $q7 + $q8 + $q9 + $q10 + $q11;
     //Determine of the results are introvertet or extrovertet
     if ($result < 0) {
         $this->introExtro = "Extrovert";
@@ -186,6 +180,7 @@ public function extrovertOrintrovert(){
         $this->introExtro = "Padefinim";
     }
     else{
+
         $this->introExtro = "Introvert";
     }
 
@@ -201,21 +196,14 @@ public function extrovertOrintrovert(){
 //Evaluates the section of intuitive or Sensing, working with the partial intuitiveSensing.blade.php testi > partials
 public function intuitiveOrSensing(){
 
-    $ns1 = Input::get('ns1');
-    $ns2 = Input::get('ns2');
-    $ns3 = Input::get('ns3');
-    $ns4 = Input::get('ns4');
-    $ns5 = Input::get('ns5');
-    $ns6 = Input::get('ns6');
-    $ns7 = Input::get('ns7');
-    $ns8 = Input::get('ns8');
-    $ns9 = Input::get('ns9');
-    $ns10 = Input::get('ns10');
-    $ns11 = Input::get('ns11');
-    //add the inpute values
-
-    $result = $ns1 + $ns2 + $ns3 + $ns4 + $ns5 + $ns6 + $ns7 + $ns8 + $ns9 + $ns10 + $ns11;
-
+    $result = 0;
+   
+    if($intuitionSensing = request()->input('q.intuitionSensing')){
+        foreach($intuitionSensing as $question){
+            $result = $result + $question;
+        }    
+    }
+    
     //Determine of the results are introvertet or extrovertet
     if ($result < 0) {
         $this->intuSens = "Intuitive";
@@ -239,20 +227,28 @@ public function intuitiveOrSensing(){
 //Evaluates the section of Feeling or Thinking, working with the partial thinkingFeeling.blade.php testi > partials
     public function feelingOrThinking(){
 
-        $ftq1 = Input::get('ftq1');
-        $ftq2 = Input::get('ftq2');
-        $ftq3 = Input::get('ftq3');
-        $ftq4 = Input::get('ftq4');
-        $ftq5 = Input::get('ftq5');
-        $ftq6 = Input::get('ftq6');
-        $ftq7 = Input::get('ftq7');
-        $ftq8 = Input::get('ftq8');
-        $ftq9 = Input::get('ftq9');
-        $ftq10 = Input::get('ftq10');
-        $ftq11 = Input::get('ftq11');
+
+        $result = 0;
+         if($feelingThinking = request()->input('q.feelingThinking')){
+            foreach($feelingThinking as $question){
+                $result = $result + $question;
+            }    
+        }
+
+        // $ftq1 = Input::get('ftq1');
+        // $ftq2 = Input::get('ftq2');
+        // $ftq3 = Input::get('ftq3');
+        // $ftq4 = Input::get('ftq4');
+        // $ftq5 = Input::get('ftq5');
+        // $ftq6 = Input::get('ftq6');
+        // $ftq7 = Input::get('ftq7');
+        // $ftq8 = Input::get('ftq8');
+        // $ftq9 = Input::get('ftq9');
+        // $ftq10 = Input::get('ftq10');
+        // $ftq11 = Input::get('ftq11');
 
         //add the inpute values
-        $result = $ftq1 + $ftq2 + $ftq3 + $ftq4 + $ftq5 + $ftq6 + $ftq7 + $ftq8 + $ftq9 + $ftq10 + $ftq11;
+        // $result = $ftq1 + $ftq2 + $ftq3 + $ftq4 + $ftq5 + $ftq6 + $ftq7 + $ftq8 + $ftq9 + $ftq10 + $ftq11;
 
         //Determine of the results are introvertet or extrovertet
         if ($result < 0) {
@@ -277,20 +273,28 @@ public function intuitiveOrSensing(){
 //Evaluates the section of Judging or Perspekting, working with the partial judgingPerspecting.blade.php testi > partials
     public function judgingOrperspecting(){
 
-        $jp1 = Input::get('jp1');
-        $jp2 = Input::get('jp2');
-        $jp3 = Input::get('jp3');
-        $jp4 = Input::get('jp4');
-        $jp5 = Input::get('jp5');
-        $jp6 = Input::get('jp6');
-        $jp7 = Input::get('jp7');
-        $jp8 = Input::get('jp8');
-        $jp9 = Input::get('jp9');
-        $jp10 = Input::get('jp10');
-        $jp11 = Input::get('jp11');
+
+        $result = 0;
+         if($jundgingPerciving = request()->input('q.jundgingPerciving')){
+            foreach($jundgingPerciving as $question){
+                $result = $result + $question;
+            }    
+        }
+
+        // $jp1 = Input::get('jp1');
+        // $jp2 = Input::get('jp2');
+        // $jp3 = Input::get('jp3');
+        // $jp4 = Input::get('jp4');
+        // $jp5 = Input::get('jp5');
+        // $jp6 = Input::get('jp6');
+        // $jp7 = Input::get('jp7');
+        // $jp8 = Input::get('jp8');
+        // $jp9 = Input::get('jp9');
+        // $jp10 = Input::get('jp10');
+        // $jp11 = Input::get('jp11');
 
         //add the inpute values
-        $result = $jp1 + $jp2 + $jp3 + $jp4 + $jp5 + $jp6 + $jp7 + $jp8 + $jp9 + $jp10 + $jp11;
+        // $result = $jp1 + $jp2 + $jp3 + $jp4 + $jp5 + $jp6 + $jp7 + $jp8 + $jp9 + $jp10 + $jp11;
 
         //Determine of the results are introvertet or extrovertet
         if ($result < 0) {

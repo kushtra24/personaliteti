@@ -25,7 +25,7 @@ class QuestionsController extends Controller
      */
     public function create()
     {
-        //
+        return view('questions.create');
     }
 
     /**
@@ -35,8 +35,10 @@ class QuestionsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {        
+        $store->finaltype = $this->finalType;
+        $store->intro_extro = $this->introExtro;
+        $store->save();
     }
 
     /**

@@ -34,19 +34,42 @@
             <div class="tab-content">
 
               <div role="tabpanel" class="tab-pane fade in active firstSet" id="firstSet">
-                  @include('testi.partials.introExtro')
+                  {{-- @include('testi.partials.introExtro') --}}
+
+                @foreach( $questions->slice(0, 2) as $question)
+                <div class="question form-group">
+                    <h3>{{ $question->question }}</h3>
+                    <fieldset  class="test-field pull-left" id="group1">
+                        <p>{{ $spajtohem }}</p>
+                        <input  type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3">
+
+                        <input type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2">
+
+                        <input type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1">
+                        
+                        <input type="radio" name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}neotral1" value="0">
+                        
+                        <input type="radio" name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option1r" class="right" value="1">
+                        
+                        <input type="radio" name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2">
+                        
+                        <input type="radio" name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3">
+                        <p>{{$pajtohem}}</p>
+                    </fieldset>
+                </div>
+                @endforeach
+
               </div>
 
               <div role="tabpanel" class="tab-pane fade secondSet" id="secondSet">
-                  @include('testi.partials.IntuitiveSensitive')
               </div>
 
               <div role="tabpanel" class="tab-pane fade thirdSet" id="thirdSet">
-                   @include('testi.partials.thinkingFeeling')
+                   {{-- @include('testi.partials.thinkingFeeling') --}}
               </div>
 
               <div role="tabpanel" class="tab-pane fade lastSet" id="lastSet">
-                   @include('testi.partials.judgingPerspecting')
+                   {{-- @include('testi.partials.judgingPerspecting') --}}
                   <input type="submit" class="btn btn-primary btn-lg btn-block" value="Perfundo">
               </div>
               

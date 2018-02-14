@@ -33,6 +33,8 @@ Route::group(['test' => 'test'], function(){
 
 Route::group(['question' => 'question'], function(){
     Route::get('/pyetjet', 'QuestionsController@index');
+    Route::get('/pyetjet/create', 'QuestionsController@create');
+    Route::post('/pyetjet/store', 'QuestionsController@store');
     Route::get('/pyetjet/{id}', 'QuestionsController@show');
     Route::get('/pyetjet/{id}/edit', 'QuestionsController@edit');
 });
