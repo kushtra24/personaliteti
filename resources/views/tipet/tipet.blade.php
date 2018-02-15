@@ -24,13 +24,10 @@
 			@endif
 		@endforeach --}}
 
-
-
 		<div id="organize" class="type-group row">
-			<?php $first = ""; $var = 0;?>
-			<h1><strong> <?php echo $first; ?> </strong></h1>
-		@for($i = 0; $i <= 4; $i++)
-			@foreach ($tipet->slice(0, $var) as $tipi)
+			<h1><strong>Organizim</strong></h1>
+				
+			@foreach ($tipet->slice(0, 4) as $tipi)
 				<div class="col-md-3">
 					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
 						<h4>{{ $tipi->type }}</h4>
@@ -39,18 +36,6 @@
 					</a>
 				</div>
 			@endforeach
-			
-			<?php $var = $var + 4;
-
-				if ($i= 1) {
-					$first = "Organizim";
-				}
-				elseif($i= 2){
-					$first = "tjter";
-				}
-			?>
-
-		@endfor
 		</div>
 
 
