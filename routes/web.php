@@ -51,6 +51,16 @@ Route::group(['post' => 'post'], function(){
     Route::post('/post/{id}/delete', 'postController@destroy')->name('postController.destroy');
 });
 
+Route::group(['page' => 'page'], function(){
+    Route::get('/faqet', 'pageController@index');
+    Route::get('/page/create', 'pageController@create');
+    Route::post('/page/store', 'pageController@store');
+    Route::get('/page/{id}', 'pageController@show');
+    Route::get('/page/{id}/edit', 'pageController@edit');
+    Route::post('/page/{id}/edit', 'pageController@update')->name('page.update');
+    Route::post('/page/{id}/delete', 'pageController@destroy')->name('page.destroy');
+});
+
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
