@@ -36,7 +36,7 @@
               <div role="tabpanel" class="tab-pane fade in active firstSet" id="firstSet">
                   {{-- @include('testi.partials.introExtro') --}}
 
-                @foreach( $questions->slice(0, 2) as $question)
+                @foreach( $questions->slice(0, 10) as $question)
                 <div class="question form-group">
                     <h3>{{ $question->question }}</h3>
                     <fieldset  class="test-field pull-left" id="group1">

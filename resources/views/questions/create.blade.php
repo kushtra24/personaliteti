@@ -14,6 +14,12 @@
             <div class="row">
                 <div class="col-lg-4">
 
+                        @if(session()->has('message.level'))
+                            <div class="alert alert-{{ session('message.level') }}"> 
+                            {!! session('message.content') !!}
+                            </div>
+                        @endif
+
                      <form  method="POST" action="{{ action('QuestionsController@store') }}" >
                       {!! csrf_field() !!}
                        

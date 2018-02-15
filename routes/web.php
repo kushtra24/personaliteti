@@ -37,6 +37,18 @@ Route::group(['question' => 'question'], function(){
     Route::post('/pyetjet/store', 'QuestionsController@store');
     Route::get('/pyetjet/{id}', 'QuestionsController@show');
     Route::get('/pyetjet/{id}/edit', 'QuestionsController@edit');
+    Route::post('/pyetjet/{id}/edit', 'QuestionsController@update')->name('QuestionsController.update');
+    Route::post('/pyetjet/{id}/delete', 'QuestionsController@destroy')->name('QuestionsController.destroy');
+});
+
+Route::group(['post' => 'post'], function(){
+    Route::get('/post', 'postController@index');
+    Route::get('/post/create', 'postController@create');
+    Route::post('/post/store', 'postController@store');
+    Route::get('/post/{id}', 'postController@show');
+    Route::get('/post/{id}/edit', 'postController@edit');
+    Route::post('/post/{id}/edit', 'postController@update')->name('postController.update');
+    Route::post('/post/{id}/delete', 'postController@destroy')->name('postController.destroy');
 });
 
 

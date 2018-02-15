@@ -91,7 +91,7 @@
                             </li>                
                         @endif
                         <li>
-                            <a href="/adminTesti"><i class="fa fa-dashboard fa-fw"></i> Artikujë</a>
+                            <a href="/post"><i class="fa fa-dashboard fa-fw"></i> Artikujë</a>
                         </li> 
                     </ul>
                 </div>
