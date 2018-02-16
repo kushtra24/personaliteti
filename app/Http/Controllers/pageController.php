@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Page;
 
 class pageController extends Controller
 {
@@ -13,7 +14,8 @@ class pageController extends Controller
      */
     public function index()
     {
-        return view('page.index');
+        $pages = Page::all();
+        return view('pages.index', compact('pages'));
     }
 
     /**
@@ -23,7 +25,7 @@ class pageController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.create');
     }
 
     /**
@@ -34,7 +36,21 @@ class pageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $store = new Page;
+
+        $store->title = $request['title'];
+        $store->content = $request['content'];
+        $store->save();
+
+        if ($store->save()) {
+        $request->session()->flash('message.level', 'success');
+        $request->session()->flash('message.content', 'Faqja eshte publikuar me sukses');
+        } else {
+            $request->session()->flash('message.level', 'danger');
+            $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
+        }
+
+        return view('pages.create');
     }
 
     /**
@@ -45,7 +61,9 @@ class pageController extends Controller
      */
     public function show($id)
     {
-        //
+        $pages = Page::find($id);
+
+        return view('pages.show', compact('pages'));
     }
 
     /**
@@ -56,7 +74,9 @@ class pageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pages = Page::find($id);
+
+        return view('pages.edit', compact('pages'));
     }
 
     /**
@@ -68,7 +88,21 @@ class pageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pages = Page::find($id);
+
+        $pages->title = $request['title'];
+        $pages->content = $request['content'];
+        $pages->save();
+
+        if ($pages->save()) {
+        $request->session()->flash('message.level', 'success');
+        $request->session()->flash('message.content', 'Faqja eshte ndryshuar me sukses');
+        } else {
+            $request->session()->flash('message.level', 'danger');
+            $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
+        }
+
+        return view('pages.edit', compact('pages'));
     }
 
     /**
@@ -79,6 +113,10 @@ class pageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pages = Page::find($id);
+
+        $pages->delete();
+
+        return back();
     }
 }

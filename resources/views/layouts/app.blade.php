@@ -70,6 +70,9 @@
                                 <ul class="dropdown-menu" role="menu">
 
                                     <li>
+                                        @if (Auth::user() && Auth::user()->hasAnyRole('admin')) 
+                                            <a href="/admin">Admin Area</a>
+                                         @endif
                                         <a href="/profile">Profili</a>
                                          @if (Auth::user() && Auth::user()->hasAnyRole('User')) 
                                             <a href="/home">Resultatet</a>
@@ -146,7 +149,7 @@
                 <ul>
                     <li> <a href="#"> Kontakt</a></li>
                     <li> <a href="#"> Kushtet e përdorimit</a></li>
-                    <li> <a href="#"> Politika e privatesisë</a></li>
+                    <li> <a href="/page/8"> Politika e privatesisë</a></li>
                 </ul>
         </div>
     </div>
