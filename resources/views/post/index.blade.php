@@ -5,7 +5,7 @@
  <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Pyetjet</h1>
+            <h1 class="page-header">Artikujt</h1>
             <a href="{!! action('postController@create') !!}" class="btn btn-primary">Shto Artikull</a>
         </div>
         <!-- /.col-lg-12 -->

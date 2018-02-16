@@ -23,27 +23,13 @@ Route::get('/profile', 'userController@index')->name('profile');
 
 Route::group(['test' => 'test'], function(){
     Route::get('/testip', 'testController@doTheTest')->name('testi');
-    // Route::get('/testi', 'testController@showQuestions')->name('showQuestions');
-    //post the patients deetails to the database and return to patients
     Route::post('/result', 'testController@introExtroQuestions');
     Route::get('/result', 'testController@introExtroQuestionsResult');
     Route::post('/home', 'testController@introExtroQuestions');
-    // Route::get('/admintesti', 'testController@edit');
 });
 
-Route::group(['question' => 'question'], function(){
-    Route::get('/pyetjet', 'QuestionsController@index');
-    Route::get('/pyetjet/create', 'QuestionsController@create');
-    Route::post('/pyetjet/store', 'QuestionsController@store');
-    Route::get('/pyetjet/{id}', 'QuestionsController@show');
-    Route::get('/pyetjet/{id}/edit', 'QuestionsController@edit');
-    Route::post('/pyetjet/{id}/edit', 'QuestionsController@update')->name('QuestionsController.update');
-    Route::post('/pyetjet/{id}/delete', 'QuestionsController@destroy')->name('QuestionsController.destroy');
-});
 
 Route::group(['post' => 'post'], function(){
-    Route::get('/post', 'postController@index');
-    Route::get('/post/create', 'postController@create');
     Route::post('/post/store', 'postController@store');
     Route::get('/post/{id}', 'postController@show');
     Route::get('/post/{id}/edit', 'postController@edit');
@@ -57,14 +43,7 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 Route::group(['tipet' => 'tipet'], function(){
 	Route::get('/tipet', 'tipetController@index')->name('tipet');
     Route::get('/tipi/{id}', 'tipetController@show')->name('tipi');
-    Route::get('/admintipet', 'tipetController@showTypes')->name('admintipet');
-	Route::get('/admintipet/{id}', 'tipetController@edit')->name('admintipet');
-    Route::post('/admintipet/{id}/update', 'tipetController@update')->name('admintipet.update');
 });
-
-// Route::group(['admin' => 'admin'], function(){
-// 	Route::get('/admin', 'adminController@index')->name('admin');
-// });
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
@@ -72,30 +51,29 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 // User role authentification and access gration
 Route::group(['middleware' => 'web'], function () {
 
-    // Route::get('/', function () {
-    //     return view('index');
-    // })->name('main');
+    Route::get('/admin', ['uses' => 'adminController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    //Posts
+    Route::get('/post', ['uses' => 'postController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::get('/post/create', ['uses' => 'postController@create', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    //Questions
+    Route::get('/pyetjet', ['uses' => 'QuestionsController@index', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::get('/pyetjet/create', ['uses' => 'QuestionsController@create', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/pyetjet/store', ['uses' => 'QuestionsController@store', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::get('/pyetjet/{id}', ['uses' => 'QuestionsController@show', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::get('/pyetjet/{id}/edit', ['uses' => 'QuestionsController@edit', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/pyetjet/{id}/edit', ['uses' => 'QuestionsController@update', 'as' => 'QuestionsController.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/pyetjet/{id}/delete', ['uses' => 'QuestionsController@destroy', 'as' => 'QuestionsController.destroy', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    //Tipi
+    Route::get('/admintipet', ['uses' => 'tipetController@showTypes', 'as' => 'admintipet', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::get('/admintipet/{id}', ['uses' => 'tipetController@edit', 'as' => 'admintipet', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/admintipet/{id}/update', ['uses' => 'tipetController@update', 'as' => 'admintipet.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    //pages
+    Route::get('/faqet', ['uses' => 'pageController@index', 'middleware' => 'roles', 'roles' => ['Admin']]);
 
-    // Route::get('/author', [
-    //     'uses' => 'AppController@getAuthorPage',
-    //     'as' => 'author',
-    //     'middleware' => 'roles',
-    //     'roles' => ['Admin', 'Author']
-    // ]);
-
-    // Route::get('/author/createArticle', [
-    //     'uses' => 'AppController@getGenerateArticle',
-    //     'as' => 'author.article',
-    //     'middleware' => 'roles',
-    //     'roles' => ['Admin', 'Author']
-    // ]);
-
-    Route::get('/admin', [
-        'uses' => 'adminController@index',
-        'as' => 'admin',
-        'middleware' => 'roles',
-        'roles' => ['Admin', 'Author']
-    ]);
-
-
+    Route::get('/page/create', 'pageController@create');
+    Route::post('/page/store', 'pageController@store');
+    Route::get('/page/{id}', 'pageController@show');
+    Route::get('/page/{id}/edit', 'pageController@edit');
+    Route::post('/page/{id}/edit', 'pageController@update')->name('page.update');
+    Route::post('/page/{id}/delete', 'pageController@destroy')->name('page.destroy');
 });
