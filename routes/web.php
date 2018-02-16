@@ -37,17 +37,6 @@ Route::group(['post' => 'post'], function(){
     Route::post('/post/{id}/delete', 'postController@destroy')->name('postController.destroy');
 });
 
-Route::group(['page' => 'page'], function(){
-    Route::get('/faqet', 'pageController@index');
-    Route::get('/page/create', 'pageController@create');
-    Route::post('/page/store', 'pageController@store');
-    Route::get('/page/{id}', 'pageController@show');
-    Route::get('/page/{id}/edit', 'pageController@edit');
-    Route::post('/page/{id}/edit', 'pageController@update')->name('page.update');
-    Route::post('/page/{id}/delete', 'pageController@destroy')->name('page.destroy');
-});
-
-
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 Route::group(['tipet' => 'tipet'], function(){
@@ -79,11 +68,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/admintipet/{id}/update', ['uses' => 'tipetController@update', 'as' => 'admintipet.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
     //pages
     Route::get('/faqet', ['uses' => 'pageController@index', 'middleware' => 'roles', 'roles' => ['Admin']]);
-
-    Route::get('/page/create', 'pageController@create');
-    Route::post('/page/store', 'pageController@store');
-    Route::get('/page/{id}', 'pageController@show');
-    Route::get('/page/{id}/edit', 'pageController@edit');
-    Route::post('/page/{id}/edit', 'pageController@update')->name('page.update');
-    Route::post('/page/{id}/delete', 'pageController@destroy')->name('page.destroy');
+    Route::get('/faqet/create', ['uses' => 'pageController@create', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/faqet/store', ['uses' => 'pageController@store', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::get('/faqet/{id}', ['uses' => 'pageController@show', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::get('/faqet/{id}/edit', ['uses' => 'pageController@edit', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/faqet/{id}/edit', ['uses' => 'pageController@update', 'as' => 'page.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/faqet/{id}/delete', ['uses' => 'pageController@destroy', 'as' => 'page.destroy', 'middleware' => 'roles', 'roles' => ['Admin']]);
 });

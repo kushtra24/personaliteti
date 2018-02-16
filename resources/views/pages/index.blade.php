@@ -5,7 +5,7 @@
  <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Pyetjet</h1>
+            <h1 class="page-header">Faqet</h1>
             <a href="{!! action('pageController@create') !!}" class="btn btn-primary">Shto Faqe</a>
         </div>
         <!-- /.col-lg-12 -->
