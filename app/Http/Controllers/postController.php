@@ -25,7 +25,7 @@ class postController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.create');
     }
 
     /**
@@ -36,7 +36,29 @@ class postController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $store = new Page;
+
+        $store->title = $request['title'];
+        $store->content = $request['content'];
+        $store->author = $request['author'];
+        
+        //image
+        if($request->hasFile('file')){
+            $filename = $request->file->getClientOriginalName();
+            $filename = $request->file('file')->storeAs('public/images', $filename);
+        }
+
+        $store->save();
+
+        if ($store->save()) {
+        $request->session()->flash('message.level', 'success');
+        $request->session()->flash('message.content', 'Faqja eshte publikuar me sukses');
+        } else {
+            $request->session()->flash('message.level', 'danger');
+            $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
+        }
+
+        return redirect('post');
     }
 
     /**
@@ -47,7 +69,9 @@ class postController extends Controller
      */
     public function show($id)
     {
-        //
+        $posts = Post::find($id);
+
+        return view('post.show', compact('posts'));
     }
 
     /**
@@ -58,7 +82,9 @@ class postController extends Controller
      */
     public function edit($id)
     {
-        //
+        $posts = Post::find($id);
+
+        return view('post.edit', compact('posts'));
     }
 
     /**
@@ -70,7 +96,29 @@ class postController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $store = new Post;
+
+        $store->title = $request['title'];
+        $store->content = $request['content'];
+        $store->author = $request['author'];
+        
+        //image
+        if($request->hasFile('file')){
+            $filename = $request->file->getClientOriginalName();
+            $filename = $request->file('file')->storeAs('public/images', $filename);
+        }
+
+        $store->save();
+
+        if ($store->save()) {
+        $request->session()->flash('message.level', 'success');
+        $request->session()->flash('message.content', 'Faqja eshte publikuar me sukses');
+        } else {
+            $request->session()->flash('message.level', 'danger');
+            $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
+        }
+
+        return redirect('post');
     }
 
     /**
@@ -81,6 +129,10 @@ class postController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Posts = Post::find($id);
+
+        $Posts->delete();
+
+        return back();
     }
 }

@@ -36,7 +36,7 @@ class pageController extends Controller
      */
     public function store(Request $request)
     {
-         $store = new Page;
+        $store = new Page;
 
         $store->title = $request['title'];
         $store->content = $request['content'];
@@ -50,7 +50,7 @@ class pageController extends Controller
             $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
         }
 
-        return view('pages.create');
+        return redirect('faqet');
     }
 
     /**

@@ -45,13 +45,13 @@ class QuestionsController extends Controller
 
         if ($store->save()) {
         $request->session()->flash('message.level', 'success');
-        $request->session()->flash('message.content', 'Question eshte publikuar me sukses');
+        $request->session()->flash('message.content', 'Pyetja eshte publikuar me sukses');
         } else {
             $request->session()->flash('message.level', 'danger');
             $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
         }
 
-        return view('questions.create');
+        return redirect('pyetjet');
     }
 
     /**

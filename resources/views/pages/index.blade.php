@@ -16,10 +16,10 @@
                 <div class="col-lg-12">
 
                     @if(session()->has('message.level'))
-                        <div class="alert alert-{{ session('message.level') }}"> 
-                        {!! session('message.content') !!}
-                        </div>
-                    @endif
+                            <div class="alert alert-{{ session('message.level') }}"> 
+                            {!! session('message.content') !!}
+                            </div>
+                        @endif
 
                      <div class="table-responsive patients-overview">
                     <table class="table table-hover table-striped">
