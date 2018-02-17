@@ -5,6 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+        	
 			<p>{{ Auth::user()->first_name }}</p>
 			<p>{{ Auth::user()->last_name }}</p>
 			<p>{{ Auth::user()->age }}</p>

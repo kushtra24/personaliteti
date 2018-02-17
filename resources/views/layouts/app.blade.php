@@ -149,7 +149,7 @@
                 <ul>
                     <li> <a href="#"> Kontakt</a></li>
                     <li> <a href="#"> Kushtet e përdorimit</a></li>
-                    <li> <a href="/page/8"> Politika e privatesisë</a></li>
+                    <li> <a href="/faqet/8"> Politika e privatesisë</a></li>
                 </ul>
         </div>
     </div>

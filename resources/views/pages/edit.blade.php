@@ -30,6 +30,13 @@
                         </div>
 
                         <div class="form-group">
+                          <label for="type" class="col-sm-3 control-label">Slug</label>
+                            <div class="col-sm-9">
+                          <input type="text" class="form-control" name="slug" id="slug" value="{{ $pages->slug }}" placeholder="Titulli">
+                           </div>
+                        </div>
+
+                        <div class="form-group">
                           <label for="FileNo" class="col-sm-3 control-label">Pershkrimi</label>
                             <div class="col-sm-9">
                           <textarea name="content" id="editor">{{ $pages->content }}</textarea>

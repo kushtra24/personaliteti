@@ -27,6 +27,7 @@
                           <tr>
                             <th>ID</th>
                             <th>Titulli</th>
+                            <th>slug</th>
                             <th>created_at</th>
                             <th>updated_at</th>
                           </tr>
@@ -35,6 +36,7 @@
                         <tr class="testing-table">
                           <td>{{ $page->id }}</td>
                           <td>{{ $page->title }}</td>
+                          <td>{{ $page->slug }}</td>
                           <td>{{ $page->created_at }}
                             <div class="setting">
 

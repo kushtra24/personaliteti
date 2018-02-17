@@ -25,7 +25,7 @@ class userController extends Controller
     public function index()
     {
         $user = User::all();
-        return view('profile')->with(compact('user') );
+        return view('profile')->with('name', 'user');
     }
 
     /**

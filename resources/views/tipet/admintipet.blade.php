@@ -5,7 +5,7 @@
  <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Edito Tipet e personalitetit</h1>
+                    <h1 class="page-header">Tipet e personalitetit</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

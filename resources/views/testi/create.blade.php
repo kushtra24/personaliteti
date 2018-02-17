@@ -31,15 +31,15 @@
             </ul>
 
             <!-- Tab panes -->
-            <div class="tab-content">
+            <div class="tab-content" id="all-tabs">
 
-              <div role="tabpanel" class="tab-pane fade in active firstSet" id="firstSet">
+              <div role="tabpanel" class="tab-pane fade in active " id="firstSet">
                   {{-- @include('testi.partials.introExtro') --}}
-
-                @foreach( $questions->slice(0, 10) as $question)
-                <div class="question form-group">
+                {{-- ->slice(0, 10) --}}
+                @foreach( $questions as $question)
+                <div class="question form-group-{{$question->id}}">
                     <h3>{{ $question->question }}</h3>
-                    <fieldset  class="test-field pull-left" id="group1">
+                    <fieldset  class="test-field pull-left">
                         <p>{{ $spajtohem }}</p>
                         <input  type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3">
 
@@ -61,14 +61,14 @@
 
               </div>
 
-              <div role="tabpanel" class="tab-pane fade secondSet" id="secondSet">
+              {{-- <div role="tabpanel" class="tab-pane fade secondSet" id="secondSet">
               </div>
-
-              <div role="tabpanel" class="tab-pane fade thirdSet" id="thirdSet">
+ --}}
+              <div role="tabpanel" class="tab-pane fade " id="thirdSet">
                    {{-- @include('testi.partials.thinkingFeeling') --}}
               </div>
 
-              <div role="tabpanel" class="tab-pane fade lastSet" id="lastSet">
+              <div role="tabpanel" class="tab-pane fade " id="lastSet">
                    {{-- @include('testi.partials.judgingPerspecting') --}}
                   <input type="submit" class="btn btn-primary btn-lg btn-block" value="Perfundo">
               </div>
@@ -104,7 +104,8 @@
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div class="container">
 <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="5"></div>
@@ -125,12 +126,16 @@ $("input[type='radio']").on('click',function(){
    } $(this).parent().addClass('checked');
 });
 
+$('.form-group-11, .form-group-12, .form-group-13, .form-group-14, .form-group-15, .form-group-16, .form-group-17, .form-group-18, .form-group-19, .form-group-20').addClass('hide');
+
 var count=1;
 $('.tab-forward').click(function() {
     if(count==1){
         $('.progress-status').text('Edhe 3/4');
         $('.progress-minutes').text(' ~ 7:30 min');
-
+        $('#all-tabs>div').attr('id', 'secondSet');
+        $('.form-group-1, .form-group-2, .form-group-3, .form-group-4, .form-group-5, .form-group-6, .form-group-7, .form-group-8, .form-group-9, .form-group-10').addClass('hide');
+        $('.form-group-11, .form-group-12, .form-group-13').removeClass('hide');
     }
     if(count==2){
         $('.progress-status').text('Vetem edhe 1/4');
