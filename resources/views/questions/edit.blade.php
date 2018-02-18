@@ -5,14 +5,14 @@
  <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Pyetjet</h1>
+            <h1 class="page-header">Edito Pyetjet</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
 
     <!-- /.row -->
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-12">
 
                         @if(session()->has('message.level'))
                             <div class="alert alert-{{ session('message.level') }}"> 
@@ -31,10 +31,10 @@
                             <div class="form-group">
                                 <select class="form-control" name="purpose" required >
                                     <option value=""> Teston</option>
-                                    <option value="IntroExtro" {{ $questions->purpose == "IntroExtro" ? 'selected="selected"' : '' }}>Introvert / Extrovert</option>
-                                    <option value="intuitionSensing" {{ $questions->purpose == "intuitionSensing" ? 'selected="selected"' : '' }}>Intuition / Sensing</option>
-                                    <option value="feelingThinking" {{ $questions->purpose == "feelingThinking" ? 'selected="selected"' : '' }}>Feeling / Thinking</option>
-                                    <option value="jundgingPerciving" {{ $questions->purpose == "jundgingPerciving" ? 'selected="selected"' : '' }}>Judging / Perciving</option>
+                                    <option value="IntroExtro" {{ $questions->purpose == "IntroExtro" ? 'selected="selected"' : '' }}>Extrovert / Introvert</option>
+                                    <option value="intuitionSensing" {{ $questions->purpose == "intuitionSensing" ? 'selected="selected"' : '' }}>Intuitive / Shqisor</option>
+                                    <option value="feelingThinking" {{ $questions->purpose == "feelingThinking" ? 'selected="selected"' : '' }}>Mendim (Thinking) / Ndjenjë (Feeling)</option>
+                                    <option value="jundgingPerciving" {{ $questions->purpose == "jundgingPerciving" ? 'selected="selected"' : '' }}>Gjykues (Judging) / Perspektivë</option>
                                     <p>{{$questions->purpose}}</p>
                                 </select>
                             </div>

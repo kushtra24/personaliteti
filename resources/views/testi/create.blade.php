@@ -39,7 +39,7 @@
                     <h3>{{ $question->question }}</h3>
                     <fieldset  class="test-field pull-left">
                         <p>{{ $spajtohem }}</p>
-                        <input  type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3">
+                        <input type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3">
 
                         <input type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2">
 
@@ -67,8 +67,10 @@
               </div>
               </div>
               <input type="submit" class="btn btn-primary btn-lg btn-block hide" value="Perfundo" id="submit">
+              
+                  <div class="alert alert-danger hide"> Keni lënë Pyetje pa përzgjedhur, Shfrytezoni butonin "Kthehu" per te shikuar</div>
 
-              </div><!-- end of teb content -->
+          </div><!-- end of teb content -->
         </form>
 
 
@@ -84,13 +86,8 @@
 </div>
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+{{-- Facebook comments --}}
+<script>
 </script>
 
 <div class="container">
@@ -102,6 +99,16 @@
 
 <script>
 
+//Form validation
+$('#submit').click(function() {
+    if(!$("input").is(":checked")) {
+      $('.alert').removeClass('hide');
+        event.preventDefault();
+    }
+});
+//form validation end
+
+//Progress bar counter
 progressProcent = 0;
 $("input[type='radio']").on('click',function(){
    if($(this).parent().hasClass('checked') == false){
@@ -111,7 +118,9 @@ $("input[type='radio']").on('click',function(){
       $("#progress-container").removeClass("hide");
    } $(this).parent().addClass('checked');
 });
+//progress bar counter end
 
+//Progress bar changelog and tab switching
 $('.question:nth-child(n+11)').addClass('hide');
 
 var count = 0;
@@ -154,7 +163,7 @@ $('#goBack').click(function() {
         $(".tab-forward").removeClass("hide");
     }
 });
-
+//Progress bar changelog and tab switching end
 
 
 // go forward button
@@ -191,16 +200,15 @@ $('.tab-prev').click(function(){
 
 });
 
-
-jQuery('#myTabs a').click(function (e) {
-  e.preventDefault()
-  jQuery(this).tab('show')
-})
-
-// $('input[value="3"]').click(function(){
-//   $('input[type="radio"].right').css({color: "red"});
-// });
-
+// facebook comments
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+//facebook comments end
 </script>
 
 @endsection

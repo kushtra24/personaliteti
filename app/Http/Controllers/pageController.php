@@ -102,7 +102,7 @@ class pageController extends Controller
             $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
         }
 
-        return view('pages.edit', compact('pages'));
+        return redirect('faqet');
     }
 
     /**

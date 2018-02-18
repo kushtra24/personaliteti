@@ -103,7 +103,7 @@ class QuestionsController extends Controller
             $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
         }
 
-        return view('questions.edit', compact('questions'));
+        return redirect('pyetjet');
     }
 
     /**

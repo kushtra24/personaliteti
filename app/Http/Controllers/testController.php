@@ -181,8 +181,8 @@ public function extrovertOrintrovert()
 {
     $result = 0;
 
-    if($extroIntro = request()->input('q.extroIntro')){
-        foreach($extroIntro as $question){
+    if($IntroExtro = request()->input('q.IntroExtro')){
+        foreach($IntroExtro as $question){
             $result = $result + $question;
         }
     }
@@ -251,21 +251,6 @@ public function intuitiveOrSensing(){
             }    
         }
 
-        // $ftq1 = Input::get('ftq1');
-        // $ftq2 = Input::get('ftq2');
-        // $ftq3 = Input::get('ftq3');
-        // $ftq4 = Input::get('ftq4');
-        // $ftq5 = Input::get('ftq5');
-        // $ftq6 = Input::get('ftq6');
-        // $ftq7 = Input::get('ftq7');
-        // $ftq8 = Input::get('ftq8');
-        // $ftq9 = Input::get('ftq9');
-        // $ftq10 = Input::get('ftq10');
-        // $ftq11 = Input::get('ftq11');
-
-        //add the inpute values
-        // $result = $ftq1 + $ftq2 + $ftq3 + $ftq4 + $ftq5 + $ftq6 + $ftq7 + $ftq8 + $ftq9 + $ftq10 + $ftq11;
-
         //Determine of the results are introvertet or extrovertet
         if ($result < 0) {
             $this->feelingThinking = "Mendim (Thinking)";
@@ -296,21 +281,6 @@ public function intuitiveOrSensing(){
                 $result = $result + $question;
             }    
         }
-
-        // $jp1 = Input::get('jp1');
-        // $jp2 = Input::get('jp2');
-        // $jp3 = Input::get('jp3');
-        // $jp4 = Input::get('jp4');
-        // $jp5 = Input::get('jp5');
-        // $jp6 = Input::get('jp6');
-        // $jp7 = Input::get('jp7');
-        // $jp8 = Input::get('jp8');
-        // $jp9 = Input::get('jp9');
-        // $jp10 = Input::get('jp10');
-        // $jp11 = Input::get('jp11');
-
-        //add the inpute values
-        // $result = $jp1 + $jp2 + $jp3 + $jp4 + $jp5 + $jp6 + $jp7 + $jp8 + $jp9 + $jp10 + $jp11;
 
         //Determine of the results are introvertet or extrovertet
         if ($result < 0) {

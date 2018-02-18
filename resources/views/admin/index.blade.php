@@ -44,7 +44,7 @@
                                     <i class="fa fa-tasks fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
+                                    <div class="huge">{{$users = DB::table('posts')->count()}}</div>
                                     <div>Artikuj</div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                                     <i class="fa fa-support fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">135555</div>
+                                    <div class="huge">{{ $users = DB::table('test_counters')->pluck('test_counter') }}</div>
                                     <div>Testet!</div>
                                 </div>
                             </div>
