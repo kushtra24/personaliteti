@@ -9,6 +9,8 @@ use Illuminate\Cookie\CookieJar;
 use Illuminate\Support\Facades\Cookie;
 use App\User;
 use App\Question;
+use App\testCounter;
+use Illuminate\Support\Facades\DB;
 use Auth;
 //use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
@@ -94,9 +96,15 @@ class testController extends Controller
         //
     }
 
+
+    /**
+     * Returns the variables and the results to the view
+     *
+     * @return \Illuminate\Http\Response
+     */
+
     public function introExtroQuestionsResult(){
 
-//        dd($this->introExtro);
         if(Cookie::get('finaltype')){
             return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, 'rol_name' => $this->rol_name]);
         }
@@ -150,6 +158,14 @@ public function introExtroQuestions(CookieJar $cookieJar)
         Cookie::queue(Cookie::make('jpfinalProcentRez', $this->jpfinalProcentRez, 3000));
         Cookie::queue(Cookie::make('rol_name', $this->rol_name, 3000));
     }
+
+    // $counter = new testCounter();
+    // $counter = testCounter::Where(test_counters)->update(test_counter = test_counter + 1);
+
+    $store = DB::table('test_counters')->increment('test_counter');
+
+   
+
 
     //DB::table('users')->whereId(Auth::user()->id)->increment('position');
     return $this->introExtroQuestionsResult();

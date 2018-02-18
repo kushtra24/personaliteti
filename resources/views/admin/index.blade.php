@@ -22,7 +22,7 @@
                                     <i class="fa fa-comments fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">4</div>
+                                    <div class="huge">{{$users = DB::table('users')->count()}}</div>
                                     <div>Regjistrimet!</div>
                                 </div>
                             </div>

@@ -70,7 +70,7 @@
 
               <div role="tabpanel" class="tab-pane fade " id="lastSet">
                    {{-- @include('testi.partials.judgingPerspecting') --}}
-                  <input type="submit" class="btn btn-primary btn-lg btn-block" value="Perfundo">
+                  
               </div>
               
               <div class="form-group">
@@ -81,6 +81,7 @@
                 <a id="goforward" class="tab-forward btn btn-success btn-lg btn-block" data-toggle="tooltip" data-placement="top" title="Vazhdo">Vazhdo</a>
               </div>
               </div>
+              <input type="submit" class="btn btn-primary btn-lg btn-block hide" value="Perfundo" id="submit">
 
               </div><!-- end of teb content -->
         </form>
@@ -140,10 +141,13 @@ $('.tab-forward').click(function() {
     if(count==2){
         $('.progress-status').text('Vetem edhe 1/4');
         $('.progress-minutes').text(' ~ 5:00 min');
+        $('#all-tabs>div').attr('id', 'thirdSet');
     }
     if(count==3){
         $('.progress-status').text('E Fundit');
         $('.progress-minutes').text(' ~ 2.30 min');
+        $('#all-tabs>div').attr('id', 'lastSet');
+        $('#submit').removeClass('hide');
     }
     count++;
 });
