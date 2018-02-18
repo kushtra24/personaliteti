@@ -33,11 +33,9 @@
             <!-- Tab panes -->
             <div class="tab-content" id="all-tabs">
 
-              <div role="tabpanel" class="tab-pane fade in active " id="firstSet">
-                  {{-- @include('testi.partials.introExtro') --}}
-                {{-- ->slice(0, 10) --}}
+
                 @foreach( $questions as $question)
-                <div class="question form-group-{{$question->id}}">
+                <div class="question form-group">
                     <h3>{{ $question->question }}</h3>
                     <fieldset  class="test-field pull-left">
                         <p>{{ $spajtohem }}</p>
@@ -59,19 +57,6 @@
                 </div>
                 @endforeach
 
-              </div>
-
-              {{-- <div role="tabpanel" class="tab-pane fade secondSet" id="secondSet">
-              </div>
- --}}
-              <div role="tabpanel" class="tab-pane fade " id="thirdSet">
-                   {{-- @include('testi.partials.thinkingFeeling') --}}
-              </div>
-
-              <div role="tabpanel" class="tab-pane fade " id="lastSet">
-                   {{-- @include('testi.partials.judgingPerspecting') --}}
-                  
-              </div>
               
               <div class="form-group">
               <div class="col-md-6">
@@ -127,30 +112,49 @@ $("input[type='radio']").on('click',function(){
    } $(this).parent().addClass('checked');
 });
 
-$('.form-group-11, .form-group-12, .form-group-13, .form-group-14, .form-group-15, .form-group-16, .form-group-17, .form-group-18, .form-group-19, .form-group-20').addClass('hide');
+$('.question:nth-child(n+11)').addClass('hide');
 
-var count=1;
+var count = 0;
 $('.tab-forward').click(function() {
+    count++;
     if(count==1){
         $('.progress-status').text('Edhe 3/4');
         $('.progress-minutes').text(' ~ 7:30 min');
-        $('#all-tabs>div').attr('id', 'secondSet');
-        $('.form-group-1, .form-group-2, .form-group-3, .form-group-4, .form-group-5, .form-group-6, .form-group-7, .form-group-8, .form-group-9, .form-group-10').addClass('hide');
-        $('.form-group-11, .form-group-12, .form-group-13').removeClass('hide');
+        $('.question:nth-child(-n+11)').addClass('hide');
+        $('.question:nth-child(n+11):nth-child(-n+20)').removeClass('hide');
     }
     if(count==2){
         $('.progress-status').text('Vetem edhe 1/4');
         $('.progress-minutes').text(' ~ 5:00 min');
-        $('#all-tabs>div').attr('id', 'thirdSet');
+        $('.question:nth-child(n+11):nth-child(-n+20)').addClass('hide');
+        $('.question:nth-child(n+21):nth-child(-n+30)').removeClass('hide');
     }
     if(count==3){
         $('.progress-status').text('E Fundit');
         $('.progress-minutes').text(' ~ 2.30 min');
-        $('#all-tabs>div').attr('id', 'lastSet');
         $('#submit').removeClass('hide');
+        $('.question:nth-child(n+21):nth-child(-n+30)').addClass('hide');
+        $('.question:nth-child(n+31)').removeClass('hide');
     }
-    count++;
 });
+
+$('#goBack').click(function() {
+    count = count - 1;
+    if(count==0){
+        $('.question:nth-child(n+10)').addClass('hide');
+        $('.question:nth-child(-n+10)').removeClass('hide');
+    }
+    if(count==1){
+        $('.question:nth-child(n+11):nth-child(-n+20)').removeClass('hide');
+        $('.question:nth-child(n+21):nth-child(-n+30)').addClass('hide');
+    }
+    if(count==2){
+        $('.question:nth-child(n+21):nth-child(-n+30)').removeClass('hide');
+        $('.question:nth-child(n+31)').addClass('hide');
+        $(".tab-forward").removeClass("hide");
+    }
+});
+
 
 
 // go forward button
