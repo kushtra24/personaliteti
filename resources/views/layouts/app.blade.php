@@ -109,7 +109,7 @@
                 <img src="{{asset('images/personaliteti-logo.png')}}" height="40px">
             </a>
             <p class="footer-description">Merr një përshkrim të vetvëtes, njihu më tepër rreth fuqive dhe dobësive tuaja.</p>
-            <p>Teste te bëra deri me tani {{ $coutner = DB::table('test_counters')->pluck('test_counter') }}</p>
+            <p>Teste te bëra deri me tani {{ $counter }}</p>
             <div class="footer-solcial-icons">
                 <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
                 <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a>

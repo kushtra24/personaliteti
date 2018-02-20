@@ -88,7 +88,7 @@
                                     <i class="fa fa-support fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">{{ $users = DB::table('test_counters')->pluck('test_counter') }}</div>
+                                    <div class="huge">{{ $counter }}</div>
                                     <div>Testet!</div>
                                 </div>
                             </div>
