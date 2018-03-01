@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Testresults extends Migration
+class Tests extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Testresults extends Migration
      */
     public function up()
     {
-        Schema::create('test_results', function (Blueprint $table) {
+        Schema::create('tests', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_id');
             $table->string('finaltype');
@@ -37,6 +37,6 @@ class Testresults extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('test_results');
+        Schema::dropIfExists('tests');
     }
 }

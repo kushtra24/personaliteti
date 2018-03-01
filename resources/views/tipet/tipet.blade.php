@@ -12,18 +12,6 @@
 
 	<section id="the-types">
 
-		{{-- @foreach ($tipet as $tipi)
-			@if($tipi->id <= 4)
-			<div class="col-md-3">
-					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
-						<h4>{{ $tipi->type }}</h4>
-						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
-						<p>{{ $tipi->name }}</p>
-					</a>
-				</div>
-			@endif
-		@endforeach --}}
-
 		<div id="organize" class="type-group row">
 			<h1><strong>Organizim</strong></h1>
 				
@@ -31,13 +19,12 @@
 				<div class="col-md-3">
 					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
 						<h4>{{ $tipi->type }}</h4>
-						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<img src="{{ $tipi->type_img }}" alt="tipi" width="200px">
 						<p>{{ $tipi->name }}</p>
 					</a>
 				</div>
 			@endforeach
 		</div>
-
 
 		<div id="vetvetja" class="type-group row">
 			<h1><strong>Vetvetja</strong></h1>
@@ -46,12 +33,11 @@
 				<div class="col-md-3">
 					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
 						<h4>{{ $tipi->type }}</h4>
-						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<img src="{{ $tipi->type_img }}" alt="tipi" width="200px">
 						<p>{{ $tipi->name }}</p>
 					</a>
 				</div>
 			@endforeach
-				
 		</div>
 
 		<div id="shoqeri" class="type-group row">
@@ -61,12 +47,11 @@
 				<div class="col-md-3">
 					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
 						<h4>{{ $tipi->type }}</h4>
-						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<img src="{{ $tipi->type_img }}" alt="tipi" width="200px">
 						<p>{{ $tipi->name }}</p>
 					</a>
 				</div>
 			@endforeach
-
 		</div>
 
 		<div id="mbledhje" class="type-group row">
@@ -75,7 +60,7 @@
 				<div class="col-md-3">
 					<a href="{{ action('tipetController@show', ['id' => $tipi->id]) }}">
 						<h4>{{ $tipi->type }}</h4>
-						<img src="images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<img src="{{ $tipi->type_img }}" alt="tipi" width="200px">
 						<p>{{ $tipi->name }}</p>
 					</a>
 				</div>

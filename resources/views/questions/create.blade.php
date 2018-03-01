@@ -12,7 +12,7 @@
 
     <!-- /.row -->
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-12">
 
                         @if(session()->has('message.level'))
                             <div class="alert alert-{{ session('message.level') }}"> 
@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="form-group">
-                        <button type="submit" class="btn btn-primary pull-right cleftButton" name="submit" id="submit"><i class="fa fa-save"></i> &nbsp; Ruaje</button>
+                        <button type="submit" class="btn btn-primary cleftButton" name="submit" id="submit"><i class="fa fa-save"></i> &nbsp; Ruaje</button>
                         </div>
 
                      </form>

@@ -16,7 +16,8 @@
 	<p>{{ $tipi->id }}</p>
 	<p>{{ $tipi->type }}</p>
 	<p>{{ $tipi->name }}</p>
-	<img src="/images/{{ $tipi->type_img }}" alt="tipi" width="200px">
+	<img src="../{{ $tipi->type_img }}" alt="tipi" width="200px">
+	
 	{!! $tipi->description !!}
 	
 	</section>

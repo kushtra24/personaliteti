@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\testresults;
+use App\Test;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Cookie\CookieJar;
@@ -102,13 +102,12 @@ class testController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
     public function introExtroQuestionsResult(){
 
         if(Cookie::get('finaltype')){
             return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, 'rol_name' => $this->rol_name]);
         }
-        return redirect('testi.result');
+        return redirect('result');
     }
 
     /**
@@ -131,7 +130,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
     $this->finalTypeName($this->introExtro, $this->intuSens, $this->feelingThinking, $this->judgingPerspecting);
 
     if (Auth::check()) {
-        $store = new TestResults();
+        $store = new Test();
         $store->user_id = Auth::user()->id;
         $store->finaltype = $this->finalType;
         $store->intro_extro = $this->introExtro;
@@ -159,18 +158,10 @@ public function introExtroQuestions(CookieJar $cookieJar)
         Cookie::queue(Cookie::make('rol_name', $this->rol_name, 3000));
     }
 
-    // $counter = new testCounter();
-    // $counter = testCounter::Where(test_counters)->update(test_counter = test_counter + 1);
-
     $store = DB::table('test_counters')->increment('test_counter');
 
-   
-
-
-    //DB::table('users')->whereId(Auth::user()->id)->increment('position');
     return $this->introExtroQuestionsResult();
 
-//    return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, "rolenames" => $rolenames]);
 
 } //end of function
 

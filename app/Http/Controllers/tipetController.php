@@ -74,17 +74,17 @@ class tipetController extends Controller
         //image
         if($request->hasFile('file')){
             $filename = $request->file->getClientOriginalName();
-            $filename = $request->file('file')->storeAs('public/images', $filename);
+            $filename = $request->file('file')->storeAs('/images', $filename);
+            $tipi->type_img = $filename;
         }
-        
-        $tipi->type_img = $filename;
+
         $tipi->type = $request['type'];
         $tipi->name = $request['name'];
         $tipi->description = $request['description'];
 
         $tipi->save();
 
-        return view('tipet.tipi', compact('tipi'));
+        return redirect('admintipet');
     }
     
 

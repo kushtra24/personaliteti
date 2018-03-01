@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use App\TestResults;
+use App\Test;
 use Illuminate\Cookie\CookieJar;
 use Auth;
 use Illuminate\Auth\Events\Registered;
