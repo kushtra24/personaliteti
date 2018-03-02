@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Artikujt</h1>
-            <a href="{!! action('postController@create') !!}" class="btn btn-primary">Shto Artikull</a>
+            <a href="{!! action('PostController@create') !!}" class="btn btn-primary">Shto Artikull</a>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -38,12 +38,12 @@
                           <td>{{ $post->created_at }}
                             <div class="setting">
 
-                            <a class="btn btn-success btn-xs" href="{{ action('postController@show', ['id' => $post->id]) }}" role="button">View</a>
+                            <a class="btn btn-success btn-xs" href="{{ action('PostController@show', ['id' => $post->id]) }}" role="button">View</a>
 
-                            <a class="btn btn-warning btn-xs" href="{{ action('postController@edit', ['id' => $post->id]) }}" role="button">Edit</a>
+                            <a class="btn btn-warning btn-xs" href="{{ action('PostController@edit', ['id' => $post->id]) }}" role="button">Edit</a>
 
                             <div class="display-inline" style="display: inline-block;">
-                                <form method="POST" action="{{ route('postController.destroy', [$post->id]) }}">
+                                <form method="POST" action="{{ route('PostController.destroy', [$post->id]) }}">
                                       {{ csrf_field() }}
                                       <button type="submit" class="btn btn-danger btn-xs">Delete</button>
                                 </form>

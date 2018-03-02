@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Tipi;
 
-class tipetController extends Controller
+class TipetController extends Controller
 {
 
     /**

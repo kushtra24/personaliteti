@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
-use App\testCounter;
+use App\TestCounter;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
         //     return View::share('counter', testCounter::first()->test_counter);
         // });
 
-        View::share('counter', testCounter::first()->test_counter);
+        View::share('counter', TestCounter::first()->test_counter);
         
     }
 

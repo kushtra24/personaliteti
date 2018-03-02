@@ -33,9 +33,9 @@
                           <td>{{ $tipi->created_at }}
                             <div class="setting">
 
-                            <a class="btn btn-success btn-xs" href="{{ action('tipetController@show', ['id' => $tipi->id]) }}" role="button">View</a>
+                            <a class="btn btn-success btn-xs" href="{{ action('TipetController@show', ['id' => $tipi->id]) }}" role="button">View</a>
 
-                            <a class="btn btn-warning btn-xs" href="{{ action('tipetController@edit', ['id' => $tipi->id]) }}" role="button">Edit</a>
+                            <a class="btn btn-warning btn-xs" href="{{ action('TipetController@edit', ['id' => $tipi->id]) }}" role="button">Edit</a>
                             </div>
                           </td>
                           <td>{{ $tipi->updated_at }}</td>

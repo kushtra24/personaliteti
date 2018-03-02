@@ -9,12 +9,12 @@ use Illuminate\Cookie\CookieJar;
 use Illuminate\Support\Facades\Cookie;
 use App\User;
 use App\Question;
-use App\testCounter;
+use App\TestCounter;
 use Illuminate\Support\Facades\DB;
 use Auth;
 //use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
-class testController extends Controller
+class TestController extends Controller
 {
     public $finalType;
     private $finalProcentRez;

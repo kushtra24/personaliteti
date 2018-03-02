@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class testCounter extends Model
+class TestCounter extends Model
 {
 
 }

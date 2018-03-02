@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class pageSeeder extends Seeder
 {
@@ -13,6 +14,7 @@ class pageSeeder extends Seeder
     {
         DB::table('pages')->insert([
             'title' => "Rreth nesh",
+            'slug' => "Rreth nesh",
 	        'content' => "<p>Content of a simple post</p>",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);

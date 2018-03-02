@@ -8629,3 +8629,10 @@ footer ul li a:hover {
   margin: 50px 0;
 }
 
+.alert {
+  position: fixed;
+  right: 4px;
+  bottom: 1px;
+  width: auto;
+}
+

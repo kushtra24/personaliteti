@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Page;
 
-class pageController extends Controller
+class PageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -39,6 +39,7 @@ class pageController extends Controller
         $store = new Page;
 
         $store->title = $request['title'];
+        $store->slug = $request['slug'];
         $store->content = $request['content'];
         $store->save();
 
@@ -91,6 +92,7 @@ class pageController extends Controller
         $pages = Page::find($id);
 
         $pages->title = $request['title'];
+        $pages->slug = $request['slug'];
         $pages->content = $request['content'];
         $pages->save();
 

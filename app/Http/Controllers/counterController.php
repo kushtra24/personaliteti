@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\testCounter;
+use App\TestCounter;
 
-class counterController extends Controller
+class CounterController extends Controller
 {
     
     /**
@@ -15,7 +15,7 @@ class counterController extends Controller
      */
     public function index()
     {
-        $counters = testCounter::all();
+        $counters = TestCounter::all();
 
         return view('layouts.app', compact('counters'));
     }

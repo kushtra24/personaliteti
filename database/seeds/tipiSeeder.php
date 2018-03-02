@@ -15,7 +15,7 @@ class tipiSeeder extends Seeder
             'type' => "INTJ",
 	        'name' => "Arkitekti",
 	        'description' => "This is a short description of the Arkitekti",
-	        'type_img' => "intj.png",
+	        'type_img' => "images/images/intj.png",
 	        'featured_Image' => "intj-feat.png",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -24,7 +24,7 @@ class tipiSeeder extends Seeder
             'type' => "INFJ",
 	        'name' => "KËSHILLUESI",
 	        'description' => "This is a short description of the KËSHILLUESI",
-	        'type_img' => "INFJ.png",
+	        'type_img' => "images/INFJ.png",
 	        'featured_Image' => "INFJ-feat.png",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -33,7 +33,7 @@ class tipiSeeder extends Seeder
             'type' => "ISTJ",
             'name' => "INSPEKTORI",
             'description' => "This is a short description of the INSPEKTORI",
-            'type_img' => "ISTJ.png",
+            'type_img' => "images/ISTJ.png",
             'featured_Image' => "ISTJ-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -42,7 +42,7 @@ class tipiSeeder extends Seeder
             'type' => "ISFJ",
             'name' => "mbrojtësi",
             'description' => "This is a short description of the mbrojtësi",
-            'type_img' => "ISFJ.png",
+            'type_img' => "images/ISFJ.png",
             'featured_Image' => "ISFJ-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -51,7 +51,7 @@ class tipiSeeder extends Seeder
             'type' => "INTP",
             'name' => "FILOZOFЁT",
             'description' => "This is a short description of the FILOZOFЁT",
-            'type_img' => "INTP.png",
+            'type_img' => "images/INTP.png",
             'featured_Image' => "INTP-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -60,7 +60,7 @@ class tipiSeeder extends Seeder
             'type' => "INFP",
             'name' => "NDËRMJETËSUESI",
             'description' => "This is a short description of the NDËRMJETËSUESI",
-            'type_img' => "INFP.png",
+            'type_img' => "images/INFP.png",
             'featured_Image' => "INFP-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -69,7 +69,7 @@ class tipiSeeder extends Seeder
             'type' => "ISTP",
             'name' => "I SHKATHËTI",
             'description' => "This is a short description of the I SHKATHËTI",
-            'type_img' => "ISTP.png",
+            'type_img' => "images/ISTP.png",
             'featured_Image' => "ISTP-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -78,7 +78,7 @@ class tipiSeeder extends Seeder
             'type' => "ISFP",
             'name' => "aventurierët",
             'description' => "This is a short description of the aventurierët",
-            'type_img' => "ISFP.png",
+            'type_img' => "images/ISFP.png",
             'featured_Image' => "ISFP-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -87,7 +87,7 @@ class tipiSeeder extends Seeder
             'type' => "ENTJ",
             'name' => "KOMANDANTI",
             'description' => "This is a short description of the KOMANDANTI",
-            'type_img' => "ENTJ.png",
+            'type_img' => "images/ENTJ.png",
             'featured_Image' => "ENTJ-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -96,7 +96,7 @@ class tipiSeeder extends Seeder
             'type' => "ENFJ",
             'name' => "Protagonistët",
             'description' => "This is a short description of the Protagonistët",
-            'type_img' => "ENFJ.png",
+            'type_img' => "images/ENFJ.png",
             'featured_Image' => "ENFJ-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -105,7 +105,7 @@ class tipiSeeder extends Seeder
             'type' => "ESTJ",
             'name' => "zbatuesi",
             'description' => "This is a short description of the zbatuesi",
-            'type_img' => "ESTJ.png",
+            'type_img' => "images/ESTJ.png",
             'featured_Image' => "ESTJ-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -114,7 +114,7 @@ class tipiSeeder extends Seeder
             'type' => "ESFJ",
             'name' => "Ofruesi",
             'description' => "This is a short description of the Ofruesi",
-            'type_img' => "ESFJ.png",
+            'type_img' => "images/ESFJ.png",
             'featured_Image' => "ESFJ-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -123,7 +123,7 @@ class tipiSeeder extends Seeder
             'type' => "ENTP",
             'name' => "debatuesi",
             'description' => "This is a short description of the debatuesi",
-            'type_img' => "ENTP.png",
+            'type_img' => "images/ENTP.png",
             'featured_Image' => "ENTP-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -132,7 +132,7 @@ class tipiSeeder extends Seeder
             'type' => "ENFP",
             'name' => "Përkrahësi",
             'description' => "This is a short description of the Përkrahësi",
-            'type_img' => "ENFP.png",
+            'type_img' => "images/ENFP.png",
             'featured_Image' => "ENFP-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -141,7 +141,7 @@ class tipiSeeder extends Seeder
             'type' => "ESTP",
             'name' => "sipërmarrësi",
             'description' => "This is a short description of the sipërmarrësi",
-            'type_img' => "ESTP.png",
+            'type_img' => "images/ESTP.png",
             'featured_Image' => "ESTP-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -150,7 +150,7 @@ class tipiSeeder extends Seeder
             'type' => "ESFP",
             'name' => "ARGËTUESI",
             'description' => "This is a short description of the ARGËTUESI",
-            'type_img' => "ESFP.png",
+            'type_img' => "images/ESFP.png",
             'featured_Image' => "ESFP-feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);

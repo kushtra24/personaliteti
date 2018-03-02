@@ -20,11 +20,15 @@
                             </div>
                         @endif
 
-                     <form  method="POST" action="{{ action('pageController@store') }}" >
+                     <form  method="POST" action="{{ action('PageController@store') }}" >
                       {!! csrf_field() !!}
                        
                         <div class="form-group">
                             <input type="text" class="form-control" name="title" placeholder="Titulli faqes" required>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="slug" id="slug" placeholder="slug">
                         </div>
 
                         <div class="form-group">

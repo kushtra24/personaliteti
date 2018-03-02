@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Faqet</h1>
-            <a href="{!! action('pageController@create') !!}" class="btn btn-primary">Shto Faqe</a>
+            <a href="{!! action('PageController@create') !!}" class="btn btn-primary">Shto Faqe</a>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -40,9 +40,9 @@
                           <td>{{ $page->created_at }}
                             <div class="setting">
 
-                            <a class="btn btn-success btn-xs" href="{{ action('pageController@show', ['id' => $page->id]) }}" role="button">View</a>
+                            <a class="btn btn-success btn-xs" href="{{ action('PageController@show', ['id' => $page->id]) }}" role="button">View</a>
 
-                            <a class="btn btn-warning btn-xs" href="{{ action('pageController@edit', ['id' => $page->id]) }}" role="button">Edit</a>
+                            <a class="btn btn-warning btn-xs" href="{{ action('PageController@edit', ['id' => $page->id]) }}" role="button">Edit</a>
 
                             <div class="display-inline" style="display: inline-block;">
                                 <form method="post" action="{{ route('page.destroy', [$page->id]) }}">
