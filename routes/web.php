@@ -71,7 +71,7 @@ Route::group(['middleware' => 'web'], function () {
     //pages
     Route::get('/faqet', ['uses' => 'PageController@index', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::get('/faqet/create', ['uses' => 'PageController@create', 'middleware' => 'roles', 'roles' => ['Admin']]);
-    Route::post('/faqet/store', ['uses' => 'PageController@store', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/faqet/store', ['uses' => 'PageController@store', 'as' => 'page.post','middleware' => 'roles', 'roles' => ['Admin']]);
     Route::get('/faqet/{id}', ['uses' => 'PageController@show', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::get('/faqet/{id}/edit', ['uses' => 'PageController@edit', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::post('/faqet/{id}/edit', ['uses' => 'PageController@update', 'as' => 'page.update', 'middleware' => 'roles', 'roles' => ['Admin']]);

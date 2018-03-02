@@ -13,8 +13,13 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-8">
+                      @if(session()->has('message.level'))
+                          <div class="alert alert-{{ session('message.level') }}"> 
+                          {!! session('message.content') !!}
+                          </div>
+                      @endif
 
-                     <div class="table-responsive patients-overview">
+                  <div class="table-responsive patients-overview">
                     <table class="table table-hover table-striped">
                       <thead class="thead-inverse">
                           <tr>

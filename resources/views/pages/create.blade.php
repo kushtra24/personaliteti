@@ -20,19 +20,29 @@
                             </div>
                         @endif
 
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        
                      <form  method="POST" action="{{ action('PageController@store') }}" >
                       {!! csrf_field() !!}
                        
                         <div class="form-group">
-                            <input type="text" class="form-control" name="title" placeholder="Titulli faqes" required>
+                            <input type="text" class="form-control" name="title" placeholder="Titulli faqes" value="{{old('title')}}" required>
                         </div>
 
                         <div class="form-group">
-                          <input type="text" class="form-control" name="slug" id="slug" placeholder="slug">
+                          <input type="text" class="form-control" name="slug" id="slug" value="{{old('slug')}}" placeholder="slug">
                         </div>
 
                         <div class="form-group">
-                            <textarea name="content" id="editor" cols="50" rows="50"></textarea>
+                            <textarea name="content" id="editor" cols="50" rows="50">{{old('content')}}</textarea>
                         </div>
 
 

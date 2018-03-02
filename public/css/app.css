@@ -8636,3 +8636,7 @@ footer ul li a:hover {
   width: auto;
 }
 
+.alert li {
+  list-style: none;
+}
+

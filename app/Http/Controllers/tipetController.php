@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Tipi;
+use App\Http\Requests\TypeRequest;
+
 
 class TipetController extends Controller
 {
@@ -66,7 +68,7 @@ class TipetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TypeRequest $request, $id)
     {
         //Updating the fields to the database based on the id
         $tipi = Tipi::find($id);
@@ -83,6 +85,15 @@ class TipetController extends Controller
         $tipi->description = $request['description'];
 
         $tipi->save();
+
+         if ($tipi->save()) {
+        $request->session()->flash('message.level', 'success');
+        $request->session()->flash('message.content', 'Tipi eshte ndryshuar me sukses');
+        } else {
+            $request->session()->flash('message.level', 'danger');
+            $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
+        }
+
 
         return redirect('admintipet');
     }

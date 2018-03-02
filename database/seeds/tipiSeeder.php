@@ -15,7 +15,7 @@ class tipiSeeder extends Seeder
             'type' => "INTJ",
 	        'name' => "Arkitekti",
 	        'description' => "This is a short description of the Arkitekti",
-	        'type_img' => "images/images/intj.png",
+	        'type_img' => "images/intj.png",
 	        'featured_Image' => "intj-feat.png",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
