@@ -53,6 +53,13 @@
                         </div>
 
                         <div class="form-group">
+                          <label for="FileNo" class="col-sm-2 control-label">Pershkrimi shkurt</label>
+                            <div class="col-sm-10">
+                          <textarea class="form-control" rows="5" id="short" name="shortDescription">{{ $tipi->shortDescription }}</textarea>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
                           <label for="FileNo" class="control-label">Pershkrimi</label>
                             <div class="col-sm-12">
                           <textarea name="description" id="editor">{{ $tipi->description }}</textarea>

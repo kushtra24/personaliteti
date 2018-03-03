@@ -27,6 +27,7 @@ class tipiRequest extends FormRequest
             'file' => 'required|image|mimes:jpg,png',
             'type' => 'required',
             'name' => 'required',
+            'shortDescription' => 'required',
             'description' => 'required',
         ];
     }

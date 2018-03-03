@@ -17,6 +17,7 @@ class Tipis extends Migration
             $table->increments('id');
             $table->string('type');
             $table->string('name');
+            $table->string('shortDescription');
             $table->text('description');
             $table->string('type_img');
             $table->string('featured_Image');

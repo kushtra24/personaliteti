@@ -225,24 +225,6 @@ input[type="radio"] {
 		}
 }
 
-// .testing-page{
-// 	input[type="submit"]{
-// 		// width: 100%;
-// 		// padding: 15px 0;
-// 		margin: 22px 0;
-// 		// font-weight: bold;
-// 		transition: .4s background-color ease-out;
-// 		&:hover{
-// 			background-color: #20895e;
-// 		}
-// 	}
-// }
-
-	// input[value="2"]:checked{
-	// 	background: red;
-	// 	@include default-box(inset 0 0 0 0.4em white, 0 0 0 0.3em red);
-	// }
-
 
 
 // __________________________________________________________________________________________Footer
@@ -294,6 +276,37 @@ footer{
 
 .type-group {
     margin: 50px 0;
+}
+
+.the-type:hover{
+	-webkit-box-shadow: 6px 3px 11px -4px rgba(184,184,184,0.52);
+	-moz-box-shadow: 6px 3px 11px -4px rgba(184,184,184,0.52);
+	box-shadow: 6px 3px 11px -4px rgba(184,184,184,0.52);
+	border-radius: 7px;
+	background: #eff5f9;
+}
+
+.the-type h4 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.the-type img {
+    width: 200px;
+    transition: .3s width ease-out;
+}
+
+.the-type:hover img {
+    width: 230px;
+}
+
+.the-type a{
+	text-decoration: none;
+}
+// __________________________________________________________________________________________Tipi
+
+.single-type-meta h3 span{
+	font-weight: 700; 
 }
 
 // __________________________________________________________________________________________Alert

@@ -8629,6 +8629,37 @@ footer ul li a:hover {
   margin: 50px 0;
 }
 
+.the-type:hover {
+  -webkit-box-shadow: 6px 3px 11px -4px rgba(184, 184, 184, 0.52);
+  box-shadow: 6px 3px 11px -4px rgba(184, 184, 184, 0.52);
+  border-radius: 7px;
+  background: #eff5f9;
+}
+
+.the-type h4 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.the-type img {
+  width: 200px;
+  -webkit-transition: .3s width ease-out;
+  transition: .3s width ease-out;
+}
+
+.the-type:hover img {
+  width: 230px;
+}
+
+.the-type a {
+  text-decoration: none;
+}
+
+.single-type-meta h3 span {
+  font-weight: 700;
+}
+
 .alert {
   position: fixed;
   right: 4px;

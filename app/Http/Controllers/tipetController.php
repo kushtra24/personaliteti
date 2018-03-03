@@ -45,6 +45,10 @@ class TipetController extends Controller
     {
         $tipi = Tipi::find($id);
 
+        if ($tipi->type = "ENFJ" ) {
+            $tipi->group = "Organizim";
+        }
+
         return view('tipet.tipi', compact('tipi'));
     }
 
@@ -82,6 +86,7 @@ class TipetController extends Controller
 
         $tipi->type = $request['type'];
         $tipi->name = $request['name'];
+        $tipi->shortDescription = $request['shortDescription'];
         $tipi->description = $request['description'];
 
         $tipi->save();
