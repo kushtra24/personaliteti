@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use App\TestCounter;
+use App\User;
+use App\Test;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -22,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
         // });
 
         View::share('counter', TestCounter::first()->test_counter);
+        // View::share('results', auth()->user()->Test);
         
     }
 

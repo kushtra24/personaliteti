@@ -84,7 +84,7 @@ class RegisterController extends Controller
         $user->roles()->attach(Role::where('name', 'User')->first());
 
         // Store the values of the cookies into the database depending on the current user that is loged in
-        $store = new TestResults;
+        $store = new Test;
         $store->user_id = $user->id;
         $store->finaltype = Cookie::get('finaltype', 'Coockies janë çkyqur');
         $store->intro_extro = Cookie::get('introExtro', 'Coockies janë çkyqur');
