@@ -22,8 +22,10 @@ class AppServiceProvider extends ServiceProvider
         // \Cache::remember('counter', 120, function () {
         //     return View::share('counter', testCounter::first()->test_counter);
         // });
-
-        View::share('counter', TestCounter::first()->test_counter);
+        
+           View::share('counter', TestCounter::first()->test_counter);
+        
+        
         // View::share('results', auth()->user()->Test);
         
     }

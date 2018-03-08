@@ -33,14 +33,20 @@
 				<h3>Resultatet e juaja </h3>
 				{{ Auth::user()->first_name }}
 				<br>
-			 <p> Kodi: {{ Auth()->user()->testResults->last()->finaltype }}</p>
-             <p> Kodi: {{ Auth()->user()->testResults->last()->created_at }}</p>
-             <p> Kodi: {{ Auth()->user()->testResults->last()->rol_name }}</p>
-             <p> Kodi: {{ Auth()->user()->testResults->last()->intro_extro }} {{ Auth()->user()->testResults->last()->first_final_procent_rez }}% </p>
-             <p> Kodi: {{ Auth()->user()->testResults->last()->intu_sens }} {{ Auth()->user()->testResults->last()->ns_final_procent_rez }}% </p>
-             <p> Kodi: {{ Auth()->user()->testResults->last()->feeling_thinking }} {{ Auth()->user()->testResults->last()->ft_final_procent_rez }}% </p>
-             <p> Kodi: {{ Auth()->user()->testResults->last()->judging_perspecting }} {{ Auth()->user()->testResults->last()->jp_final_procent_rez }}% </p>
+				<?php try { ?>
+					 <p> Kodi: {{ Auth()->user()->testResults->last()->finaltype }}</p>
+		             <p> Kodi: {{ Auth()->user()->testResults->last()->created_at }}</p>
+		             <p> Kodi: {{ Auth()->user()->testResults->last()->rol_name }}</p>
+		             <p> Kodi: {{ Auth()->user()->testResults->last()->intro_extro }} {{ Auth()->user()->testResults->last()->first_final_procent_rez }}% </p>
+		             <p> Kodi: {{ Auth()->user()->testResults->last()->intu_sens }} {{ Auth()->user()->testResults->last()->ns_final_procent_rez }}% </p>
+		             <p> Kodi: {{ Auth()->user()->testResults->last()->feeling_thinking }} {{ Auth()->user()->testResults->last()->ft_final_procent_rez }}% </p>
+		             <p> Kodi: {{ Auth()->user()->testResults->last()->judging_perspecting }} {{ Auth()->user()->testResults->last()->jp_final_procent_rez }}% </p>
 				<a href="/compare?{{-- {{$tipet->{id} }} --}}" class="btn btn-primary">Krahaso me ty</a>
+				<?php } catch (Exception $e) {
+					echo "Momentalisht nuk ke resultate";
+				}
+				?>
+			 
 			</div>
 			@endif
 		</div>

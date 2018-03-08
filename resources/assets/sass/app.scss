@@ -311,13 +311,51 @@ footer{
 
 // __________________________________________________________________________________________Alert
 
-.alert{
-    position: fixed;
-    right: 4px;
-    bottom: 1px;
-    width: auto;
-}
+// .alert{
+//     position: fixed;
+//     right: 4px;
+//     bottom: 1px;
+//     width: auto;
+// }
 
-.alert li{
-	list-style: none;
+// .alert li{
+// 	list-style: none;
+// }
+
+.alert {
+    transform: translateX(100%);
+    position: fixed;
+    bottom: 5px;
+    right: 0px;
+    -webkit-animation: anim 7s 1;
+    animation: anim 7s 1;
+    z-index: 1000;
+}
+@-webkit-keyframes anim {
+    0% {
+        transform: translateX(100%);
+    }
+    14.28% {
+        transform: translateX(0);
+    }
+    85.71% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+@keyframes anim {
+    0% {
+        transform: translateX(100%);
+    }
+    14.28% {
+        transform: translateX(0);
+    }
+    85.71% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
