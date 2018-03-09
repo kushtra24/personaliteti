@@ -26,7 +26,7 @@ class PostToPage extends FormRequest
         return [
             'title' => 'required|max:255',
             'slug' => 'required',
-            'content' => 'required|min:70',
+            'content' => 'required',
         ];
     }
 }

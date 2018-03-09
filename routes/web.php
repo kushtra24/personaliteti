@@ -11,6 +11,7 @@
 |
 */
 
+use App\Page;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,6 +32,16 @@ Route::group(['test' => 'test'], function(){
 });
 
 
+ Route::get('faqe/{slug}', function($slug)
+    {
+        $page =  Page::where('slug', $slug)->first();
+        return view('pages.page')
+        ->with('content', $page->content)
+        ->with('title', $page->title)
+        ;
+    });
+
+ 
 Route::group(['post' => 'post'], function(){
     Route::post('/post/store', 'PostController@store');
     Route::get('/post/{id}', 'PostController@show');

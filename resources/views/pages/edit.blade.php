@@ -14,10 +14,10 @@
                 <div class="col-lg-12">
 
                   @if(session()->has('message.level'))
-                            <div class="alert alert-{{ session('message.level') }}"> 
-                            {!! session('message.content') !!}
-                            </div>
-                        @endif
+                      <div class="alert alert-{{ session('message.level') }}"> 
+                      {!! session('message.content') !!}
+                      </div>
+                  @endif
                     
                     <form method="POST" action="{{ route('page.update', [$pages->id]) }}" class="form-horizontal" enctype="multipart/form-data" >
                       {{ csrf_field() }}
@@ -32,7 +32,7 @@
                         <div class="form-group">
                           <label for="type" class="col-sm-3 control-label">Slug</label>
                             <div class="col-sm-9">
-                          <input type="text" class="form-control" name="slug" id="slug" value="{{ $pages->slug }}" placeholder="Slug">
+                          <input type="text" class="form-control" name="slug" id="slug" value="{{ $pages->slug }}" placeholder="Slug" disabled>
                            </div>
                         </div>
 
@@ -46,6 +46,7 @@
                           <button type="submit" class="btn btn-primary pull-right">Ruaje</button>
 
                     </form>
+                    
                     
                 </div>
                 <!-- /.col-lg-8 -->

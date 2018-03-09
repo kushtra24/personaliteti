@@ -48,10 +48,10 @@
                             <a href="/tipet">Tipet</a>
                         </li>
                         <li>
-                            <a href="#">Rreth nesh</a></li>
+                            <a href="/faqe/rreth_nesh">Rreth nesh</a></li>
                         </li>
                         <li>
-                            <a href="#">Blog</a></li>
+                            <a href="/blog">Blog</a></li>
                         </li>
                     </ul>
 
@@ -136,7 +136,7 @@
                 <a href="https://www.16personalities.com/articles" title="Articles">Më shum</a>
             </h4>
             <ul>
-                <li> <a href="#"> Teoria Jonë</a></li>
+                <li> <a href="/faqe/teoria_jone"> Teoria Jonë</a></li>
                 <li> <a href="{{ route('login') }}"> Kyqu</a></li>
             </ul>
         </div>
@@ -149,7 +149,7 @@
                 <ul>
                     <li> <a href="#"> Kontakt</a></li>
                     <li> <a href="#"> Kushtet e përdorimit</a></li>
-                    <li> <a href="/faqet/8"> Politika e privatesisë</a></li>
+                    <li> <a href="/faqe/politikat_privatesise"> Politika e privatesisë</a></li>
                 </ul>
         </div>
     </div>
