@@ -36,7 +36,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $store = new Page;
+        $store = new Post;
 
         $store->title = $request['title'];
         $store->content = $request['content'];
