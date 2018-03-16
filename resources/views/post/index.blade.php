@@ -32,7 +32,7 @@
                         <tr class="testing-table">
                           <td>{{ $post->id }}</td>
                           <td>{{ $post->title }}</td>
-                          <td>{{ $post->content }}</td>
+                          <td>{{ str_limit($post->content, 10) }}</td>
                           <td>{{ $post->image }}</td>
                           <td>{{ $post->author }}</td>
                           <td>{{ $post->created_at }}

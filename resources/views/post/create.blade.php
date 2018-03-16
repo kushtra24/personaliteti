@@ -30,7 +30,7 @@
                             </div>
                         @endif
                         
-                     <form  method="POST" action="{{ action('PostController@store') }}" >
+                     <form  method="POST" action="{{ action('PostController@store') }}" enctype="multipart/form-data">
                       {!! csrf_field() !!}
                        
                         <div class="form-group">

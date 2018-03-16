@@ -7,7 +7,7 @@
       
          <div class="center">
       
-      <h1>Testi i Tipit tuaj</h1>
+      <h1>Pyetsori</h1>
       <p>Ky eshte pyetsori per te identifikuar tipin e juaj</p>
 
     <div class="row">

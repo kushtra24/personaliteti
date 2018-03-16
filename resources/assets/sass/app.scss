@@ -108,6 +108,51 @@
     }
 }
 
+	#cka_vlerson {
+    	display: flex;
+    	flex-flow: row wrap;
+    	h1 {
+    		margin: 61px auto 15px;
+    		font-size: 52px;
+    		font-weight: 700;
+		}
+		i{
+			font-size: 250px;
+		}
+		.komunikim, .karrier, .lidhje, .vendimarrje{
+		 	h2{
+		    	text-transform: uppercase;
+		    	font-weight: 700;
+		    	text-align: center;
+		    }
+		}
+		p {
+    		line-height: 29px;
+    		text-align: justify;
+		}
+
+		.komunikim{
+			i{
+				color: #5ebfd8;
+			}
+		}
+		.karrier{
+		 	i{
+				color: #e4c62b;
+			}
+		}
+		.lidhje{
+			 i{
+				color: #ff0002;
+			}
+		}
+		.vendimarrje{
+			 i{
+				color: #8f749f;
+			}
+		}
+	}
+
 
 // Testing page
 // Input design
@@ -310,17 +355,6 @@ footer{
 }
 
 // __________________________________________________________________________________________Alert
-
-// .alert{
-//     position: fixed;
-//     right: 4px;
-//     bottom: 1px;
-//     width: auto;
-// }
-
-// .alert li{
-// 	list-style: none;
-// }
 
 .alert {
     transform: translateX(100%);

@@ -8457,6 +8457,56 @@ button.close {
   color: #fff;
 }
 
+#cka_vlerson {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#cka_vlerson h1 {
+  margin: 61px auto 15px;
+  font-size: 52px;
+  font-weight: 700;
+}
+
+#cka_vlerson i {
+  font-size: 250px;
+}
+
+#cka_vlerson .komunikim h2,
+#cka_vlerson .karrier h2,
+#cka_vlerson .lidhje h2,
+#cka_vlerson .vendimarrje h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+#cka_vlerson p {
+  line-height: 29px;
+  text-align: justify;
+}
+
+#cka_vlerson .komunikim i {
+  color: #5ebfd8;
+}
+
+#cka_vlerson .karrier i {
+  color: #e4c62b;
+}
+
+#cka_vlerson .lidhje i {
+  color: #ff0002;
+}
+
+#cka_vlerson .vendimarrje i {
+  color: #8f749f;
+}
+
 input[type="radio"] {
   -webkit-appearance: none;
      -moz-appearance: none;
