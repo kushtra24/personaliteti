@@ -36,18 +36,19 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $store = new Page;
+        $store = new Post;
+
+                 //image
+        if($request->hasFile('file')){
+            $filename = $request->file->getClientOriginalName();
+            $filename = $request->file('file')->storeAs('/images', $filename);
+            $store->image = $filename;
+        }
 
         $store->title = $request['title'];
         $store->content = $request['content'];
         $store->author = $request['author'];
         
-        //image
-        if($request->hasFile('file')){
-            $filename = $request->file->getClientOriginalName();
-            $filename = $request->file('file')->storeAs('public/images', $filename);
-        }
-
         $store->save();
 
         if ($store->save()) {

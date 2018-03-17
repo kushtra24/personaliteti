@@ -42,13 +42,11 @@ Route::group(['test' => 'test'], function(){
     });
 
  
-Route::group(['post' => 'post'], function(){
-    Route::post('/post/store', 'PostController@store');
-    Route::get('/post/{id}', 'PostController@show');
-    Route::get('/post/{id}/edit', 'PostController@edit');
-    Route::post('/post/{id}/edit', 'PostController@update')->name('PostController.update');
-    Route::post('/post/{id}/delete', 'PostController@destroy')->name('PostController.destroy');
-});
+// Route::group(['post' => 'post'], function(){
+    // Route::post('/post/store', 'PostController@store');
+    // Route::post('/post/{id}/update', 'PostController@update')->name('PostController.update');
+    // Route::post('/post/{id}/delete', 'PostController@destroy')->name('PostController.destroy');
+// });
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
@@ -67,6 +65,11 @@ Route::group(['middleware' => 'web'], function () {
     //Posts
     Route::get('/post', ['uses' => 'PostController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
     Route::get('/post/create', ['uses' => 'PostController@create', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::get('/post/{id}', ['uses' => 'PostController@show', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::get('/post/edit/{id}', ['uses' => 'PostController@edit', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::post('/post/store', ['uses' => 'PostController@store', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/post/{id}/update', ['uses' => 'PostController@update', 'as' => 'PostController.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/post/{id}/delete', ['uses' => 'PostController@destroy', 'as' => 'PostController.destroy', 'middleware' => 'roles', 'roles' => ['Admin', ]]);
     //Questions
     Route::get('/pyetjet', ['uses' => 'QuestionsController@index', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::get('/pyetjet/create', ['uses' => 'QuestionsController@create', 'middleware' => 'roles', 'roles' => ['Admin']]);

@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Artikujt</h1>
-            <a href="{!! action('PostController@create') !!}" class="btn btn-primary">Shto Artikull</a>
+            <a href="{{ action('PostController@create') }}" class="btn btn-primary">Shto Artikull</a>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -32,7 +32,7 @@
                         <tr class="testing-table">
                           <td>{{ $post->id }}</td>
                           <td>{{ $post->title }}</td>
-                          <td>{{ $post->content }}</td>
+                          <td>{{ str_limit($post->content, 10) }}</td>
                           <td>{{ $post->image }}</td>
                           <td>{{ $post->author }}</td>
                           <td>{{ $post->created_at }}

@@ -48,8 +48,6 @@
                             </tr>
                             <tr>
                                 <td>Codi</td>
-
-
                                 <td>{{ $testResult->finaltype }}</td>
                             </tr>
 
