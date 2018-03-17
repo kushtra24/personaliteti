@@ -359,3 +359,7 @@ footer{
         transform: translateX(100%);
     }
 }
+
+.modal-footer .btn + .btn {
+    margin: inherit;
+}

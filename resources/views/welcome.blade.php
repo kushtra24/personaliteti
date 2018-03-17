@@ -8,7 +8,7 @@
 		<h1>Gjejë Personalitetin tuaj, Tani!</h1>
 		<h4>Fillo tesin e personalitetit dhe mahnitu me saktesine qe ofron resultati juaj i personalitetit</h4>
 
-		<a href="{{ route('testi') }}" class="btn btn-primary">Fillo Testing</a>
+		<a href="{{ route('testi') }}" class="btn btn-primary">Fillo Testin</a>
 		<br><small>Pa pages, nuk eshte e nevojshme regjistrimi</small>
 		<br>
 		<img src="{{ URL::to('/') }}/images/homepage.jpg" alt="homepage image">

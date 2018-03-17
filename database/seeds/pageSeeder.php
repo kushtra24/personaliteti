@@ -35,7 +35,7 @@ class pageSeeder extends Seeder
 
         DB::table('pages')->insert([
             'title' => "Rreth nesh",
-            'slug' => "Rreth nesh",
+            'slug' => "faqe",
             'content' => "<p>Content of a simple post</p>",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);

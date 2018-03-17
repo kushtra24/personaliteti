@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('style')
+<style>
+  .registration-info {
+    background-color: #00b1ba;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+</style>
+@endsection
 @section('content')
 
 <div class="container">
@@ -73,107 +83,88 @@
   <a href="{{ route('register') }}" class="btn btn-primary">Shko në profil</a>
 @else
     <p>Regjistrohu tani per t'i ruajtur keto resultate</p>
-    <button id="show_register" class="btn btn-primary">Regjistrohu</button>
+    <button id="show_register" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Regjistrohu</button>
 @endif
 
-
-  <div id="registerForma" class="col-md-12 hide">
-    <div class="panel panel-default">
-      <div class="panel-heading">Regjistrohu</div>
-
-      <div class="panel-body">
-        <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-          {{ csrf_field() }}
-
-          <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-            <label for="first_name" class="col-md-4 control-label">Emri</label>
-
-            <div class="col-md-6">
-              <input id="first_name" type="text" class="form-control" name="first_name" value="{{ old('name') }}" required autofocus>
-
-              @if ($errors->has('first_name'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('first_name') }}</strong>
-                </span>
-              @endif
-            </div>
-          </div>
-
-          <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-            <label for="name" class="col-md-4 control-label">Mbiemri</label>
-
-            <div class="col-md-6">
-              <input id="name" type="text" class="form-control" name="last_name" value="{{ old('name') }}" required>
-
-              @if ($errors->has('last_name'))
-                <span class="help-block">
-                                        <strong>{{ $errors->first('last_name') }}</strong>
-                                    </span>
-              @endif
-            </div>
-          </div>
-
-          <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
-            <label for="age" class="col-md-4 control-label">Mosha</label>
-
-            <div class="col-md-6">
-              <input id="age" type="number" class="form-control" name="age" value="{{ old('age') }}" required>
-
-              @if ($errors->has('age'))
-                <span class="help-block">
-                                        <strong>{{ $errors->first('age') }}</strong>
-                                    </span>
-              @endif
-            </div>
-          </div>
-
-          <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <label for="email" class="col-md-4 control-label">E-Mail Adresa</label>
-
-            <div class="col-md-6">
-              <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-              @if ($errors->has('email'))
-                <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-              @endif
-            </div>
-          </div>
-
-          <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-            <label for="password" class="col-md-4 control-label">Fjalkalimi</label>
-
-            <div class="col-md-6">
-              <input id="password" type="password" class="form-control" name="password" required>
-
-              @if ($errors->has('password'))
-                <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-              @endif
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="password-confirm" class="col-md-4 control-label">Përsërit Fjalkalimin</label>
-
-            <div class="col-md-6">
-              <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-md-6 col-md-offset-4">
-              <button type="submit" class="btn btn-primary">
-                Regjistrohu
-              </button>
-            </div>
-          </div>
-        </form>
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+    {{--   <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Regjistrohu</h4>
+      </div> --}}
+      <div class="modal-body">
+      <div class="col-md-6">
+        <div class="registration-info">
+          <i class="fab fa-wpforms fa-10x"></i>
+          <h1>Regjistrohu</h1>
+          <p>Regjistrimi eshte falas dhe ju lejon qe te mbani resultatet e juaja ne nje vend te vetme, ti shperndani ato apo te lexoni me teper per cdo resultat</p>
+        </div>
       </div>
-    </div>
-  </div>
+        <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+              {{ csrf_field() }}
+<div class="col-md-6">
+              <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }} ">
+                  <input id="first_name" type="text" class="form-control" name="first_name" placeholder="Emri" value="{{ old('name') }}" required autofocus>
+                  @if ($errors->has('first_name'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('first_name') }}</strong>
+                    </span>
+                  @endif
+              </div>
+
+              <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
+                  <input id="name" type="text" class="form-control" name="last_name" placeholder="Mbiemri" value="{{ old('name') }}" required>
+                  @if ($errors->has('last_name'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('last_name') }}</strong>
+                    </span>
+                  @endif
+              </div>
+
+              <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
+                  <input id="age" type="number" class="form-control" name="age" placeholder="Mosha" value="{{ old('age') }}" required>
+                  @if ($errors->has('age'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('age') }}</strong>
+                    </span>
+                  @endif
+              </div>
+
+              <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                  <input id="email" type="email" class="form-control" name="email" placeholder="E-Mail Adresa" value="{{ old('email') }}" required>
+                  @if ($errors->has('email'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                  @endif
+              </div>
+
+              <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                  <input id="password" type="password" class="form-control" placeholder="Fjalkalimi" name="password" required>
+                  @if ($errors->has('password'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('password') }}</strong>
+                    </span>
+                  @endif
+              </div>
+
+              <div class="form-group">
+                  <input id="password-confirm" type="password" class="form-control" placeholder="Përsërit Fjalkalimin" name="password_confirmation" required>
+              </div>
+              <div class="form-group">
+                  <input id="agree" type="checkbox" required>
+                  <label for="agree">Duke u regjistruar ju pranoni Politikat e privatesis</label>
+              </div>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Mbylle</button>
+        <button type="submit" class="btn btn-primary">Regjistrohu</button>
+      </div>
+    </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 </div>
 
@@ -181,9 +172,8 @@
 
 @section('scripts')
   <script>
-  $( "#show_register" ).click(function() {
-    $("#registerForma").removeClass("hide");
-    $("#show_register").addClass("hide");
-  });
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').focus()
+  })
   </script>
 @endsection

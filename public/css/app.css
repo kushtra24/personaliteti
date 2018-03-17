@@ -8715,3 +8715,7 @@ footer ul li a:hover {
   }
 }
 
+.modal-footer .btn + .btn {
+  margin: inherit;
+}
+
