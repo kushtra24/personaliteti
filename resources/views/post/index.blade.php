@@ -32,32 +32,33 @@
                         <tr class="testing-table">
                           <td>{{ $post->id }}</td>
                           <td>{{ $post->title }}</td>
-                          <td>{{ str_limit($post->content, 10) }}</td>
+                          <td>{!! str_limit($post->content, 50) !!}</td>
                           <td>{{ $post->image }}</td>
                           <td>{{ $post->author }}</td>
                           <td>{{ $post->created_at }}
                             <div class="setting">
+                              <a class="btn btn-success btn-xs" href="{{ action('PostController@show', ['id' => $post->id]) }}" role="button">View</a>
 
-                            <a class="btn btn-success btn-xs" href="{{ action('PostController@show', ['id' => $post->id]) }}" role="button">View</a>
+                              <a class="btn btn-warning btn-xs" href="{{ action('PostController@edit', ['id' => $post->id]) }}" role="button">Edit</a>
 
-                            <a class="btn btn-warning btn-xs" href="{{ action('PostController@edit', ['id' => $post->id]) }}" role="button">Edit</a>
-
-                            <div class="display-inline" style="display: inline-block;">
-                                <form method="POST" action="{{ route('PostController.destroy', [$post->id]) }}">
-                                      {{ csrf_field() }}
-                                      <button type="submit" class="btn btn-danger btn-xs">Delete</button>
-                                </form>
-                            </div>
+                              <div class="display-inline" style="display: inline-block;">
+                                  <form method="POST" action="{{ route('PostController.destroy', [$post->id]) }}">
+                                        {{ csrf_field() }}
+                                        <button type="submit" class="btn btn-danger btn-xs">Delete</button>
+                                  </form>
+                              </div>
                             </div>
                           </td>
                           <td>{{ $post->updated_at }}</td>
                         </tr>
                         @endforeach
                     </table>
+                    {{ $posts->links() }}
                   </div>
                     
                 </div>
                 <!-- /.col-lg-8 -->
+
             </div>
             <!-- /.row -->
 </div>

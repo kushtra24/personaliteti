@@ -117,15 +117,13 @@
             <a href="/testip" class="btn btn-default">Fillo testin</a>
         </div>
         <div class="col-md-3">
-            
             <h4>
                 <a href="https://www.16personalities.com/blog" title="Articles">Artikujt</a>
             </h4>
             <ul>
-                <li> <a href="#"> This is an aticle title that needs to change</a></li>
-                <li> <a href="#"> This is an aticle title that needs to change</a></li>
-                <li> <a href="#"> This is an aticle title that needs to change</a></li>
-                <li> <a href="#"> This is an aticle title that needs to change</a></li>
+                @foreach($posts as $post)
+                <li> <a href="/post/{{ $post->id }}">{!! str_limit($post->title, 40) !!}</a></li>
+                @endforeach
             </ul>
 
         </div>

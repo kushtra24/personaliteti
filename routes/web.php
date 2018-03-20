@@ -34,11 +34,16 @@ Route::group(['test' => 'test'], function(){
 
  Route::get('faqe/{slug}', function($slug)
     {
-        $page =  Page::where('slug', $slug)->first();
-        return view('pages.page')
-        ->with('content', $page->content)
-        ->with('title', $page->title)
-        ;
+        try {
+            $page =  Page::where('slug', $slug)->first();
+            return view('pages.page')
+            ->with('content', $page->content)
+            ->with('title', $page->title)
+            ;
+        } catch (Exception $e) {
+            return abort(404);
+        }
+        
     });
 
  
@@ -88,6 +93,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/faqet/store', ['uses' => 'PageController@store', 'as' => 'page.post','middleware' => 'roles', 'roles' => ['Admin']]);
     Route::get('/faqet/{id}', ['uses' => 'PageController@show', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::get('/faqet/{id}/edit', ['uses' => 'PageController@edit', 'middleware' => 'roles', 'roles' => ['Admin']]);
-    Route::post('/faqet/{id}/edit', ['uses' => 'PageController@update', 'as' => 'page.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/faqet/{id}/update', ['uses' => 'PageController@update', 'as' => 'page.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::post('/faqet/{id}/delete', ['uses' => 'PageController@destroy', 'as' => 'page.destroy', 'middleware' => 'roles', 'roles' => ['Admin']]);
 });

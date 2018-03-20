@@ -19,32 +19,31 @@
                       </div>
                   @endif
                     
-                    <form method="POST" action="{{ route('page.update', [$pages->id]) }}" class="form-horizontal" enctype="multipart/form-data" >
+                    <form method="POST" action="{{ route('page.update', [$pages->id]) }}" class="form-horizontal" >
                       {{ csrf_field() }}
 
                         <div class="form-group">
                           <label for="type" class="col-sm-3 control-label">Titulli</label>
                             <div class="col-sm-9">
-                          <input type="text" class="form-control" name="title" id="title" value="{{ $pages->title }}" placeholder="Titulli">
+                              <input type="text" class="form-control" name="title" id="title" value="{{ $pages->title }}" placeholder="Titulli">
                            </div>
                         </div>
 
                         <div class="form-group">
                           <label for="type" class="col-sm-3 control-label">Slug</label>
                             <div class="col-sm-9">
-                          <input type="text" class="form-control" name="slug" id="slug" value="{{ $pages->slug }}" placeholder="Slug" disabled>
+                              <input type="text" class="form-control" name="slug" id="slug" value="{{ $pages->slug }}" placeholder="Slug" disabled>
                            </div>
                         </div>
 
                         <div class="form-group">
                           <label for="FileNo" class="col-sm-3 control-label">Pershkrimi</label>
                             <div class="col-sm-9">
-                          <textarea name="content" id="editor">{{ $pages->content }}</textarea>
+                              <textarea name="content" id="editor">{{ $pages->content }}</textarea>
                            </div>
                         </div>
 
-                          <button type="submit" class="btn btn-primary pull-right">Ruaje</button>
-
+                        <button type="submit" class="btn btn-primary pull-right">Ruaje</button>
                     </form>
                     
                     
@@ -58,8 +57,6 @@
 @endsection
 
 @section('adminscripts')
-
-
   <script>
     ClassicEditor
         .create( document.querySelector( '#editor' ) )

@@ -16,7 +16,8 @@ class CheckRole
     public function handle($request, Closure $next)
     {
         if ($request->user() == null) {
-            return response("Nuk keni qasje ne kete faqe. Nder arsyet mund te jet se nuk jeni te kyqur", 401);
+            return abort(404);
+
         }
         $actions = $request->route()->getAction();
         $roles = isset($actions['roles']) ? $actions['roles'] : null;
@@ -24,6 +25,6 @@ class CheckRole
         if ($request->user()->hasAnyRole($roles) || !$roles) {
             return $next($request);
         }
-        return response("Nuk keni qasje ne kete faqe", 401);
+        return abort(404);
     }
 }

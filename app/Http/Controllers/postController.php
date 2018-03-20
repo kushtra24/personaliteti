@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('id','desc')->paginate(10);
         return view('post.index', compact('posts'));
     }
 
@@ -97,6 +97,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
        $store = new Post;
 
         $store->title = $request['title'];
