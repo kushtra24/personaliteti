@@ -48,7 +48,7 @@
 
                         <input type="file" id="file" name="file" onchange="readURL(this);"><span id="filename"></span>
 
-                          <img src="../{{ $tipi->type_img }}" alt="Type image" width="50px" id="imediateImage">
+                          <img src="../{{ $tipi->type_img }}" alt="Type image" width="50px" id="imediateImage1">
                            </div>
                         </div>
 
@@ -91,10 +91,10 @@
 
 
         // show the image immediately after insertation
-        $("input[id='type_img']").change(function (e) {
-            var $this = $(this);
-            $this.next().html($this.val().split('\\').pop());
-        });
+        // $("input[id='type_img']").change(function (e) {
+        //     var $this = $(this);
+        //     $this.next().html($this.val().split('\\').pop());
+        // });
 
     //Show image imediately
     function readURL(input) {

@@ -22,7 +22,6 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
@@ -30,19 +29,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{--{{ config('app.name', 'Personaliteti') }}--}}
                         <img src="{{asset('images/personaliteti-logo.png')}}" height="30px" alt="personaliteti.com">
                     </a>
-                </div>
+                </div>{{-- nabar-header --}}
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="/">Home</a>
+                            <a href="/">Ballina</a>
                         </li>
                         <li>
                             <a href="/tipet">Tipet</a>
@@ -53,7 +51,7 @@
                         <li>
                             <a href="/blog">Blog</a></li>
                         </li>
-                    </ul>
+                    </ul>{{-- navbar-nav --}}
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
@@ -90,79 +88,81 @@
                                 </ul>
                             </li>
                         @endguest
-                    </ul>
-                </div>
-            </div>
+                    </ul>{{-- navbar-nav navbar-right --}}
+                </div>{{-- navbar-colaps --}}
+
+            </div>{{-- container --}}
         </nav>
 
         @yield('content')
-    </div>
+    </div> {{-- app --}}
 
 <footer>
     <hr>
     <div class="container">
         <div class="row">
-        <div class="col-md-3">
-            <!-- Branding Image -->
-            <a class="" href="{{ url('/') }}">
-                {{--{{ config('app.name', 'Personaliteti') }}--}}
-                <img src="{{asset('images/personaliteti-logo.png')}}" height="40px">
-            </a>
-            <p class="footer-description">Merr një përshkrim të vetvëtes, njihu më tepër rreth fuqive dhe dobësive tuaja.</p>
-            <p>Teste te bëra deri me tani {{ $counter }}</p>
-            <div class="footer-solcial-icons">
-                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a>
+            <div class="col-md-3">
+                <!-- Branding Image -->
+                <a class="" href="{{ url('/') }}">
+                    {{--{{ config('app.name', 'Personaliteti') }}--}}
+                    <img src="{{asset('images/personaliteti-logo.png')}}" height="40px">
+                </a>
+                <p class="footer-description">Merr një përshkrim të vetvëtes, njihu më tepër rreth fuqive dhe dobësive tuaja.</p>
+                <p>Teste te bëra deri me tani {{ $counter }}</p>
+                <div class="footer-solcial-icons">
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a>
+                </div>
+                <a href="/testip" class="btn btn-default">Fillo testin</a>
             </div>
-            <a href="/testip" class="btn btn-default">Fillo testin</a>
-        </div>
-        <div class="col-md-3">
-            <h4>
-                <a href="https://www.16personalities.com/blog" title="Articles">Artikujt</a>
-            </h4>
-            <ul>
-                @foreach($posts as $post)
-                <li> <a href="/post/{{ $post->id }}">{!! str_limit($post->title, 40) !!}</a></li>
-                @endforeach
-            </ul>
+            <div class="col-md-3">
+                <h4>
+                    <a href="https://www.16personalities.com/blog" title="Articles">Artikujt</a>
+                </h4>
+                <ul>
+                    @foreach($posts as $post)
+                    <li> <a href="/post/{{ $post->id }}">{!! str_limit($post->title, 40) !!}</a></li>
+                    @endforeach
+                </ul>
+            </div>
 
-        </div>
+            <div class="col-md-3">
 
-        <div class="col-md-3">
+                <h4>
+                    <a href="https://www.16personalities.com/articles" title="Articles">Më shum</a>
+                </h4>
+                <ul>
+                    <li> <a href="/faqe/teoria_jone"> Teoria Jonë</a></li>
+                    <li> <a href="{{ route('login') }}"> Kyqu</a></li>
+                </ul>
+            </div>
 
-            <h4>
-                <a href="https://www.16personalities.com/articles" title="Articles">Më shum</a>
-            </h4>
-            <ul>
-                <li> <a href="/faqe/teoria_jone"> Teoria Jonë</a></li>
-                <li> <a href="{{ route('login') }}"> Kyqu</a></li>
-            </ul>
-        </div>
+            <div class="col-md-3">
 
-        <div class="col-md-3">
-
-            <h4>
-                <a href="https://www.16personalities.com/articles" title="Articles">E nevojshme</a>
-            </h4>
+                <h4>
+                    <a href="https://www.16personalities.com/articles" title="Articles">E nevojshme</a>
+                </h4>
                 <ul>
                     <li> <a href="#"> Kontakt</a></li>
                     <li> <a href="#"> Kushtet e përdorimit</a></li>
                     <li> <a href="/faqe/politikat_privatesise"> Politika e privatesisë</a></li>
                 </ul>
-        </div>
-    </div>
-    <hr>
+            </div>
+        </div><!-- row -->
+        <hr>
         <div class="row">
-            <div class="col-md-6"> <p> &copy; Personaliteti.com <?php echo date("Y"); ?>. Të gjitha të drejtat e rezervuara. </p></div>
-            <div class="col-md-6"> <p class="pull-right"> Designed and developed by: <a href="http://kushtrim.net" target="_blank"> Kushtrim.net</a></p> </div>
+            <div class="col-md-6">
+                <p> &copy; Personaliteti.com
+                    <?php echo date("Y"); ?>. Të gjitha të drejtat e rezervuara. </p>
+            </div>
+            <div class="col-md-6">
+                <p class="pull-right"> Designed and developed by: <a href="http://kushtrim.net" target="_blank"> Kushtrim.net</a></p>
+            </div>
         </div>
     </div>
 </footer>
-
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-
     @yield('scripts')
 </body>
 </html>
