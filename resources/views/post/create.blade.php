@@ -69,11 +69,15 @@
 
 
   <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+
+
+ClassicEditor
+    .create( document.querySelector( '#editor' ), {
+        cloudServices: {
+            tokenUrl: 'https://example.com/cs-token-endpoint',
+            uploadUrl: 'https://your-organization-id.cke-cs.com/easyimage/upload/'
+        }
+    } );
 
 
         // show the image immediately after insertation

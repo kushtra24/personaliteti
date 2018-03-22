@@ -70,9 +70,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $posts = Post::find($id);
+        $postet = Post::find($id);
 
-        return view('post.show', compact('posts'));
+        return view('post.show', compact('postet'));
     }
 
     /**
@@ -98,17 +98,18 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         
-       $store = new Post;
-
-        $store->title = $request['title'];
-        $store->content = $request['content'];
-        $store->author = $request['author'];
+        $store = Post::find($id);
         
         //image
         if($request->hasFile('file')){
             $filename = $request->file->getClientOriginalName();
-            $filename = $request->file('file')->storeAs('public/images', $filename);
+            $filename = $request->file('file')->storeAs('/images', $filename);
+            $store->image = $filename;
         }
+
+        $store->title = $request['title'];
+        $store->content = $request['content'];
+        $store->author = $request['author'];
 
         $store->save();
 

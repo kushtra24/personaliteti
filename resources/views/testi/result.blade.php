@@ -93,6 +93,8 @@ a { text-decoration: none; color: #EC5C93; }
             <h3>{{ $jpfinalProcentRez }}% {{$judgingPerspecting}}</h3>
             <br>
             <h4> {{ $tipi->shortDescription }}</h4>
+            <br>
+            <h4>Regjistrohu dhe lexo më shume rreth tipit tuaj</h4>
           @endif
         </div>
 

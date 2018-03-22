@@ -8650,6 +8650,11 @@ footer ul {
   -webkit-padding-start: 0;
 }
 
+footer ul hr {
+  margin: 6px 0;
+  padding: 0;
+}
+
 footer ul li {
   list-style: none;
 }

@@ -121,7 +121,8 @@
                 </h4>
                 <ul>
                     @foreach($posts as $post)
-                    <li> <a href="/post/{{ $post->id }}">{!! str_limit($post->title, 40) !!}</a></li>
+                    <li> <a href="/post/{{ $post->id }}">{!! str_limit($post->title, 40) !!}...</a></li>
+                    <hr>
                     @endforeach
                 </ul>
             </div>
