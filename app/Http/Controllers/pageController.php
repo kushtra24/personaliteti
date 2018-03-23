@@ -93,7 +93,7 @@ class PageController extends Controller
         $pages = Page::find($id);
 
         $pages->title = $request['title'];
-        $pages->slug = $request['slug'];
+        // $pages->slug = $request['slug'];
         $pages->content = $request['content'];
         $pages->save();
 

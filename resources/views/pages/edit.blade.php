@@ -4,7 +4,7 @@
  <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Edito Faqet</h1>
+                    <h1 class="page-header">Edito Faqen</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -18,27 +18,30 @@
                       {!! session('message.content') !!}
                       </div>
                   @endif
+
                     
                     <form method="POST" action="{{ route('page.update', [$pages->id]) }}" class="form-horizontal" >
                       {{ csrf_field() }}
 
+                      <p><i>/{{ $pages->slug }}</i></p>
+
                         <div class="form-group">
-                          <label for="type" class="col-sm-3 control-label">Titulli</label>
-                            <div class="col-sm-9">
+                          <label for="type" class="control-label">Titulli</label>
+                            <div class="">
                               <input type="text" class="form-control" name="title" id="title" value="{{ $pages->title }}" placeholder="Titulli">
                            </div>
                         </div>
 
-                        <div class="form-group">
+                       {{--  <div class="form-group">
                           <label for="type" class="col-sm-3 control-label">Slug</label>
                             <div class="col-sm-9">
                               <input type="text" class="form-control" name="slug" id="slug" value="{{ $pages->slug }}" placeholder="Slug" disabled>
                            </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group">
-                          <label for="FileNo" class="col-sm-3 control-label">Pershkrimi</label>
-                            <div class="col-sm-9">
+                          <label for="FileNo" class=" control-label">Pershkrimi</label>
+                            <div class="">
                               <textarea name="content" id="editor">{{ $pages->content }}</textarea>
                            </div>
                         </div>

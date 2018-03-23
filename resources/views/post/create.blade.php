@@ -47,7 +47,7 @@
                         </div>
 
                         <div class="form-group">
-                            <textarea name="content" id="editor" cols="50" rows="50">{{old('content')}}</textarea>
+                            <textarea name="content" cols="50" rows="50">{{old('content')}}</textarea>
                         </div>
 
                         <div class="form-group">
@@ -66,19 +66,9 @@
 @endsection
 
 @section('adminscripts')
-
-
   <script>
 
-
-ClassicEditor
-    .create( document.querySelector( '#editor' ), {
-        cloudServices: {
-            tokenUrl: 'https://example.com/cs-token-endpoint',
-            uploadUrl: 'https://your-organization-id.cke-cs.com/easyimage/upload/'
-        }
-    } );
-
+        
 
         // show the image immediately after insertation
         $("input[id='type_img']").change(function (e) {

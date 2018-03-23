@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Storage;
 
 class PostController extends Controller
 {
@@ -41,7 +42,7 @@ class PostController extends Controller
                  //image
         if($request->hasFile('file')){
             $filename = $request->file->getClientOriginalName();
-            $filename = $request->file('file')->storeAs('/images', $filename);
+            $filename = $request->file('file')->storeAs('/images', $filename, 'public');
             $store->image = $filename;
         }
 
@@ -103,7 +104,7 @@ class PostController extends Controller
         //image
         if($request->hasFile('file')){
             $filename = $request->file->getClientOriginalName();
-            $filename = $request->file('file')->storeAs('/images', $filename);
+            $filename = $request->file('file')->storeAs('/images', $filename, 'public');
             $store->image = $filename;
         }
 
@@ -137,5 +138,11 @@ class PostController extends Controller
         $Posts->delete();
 
         return back();
+    }
+
+    public function blog(){
+        $posts = Post::orderBy('id','desc')->paginate(3);
+
+        return view('post.blog', compact('posts'));
     }
 }

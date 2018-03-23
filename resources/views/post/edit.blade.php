@@ -35,7 +35,7 @@
                        
                         <div class="form-group">
                         		<input type="file" id="file" name="file" onchange="readURL(this);"><span id="filename"></span>
-                          		<img src="/{{ $posts->image }}" alt="post image" width="50px" id="imediateImage">
+                          		<img src="{{ $posts->image }}" alt="post image" width="50px" id="imediateImage" class="img-responsive">
                         </div>
 
                         <div class="form-group">
@@ -69,12 +69,6 @@
 
 
   <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-
 
         // show the image immediately after insertation
         $("input[id='type_img']").change(function (e) {
