@@ -4,8 +4,6 @@
 <style>
 
 #container { text-align: center; margin: 20px; }
-h2 { color: #CCC; }
-a { text-decoration: none; color: #EC5C93; }
 
 .bar-main-container {
   margin: 10px auto;
@@ -29,7 +27,7 @@ a { text-decoration: none; color: #EC5C93; }
   -moz-border-radius: 4px;
   border-radius: 4px;
   padding: 9px 0px 0px 8px;
-  width: 18%;
+  width: 21%;
   height: 34px;
   text-align: center;
 }
