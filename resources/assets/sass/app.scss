@@ -277,6 +277,7 @@ input[type="radio"] {
 
 footer{
 	margin: 25px 0;
+
 	h4{
 		margin: 0 0 10px 0;
 		a{
@@ -289,6 +290,10 @@ footer{
 		-webkit-margin-before: 0;
 		-webkit-margin-after: 0;
 		-webkit-padding-start: 0;
+		hr{
+			margin: 6px 0;
+			padding: 0;
+		}
 		li{
 			list-style: none;
 			a{

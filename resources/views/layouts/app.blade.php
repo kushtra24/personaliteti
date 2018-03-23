@@ -12,6 +12,9 @@
 
     <!-- font awesome  -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -121,7 +124,8 @@
                 </h4>
                 <ul>
                     @foreach($posts as $post)
-                    <li> <a href="/post/{{ $post->id }}">{!! str_limit($post->title, 40) !!}</a></li>
+                    <li> <a href="/post/{{ $post->id }}">{!! str_limit($post->title, 40) !!}...</a></li>
+                    <hr>
                     @endforeach
                 </ul>
             </div>
