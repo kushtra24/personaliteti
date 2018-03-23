@@ -71,11 +71,24 @@ progress::-moz-progress-bar {
 		<div class="container">
 			<div class="single-post-title">
 				<h1>{{ $postet->title }}</h1>
-				<p>Autori: {{ $postet->author }} | {{-- {{ $posted->catedory }} | --}} Me: {{ $postet->created_at }}</p>
+				<p>Autori: {{ $postet->author }} | {{-- {{ $posted->catedory }} | --}} Me: {{ $postet->created_at->format('d.m.Y') }}</p>
 			</div>
 			<div class="col-md-8" id="post">
 				<img src="{{ $postet->image }}" alt="featured img" class="img-responsive">
 				{!! $postet->content !!}
+        <hr>
+        <div class="comments">
+          @foreach($postet->comments as $comment)
+              <article>
+                <strong> {{ $comment->created_at->diffForHumans() }} </strong>
+                {{ $comment->body}}
+              </article>
+          @endforeach
+        </div>
+
+        <div class="add_coment">
+          Add Comments
+        </div>
 			</div>
 			<div class="col-md-4">
 			@include('post.partials.sidebar')
