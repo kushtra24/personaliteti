@@ -17,9 +17,9 @@ class TestCounters extends Migration
             $table->bigInteger('test_counter');
         });
 
-        // DB::table('test_counters')->insert([
-        //     'test_counter' => "0",
-        // ]);
+        DB::table('test_counters')->insert([
+            'test_counter' => "0",
+        ]);
     }
 
     /**

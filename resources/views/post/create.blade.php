@@ -35,16 +35,16 @@
                        
                         <div class="form-group">
                         		<input type="file" id="file" name="file" onchange="readURL(this);"><span id="filename"></span>
-                          		<img src="#" alt="Type image" width="50px" id="imediateImage">
+                          		<img src="#" alt="No image" width="50px" id="imediateImage">
                         </div>
 
                         <div class="form-group">
                             <input type="text" class="form-control" name="title" placeholder="Titulli faqes" value="{{old('title')}}" required>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text" class="form-control" name="author" placeholder="Autori" value="{{old('title')}}" required>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group">
                             <textarea name="content" cols="50" rows="50">{{old('content')}}</textarea>

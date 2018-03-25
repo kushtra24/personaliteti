@@ -82,21 +82,29 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="/admin"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                         </li>
+                        <li>
+                            <a href="#"><i class="fas fa-images"></i> Galeria</a>
+                        </li>  
                         @if (Auth::user() && Auth::user()->hasAnyRole('Admin'))                        
                              <li>
-                                <a href="/admintipet"><i class="fa fa-dashboard fa-fw"></i> Tipet</a>
+                                <a href="/admintipet"><i class="fas fa-users"></i> Tipet</a>
                             </li> 
                             <li>
-                                <a href="/pyetjet"><i class="fa fa-dashboard fa-fw"></i> Pyetjet</a>
+                                <a href="/pyetjet"><i class="fas fa-braille"></i> Pyetjet</a>
                             </li>
                             <li>
-                                <a href="/faqet"><i class="fa fa-dashboard fa-fw"></i> Faqet</a>
+                                <a href="/faqet"><i class="fas fa-file-alt"></i> Faqet</a>
                             </li>                
                         @endif
                         <li>
-                            <a href="/post"><i class="fa fa-dashboard fa-fw"></i> Artikujë</a>
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-newspaper"></i> Artikujtë <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="/post"><i class="far fa-newspaper"></i> Artikujë</a></li>
+                                <li><a href="/post/create"><i class="fas fa-plus-circle"></i> Shto Artikull</a></li>
+                                <li><a href="/comments"><i class="fas fa-comments"></i> Komentet</a></li>
+                              </ul>
                         </li> 
                     </ul>
                 </div>

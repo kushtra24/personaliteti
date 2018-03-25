@@ -57,7 +57,14 @@ class User extends Authenticatable
     public function testResults(){
         return $this->hasMany(Test::Class);
     }
-//'App\testResults', 'user_id', 'id'
+
+    public function posts(){
+        return $this->hasMany(Post::Class);
+    }
+
+    public function comment(){
+        return $this->hasMany(Comment::Class);
+    }
 
 
 }// end of class

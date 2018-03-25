@@ -14,6 +14,7 @@ class postSeeder extends Seeder
     {
         DB::table('posts')->insert([
             'title' => "Simple post",
+            'user_id' => "1",
 	        'content' => "Content of a simple post",
 	        'image' => "images/image.jpg",
 	        'author' => "The bot",

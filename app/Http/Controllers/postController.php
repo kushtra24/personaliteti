@@ -46,9 +46,10 @@ class PostController extends Controller
             $store->image = $filename;
         }
 
+        $store->user_id = auth()->id();
         $store->title = $request['title'];
         $store->content = $request['content'];
-        $store->author = $request['author'];
+        $store->author = auth()->user()->first_name;
         
         $store->save();
 
@@ -107,10 +108,11 @@ class PostController extends Controller
             $filename = $request->file('file')->storeAs('/images', $filename, 'public');
             $store->image = $filename;
         }
-
+        
+        $store->user_id = auth()->id();
         $store->title = $request['title'];
         $store->content = $request['content'];
-        $store->author = $request['author'];
+        $store->author = auth()->user()->first_name;
 
         $store->save();
 

@@ -80,21 +80,8 @@
 @endsection
 
 @section('adminscripts')
-
-
   <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
 
-
-        // show the image immediately after insertation
-        // $("input[id='type_img']").change(function (e) {
-        //     var $this = $(this);
-        //     $this.next().html($this.val().split('\\').pop());
-        // });
 
     //Show image imediately
     function readURL(input) {

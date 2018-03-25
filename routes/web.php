@@ -17,18 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/blog', function () {
-//     return view('post.blog');
-// });
-
 Route::get('/blog', 'PostController@blog')->name('blog');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::get('/profile', 'UserController@index')->name('profile');
-//Route::get('/home', 'HomeController@show');
 
 Route::group(['test' => 'test'], function(){
     Route::get('/testip', 'TestController@doTheTest')->name('testi');
@@ -52,13 +46,6 @@ Route::group(['test' => 'test'], function(){
         
     });
 
- 
-// Route::group(['post' => 'post'], function(){
-    // Route::post('/post/store', 'PostController@store');
-    // Route::post('/post/{id}/update', 'PostController@update')->name('PostController.update');
-    // Route::post('/post/{id}/delete', 'PostController@destroy')->name('PostController.destroy');
-// });
-
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 Route::group(['tipet' => 'tipet'], function(){
@@ -76,7 +63,7 @@ Route::group(['middleware' => 'web'], function () {
     //Posts
     Route::get('/post', ['uses' => 'PostController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
     Route::get('/post/create', ['uses' => 'PostController@create', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
-    Route::get('/post/{id}', ['uses' => 'PostController@show', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::get('/post/{id}', 'PostController@show');
     Route::get('/post/edit/{id}', ['uses' => 'PostController@edit', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
     Route::post('/post/store', ['uses' => 'PostController@store', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::post('/post/{id}/update', ['uses' => 'PostController@update', 'as' => 'PostController.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
@@ -101,4 +88,16 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/faqet/{id}/edit', ['uses' => 'PageController@edit', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::post('/faqet/{id}/update', ['uses' => 'PageController@update', 'as' => 'page.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::post('/faqet/{id}/delete', ['uses' => 'PageController@destroy', 'as' => 'page.destroy', 'middleware' => 'roles', 'roles' => ['Admin']]);
+
+    //Comments
+    Route::get('/comments', ['uses' => 'CommentController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::get('/comments/create', ['uses' => 'CommentController@create', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    // Route::post('/comments/store/{$post}', ['uses' => 'CommentController@store', 'as' => 'comments.post','middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/post/{post}/comment', 'CommentController@store')->name('comment.store');
+    Route::get('/comments/{id}', ['uses' => 'CommentController@show', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::get('/comments/{id}/edit', ['uses' => 'CommentController@edit', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/comments/{id}/update', ['uses' => 'CommentController@update', 'as' => 'comments.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
+    Route::post('/comments/delete/{id}', ['uses' => 'CommentController@destroy', 'as' => 'comments.destroy', 'middleware' => 'roles', 'roles' => ['Admin']]);
+
 });
+

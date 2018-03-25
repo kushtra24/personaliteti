@@ -43,10 +43,6 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" name="author" placeholder="Autori" value="{{ $posts->author }}" required>
-                        </div>
-
-                        <div class="form-group">
                             <textarea name="content" id="editor" cols="50" rows="50">{{ $posts->content }}</textarea>
                         </div>
 

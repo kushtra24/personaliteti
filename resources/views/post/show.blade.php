@@ -67,28 +67,46 @@ progress::-moz-progress-bar {
 
 @section('content')
 <progress value="0"></progress>
-	<section id="page-{{ $postet->id }}">
+	<section id="post-{{ $postet->id }}">
 		<div class="container">
 			<div class="single-post-title">
 				<h1>{{ $postet->title }}</h1>
-				<p>Autori: {{ $postet->author }} | {{-- {{ $posted->catedory }} | --}} Me: {{ $postet->created_at->format('d.m.Y') }}</p>
+				<p>Autori: {{ $postet->author }} | {{-- {{ $posted->category }} | --}} Me: {{ $postet->created_at->format('d.m.Y') }}</p>
 			</div>
 			<div class="col-md-8" id="post">
 				<img src="{{ $postet->image }}" alt="featured img" class="img-responsive">
 				{!! $postet->content !!}
         <hr>
         <div class="comments">
-          @foreach($postet->comments as $comment)
+          @foreach($postet->comments->reverse() as $comment)
               <article>
                 <strong> {{ $comment->created_at->diffForHumans() }} </strong>
                 {{ $comment->body}}
               </article>
           @endforeach
         </div>
-
+<hr>
         <div class="add_coment">
-          Add Comments
+          <h3>Shto Koment</h3>
+          @if(session()->has('message.level'))
+              <div class="alert alert-{{ session('message.level') }}"> 
+              {!! session('message.content') !!}
+              </div>
+          @endif
+          <form  method="POST" action="{{ route('comment.store', [$postet->id]) }}">
+            {!! csrf_field() !!}
+
+              <div class="form-group">
+                  <input type="text" class="form-control" name="body" cols="50" rows="50" value="{{old('body')}}" required></input>
+              </div>
+
+              <div class="form-group">
+              <button type="submit" class="btn btn-primary pull-right cleftButton" name="submit" id="submit" style=" margin-right: 0; ">Shto Koment</button>
+              </div>
+
+           </form>
         </div>
+
 			</div>
 			<div class="col-md-4">
 			@include('post.partials.sidebar')
