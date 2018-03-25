@@ -43,12 +43,12 @@ progress::-moz-progress-bar {
 	text-align: justify;
     word-break: break-all;
     }
-#post>img{
+
+#post img{
 	display: block;
-	width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 50px;
+  max-width: 100% !important;
+  height: auto;
+  margin-bottom: 50px;
 }
 
 #post p{
@@ -71,42 +71,50 @@ progress::-moz-progress-bar {
 		<div class="container">
 			<div class="single-post-title">
 				<h1>{{ $postet->title }}</h1>
-				<p>Autori: {{ $postet->author }} | {{-- {{ $posted->category }} | --}} Me: {{ $postet->created_at->format('d.m.Y') }}</p>
+				<p>Autori: {{ $postet->user->first_name . " " . $postet->user->last_name}} | {{-- {{ $posted->category }} | --}} Me: {{ $postet->created_at->format('d.m.Y') }}</p>
 			</div>
 			<div class="col-md-8" id="post">
 				<img src="{{ $postet->image }}" alt="featured img" class="img-responsive">
 				{!! $postet->content !!}
         <hr>
+        <h4><b><i class="fas fa-comments"></i> {{ $postet->comments->count() }} Koment{{ $postet->comments->count() == 1 ? "" : "e" }} </b></h4>
+
+        @guest
+            <h4><a href="{{ route('login') }}">Kyqu</a> Për të Lënë koment</h4>
+        @else
+          <div class="add_coment">
+            <h3>Shto Koment</h3>
+            @if(session()->has('message.level'))
+                <div class="alert alert-{{ session('message.level') }}"> 
+                {!! session('message.content') !!}
+                </div>
+            @endif
+            <form  method="POST" action="{{ route('comment.store', [$postet->id]) }}">
+              {!! csrf_field() !!}
+
+                <div class="form-group">
+                    <input type="text" class="form-control comment-field" name="body" cols="50" rows="50" value="{{old('body')}}" required></input>
+                </div>
+
+                <div class="form-group">
+                <button type="submit" class="btn btn-primary  pull-right cleftButton" name="submit" id="submit" style=" margin-right: 0; ">Shto Koment</button>
+                </div>
+
+             </form>
+          </div>
+          <br>
+        <br>
+        @endguest
+        
+        <hr>
         <div class="comments">
           @foreach($postet->comments->reverse() as $comment)
               <article>
-                <strong> {{ $comment->created_at->diffForHumans() }} </strong>
-                {{ $comment->body}}
+                <small><strong><i class="fas fa-user-circle"></i> {{ $comment->user->first_name}} {{ $comment->user->last_name}} <i class="fas fa-clock"></i> {{ $comment->created_at->diffForHumans() }}</strong></small>
+                <p>{{ $comment->body}}</p>
               </article>
           @endforeach
         </div>
-<hr>
-        <div class="add_coment">
-          <h3>Shto Koment</h3>
-          @if(session()->has('message.level'))
-              <div class="alert alert-{{ session('message.level') }}"> 
-              {!! session('message.content') !!}
-              </div>
-          @endif
-          <form  method="POST" action="{{ route('comment.store', [$postet->id]) }}">
-            {!! csrf_field() !!}
-
-              <div class="form-group">
-                  <input type="text" class="form-control" name="body" cols="50" rows="50" value="{{old('body')}}" required></input>
-              </div>
-
-              <div class="form-group">
-              <button type="submit" class="btn btn-primary pull-right cleftButton" name="submit" id="submit" style=" margin-right: 0; ">Shto Koment</button>
-              </div>
-
-           </form>
-        </div>
-
 			</div>
 			<div class="col-md-4">
 			@include('post.partials.sidebar')
@@ -119,6 +127,25 @@ progress::-moz-progress-bar {
 @section('scripts')
 <script>
 
+  //replace the english month to Albanian
+  $(".archives").each(function() {
+    var text = $(this).text();
+    text = text.replace("January", "Janar");
+    text = text.replace("February", "Shkurt");
+    text = text.replace("March", "Mars");
+    text = text.replace("April", "Prill");
+    text = text.replace("May", "Mai");
+    text = text.replace("June", "Qershorë");
+    text = text.replace("July", "Korrik");
+    text = text.replace("August", "Gusht");
+    text = text.replace("September", "Shtatorë");
+    text = text.replace("October", "Tetorë");
+    text = text.replace("November", "Nënntorë");
+    text = text.replace("December", "Dhjetorë");
+    $(this).text(text);
+});
+
+//progress bar
 $(document).ready(function() {
     
   var getMax = function(){

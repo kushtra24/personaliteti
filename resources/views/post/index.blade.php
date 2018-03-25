@@ -46,8 +46,8 @@
                             </div>
                           </td>
                           {{-- <td>{!! str_limit($post->content, 50) !!}</td> --}}
-                          <td>{{ $post->image }}</td>
-                          <td>{{ $post->author }}</td>
+                          <td><img src="{{ $post->image }}" alt="postimg" width="100px" height="auto"></td>
+                          <td>{{ $post->user->first_name . " " . $post->user->last_name}}</td>
                           <td>{{ $post->created_at }}
                           </td>
                           <td>{{ $post->updated_at }}</td>

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Post;
 use Storage;
 
+use Carbon\Carbon;
+
 class PostController extends Controller
 {
     /**
@@ -73,8 +75,14 @@ class PostController extends Controller
     public function show($id)
     {
         $postet = Post::find($id);
+        
+        $archives = Post::archives();
 
-        return view('post.show', compact('postet'));
+        Carbon::setLocale('sq');
+        Carbon::setUtf8(true);
+
+
+        return view('post.show', compact('postet', 'archives'));
     }
 
     /**
@@ -142,9 +150,33 @@ class PostController extends Controller
         return back();
     }
 
-    public function blog(){
-        $posts = Post::orderBy('id','desc')->paginate(3);
+    public function archiveFilterd(){
 
-        return view('post.blog', compact('posts'));
+         $posts = Post::latest();
+
+        if ($month = request('month')) {
+            $posts->whereMonth('created_at', Carbon::parse($month)->month);
+        }
+
+        if ($year = request('year')) {
+            $posts->whereYear('created_at', $year);
+        }
+
+        $posts = $posts->get();
+
+        $archives = Post::archives();
+
+        return view('post.archiveFilter', compact('posts', 'archives'));
     }
+
+    public function blog(){
+        $posts = Post::orderBy('id','desc')->paginate(4);
+
+        $archives = Post::archives();
+        
+        return view('post.blog', compact('posts', 'archives'));
+    }
+
+   
+
 }

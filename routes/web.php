@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/blog', 'PostController@blog')->name('blog');
+Route::get('/archiveFilter', 'PostController@archiveFilterd')->name('archiveFilterd');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

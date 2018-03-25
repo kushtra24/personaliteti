@@ -16,21 +16,14 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      *
      * @return void
-     */
+     */ 
     public function boot()
     {
         Schema::defaultStringLength(191);
 
-        // \Cache::remember('counter', 120, function () {
-        //     return View::share('counter', testCounter::first()->test_counter);
-        // });
-        // if ( Schema::hasColumn('test_counters', 'test_counter')) {
         	View::share('counter', TestCounter::first()->test_counter);
-        // }
            
             View::share('posts', Post::orderBy('id', 'desc')->take(5)->get());
-        
-        // View::share('results', auth()->user()->Test);
         
     }
 

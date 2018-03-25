@@ -50,7 +50,6 @@
 						<p><b>Autori:</b> {{ $post->user->first_name . " " . $post->user->last_name}} | <b>Data e Publikimit:</b> {{ $post->created_at->format('d.m.Y') }}</p>
 					</div>
 				@endforeach
-				{{ $posts->links() }}
 			</div>
 			<div class="col-md-4">
 				@include('post.partials.sidebar')
