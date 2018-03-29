@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use Storage;
-
+use Analytics;
+use Spatie\Analytics\Period;
+use App\Category;
 use Carbon\Carbon;
 
 class PostController extends Controller
@@ -18,6 +20,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::orderBy('id','desc')->paginate(10);
+
         return view('post.index', compact('posts'));
     }
 
@@ -28,7 +31,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('post.create');
+        $Categories = Category::all();
+        return view('post.create', compact('Categories'));
     }
 
     /**
@@ -39,6 +43,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request->input('category');
         $store = new Post;
 
                  //image
@@ -51,9 +56,12 @@ class PostController extends Controller
         $store->user_id = auth()->id();
         $store->title = $request['title'];
         $store->content = $request['content'];
+        // $store->category = $request['category'];
         $store->author = auth()->user()->first_name;
         
         $store->save();
+
+        $store->category()->attach($request->input('category'));
 
         if ($store->save()) {
         $request->session()->flash('message.level', 'success');
@@ -124,6 +132,8 @@ class PostController extends Controller
 
         $store->save();
 
+        $store->category()->sync($request->input('category'));
+        
         if ($store->save()) {
         $request->session()->flash('message.level', 'success');
         $request->session()->flash('message.content', 'Faqja eshte publikuar me sukses');
@@ -143,9 +153,15 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        $Posts = Post::find($id);
+        // Post::where('id', $id)->delete();
 
-        $Posts->delete();
+        $post = Post::find($id);
+
+        $post->category()->detach();
+
+        $post->comments()->delete();
+
+        $post->delete();
 
         return back();
     }
@@ -165,18 +181,35 @@ class PostController extends Controller
         $posts = $posts->get();
 
         $archives = Post::archives();
-
+        
         return view('post.archiveFilter', compact('posts', 'archives'));
     }
+    
 
     public function blog(){
         $posts = Post::orderBy('id','desc')->paginate(4);
 
         $archives = Post::archives();
-        
+
+        // $pages = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+
         return view('post.blog', compact('posts', 'archives'));
     }
 
-   
+    public function search(){
+
+        // they are all the same.
+        $q = request()->input('q');
+
+        $query = Post::where('title','LIKE','%'.$q.'%')->orWhere('content','LIKE','%'.$q.'%')->get();
+
+        if(count($query) > 0)
+            return view('post.searchResult')->withDetails($query)->withQuery ( $q );
+        else
+            return view ('post.searchResult')->withMessage('No Details found. Try to search again !');
+        
+    }
+
+
 
 }

@@ -21,9 +21,6 @@
     <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
     <script src="{{ asset('js/tinymce/tinymce.init.js') }}"></script>
 
-       
-
-
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     @yield('style')
@@ -104,6 +101,7 @@
                                 <li><a href="/post"><i class="far fa-newspaper"></i> Artikujë</a></li>
                                 <li><a href="/post/create"><i class="fas fa-plus-circle"></i> Shto Artikull</a></li>
                                 <li><a href="/comments"><i class="fas fa-comments"></i> Komentet</a></li>
+                                <li><a href="/categories"><i class="fas fa-archive"></i> Kategoritë</a></li>
                               </ul>
                         </li> 
                     </ul>

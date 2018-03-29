@@ -32,6 +32,7 @@ Route::group(['test' => 'test'], function(){
     Route::post('/home', 'TestController@introExtroQuestions');
 });
 
+Route::post('/search', 'PostController@search');
 
  Route::get('faqe/{slug}', function($slug)
     {
@@ -39,8 +40,10 @@ Route::group(['test' => 'test'], function(){
             $page =  Page::where('slug', $slug)->first();
             return view('pages.page')
             ->with('content', $page->content)
-            ->with('title', $page->title)
-            ;
+            ->with('title', $page->title);
+
+            // $page = Page::slug();
+
         } catch (Exception $e) {
             return abort(404);
         }
@@ -64,7 +67,7 @@ Route::group(['middleware' => 'web'], function () {
     //Posts
     Route::get('/post', ['uses' => 'PostController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
     Route::get('/post/create', ['uses' => 'PostController@create', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
-    Route::get('/post/{id}', 'PostController@show');
+    Route::get('/blog/{id}', 'PostController@show');
     Route::get('/post/edit/{id}', ['uses' => 'PostController@edit', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
     Route::post('/post/store', ['uses' => 'PostController@store', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::post('/post/{id}/update', ['uses' => 'PostController@update', 'as' => 'PostController.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
@@ -99,6 +102,15 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/comments/{id}/edit', ['uses' => 'CommentController@edit', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::post('/comments/{id}/update', ['uses' => 'CommentController@update', 'as' => 'comments.update', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::post('/comments/delete/{id}', ['uses' => 'CommentController@destroy', 'as' => 'comments.destroy', 'middleware' => 'roles', 'roles' => ['Admin']]);
+
+    //Category
+    Route::get('/categories', ['uses' => 'CategoryController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::get('/categories/create', ['uses' => 'CategoryController@create', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::get('/categories/{id}', 'CategoryController@show');
+    Route::get('/categories/{id}/edit', ['uses' => 'CategoryController@edit', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::post('/categories/store', ['uses' => 'CategoryController@store', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::post('/categories/{id}/update', ['uses' => 'CategoryController@update', 'as' => 'category.update', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::post('/categories/delete/{id}', ['uses' => 'CategoryController@destroy', 'as' => 'category.destroy', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
 
 });
 

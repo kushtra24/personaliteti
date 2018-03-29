@@ -71,7 +71,10 @@ progress::-moz-progress-bar {
 		<div class="container">
 			<div class="single-post-title">
 				<h1>{{ $postet->title }}</h1>
-				<p>Autori: {{ $postet->user->first_name . " " . $postet->user->last_name}} | {{-- {{ $posted->category }} | --}} Me: {{ $postet->created_at->format('d.m.Y') }}</p>
+				<p>Autori: {{ $postet->user->first_name . " " . $postet->user->last_name}}
+          | {{-- {{ $posted->category }} | --}}
+          Me: {{ $postet->created_at->format('d.m.Y') }}
+          | @foreach($postet->category as $category) <a href="#">{{ $category->name }}</a>, @endforeach</p>
 			</div>
 			<div class="col-md-8" id="post">
 				<img src="{{ $postet->image }}" alt="featured img" class="img-responsive">

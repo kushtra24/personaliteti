@@ -44,7 +44,7 @@
 					</div>
 					<div class="post-container">
 						
-						<a href="/post/{{ $post->id }}"><h3>{{ $post->title }}</h3></a>
+						<a href="/blog/{{ $post->id }}"><h3>{{ $post->title }}</h3></a>
 						{!! str_limit($post->content, 200) !!}
 						<hr>
 						<p><b>Autori:</b> {{ $post->user->first_name . " " . $post->user->last_name}} | <b>Data e Publikimit:</b> {{ $post->created_at->format('d.m.Y') }}</p>

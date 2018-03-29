@@ -21,11 +21,16 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function category(){
+        // this is a many to many stable it links many categories to many posts
+        return $this->belongsToMany(category::class, 'category_post');
+    }
+
     public static function archives(){
         return static::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) published')
         ->groupBy('year', 'month')
-        ->get()
-        ->toArray();
+        ->get();
+        // ->toArray();
     }
 
 }

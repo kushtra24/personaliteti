@@ -13,7 +13,7 @@ class questionsSeeder extends Seeder
     public function run()
     {
         DB::table('Questions')->insert([
-            'question' => "question one",
+            'question' => "Te qendroje ne mesin e shum njerzve me lodhe mentalisht",
 	        'purpose' => "IntroExtro",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -37,7 +37,7 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "question five",
+            'question' => "Nese beje ushtrime fizike me pelqen te jeme ne shtepi vetem",
             'purpose' => "IntroExtro",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
