@@ -115,41 +115,41 @@
                 <div class="footer-solcial-icons">
                     <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
                     <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a>
+                    <a href="#"><i class="fab fa-youtube-square fa-2x"></i></i></a>
                 </div>
                 <a href="/testip" class="btn btn-default">Fillo testin</a>
             </div>
             <div class="col-md-3">
                 <h4>
-                    <a href="https://www.16personalities.com/blog" title="Articles">Artikujt</a>
+                    Artikujt
                 </h4>
                 <ul>
                     @foreach($posts as $post)
-                    <li> <a href="/post/{{ $post->id }}">{!! str_limit($post->title, 40) !!}...</a></li>
+                    <li> <a href="/post/{{ $post->id }}" title="{{$post->title}}">{!! str_limit($post->title, 40) !!}...</a></li>
                     <hr>
                     @endforeach
                 </ul>
             </div>
 
             <div class="col-md-3">
-
                 <h4>
-                    <a href="https://www.16personalities.com/articles" title="Articles">Më shum</a>
+                    Më shumë
                 </h4>
                 <ul>
-                    <li> <a href="/faqe/teoria_jone"> Teoria Jonë</a></li>
-                    <li> <a href="{{ route('login') }}"> Kyqu</a></li>
+                    <li><a href="/faqe/teoria_jone"><i class="fas fa-caret-right"></i> Teoria Jonë</a></li>
+                    <li><a href="/faqe/pts"><i class="fas fa-caret-right"></i> Pyetje të Shpeshta</a></li>
+                    <li><a href="{{ route('login') }}"><i class="fas fa-caret-right"></i> Kyqu</a></li>
                 </ul>
             </div>
 
             <div class="col-md-3">
-
                 <h4>
-                    <a href="https://www.16personalities.com/articles" title="Articles">E nevojshme</a>
+                    E nevojshme
                 </h4>
                 <ul>
-                    <li> <a href="#"> Kontakt</a></li>
-                    <li> <a href="#"> Kushtet e përdorimit</a></li>
-                    <li> <a href="/faqe/politikat_privatesise"> Politika e privatesisë</a></li>
+                    <li> <a href="/impressum"><i class="fas fa-caret-right"></i> Impressum</a></li>
+                    <li> <a href="/faqe/kushtet_perdorimit"><i class="fas fa-caret-right"></i> Kushtet e përdorimit</a></li>
+                    <li> <a href="/faqe/politikat_privatesise"><i class="fas fa-caret-right"></i> Politika e privatesisë</a></li>
                 </ul>
             </div>
         </div><!-- row -->

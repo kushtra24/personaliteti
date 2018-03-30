@@ -35,11 +35,11 @@
                       {!! csrf_field() !!}
                        
                         <div class="form-group">
-                            <input type="text" class="form-control" name="name" placeholder="Titulli faqes" value="{{old('name')}}" required>
+                            <input type="text" class="form-control" name="name" placeholder="Emri" value="{{old('name')}}" required>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" name="slug" placeholder="Titulli faqes" value="{{old('slug')}}" required>
+                            <input type="text" class="form-control" name="slug" placeholder="Slug" value="{{old('slug')}}" required>
                         </div>
 
                         <div class="form-group">

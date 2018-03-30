@@ -10,4 +10,14 @@ class Category extends Model
     	// this is a many to many stable it links many categories to many posts
     	return $this->belongsToMany(Post::class, 'category_post');
     }
+
+	/**
+	* Get the route key for the model.
+	*
+	* @return string
+	*/
+	public function getRouteKeyName()
+	{
+	    return 'slug';
+	}
 }

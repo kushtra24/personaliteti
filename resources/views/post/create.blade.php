@@ -47,12 +47,13 @@
                         <button type="submit" class="btn btn-primary pull-right cleftButton" name="submit" id="submit"><i class="fa fa-save"></i> &nbsp; Ruaje</button>
                         </div>
                 </div>
+
                 <!-- /.col-lg-8 -->
 
                 <div class="col-md-3">
                     <h3>Fotoja</h3>
                     <div class="form-group">
-                            <input type="file" id="file" name="file" onchange="readURL(this);"><span id="filename"></span>
+                            <input type="file" id="file" name="file" onchange="readURL(this);" required><span id="filename"></span>
                             <img src="#" alt="No image" id="imediateImage" class="img-responsive">
                     </div>
                     <h3>Category</h3>

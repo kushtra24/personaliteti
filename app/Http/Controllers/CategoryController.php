@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Http\Requests\CategoryRequest;
+use App\Post;
 
 class CategoryController extends Controller
 {
@@ -123,4 +124,20 @@ class CategoryController extends Controller
 
         return back();
     }
+
+
+    public function categoryfilter(Category $category){
+
+        // $categories = Category::with('post');
+
+        // if ($category = request('category')) {
+        //     $categories->where('slug', $category);
+        // }
+        $categories = $category->load('post');
+        
+        return view('post.categoryfilter', compact('categories'));
+    }
+
+
 }
+

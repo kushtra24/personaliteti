@@ -9,6 +9,7 @@ use Analytics;
 use Spatie\Analytics\Period;
 use App\Category;
 use Carbon\Carbon;
+use App\Http\Requests\PostRequest;
 
 class PostController extends Controller
 {
@@ -41,7 +42,7 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         // return $request->input('category');
         $store = new Post;
@@ -86,11 +87,13 @@ class PostController extends Controller
         
         $archives = Post::archives();
 
+        $categories = Category::all();
+
         Carbon::setLocale('sq');
         Carbon::setUtf8(true);
 
 
-        return view('post.show', compact('postet', 'archives'));
+        return view('post.show', compact('postet', 'archives', 'categories'));
     }
 
     /**
@@ -168,21 +171,19 @@ class PostController extends Controller
 
     public function archiveFilterd(){
 
-         $posts = Post::latest();
+        $posts = Post::latest();
 
+        //get only the month and year of the post clicked on the archive
         if ($month = request('month')) {
             $posts->whereMonth('created_at', Carbon::parse($month)->month);
         }
-
         if ($year = request('year')) {
             $posts->whereYear('created_at', $year);
         }
 
         $posts = $posts->get();
-
-        $archives = Post::archives();
         
-        return view('post.archiveFilter', compact('posts', 'archives'));
+        return view('post.archiveFilter', compact('posts'));
     }
     
 
@@ -191,10 +192,13 @@ class PostController extends Controller
 
         $archives = Post::archives();
 
+        $categories = Category::all();
+
         // $pages = Analytics::fetchVisitorsAndPageViews(Period::days(7));
 
-        return view('post.blog', compact('posts', 'archives'));
+        return view('post.blog', compact('posts', 'archives', 'categories'));
     }
+
 
     public function search(){
 
@@ -202,6 +206,7 @@ class PostController extends Controller
         $q = request()->input('q');
 
         $query = Post::where('title','LIKE','%'.$q.'%')->orWhere('content','LIKE','%'.$q.'%')->get();
+        
 
         if(count($query) > 0)
             return view('post.searchResult')->withDetails($query)->withQuery ( $q );

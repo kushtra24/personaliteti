@@ -25,7 +25,7 @@
 	text-align: center;
 }
 
-.btn(){
+.btn{
 	background-color: transparent;
     border-width: 2px;
 	transition: .3s background-color ease-out;
@@ -297,10 +297,10 @@ footer{
 		li{
 			list-style: none;
 			a{
-				color: #616161;
+				line-height: 30px;
+
 				&:hover{
 					text-decoration: none;
-					color: #000;
 				}
 			}
 		}
@@ -401,4 +401,68 @@ footer{
 
 .modal-footer .btn + .btn {
     margin: inherit;
+}
+
+#sidebar{
+	#search{
+		.btn{
+			margin: 0;
+			padding: 5px 24px;
+		}
+	}
+	h4{
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-top: 50px;
+	}
+	ul{
+		padding-left: 0;
+		line-height: 30px;
+	}
+	li{
+		list-style: none;
+	}
+	hr{
+		margin: 6px 0;
+    	padding: 0;
+	}
+}
+
+footer a .fa-caret-right{
+	transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+	transition: .2s transform ease-out;
+}
+
+footer a:hover .fa-caret-right{
+	transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+}
+
+
+.post-container{
+	background-color: white;
+	padding: 20px;
+	margin-bottom: 25px;
+}
+.featured-image{
+	max-height: 300px;
+
+	overflow: hidden;
+}
+.featured-image img{
+	width: 100%;
+}
+
+#index-blog-title{
+	height: 288px;
+	margin: 0 auto;
+
+}
+#index-blog-title h1{
+	text-align: center;
+	line-height: 288px;
+	text-transform: uppercase;
 }

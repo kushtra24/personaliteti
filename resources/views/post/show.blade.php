@@ -44,9 +44,10 @@ progress::-moz-progress-bar {
     word-break: break-all;
     }
 
-#post img{
+#post>img{
 	display: block;
-  max-width: 100% !important;
+  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-bottom: 50px;
 }

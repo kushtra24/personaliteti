@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section('content')
 	<section id="index_of_blog">
 		<div id="index-blog-title">
@@ -8,7 +7,8 @@
 		</div>
 
 		<div class="container">
-		@foreach($posts as $post)
+		@foreach($categories->post as $post)
+
 			<div class="col-md-4">
 					<div class="featured-image">
 						<img src="{{ $post->image }}" alt="featured img" class="img-responsive">
