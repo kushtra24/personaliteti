@@ -17,13 +17,14 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->tinyInteger('age');
+            $table->tinyInteger('age')->nullable();
             $table->string('email',128)->unique();
             $table->string('password');
             $table->string('adresa')->nullable();
-            $table->string('Shteti')->nullable();
+            $table->string('shteti')->nullable();
             $table->string('shkollimi')->nullable();
-            $table->string('Vendlindja')->nullable();
+            $table->string('vendlindja')->nullable();
+            $table->string('gjinia')->nullable();
             $table->string('hobby')->nullable();
             $table->tinyInteger('verified')->default(0);
             $table->string('email_token')->nullable();

@@ -74,6 +74,14 @@
   font-weight: 700;
 }
 
+.modal-body {
+    padding: 8px 72px;
+}
+
+.close-icon:hover{
+  cursor: pointer;
+}
+
 </style>
 @endsection
 
@@ -195,19 +203,20 @@
     @endif
 
     <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div class="col-md-6">
+                    <div class="col-md-61">
                         <div class="registration-info">
-                            <i class="fab fa-wpforms fa-10x"></i>
-                            <h1>Regjistrohu</h1>
+                            <i class="fas fa-times pull-right close-icon" data-dismiss="modal"></i>
+                            <h3>Regjistrohu</h3>
                             <p>Regjistrimi eshte falas dhe ju lejon qe te mbani resultatet e juaja ne nje vend te vetme, ti shperndani ato apo te lexoni me teper per cdo resultat</p>
+                            <hr>
                         </div>
                     </div>
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
-                        <div class="col-md-6">
+                        <div class="col-md-61">
                             <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }} ">
                                 <input id="first_name" type="text" class="form-control" name="first_name" placeholder="Emri" autocomplete="name" value="{{ old('name') }}" required autofocus>
                                 @if ($errors->has('first_name'))
@@ -227,7 +236,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
-                                <input id="age" type="number" class="form-control" min="0" max="100" name="age" placeholder="Mosha" autocomplete="age" value="{{ old('age') }}" required>
+                                <input id="age" type="number" class="form-control" min="0" max="100" name="age" placeholder="Mosha" autocomplete="age" value="{{ old('age') }}">
                                 @if ($errors->has('age'))
                                   <span class="help-block">
                                       <strong>{{ $errors->first('age') }}</strong>
@@ -257,12 +266,11 @@
                                 <input id="password-confirm" type="password" class="form-control" placeholder="Përsërit Fjalkalimin" autocomplete="retype-password" name="password_confirmation" required>
                             </div>
                             <div class="form-group">
-                                <input id="agree" type="checkbox" required>
-                                <label for="agree">Duke u regjistruar ju pranoni Politikat e privatesis</label>
+                                <label for="agree">Duke u regjistruar ju pranoni <a href="/politikat_privatesise" target="_blank"> Politikat e privatesis</a></label>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Mbylle</button>
+                            {{-- <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Mbylle</button> --}}
                             <button type="submit" class="btn btn-primary">Regjistrohu</button>
                         </div>
                     </form>

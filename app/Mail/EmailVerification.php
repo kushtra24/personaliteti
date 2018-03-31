@@ -28,8 +28,13 @@ class EmailVerification extends Mailable
      */
     public function build()
     {
-        return $this->view('email.email')->with([
+        try {
+            return $this->view('email.email')->with([
             'email_token' => $this->user->email_token, ]);
+        } catch (Exception $e) {
+            return view('welcome');
+        }
+        
     }
 
 }// end of class

@@ -17,7 +17,7 @@
 				
 			@foreach ($tipet->slice(0, 4) as $tipi)
 				<div class="col-md-3 the-type">
-					<a href="{{ action('TipetController@show', ['id' => $tipi->id]) }}">
+					<a href="{{ action('TipetController@show', [$tipi]) }}">
 						<img src="{{ $tipi->type_img }}" alt="tipi" width="200px">
 						<h4>{{ $tipi->name }}</h4>
 						<h5>{{ $tipi->type }}</h5>

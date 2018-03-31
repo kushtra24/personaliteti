@@ -399,8 +399,11 @@ footer{
     }
 }
 
-.modal-footer .btn + .btn {
-    margin: inherit;
+.modal-footer{
+	border-top: none;
+	.btn + .btn {
+	    margin: inherit;
+	}
 }
 
 #sidebar{

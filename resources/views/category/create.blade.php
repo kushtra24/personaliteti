@@ -38,9 +38,6 @@
                             <input type="text" class="form-control" name="name" placeholder="Emri" value="{{old('name')}}" required>
                         </div>
 
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="slug" placeholder="Slug" value="{{old('slug')}}" required>
-                        </div>
 
                         <div class="form-group">
                         <button type="submit" class="btn btn-primary pull-right cleftButton" name="submit" id="submit"><i class="fa fa-save"></i> &nbsp; Ruaje</button>

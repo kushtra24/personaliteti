@@ -113,7 +113,7 @@ class TestController extends Controller
                 'tipi' => $tipi
         ]);
         }
-        return redirect('result');
+        return redirect('/');
     }
 
     /**
@@ -190,7 +190,8 @@ public function extrovertOrintrovert()
 
     }
     elseif ($result === 0) {
-        $this->introExtro = "Padefinim";
+        $result = 1;
+        $this->introExtro = "Extrovert";
     }
     else{
 
@@ -219,14 +220,14 @@ public function intuitiveOrSensing(){
     
     //Determine of the results are introvertet or extrovertet
     if ($result < 0) {
-        $this->intuSens = "Intuitive";
+        $this->intuSens = "Shqisor";
     }
     elseif ($result === 0) {
         $result = 1;
         $this->intuSens = "Shqisor";
     }
     else{
-        $this->intuSens = "Shqisor";
+        $this->intuSens = "Intuitive";
     }
 
     $this->evaluate($result);
@@ -281,14 +282,14 @@ public function intuitiveOrSensing(){
 
         //Determine of the results are introvertet or extrovertet
         if ($result < 0) {
-            $this->judgingPerspecting = "Gjykues (Judging)";
+            $this->judgingPerspecting = "Perspektivë";
         }
         elseif ($result === 0) {
             $result = 1;
             $this->judgingPerspecting = "Perspektivë";
         }
         else{
-            $this->judgingPerspecting = "Perspektivë";
+            $this->judgingPerspecting = "Gjykues (Judging)";
         }
 
         $this->evaluate($result);

@@ -42,7 +42,7 @@ class CategoryController extends Controller
      	$store = new Category;
 
         $store->name = $request['name'];
-        $store->slug = $request['slug'];
+        $store->slug = str_slug($store->name, "-");
         
         $store->save();
 
@@ -128,11 +128,6 @@ class CategoryController extends Controller
 
     public function categoryfilter(Category $category){
 
-        // $categories = Category::with('post');
-
-        // if ($category = request('category')) {
-        //     $categories->where('slug', $category);
-        // }
         $categories = $category->load('post');
         
         return view('post.categoryfilter', compact('categories'));

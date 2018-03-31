@@ -41,13 +41,9 @@ class TipetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Tipi $name)
     {
-        $tipi = Tipi::find($id);
-
-        if ($tipi->type = "ENFJ" ) {
-            $tipi->group = "Organizim";
-        }
+          $tipi = Tipi::find($name);
 
         return view('tipet.tipi', compact('tipi'));
     }

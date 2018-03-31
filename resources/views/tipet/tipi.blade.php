@@ -13,16 +13,17 @@
 	<section id="type-single">
 {{-- <p>{{ $tipi->featured_Image }}</p> --}}
 	<div class="row">
+		@foreach($tipi as $tipi)
 		<div class="col-md-4 col-md-offset-1">
 			<img src="../{{ $tipi->type_img }}" alt="tipi" class="img-responsive">
 		</div>
-		<div class="col-md-6 single-type-meta">			
-			<h3>Grupi: <span>{{ $tipi->group }}</span></h3>
+		<div class="col-md-6 single-type-meta">
 			<h3>Emertimi: <span>{{ $tipi->name }}</span></h3>
 			<h3>Kodi: <span>{{ $tipi->type }}</span></h3>
-			<p>{{ $tipi->shortDescription }}</p>
+			<p>{!! $tipi->shortDescription !!}</p>
 		</div>
 	</div>
+	@endforeach
 	<div class="row">
 		<div class="col-md-9">
 			{!! $tipi->description !!}
