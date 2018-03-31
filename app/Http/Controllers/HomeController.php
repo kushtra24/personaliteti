@@ -40,19 +40,5 @@ class HomeController extends Controller
     }
     
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-//    public function show($id)
-//    {
-//
-//        $user = User::find($id);
-//
-//        return view('home', compact('user'));
-//    }
-
 
 }
