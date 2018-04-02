@@ -115,7 +115,7 @@
                 <!-- Branding Image -->
                 <a class="" href="{{ url('/') }}">
                     {{--{{ config('app.name', 'Personaliteti') }}--}}
-                    <img src="{{asset('images/personaliteti-logo.png')}}" height="40px">
+                    <img src="{{asset('images/logo.png')}}" height="40px">
                 </a>
                 <p class="footer-description">Merr një përshkrim të vetvëtes, njihu më tepër rreth fuqive dhe dobësive tuaja.</p>
                 <p>Teste te bëra deri me tani {{ $counter }}</p>

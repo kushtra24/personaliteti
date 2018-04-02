@@ -25,6 +25,7 @@
 	text-align: center;
 }
 
+
 .btn{
 	background-color: transparent;
     border-width: 2px;
@@ -93,6 +94,35 @@
     }
 }
 
+.btn-facebook{
+	color: $facebook;
+	border-color: $facebook;
+    &:hover{
+		background-color: $facebook;
+		border-color: $facebook;
+		color: #fff;
+    }
+}
+
+.btn-twitter{
+	color: $twitter;
+	border-color: $twitter;
+    &:hover{
+		background-color: $twitter;
+		border-color: $twitter;
+		color: #fff;
+    }
+}
+
+.btn-googleplus{
+	color: $googleplus;
+	border-color: $googleplus;
+    &:hover{
+		background-color: $googleplus;
+		border-color: $googleplus;
+		color: #fff;
+    }
+}
 
 
 .btn-warning{
@@ -117,13 +147,14 @@
     		font-weight: 700;
 		}
 		i{
-			font-size: 250px;
+			font-size: 100px;
+			margin-top: 30px;
 		}
 		.komunikim, .karrier, .lidhje, .vendimarrje{
 		 	h2{
 		    	text-transform: uppercase;
 		    	font-weight: 700;
-		    	text-align: center;
+		    	// text-align: center;
 		    }
 		}
 		p {

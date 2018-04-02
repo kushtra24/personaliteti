@@ -8442,6 +8442,39 @@ button.close {
   color: #fff;
 }
 
+.btn-facebook {
+  color: #3b5998;
+  border-color: #3b5998;
+}
+
+.btn-facebook:hover {
+  background-color: #3b5998;
+  border-color: #3b5998;
+  color: #fff;
+}
+
+.btn-twitter {
+  color: #00aced;
+  border-color: #00aced;
+}
+
+.btn-twitter:hover {
+  background-color: #00aced;
+  border-color: #00aced;
+  color: #fff;
+}
+
+.btn-googleplus {
+  color: #dd4b38;
+  border-color: #dd4b38;
+}
+
+.btn-googleplus:hover {
+  background-color: #dd4b38;
+  border-color: #dd4b38;
+  color: #fff;
+}
+
 .btn-warning {
   color: #ff9100;
   border-color: #ff9100;
@@ -8474,7 +8507,8 @@ button.close {
 }
 
 #cka_vlerson i {
-  font-size: 250px;
+  font-size: 100px;
+  margin-top: 30px;
 }
 
 #cka_vlerson .komunikim h2,
@@ -8483,7 +8517,6 @@ button.close {
 #cka_vlerson .vendimarrje h2 {
   text-transform: uppercase;
   font-weight: 700;
-  text-align: center;
 }
 
 #cka_vlerson p {
