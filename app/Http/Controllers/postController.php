@@ -58,7 +58,7 @@ class PostController extends Controller
         $store->title = $request['title'];
         $store->content = $request['content'];
         // $store->category = $request['category'];
-        $store->author = auth()->user()->first_name;
+        // $store->author = auth()->user()->first_name;
         
         $store->save();
 

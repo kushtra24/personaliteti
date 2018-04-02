@@ -39,7 +39,7 @@
 
 @else  
     <h4>Të fundit</h4>
-@foreach($posts as $post)
+@foreach($posts->slice(0, 5) as $post)
         <a href="/blog/{{ $post->id }}">{{ $post->title }}</a>
         {{-- {!! str_limit($post->content, 100) !!} --}}
         <hr>

@@ -41,40 +41,47 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
+                   {{--  <ul class="nav navbar-nav">
+                        
+                    </ul> --}}
+                    {{-- navbar-nav --}}
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+
                         <li>
                             <a href="/">Ballina</a>
                         </li>
                         <li>
-                            <a href="/tipet">Tipet</a>
+                            <a href="{{ route('tipet') }}">Tipet</a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="/faqe/rreth_nesh">Rreth nesh</a></li>
-                        </li>
+                        </li> --}}
                         <li>
-                            <a href="/blog">Blog</a></li>
+                            <a href="{{ route('blog') }}">Blog</a></li>
                         </li>
-                    </ul>{{-- navbar-nav --}}
+                        {{-- <li>
+                            <a href="{{ route('testi') }}" class="btn btn-primary btn-sm">Fillo Vlersimin</a>
+                        </li> --}}
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ route('login') }}">Kyqu</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <img src="../images/{{ Auth()->user()->testResults->last()->finaltype }}.png" alt="tipi" width="35px"> {{ Auth::user()->first_name }} {{-- {{ Auth::user()->last_name }} --}} <span class="caret"></span>
+                                     {{ Auth::user()->first_name }} {{-- {{ Auth::user()->last_name }} --}} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
 
                                     <li>
                                         @if (Auth::user() && Auth::user()->hasAnyRole('admin')) 
-                                            <a href="/admin">Admin Area</a>
+                                            <a href="{{ route('admin') }}">Admin Area</a>
                                          @endif
-                                        <a href="/profile">Profili</a>
                                          @if (Auth::user() && Auth::user()->hasAnyRole('User')) 
+                                            <a href="/profile">Profili</a>
                                             <a href="/home">Resultatet</a>
                                          @endif
 
@@ -138,6 +145,7 @@
                 <ul>
                     <li><a href="/faqe/teoria_jone"><i class="fas fa-caret-right"></i> Teoria Jonë</a></li>
                     <li><a href="/faqe/pts"><i class="fas fa-caret-right"></i> Pyetje të Shpeshta</a></li>
+                    <li><a href="/faqe/rreth_nesh"><i class="fas fa-caret-right"></i> Rreth nesh</a></li></li>
                     <li><a href="{{ route('login') }}"><i class="fas fa-caret-right"></i> Kyqu</a></li>
                 </ul>
             </div>

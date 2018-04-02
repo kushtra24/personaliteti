@@ -42,9 +42,9 @@
                                 <select class="form-control" name="purpose" required >
                                     <option value=""> Teston</option>
                                     <option value="IntroExtro" {{ $questions->purpose == "IntroExtro" ? 'selected="selected"' : '' }}>Extrovert / Introvert</option>
-                                    <option value="intuitionSensing" {{ $questions->purpose == "intuitionSensing" ? 'selected="selected"' : '' }}>Intuitive / Shqisor</option>
+                                    <option value="intuitionSensing" {{ $questions->purpose == "intuitionSensing" ? 'selected="selected"' : '' }}>Shqisor / Intuitive</option>
                                     <option value="feelingThinking" {{ $questions->purpose == "feelingThinking" ? 'selected="selected"' : '' }}>Mendim (Thinking) / Ndjenjë (Feeling)</option>
-                                    <option value="jundgingPerciving" {{ $questions->purpose == "jundgingPerciving" ? 'selected="selected"' : '' }}>Gjykues (Judging) / Perspektivë</option>
+                                    <option value="jundgingPerciving" {{ $questions->purpose == "jundgingPerciving" ? 'selected="selected"' : '' }}>Perspektivë / Gjykues (Judging)</option>
                                     <p>{{$questions->purpose}}</p>
                                 </select>
                             </div>

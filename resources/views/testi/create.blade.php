@@ -27,7 +27,7 @@
     </div>
 
 
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
         <form method="POST" action="/result" class="form-horizontal">
         {{ csrf_field() }}
         
@@ -45,7 +45,7 @@
 
                 @foreach( $questions as $question)
                 <div class="question form-group">
-                    <h3>{{ $question->question }}</h3>
+                    <h4 style="font-weight: 700;">{{ $question->question }}</h4>
                     <fieldset  class="test-field pull-left">
                         <p>{{ $spajtohem }}</p>
                         <input type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3">

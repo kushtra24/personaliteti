@@ -50,7 +50,7 @@
 						<p>
 							<b>Autori:</b> {{ $post->user->first_name . " " . $post->user->last_name}} | 
 							<b>Data e Publikimit:</b> {{ $post->created_at->format('d.m.Y') }} |
-							<b>Kategori:</b> @foreach($post->category as $category) <a href="#">{{ $category->name }}</a>, @endforeach
+							<b>Kategori:</b> @foreach($post->category as $category) {{ $category->name }}, @endforeach
 						</p>
 					</div>
 				@endforeach

@@ -63,6 +63,10 @@ progress::-moz-progress-bar {
 	font-weight: 700;
 }
 
+.single-post-title p span:last-child {
+    display: none;
+}
+
 </style>
 @endsection
 
@@ -75,7 +79,7 @@ progress::-moz-progress-bar {
 				<p>Autori: {{ $postet->user->first_name . " " . $postet->user->last_name}}
           | {{-- {{ $posted->category }} | --}}
           Me: {{ $postet->created_at->format('d.m.Y') }}
-          | @foreach($postet->category as $category) <a href="#">{{ $category->name }}</a>, @endforeach</p>
+          | @foreach($postet->category as $category) <a href="{{ action('CategoryController@categoryfilter', [$category]) }}">{{ $category->name }}</a><span>,</span> @endforeach</p>
 			</div>
 			<div class="col-md-8" id="post">
 				<img src="{{ $postet->image }}" alt="featured img" class="img-responsive">

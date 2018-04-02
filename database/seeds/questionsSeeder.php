@@ -49,7 +49,7 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Brengoseni shumë se çfarë mendojnë të tjerët",
+            'question' => "Nësë duhët të bëhet diçka e bëjë edhe nëse kjo do të ndikojë te të tjeret",
             'purpose' => "feelingThinking",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -97,7 +97,7 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Njerëzit rrallë mund të ju mërzisin",
+            'question' => "Ju besoni e vërteta është më e rëndësishme sesa të jesh i sjellshëm",
             'purpose' => "feelingThinking",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -115,7 +115,7 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Nuk keni vështirë të kuptoni ndjenjat e të tjerëve",
+            'question' => "Ju intereson pse është marrë një vëndim se sa cfarë vëndimi është marr",
             'purpose' => "intuitionSensing",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -127,7 +127,7 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Stili juaj i punës ngjason më shumë me një qasje të organizuar(plan) sesa një improvizim",
+            'question' => "Është e rëndesishme të kemë një list se cfarë dua të bëjë, jo vetëm të fillojë të bëjë",
             'purpose' => "jundgingPerciving",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -151,7 +151,7 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Të krijoni një plan dhe t’i përmbaheni atij është pjesa më e rëndësishme e çdo projekti",
+            'question' => "Doni të ktheni përgjigje menjëherë",
             'purpose' => "jundgingPerciving",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -169,7 +169,7 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Rrallë brengoseni se si veprimet e tua ndikojnë tek të tjerët",
+            'question' => "Brengoseni se si veprimet e tua ndikojnë tek të tjerët",
             'purpose' => "feelingThinking",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -193,19 +193,19 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Si prind, më shumë do doje që fëmija juaj të bëheti i mirë sesa i mençur",
+            'question' => "Si prind, më shumë do doje që fëmija juaj të bëhet i mirë sesa i mençur",
             'purpose' => "feelingThinking",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Nuk lejoni njerëzit e tjerë të ndikojnë në veprimet e tua",
+            'question' => "E kijoni një përshtypje pastajë shiheni se a e këni mirë apo gabim",
             'purpose' => "jundgingPerciving",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Nuk ju merr shumë kohë që të bëheni pjesë e aktiviteteve shoqërore në vendin e ri të punës",
+            'question' => "Ju merr shumë kohë që të bëheni pjesë e aktiviteteve shoqërore në vendin e ri të punës",
             'purpose' => "IntroExtro",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -265,13 +265,13 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Logjika është shpesh më e rëndësishme se zemra kur është fjala për vendime të rëndësishme",
+            'question' => "Zemra është shpesh më e rëndësishme se logjika kur është fjala për vendime të rëndësishme",
             'purpose' => "feelingThinking",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Të mbani opsionet e hapura është më e rëndësishme se të keni një listë",
+            'question' => "Të keni një listë është më e rëndësishme se të mbani opsionet e hapura",
             'purpose' => "jundgingPerciving",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);

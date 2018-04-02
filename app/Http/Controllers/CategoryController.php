@@ -95,7 +95,7 @@ class CategoryController extends Controller
         $store = Category::find($id);
 
         $store->name = $request['name'];
-        $store->slug = $request['slug'];
+        $store->slug = str_slug($store->name, "-");
         
         $store->save();
 

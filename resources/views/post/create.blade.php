@@ -66,7 +66,7 @@
                                 </li>
                                 @endforeach
                             </ul>
-                            <a href="/categories/create">Shto Kategori</a>
+                            <a href="/categories/create" target="_blank">Shto Kategori</a>
                         </div>
                 </div>
             </form>
