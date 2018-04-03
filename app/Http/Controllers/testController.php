@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Cookie\CookieJar;
 use Illuminate\Support\Facades\Cookie;
 use App\User;
+use App\Answer;
 use App\Question;
 use App\TestCounter;
 use Illuminate\Support\Facades\DB;
@@ -116,24 +117,58 @@ class TestController extends Controller
         return redirect('/');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
+
 public function introExtroQuestions(CookieJar $cookieJar)
 {
+    // increment the test Counter by one
+    DB::table('test_counters')->increment('test_counter');
 
-    $this->extrovertOrintrovert();
 
-    $this->intuitiveOrSensing();
+    // store the final results of the question
+    $introExtroResult = 0;
+    $intuitionSensingResult = 0;
+    $feelingThinkingResult = 0;
+    $jundgingPercivingResult = 0;
 
-    $this->feelingOrThinking();
+    // get all questions and evaluate the perpose   
+    foreach(request()->input('q') as $qid => $value){
+        $question = Question::find($qid);
+        if ($question->purpose == 'IntroExtro') {
+            $introExtroResult += $value;
+        }        
+        elseif($question->purpose == 'intuitionSensing'){
+            $intuitionSensingResult += $value;
+        }   
+        elseif($question->purpose == 'feelingThinking'){
+            $feelingThinkingResult += $value;
+        } 
+        elseif($question->purpose == 'jundgingPerciving'){
+            $jundgingPercivingResult += $value;
+        }
 
-    $this->judgingOrperspecting();
+        // call_user_func($question->purpose);
+    }
+
+
+    $this->extrovertOrintrovert($introExtroResult);
+
+    $this->intuitiveOrSensing($intuitionSensingResult);
+
+    $this->feelingOrThinking($feelingThinkingResult);
+
+    $this->judgingOrperspecting($jundgingPercivingResult);
 
     $this->finalTypeName($this->introExtro, $this->intuSens, $this->feelingThinking, $this->judgingPerspecting);
+
+    // Save the answers to the answeres table on the database
+    foreach (request()->input('q') as $qid => $value) {
+        $answer = new Answer();    
+        $answer->question_id = $qid;
+        $answer->value = $value;
+        $answer->testee = TestCounter::first()->test_counter;;
+        $answer->save();
+    }
 
     if (Auth::check()) {
         $store = new Test();
@@ -152,6 +187,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
     }
 
     if (!Auth::check()){
+      
         Cookie::queue(Cookie::make('finaltype', $this->finalType, 3000));
         Cookie::queue(Cookie::make('introExtro', $this->introExtro, 3000));
         Cookie::queue(Cookie::make('FirstfinalProcentRez', $this->FirstfinalProcentRez, 3000));
@@ -164,7 +200,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
         Cookie::queue(Cookie::make('rol_name', $this->rol_name, 3000));
     }
 
-    $store = DB::table('test_counters')->increment('test_counter');
+    
 
     return $this->introExtroQuestionsResult();
 
@@ -174,15 +210,8 @@ public function introExtroQuestions(CookieJar $cookieJar)
 
 
 //Evaluates the section of extrovert or introvert, working with the partial introExtro.blade.php testi > partials
-public function extrovertOrintrovert()
+public function extrovertOrintrovert($result)
 {
-    $result = 0;
-
-    if($IntroExtro = request()->input('q.IntroExtro')){
-        foreach($IntroExtro as $question){
-            $result = $result + $question;
-        }
-    }
 
     //Determine of the results are introvertet or extrovertet
     if ($result < 0) {
@@ -208,15 +237,7 @@ public function extrovertOrintrovert()
 
 
 //Evaluates the section of intuitive or Sensing, working with the partial intuitiveSensing.blade.php testi > partials
-public function intuitiveOrSensing(){
-
-    $result = 0;
-   
-    if($intuitionSensing = request()->input('q.intuitionSensing')){
-        foreach($intuitionSensing as $question){
-            $result = $result + $question;
-        }    
-    }
+public function intuitiveOrSensing($result){
     
     //Determine of the results are introvertet or extrovertet
     if ($result < 0) {
@@ -239,15 +260,7 @@ public function intuitiveOrSensing(){
 }
 
 //Evaluates the section of Feeling or Thinking, working with the partial thinkingFeeling.blade.php testi > partials
-    public function feelingOrThinking(){
-
-
-        $result = 0;
-         if($feelingThinking = request()->input('q.feelingThinking')){
-            foreach($feelingThinking as $question){
-                $result = $result + $question;
-            }    
-        }
+    public function feelingOrThinking($result){
 
         //Determine of the results are introvertet or extrovertet
         if ($result < 0) {
@@ -270,15 +283,7 @@ public function intuitiveOrSensing(){
     }
 
 //Evaluates the section of Judging or Perspekting, working with the partial judgingPerspecting.blade.php testi > partials
-    public function judgingOrperspecting(){
-
-
-        $result = 0;
-         if($jundgingPerciving = request()->input('q.jundgingPerciving')){
-            foreach($jundgingPerciving as $question){
-                $result = $result + $question;
-            }    
-        }
+    public function judgingOrperspecting($result){
 
         //Determine of the results are introvertet or extrovertet
         if ($result < 0) {

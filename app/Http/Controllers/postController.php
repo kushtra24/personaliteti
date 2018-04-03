@@ -47,13 +47,14 @@ class PostController extends Controller
         // return $request->input('category');
         $store = new Post;
 
-                 //image
+        //image
         if($request->hasFile('file')){
             $filename = $request->file->getClientOriginalName();
             $filename = $request->file('file')->storeAs('/images', $filename, 'public');
             $store->image = $filename;
         }
 
+        
         $store->user_id = auth()->id();
         $store->title = $request['title'];
         $store->content = $request['content'];

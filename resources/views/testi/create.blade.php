@@ -48,19 +48,19 @@
                     <h4 style="font-weight: 700;">{{ $question->question }}</h4>
                     <fieldset  class="test-field pull-left">
                         <p>{{ $spajtohem }}</p>
-                        <input type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3">
+                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3">
 
-                        <input type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2">
+                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2">
 
-                        <input type="radio"  name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1">
+                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1">
                         
-                        <input type="radio" name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}neotral1" value="0">
+                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}neotral1" value="0">
                         
-                        <input type="radio" name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option1r" class="right" value="1">
+                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1r" class="right" value="1">
                         
-                        <input type="radio" name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2">
+                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2">
                         
-                        <input type="radio" name="q[{{ $question->purpose }}][{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3">
+                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3">
                         <p>{{$pajtohem}}</p>
                     </fieldset>
                 </div>
@@ -95,10 +95,6 @@
 </div>
 
 <div id="fb-root"></div>
-{{-- Facebook comments --}}
-<script>
-</script>
-
 <div class="container">
 <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="5"></div>
 </div>
@@ -155,6 +151,7 @@ $('.tab-forward').click(function() {
         $('.question:nth-child(n+31)').removeClass('hide');
     }
 });
+
 
 $('#goBack').click(function() {
     count = count - 1;

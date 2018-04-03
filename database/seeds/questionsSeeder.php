@@ -49,13 +49,13 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Nësë duhët të bëhet diçka e bëjë edhe nëse kjo do të ndikojë te të tjeret",
+            'question' => "Nësë veprimet e mia ndikojnë te tjerët mua më mundon mentalisht",
             'purpose' => "feelingThinking",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Për ju është më e rëndësishme të jeni i organizuar sesa të përshtateni me lehtësi",
+            'question' => "Për ju është më e rëndësishme të jeni i organizuar sesa të improvizoni",
             'purpose' => "jundgingPerciving",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -121,7 +121,7 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Disponimi juaj nuk ndryshon shpejt",
+            'question' => "Disponimi juaj ndryshon shpesh",
             'purpose' => "feelingThinking",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -133,19 +133,19 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Nuk ju pengon të jeni në qendër të vëmendjes",
+            'question' => "Ju pengon të jeni në qendër të vëmendjes",
             'purpose' => "IntroExtro",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Nuk i keni zili të tjerët",
+            'question' => "Për ta kryër një punë dëshironi të dini Kuptimin e punës para se të filloni",
             'purpose' => "intuitionSensing",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
          DB::table('Questions')->insert([
-            'question' => "Në një diskutim, e vërteta duhet të jetë më e rëndësishme sesa ndjenjat e njerëzve",
+            'question' => "Në një diskutim, ndjenjat e njerëzve duhet të jenë më të rëndësishme sesa e vërteta",
             'purpose' => "feelingThinking",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -181,7 +181,7 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('Questions')->insert([
-            'question' => "Ëndrrat e juaja janë të përqendruara në botën e vërtetë dhe ngjarjet e saj",
+            'question' => "Shpesh thelloheni në një botë të juajën në mendjë",
             'purpose' => "IntroExtro",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
