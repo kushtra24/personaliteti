@@ -154,7 +154,7 @@
                     E nevojshme
                 </h4>
                 <ul>
-                    <li> <a href="/impressum"><i class="fas fa-caret-right"></i> Impressum</a></li>
+                    <li> <a href="/faqe/impressum"><i class="fas fa-caret-right"></i> Impressum</a></li>
                     <li> <a href="/faqe/kushtet_perdorimit"><i class="fas fa-caret-right"></i> Kushtet e përdorimit</a></li>
                     <li> <a href="/faqe/politikat_privatesise"><i class="fas fa-caret-right"></i> Politika e privatesisë</a></li>
                 </ul>

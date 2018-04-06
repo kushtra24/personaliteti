@@ -34,8 +34,22 @@ class pageSeeder extends Seeder
         ]);
 
         DB::table('pages')->insert([
-            'title' => "Rreth nesh",
-            'slug' => "faqe",
+            'title' => "Kushtet perdorimit",
+            'slug' => "kushtet_perdorimit",
+            'content' => "<p>Content of a simple post</p>",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('pages')->insert([
+            'title' => "impressum",
+            'slug' => "impressum",
+            'content' => "<p>Content of a simple post</p>",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('pages')->insert([
+            'title' => "Pyetjet me te shpeshta",
+            'slug' => "pts",
             'content' => "<p>Content of a simple post</p>",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);

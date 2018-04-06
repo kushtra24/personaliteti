@@ -54,7 +54,7 @@
                     <h3>Fotoja</h3>
                     <div class="form-group">
                             <input type="file" id="file" name="file" onchange="readURL(this);" required><span id="filename"></span>
-                            <img src="#" alt="No image" id="imediateImage" class="img-responsive">
+                            <img src="" alt="" id="imediateImage" class="img-responsive">
                     </div>
                     <h3>Category</h3>
                         <div class="checkbox">
@@ -80,19 +80,11 @@
 @section('adminscripts')
   <script>
 
-        
-
-        // show the image immediately after insertation
-        $("input[id='type_img']").change(function (e) {
-            var $this = $(this);
-            $this.next().html($this.val().split('\\').pop());
-        });
 
     //Show image imediately
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
-
             reader.onload = function (e) {
             $('#imediateImage')
                 .attr('src', e.target.result);

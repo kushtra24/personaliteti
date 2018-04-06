@@ -89,6 +89,7 @@
 	</section>
 
 	<section class="testimonials">
+		<h1>Çfar thanë të tjerët?</h1>
 		<i class="fas fa-quote-left fa-5x quote-icon"></i>
 		<div class="owl-carousel">
 		  <div class="col-md-8 col-md-offset-2">
