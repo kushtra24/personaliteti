@@ -4,8 +4,14 @@
 @section('content')
 <div class="container testing-page">
 
+<div class="progress-container hide" id="progress-container" >
+   <strong class="progress-status">Edhe 4/4</strong> <span class="pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> <i class="progress-minutes">~ 10 min</i></span>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped active" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
+  </div>
+</div>
       
-         <div class="center">
+  <div class="center">
       
       <h1>Pyetsori</h1>
       <p>Ky eshte pyetsori per te identifikuar tipin e juaj</p>
@@ -19,7 +25,7 @@
         <div class="col-md-2"><i class="fas fa-stopwatch fa-3x"></i></i> <p>Nuk merr më shumë kohë se 10 min</p></div>
         <div class="col-md-2"><i class="fas fa-street-view fa-3x"></i><p>Përgjigjuni sinqerisht për të marr resultat më të saktë</p> </div>
         <div class="col-md-2"><i class="far fa-dot-circle fa-3x"></i> <p>Lëni sa më pakë Pyetje neotrale</p></div>
-      
+
       </div>
     </div>
     <hr>
@@ -46,8 +52,8 @@
                 @foreach( $questions as $question)
                 <div class="question form-group">
                     <h4 style="font-weight: 700;">{{ $question->question }}</h4>
-                    <fieldset  class="test-field pull-left">
-                        <p>{{ $spajtohem }}</p>
+                    <fieldset  class="test-field">
+                        <p class="hidden-xs spajtohem-lg">{{ $spajtohem }}</p>
                         <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3">
 
                         <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2">
@@ -61,8 +67,12 @@
                         <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2">
                         
                         <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3">
-                        <p>{{$pajtohem}}</p>
+                        <p class="hidden-xs pajtohem-lg">{{$pajtohem}}</p>
                     </fieldset>
+                    <div class="pajtohem visible-xs">
+                        <div class="col-xs-6"><p>{{ $spajtohem }}</p></div>
+                        <div class="col-xs-6"><p>{{$pajtohem}}</p></div>
+                    </div>
                 </div>
                 @endforeach
 
@@ -85,14 +95,6 @@
 
     </div>{{-- row end --}}
 </div>{{-- conteiner --}}
-
-
-<div class="progress-container hide" id="progress-container" style="position: fixed; bottom: 18px; left: 15px; z-index: 10000; background-color: #fff; padding: 13px 38px; border: 2px solid #f1f1f1;">
-   <strong class="progress-status">Edhe 4/4</strong> <span class="pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> <i class="progress-minutes">~ 10 min</i></span>
-  <div class="progress" style="width: 473px;">
-    <div class="progress-bar progress-bar-striped active" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
-  </div>
-</div>
 
 <div id="fb-root"></div>
 <div class="container">

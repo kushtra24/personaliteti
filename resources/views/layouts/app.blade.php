@@ -162,12 +162,12 @@
         </div><!-- row -->
         <hr>
         <div class="row">
-            <div class="col-md-6">
-                <p> &copy; Personaliteti.com
-                    <?php echo date("Y"); ?>. Të gjitha të drejtat e rezervuara. </p>
+            <div class="copyRight col-md-6">
+                <p> &copy; {{ config('app.name', 'personalitetet') }}
+                    {{ date("Y") }}. Të gjitha të drejtat e rezervuara. </p>
             </div>
-            <div class="col-md-6">
-                <p class="pull-right"> Designed and developed by: <a href="http://kushtrim.net" target="_blank"> Kushtrim.net</a></p>
+            <div class="designedBy col-md-6">
+                <p> Designed and developed by: <a href="http://kushtrim.net" target="_blank"> Kushtrim.net</a></p>
             </div>
         </div>
     </div>

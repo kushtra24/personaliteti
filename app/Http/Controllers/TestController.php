@@ -114,7 +114,7 @@ class TestController extends Controller
                 'tipi' => $tipi
         ]);
         }
-        return redirect('/');
+        return redirect('testip');
     }
 
 

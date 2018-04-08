@@ -51,8 +51,8 @@
 		<h1>Ku ju ndihmon ky vlersim</h1>
 
 		<div class="komunikim col-md-6">
-			<div class="col-md-4">
-				<i class="far fa-comments pull-right"></i>
+			<div class="col-xs-12 col-md-4">
+				<i class="far fa-comments"></i>
 			</div>
 			<div class="col-md-8">
 				<h2>Komunikim</h2>
@@ -60,8 +60,8 @@
 			</div>
 		</div>
 		<div class="karrier col-md-6">			
-			<div class="col-md-4">
-				<i class="fab fa-telegram-plane pull-right"></i>
+			<div class="col-xs-12 col-md-4">
+				<i class="fab fa-telegram-plane"></i>
 			</div>
 			<div class="col-md-8">
 				<h2>Karrier</h2>
@@ -69,8 +69,8 @@
 			</div>
 		</div>
 		<div class="lidhje col-md-6">
-				<div class="col-md-4">
-				<i class="far fa-heart pull-right"></i>
+			<div class="col-xs-12 col-md-4">
+				<i class="far fa-heart"></i>
 			</div>
 			<div class="col-md-8">
 				<h2>lIDHJE BASHKSHORTORE</h2>
@@ -78,8 +78,8 @@
 			</div>
 		</div>
 		<div class="vendimarrje col-md-6">
-			<div class="col-md-4">
-				<i class="far fa-compass pull-right"></i>
+			<div class="col-xs-12 col-md-4">
+				<i class="far fa-compass"></i>
 			</div>
 			<div class="col-md-8">
 				<h2>Vendimarrje</h2>
