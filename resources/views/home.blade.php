@@ -103,11 +103,12 @@
 
     <div class="col-md-6">
                     <h1> Pershendetje, {{ Auth::user()->first_name }}</h1>
+                    <p> <b>Numri vlersimit:</b> {{ $results->id }}</p>
                     <p> <b>Emërtimi:</b> {{ $results->rol_name }}</p>
                      <p> <b>Kodi:</b> <a href="/tipi/{{ $results->finaltype }}">{{ $results->finaltype }}</a></p>
                      <div class="date">
-                        <div class="year">{{ $results->created_at->format( 'Y' ) }}</div>
                         <div class="month">{{ $results->created_at->format( 'd m' ) }}</div>
+                        <div class="year">{{ $results->created_at->format( 'Y' ) }}</div>
                      </div>
                      
 
@@ -172,6 +173,10 @@
                   @foreach(Auth::user()->testResults->reverse() as $testResult)
                     <div class="col-md-3">
                         <table class="table table-hover">
+                            <tr>
+                                <td>Test ID </td>
+                                <td>{{ $testResult->id }} </td>
+                            </tr>
                             <tr>
                                 <td>E kriuar me: </td>
                                 <td>{{ $testResult->created_at }} </td>

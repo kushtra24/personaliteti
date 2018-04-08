@@ -82,13 +82,26 @@
   cursor: pointer;
 }
 
+#hidden{
+  display: none;
+}
+
+#loading{
+  text-align: center;
+  margin: 0 auto;
+  max-width: 250px;
+}
+
 </style>
 @endsection
 
 @section('content')
 
+<div id="loading">
+    <img src="https://www.airbare.com.hk/_nuxt/img/logo_loading.fb960ed.gif" alt="Loading" />
+</div>
 
-<div class="container">
+<div class="container" id="hidden">
     <div class="row">
         <div class="col-md-4">
             <h1>Ti je: <b> {{ $rol_name }} </b></h1>
@@ -279,16 +292,23 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 </div>
+
 @endsection
 
 @section('scripts')
   <script>
+
+
+
+    $( document ).ready(function() {
+      $('.container').removeAttr('id');
+      $('#loading').hide();
       $('.bar-percentage[data-percentage]').each(function () {
         var progress = $(this);
         var percentage = Math.ceil($(this).attr('data-percentage'));
         var finalTypeName = $(this).attr('final-type-name');
         $({countNum: 0}).animate({countNum: percentage}, {
-          duration: 2000,
+          duration: 4000,
           easing:'linear',
           step: function() {
             // What todo on every count
@@ -302,5 +322,6 @@
           }
         });
       });
+});
   </script>
 @endsection

@@ -9,7 +9,7 @@ use App\TestCounter;
 use App\User;
 use App\Test;
 Use App\Page;
-use App\post;
+use App\Post;
 class AppServiceProvider extends ServiceProvider
 {
     /**

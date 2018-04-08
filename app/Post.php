@@ -23,7 +23,7 @@ class Post extends Model
 
     public function category(){
         // this is a many to many stable it links many categories to many posts
-        return $this->belongsToMany(category::class, 'category_post');
+        return $this->belongsToMany(Category::class, 'category_post');
     }
 
     public static function archives(){

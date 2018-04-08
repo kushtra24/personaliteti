@@ -186,8 +186,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $store->save();
     }
 
-    if (!Auth::check()){
-      
+    // if (!Auth::check()){
         Cookie::queue(Cookie::make('finaltype', $this->finalType, 3000));
         Cookie::queue(Cookie::make('introExtro', $this->introExtro, 3000));
         Cookie::queue(Cookie::make('FirstfinalProcentRez', $this->FirstfinalProcentRez, 3000));
@@ -198,7 +197,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
         Cookie::queue(Cookie::make('judgingPerspecting', $this->judgingPerspecting, 3000));
         Cookie::queue(Cookie::make('jpfinalProcentRez', $this->jpfinalProcentRez, 3000));
         Cookie::queue(Cookie::make('rol_name', $this->rol_name, 3000));
-    }
+    // }
 
     
 

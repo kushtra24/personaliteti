@@ -63,7 +63,7 @@ class PostController extends Controller
         
         $store->save();
 
-        $store->category()->attach($request->input('category'));
+        $store->Category()->attach($request->input('category'));
 
         if ($store->save()) {
         $request->session()->flash('message.level', 'success');
