@@ -7,6 +7,22 @@
 	}
 }
 
+#heading-welcomepage{
+    h1{
+        font-size: 40px;
+    }
+}
+
+#cka_vlerson {
+    h1 {
+        font-size: 43px;
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+}
+
 footer{
 	text-align: center;
 	.designedBy, .copyRight{
@@ -15,6 +31,11 @@ footer{
 	}
 }
 
+.komunikim, .karrier, .lidhje, .vendimarrje{
+    &>div{
+        text-align: center;
+    }
+}
 
 //***** testp ******
 .test-field{

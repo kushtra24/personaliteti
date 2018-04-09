@@ -8998,6 +8998,19 @@ footer a:hover .fa-caret-right {
     width: inherit;
   }
 
+  #heading-welcomepage h1 {
+    font-size: 40px;
+  }
+
+  #cka_vlerson h1 {
+    font-size: 43px;
+    text-align: center;
+  }
+
+  #cka_vlerson h2 {
+    text-align: center;
+  }
+
   footer {
     text-align: center;
   }
@@ -9006,6 +9019,13 @@ footer a:hover .fa-caret-right {
   footer .copyRight {
     text-align: center;
     float: none;
+  }
+
+  .komunikim > div,
+  .karrier > div,
+  .lidhje > div,
+  .vendimarrje > div {
+    text-align: center;
   }
 
   .test-field input[type="radio"] {

@@ -78,9 +78,10 @@
     text-align: center;
 }
 
-.read-more{
+.read-more, .procentage-block, .socialMedia-share, h1{
     text-align: center;
 }
+
 </style>
 @endsection
 
@@ -89,132 +90,133 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="">
-                <div class="">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-<div class="row">
-                    <div class="col-md-4">
-                        <img src="{{ URL::to('/') }}/images/{{ $results->finaltype }}.png" alt="personaliteti tipi avatar" class="img-responsive">
-                    </div>
+          <div class="row">
+              <div class="col-md-4">
+                  <h1 class="visible-xs"> Pershendetje, {{ Auth::user()->first_name }}</h1>
+                  <img src="{{ URL::to('/') }}/images/{{ $results->finaltype }}.png" alt="personaliteti tipi avatar" class="img-responsive">
+              </div>
+              <div class="col-md-6">
+                <h1 class="hidden-xs" > Pershendetje, {{ Auth::user()->first_name }}</h1>
+                <h4>Resultati i fundit i Vlerësimit është: <a href="/tipi/{{ $results->finaltype }}">{{ $results->finaltype }}</a></h4>
+                <table class="table table-striped table-responsive">
+                  <tr>
+                    <td><b>Numri vlersimit:</b></td>
+                    <td>{{ $results->id }}</td>
+                  </tr>
 
-    <div class="col-md-6">
-                    <h1> Pershendetje, {{ Auth::user()->first_name }}</h1>
-                    <p> <b>Numri vlersimit:</b> {{ $results->id }}</p>
-                    <p> <b>Emërtimi:</b> {{ $results->rol_name }}</p>
-                     <p> <b>Kodi:</b> <a href="/tipi/{{ $results->finaltype }}">{{ $results->finaltype }}</a></p>
-                     <div class="date">
-                        <div class="month">{{ $results->created_at->format( 'd m' ) }}</div>
-                        <div class="year">{{ $results->created_at->format( 'Y' ) }}</div>
-                     </div>
-                     
+                  <tr>
+                    <td><b>Emërtimi:</b></td>
+                    <td>{{ $results->rol_name }}</td>
+                  </tr>
 
-         <div class="animated-result">
-            <div id="bar-1" class="bar-main-container azure">
-                <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $results->first_final_procent_rez }}"></div>
-                    <div class="type-name">{{ $results->intro_extro }}</div>
-                    {{-- <div class="bar-container">
-                        <div class="bar"></div>
-                    </div> --}}
-                </div>
-            </div>
-        </div>
+                  <tr>
+                    <td><b>Kodi:</b></td>
+                    <td><a href="/tipi/{{ $results->finaltype }}">{{ $results->finaltype }}</a></td>
+                  </tr>
 
-        <div class="animated-result">
-             <div id="bar-2" class="bar-main-container emerald">
-                <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $results->ns_final_procent_rez }}" final-type-name="{{ $results->intu_sens }}"></div>
-                    <div class="type-name">{{ $results->intu_sens }}</div>
-                    {{-- <div class="bar-container">
-                        <div class="bar"></div>
-                    </div> --}}
-                </div>
-            </div>
-        </div>
+                  <tr>
+                    <td><b>Data:</b></td>
+                    <td>{{ $results->created_at->format( 'd.m.Y' ) }} - {{ $results->created_at->diffForHumans() }}</td>
+                  </tr>
 
-        <div class="animated-result">
-            <div id="bar-3" class="bar-main-container violet">
-                <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $results->ft_final_procent_rez }}" final-type-name="{{ $results->feeling_thinking }} "></div>
-                    <div class="type-name">{{ $results->feeling_thinking }}</div>
-                    {{-- <div class="bar-container"> --}}
-                        {{-- <div class="bar"></div> --}}
-                    {{-- </div> --}}
-                </div>
-            </div>
-        </div>
+                </table>
 
-        <div class="animated-result">
-            <div id="bar-4" class="bar-main-container yellow">
-                <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $results->jp_final_procent_rez }}" final-type-name="{{ $results->judging_perspecting }} "></div>
-                    <div class="type-name">{{ $results->judging_perspecting }} </div>
-                    {{-- <div class="bar-container">
-                        <div class="bar"></div>
-                    </div> --}}
-                </div>
-            </div>
-        </div>
-        <div class="read-more">
-            <a href="/tipi/{{ $results->finaltype }}" class="btn btn-success">Lexo më shumë rreth {{ $results->finaltype }}</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.personalitetet.com/tipi/{{ $results->finaltype }}" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.personalitetet.com%2Ftipi%2F{{ $results->finaltype }}" target="_blank" class="btn btn-twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://plus.google.com/share?url=https://www.personalitetet.com/tipi/{{ $results->finaltype }}" target="_blank" class="btn btn-googleplus"><i class="fab fa-google-plus-g"></i></a>
-        </div>
-    </div>
-</div>
-
-                  <div class="row">
-                    <div class="col-md-12"> <h1>Historia</h1> </div>
-                  @foreach(Auth::user()->testResults->reverse() as $testResult)
-                    <div class="col-md-3">
-                        <table class="table table-hover">
-                            <tr>
-                                <td>Test ID </td>
-                                <td>{{ $testResult->id }} </td>
-                            </tr>
-                            <tr>
-                                <td>E kriuar me: </td>
-                                <td>{{ $testResult->created_at }} </td>
-                            </tr>
-                            <tr>
-                                <td>Emërtimi:  </td>
-                                <td>{{ $testResult->rol_name }} </td>
-                            </tr>
-                            <tr>
-                                <td>Codi</td>
-                                <td>{{ $testResult->finaltype }}</td>
-                            </tr>
-
-                            <tr>
-                                <td>{{ $testResult->intro_extro }} </td>
-                                <td>{{ $testResult->first_final_procent_rez }}% </td>
-                            </tr>
-                            <tr>
-                                <td>{{ $testResult->intu_sens }}</td>
-                                <td> {{ $testResult->ns_final_procent_rez }} %</td>
-                            </tr>
-                            <tr>
-                                <td>{{ $testResult->feeling_thinking }}</td>
-                                <td> {{ $testResult->ft_final_procent_rez }}% </td>
-                            </tr>
-                            <tr>
-                                <td>{{ $testResult->judging_perspecting }}</td>
-                                <td> {{ $testResult->jp_final_procent_rez }}%</td>
-                            </tr>
-                        </table>
+                <div class="procentage-block">
+                   <div class="animated-result">
+                      <div id="bar-1" class="bar-main-container azure">
+                          <div class="wrap">
+                              <div class="bar-percentage" data-percentage="{{ $results->first_final_procent_rez }}"></div>
+                              <div class="type-name">{{ $results->intro_extro }}</div>
+                          </div>
                       </div>
-                    @endforeach
+                  </div>
+
+                  <div class="animated-result">
+                       <div id="bar-2" class="bar-main-container emerald">
+                          <div class="wrap">
+                              <div class="bar-percentage" data-percentage="{{ $results->ns_final_procent_rez }}" final-type-name="{{ $results->intu_sens }}"></div>
+                              <div class="type-name">{{ $results->intu_sens }}</div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="animated-result">
+                      <div id="bar-3" class="bar-main-container violet">
+                          <div class="wrap">
+                              <div class="bar-percentage" data-percentage="{{ $results->ft_final_procent_rez }}" final-type-name="{{ $results->feeling_thinking }} "></div>
+                              <div class="type-name">{{ $results->feeling_thinking }}</div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="animated-result">
+                      <div id="bar-4" class="bar-main-container yellow">
+                          <div class="wrap">
+                              <div class="bar-percentage" data-percentage="{{ $results->jp_final_procent_rez }}" final-type-name="{{ $results->judging_perspecting }} "></div>
+                              <div class="type-name">{{ $results->judging_perspecting }} </div>
+                          </div>
+                      </div>
                   </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+                <div class="read-more">
+                    <a href="/tipi/{{ $results->finaltype }}" class="btn btn-success">Lexo më shumë rreth {{ $results->finaltype }}</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 socialMedia-share">
+                  <h2>Shpërndajë Resultatet</h2>
+                   <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.personalitetet.com/tipi/{{ $results->finaltype }}" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.personalitetet.com%2Ftipi%2F{{ $results->finaltype }}" target="_blank" class="btn btn-twitter"><i class="fab fa-twitter"></i></a>
+                      <a href="https://plus.google.com/share?url=https://www.personalitetet.com/tipi/{{ $results->finaltype }}" target="_blank" class="btn btn-googleplus"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12"> <h1>Krahaso me resultatet e kaluara</h1> </div>
+            @foreach(Auth::user()->testResults->reverse() as $testResult)
+            <div class="col-md-3">
+                <table class="table table-hover">
+                    <tr>
+                        <td> Numri vlersimit </td>
+                        <td>{{ $testResult->id }} </td>
+                    </tr>
+                    <tr>
+                        <td>E kriuar me: </td>
+                        <td>{{ $testResult->created_at->diffForHumans() }} </td>
+                    </tr>
+                    <tr>
+                        <td>Emërtimi:  </td>
+                        <td>{{ $testResult->rol_name }} </td>
+                    </tr>
+                    <tr>
+                        <td>Codi</td>
+                        <td>{{ $testResult->finaltype }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{ $testResult->intro_extro }} </td>
+                        <td>{{ $testResult->first_final_procent_rez }}% </td>
+                    </tr>
+                    <tr>
+                        <td>{{ $testResult->intu_sens }}</td>
+                        <td> {{ $testResult->ns_final_procent_rez }} %</td>
+                    </tr>
+                    <tr>
+                        <td>{{ $testResult->feeling_thinking }}</td>
+                        <td> {{ $testResult->ft_final_procent_rez }}% </td>
+                    </tr>
+                    <tr>
+                        <td>{{ $testResult->judging_perspecting }}</td>
+                        <td> {{ $testResult->jp_final_procent_rez }}%</td>
+                    </tr>
+                </table>
+              </div>
+            @endforeach
+          </div>
+        </div>{{-- col-md-12 --}}
+    </div>{{-- row --}}
+</div>{{-- container --}}
 @endsection
 
 @section('scripts')

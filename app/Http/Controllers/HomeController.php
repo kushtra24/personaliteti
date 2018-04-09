@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,10 @@ class HomeController extends Controller
     public function index()
     {
         $results = auth()->user()->testResults->last();
+
+        Carbon::setLocale('sq');
+        Carbon::setUtf8(true);
+
         return view('home')->with('results', $results );
     }
 
