@@ -111,8 +111,18 @@
                 </div>
                 <!-- /.col-lg-8 -->
                 <div class="col-lg-4">
-                    
-                
+                    <table class="table table-striped table-responsive">
+                        <thead>
+                            <th>Kodi</th>
+                            <th>Numri</th>
+                        </thead>
+                        @foreach($countResults as $countResult)
+                        <tr>
+                            <td>{{ $countResult->finaltype }}</td>
+                            <td>{{ $countResult->Numri }}</td>
+                        </tr>
+                        @endforeach
+                    </table>
                 </div>
                 <!-- /.col-lg-4 -->
             </div>

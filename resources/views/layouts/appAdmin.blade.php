@@ -41,7 +41,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/" target="_blank">Welcome</a>
+                        <a class="navbar-brand" href="/" target="_blank"><img src="{{asset('images/logo.png')}}" height="30px" alt="personalitetet"></a>
+                {{-- <a class="navbar-brand" href="/" target="_blank">{{ config('app.name', 'Personaliteti') }} Admin Panel</a> --}}
             </div>
             <!-- /.navbar-header -->
 
@@ -75,11 +76,14 @@
             </ul>
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
+            <div class="navbar sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="/admin"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a href="/admin">
+                                <i class="fas fa-tachometer-alt"></i>
+                                Dashboard
+                            </a>
                         </li>
                         <li>
                             <a href="#"><i class="fas fa-images"></i> Galeria</a>

@@ -106,15 +106,15 @@ class TestController extends Controller
     public function introExtroQuestionsResult(){
 
 
-        if(Cookie::get('finaltype')){
+        // if(Cookie::get('finaltype')){
             //to get the short description
             $tipi = \App\Tipi::where('type', $this->finalType)->first();
 
             return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, 'rol_name' => $this->rol_name,
                 'tipi' => $tipi
         ]);
-        }
-        return redirect('testip');
+        // }
+        // return redirect('testip');
     }
 
 
@@ -186,7 +186,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $store->save();
     }
 
-    // if (!Auth::check()){
+    if (!Auth::check()){
         Cookie::queue(Cookie::make('finaltype', $this->finalType, 3000));
         Cookie::queue(Cookie::make('introExtro', $this->introExtro, 3000));
         Cookie::queue(Cookie::make('FirstfinalProcentRez', $this->FirstfinalProcentRez, 3000));
@@ -197,7 +197,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
         Cookie::queue(Cookie::make('judgingPerspecting', $this->judgingPerspecting, 3000));
         Cookie::queue(Cookie::make('jpfinalProcentRez', $this->jpfinalProcentRez, 3000));
         Cookie::queue(Cookie::make('rol_name', $this->rol_name, 3000));
-    // }
+    }
 
     
 

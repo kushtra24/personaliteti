@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Test;
+use DB;
 class AdminController extends Controller
 {
     /**
@@ -13,7 +15,19 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+
+       $countResults = Test::select(DB::raw('count(*) as Numri, finaltype'))
+                            ->where('finaltype', '<>', 1)
+                            ->groupBy('finaltype')
+                            ->get();
+
+       // $countResults = DB::table('tests')
+       //               ->select(DB::raw('count(*) as Numri, finaltype'))
+       //               ->where('finaltype', '<>', 1)
+       //               ->groupBy('finaltype')
+       //               ->get();
+
+        return view('admin.index', compact('countResults'));
     }
 
     /**
