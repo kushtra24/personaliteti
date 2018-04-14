@@ -29,15 +29,6 @@ class TestController extends Controller
     private $FirstfinalProcentRez;
     private $jpfinalProcentRez;
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-
-    }
 
     public function doTheTest(){
 
@@ -48,17 +39,6 @@ class TestController extends Controller
 
         return view('testi.create', compact('spajtohem', 'pajtohem', 'questions'));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store()
-    {
-
-    }//end of store
 
     /**
      * Display the specified resource.
@@ -85,18 +65,10 @@ class TestController extends Controller
         return view('testi.edit');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
+    public function getResults(){
+            return redirect('testip');
+    }
 
     /**
      * Returns the variables and the results to the view
@@ -106,18 +78,28 @@ class TestController extends Controller
     public function introExtroQuestionsResult(){
 
 
-        // if(Cookie::get('finaltype')){
+        // if(){
             //to get the short description
             $tipi = \App\Tipi::where('type', $this->finalType)->first();
 
-            return view('testi.result')->with(['finalType' => $this->finalType, 'introExtro' => $this->introExtro, 'FirstfinalProcentRez' => $this->FirstfinalProcentRez, 'intuSens' => $this->intuSens, 'nsfinalProcentRez' => $this->nsfinalProcentRez, 'feelingThinking' => $this->feelingThinking, 'ftfinalProcentRez' => $this->ftfinalProcentRez, 'judgingPerspecting' => $this->judgingPerspecting, 'jpfinalProcentRez' => $this->jpfinalProcentRez, 'rol_name' => $this->rol_name,
+            return view('testi.result')->with([
+                'finalType' => $this->finalType,
+                'introExtro' => $this->introExtro,
+                'FirstfinalProcentRez' => $this->FirstfinalProcentRez,
+                'intuSens' => $this->intuSens,
+                'nsfinalProcentRez' => $this->nsfinalProcentRez,
+                'feelingThinking' => $this->feelingThinking,
+                'ftfinalProcentRez' => $this->ftfinalProcentRez,
+                'judgingPerspecting' => $this->judgingPerspecting,
+                'jpfinalProcentRez' => $this->jpfinalProcentRez,
+                'rol_name' => $this->rol_name,
                 'tipi' => $tipi
-        ]);
+            ]);
         // }
-        // return redirect('testip');
+        // else{
+        //     return redirect('testip');
+        // }
     }
-
-
 
 public function introExtroQuestions(CookieJar $cookieJar)
 {
@@ -186,7 +168,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $store->save();
     }
 
-    if (!Auth::check()){
+    // if (!Auth::check()){
         Cookie::queue(Cookie::make('finaltype', $this->finalType, 3000));
         Cookie::queue(Cookie::make('introExtro', $this->introExtro, 3000));
         Cookie::queue(Cookie::make('FirstfinalProcentRez', $this->FirstfinalProcentRez, 3000));
@@ -197,7 +179,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
         Cookie::queue(Cookie::make('judgingPerspecting', $this->judgingPerspecting, 3000));
         Cookie::queue(Cookie::make('jpfinalProcentRez', $this->jpfinalProcentRez, 3000));
         Cookie::queue(Cookie::make('rol_name', $this->rol_name, 3000));
-    }
+    // }
 
     
 

@@ -9,22 +9,40 @@
 <div class="container" id="hidden">
     <div class="row">
         <div class="col-md-4">
-            <h1>Ti je: <b> {{ $rol_name }} </b></h1>
+            <h1>Ti je: <b> {{ $rol_name }} {{-- {{ Cookie::get('rol_name') }} --}}</b></h1>
           @if($FirstfinalProcentRez)
-            <h3>{{ $FirstfinalProcentRez }}% {{ $introExtro }} </h3>
+            {{-- <h3>{{ $FirstfinalProcentRez }}% {{ $introExtro }} </h3>
             <h3>{{ $nsfinalProcentRez }}% {{ $intuSens }}</h3>
             <h3>{{ $ftfinalProcentRez }}% {{$feelingThinking}}</h3>
-            <h3>{{ $jpfinalProcentRez }}% {{$judgingPerspecting}}</h3>
+            <h3>{{ $jpfinalProcentRez }}% {{$judgingPerspecting}}</h3> --}}
+            <img src="../{{ $tipi->type_img }}" alt="tipi featured" width="100%" class="img-responsive">
             <br>
-            <h4> {{ $tipi->shortDescription }}</h4>
+            <h4> {!! str_limit($tipi->shortDescription, 450) !!}</h4>
             <br>
-            <h4>Regjistrohu dhe lexo më shume rreth tipit tuaj</h4>
           @endif
+          @if ($errors->has('email'))
+            <span class="help-block">
+              <div class="alert alert-danger" role="alert">{{ $errors->first('email') }}</div>
+            </span>
+          @endif
+
+            @if ($errors->has('password'))
+              <span class="help-block">
+                <div class="alert alert-danger" role="alert" >{{ $errors->first('password') }}</div>
+              </span>
+            @endif
+
+            @if (Auth::check())
+                <a href="{{ route('register') }}" class="btn btn-primary">Shiko detajet</a>
+            @else
+                <p>Regjistrohu tani per t'i ruajtur keto resultate</p>
+                <button id="show_register" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Regjistrohu</button>
+            @endif
         </div>
 
 @if($FirstfinalProcentRez)
         <div class="col-md-8" id="animated-results">
-          <h1> Emërtimi: <b>@if ($finalType == null) {{ Cookie::get('finaltype') }} @else {{ $finalType }} @endif</b></h1>
+          <h1> Kodi: <b>@if ($finalType == null) {{ Cookie::get('finaltype') }} @else {{ $finalType }} @endif</b></h1>
           <div class="animated-result">
             <div class="traid">
                 <h3>Mendimet</h3>
@@ -102,23 +120,7 @@
   <div class="alert-info" role="alert">Vazhdo Regjistrimi resultatet e juaja jane ende aktive</div>
   @endif {{--Email Has been taken error msg--}} 
 
-    @if ($errors->has('email'))
-        <span class="help-block">
-        <div class="alert alert-danger" role="alert">{{ $errors->first('email') }}</div>
-      </span>
-    @endif
 
-    @if ($errors->has('password'))
-        <span class="help-block">
-        <div class="alert alert-danger" role="alert" >{{ $errors->first('password') }}</div>
-      </span>
-    @endif
-
-    @if (Auth::check())
-        <a href="{{ route('register') }}" class="btn btn-primary">Shko në profil</a> @else
-        <p>Regjistrohu tani per t'i ruajtur keto resultate</p>
-        <button id="show_register" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Regjistrohu</button>
-    @endif
 
     <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
         <div class="modal-dialog modal-md" role="document">
@@ -184,7 +186,7 @@
                                 <input id="password-confirm" type="password" class="form-control" placeholder="Përsërit Fjalkalimin" autocomplete="retype-password" name="password_confirmation" required>
                             </div>
                             <div class="form-group">
-                                <label for="agree">Duke u regjistruar ju pranoni <a href="/politikat_privatesise" target="_blank"> Politikat e privatesis</a></label>
+                                <label for="agree">Duke u regjistruar ju pranoni <a href="/faqe/politikat_privatesise" target="_blank"> Politikat e privatesis</a></label>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -203,8 +205,7 @@
 @section('scripts')
   <script>
 
-
-
+// if($(window).width() < 961){
     $( document ).ready(function() {
       $('.container').removeAttr('id');
       $('#loading').hide();
@@ -227,6 +228,7 @@
           }
         });
       });
-});
+    });
+// }
   </script>
 @endsection

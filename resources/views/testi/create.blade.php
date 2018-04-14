@@ -54,19 +54,19 @@
                     <h4 style="font-weight: 700;">{{ $question->question }}</h4>
                     <fieldset  class="test-field">
                         <p class="hidden-xs spajtohem-lg">{{ $spajtohem }}</p>
-                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3">
+                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3" title="Nuk pajtohem fare">
 
-                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2">
+                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2" title="Nuk pajtohem">
 
-                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1">
+                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1" title="Nuk pajtohem pak">
                         
-                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}neotral1" value="0">
+                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}neotral1" value="0" title="Neotral">
                         
-                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1r" class="right" value="1">
+                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1r" class="right" value="1" title="Pajtohem pak">
                         
-                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2">
+                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2" title="Pajtohem">
                         
-                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3">
+                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3" title="Pajtohem shumë">
                         <p class="hidden-xs pajtohem-lg">{{$pajtohem}}</p>
                     </fieldset>
                     <div class="pajtohem visible-xs">

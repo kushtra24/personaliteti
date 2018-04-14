@@ -28,8 +28,8 @@ Route::get('/profile', 'UserController@index')->name('profile');
 
 Route::group(['test' => 'test'], function(){
     Route::get('/testip', 'TestController@doTheTest')->name('testi');
+    Route::get('/result', 'TestController@getResults');
     Route::post('/result', 'TestController@introExtroQuestions');
-    Route::get('/result', 'TestController@introExtroQuestionsResult');
     Route::post('/home', 'TestController@introExtroQuestions');
 });
 

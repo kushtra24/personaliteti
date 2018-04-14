@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Tipi;
 use App\Http\Requests\TypeRequest;
+use Carbon\Carbon;
 
 
 class TipetController extends Controller
@@ -44,6 +45,9 @@ class TipetController extends Controller
     public function show(Tipi $name)
     {
           $tipi = Tipi::find($name);
+
+            Carbon::setLocale('sq');
+            Carbon::setUtf8(true);
 
         return view('tipet.tipi', compact('tipi'));
     }

@@ -123,7 +123,7 @@
                     <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a>
                     <a href="#"><i class="fab fa-youtube-square fa-2x"></i></i></a>
                 </div>
-                <a href="/testip" class="btn btn-default">Fillo testin</a>
+                <a href="/testip" class="btn btn-default">Fillo Vlersimin</a>
             </div>
             <div class="col-md-3">
                 <h4>
