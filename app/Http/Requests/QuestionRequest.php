@@ -24,7 +24,7 @@ class QuestionRequest extends FormRequest
     public function rules()
     {
          return [
-            'question' => 'required',
+            'pyetja' => 'required',
             'purpose' => 'required',
         ];
     }

@@ -41,7 +41,7 @@ class TestController extends Controller
 
     public function doTheTest(){
 
-        $questions = Question::all();
+        $questions = Question::take(44)->inRandomOrder()->get();
 
         $spajtohem = "S'pajtohem";
         $pajtohem = "Pajtohem";

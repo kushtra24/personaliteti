@@ -39,7 +39,7 @@
 
                         <div class="form-group">
                             <div class="form-group">
-                                <select class="form-control" name="purpose" required >
+                                <select class="form-control" name="purpose" required>
                                     <option value=""> Teston</option>
                                     <option value="IntroExtro">Introvert / Extrovert</option>
                                     <option value="intuitionSensing">Intuition / Sensing</option>

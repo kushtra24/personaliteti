@@ -128,7 +128,8 @@ $("input[type='radio']").on('click',function(){
 //progress bar counter end
 
 //Progress bar changelog and tab switching
-$('.question:nth-child(n+11)').addClass('hide');
+//foward button
+$('.question:nth-child(n+12)').addClass('hide');
 
 var count = 0;
 $('.tab-forward').click(function() {
@@ -136,42 +137,44 @@ $('.tab-forward').click(function() {
     if(count==1){
         $('.progress-status').text('Edhe 3/4');
         $('.progress-minutes').text(' ~ 7:30 min');
-        $('.question:nth-child(-n+11)').addClass('hide');
-        $('.question:nth-child(n+11):nth-child(-n+20)').removeClass('hide');
+        $('.question:nth-child(-n+12)').addClass('hide');
+        $('.question:nth-child(n+12):nth-child(-n+22)').removeClass('hide');
     }
     if(count==2){
         $('.progress-status').text('Vetem edhe 1/4');
         $('.progress-minutes').text(' ~ 5:00 min');
-        $('.question:nth-child(n+11):nth-child(-n+20)').addClass('hide');
-        $('.question:nth-child(n+21):nth-child(-n+30)').removeClass('hide');
+        $('.question:nth-child(n+12):nth-child(-n+22)').addClass('hide');
+        $('.question:nth-child(n+23):nth-child(-n+33)').removeClass('hide');
     }
     if(count==3){
         $('.progress-status').text('E Fundit');
         $('.progress-minutes').text(' ~ 2.30 min');
         $('#submit').removeClass('hide');
-        $('.question:nth-child(n+21):nth-child(-n+30)').addClass('hide');
-        $('.question:nth-child(n+31)').removeClass('hide');
+        $('.question:nth-child(n+23):nth-child(-n+33)').addClass('hide');
+        $('.question:nth-child(n+34)').removeClass('hide');
     }
 });
 
 
+// Go back button
 $('#goBack').click(function() {
     count = count - 1;
     if(count==0){
-        $('.question:nth-child(n+10)').addClass('hide');
-        $('.question:nth-child(-n+10)').removeClass('hide');
+        $('.question:nth-child(n+11)').addClass('hide');
+        $('.question:nth-child(-n+11)').removeClass('hide');
     }
     if(count==1){
-        $('.question:nth-child(n+11):nth-child(-n+20)').removeClass('hide');
-        $('.question:nth-child(n+21):nth-child(-n+30)').addClass('hide');
+        $('.question:nth-child(n+12):nth-child(-n+21)').removeClass('hide');
+        $('.question:nth-child(n+22):nth-child(-n+31)').addClass('hide');
     }
     if(count==2){
-        $('.question:nth-child(n+21):nth-child(-n+30)').removeClass('hide');
-        $('.question:nth-child(n+31)').addClass('hide');
+        $('.question:nth-child(n+22):nth-child(-n+31)').removeClass('hide');
+        $('.question:nth-child(n+32)').addClass('hide');
         $(".tab-forward").removeClass("hide");
     }
 });
-//Progress bar changelog and tab switching end
+// Go back button
+//Progress bar changelog and tab switching end 
 
 
 // go forward button
