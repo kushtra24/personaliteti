@@ -119,7 +119,7 @@ class tipiSeeder extends Seeder
 <p><em>&nbsp;&ldquo;Nuk e ke t&euml; drejt&euml;n e mendimit t&euml; lir&euml;. E ke t&euml; drejt&euml;n e mendimit t&euml; informuar. Askush nuk e ka t&euml; drejt&euml;n e t&euml; qen&euml;t injorant.&rdquo;</em></p>
 <p><em>Harlan Ellison</em></p>
 </blockquote>',
-	        'type_img' => "images/intj.png",
+	        'type_img' => "images/INTJ.png",
 	        'featured_Image' => "images/feat.png",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);

@@ -18,15 +18,11 @@
     	</div>
         <div class="col-md-6">
 
-			<form  method="POST" action="{{ route('PostController.update', [$posts->id]) }}" enctype="multipart/form-data">
+			<form  method="POST" action="{{ route('UserController.update', [$user->id]) }}" enctype="multipart/form-data">
               	{!! csrf_field() !!}
 
                 <div class="form-group"
->                    <input type="text" class="form-control" name="title" placeholder="Titulli faqes" value="{{ $posts->title }}" required>
-                </div>
-
-                <div class="form-group">
-                    <textarea name="content" id="editor" cols="50" rows="50">{{ $posts->content }}</textarea>
+>                    <input type="text" class="form-control" name="title" placeholder="Titulli faqes" value="{{ $user->first_name }}" required>
                 </div>
 
                 <div class="form-group">

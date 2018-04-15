@@ -1,0 +1,27 @@
+@media (max-width: 321px){
+
+//***** testp ******
+.test-field{
+	input[type="radio"] {
+	    margin: 0 3px;
+	}
+}
+
+
+.navbar-brand {
+    float: left;
+    padding: 4px 15px;
+    &>.navbar-brand > img {
+        display: block;
+        height: 40px;
+    }
+}
+
+.result-page{
+    .modal-body {
+        padding: 8px 28px;
+    }
+}
+
+
+}//max-width 320

@@ -82,6 +82,10 @@
     text-align: center;
 }
 
+.pershendetje{
+    text-transform: capitalize;
+}
+
 </style>
 @endsection
 
@@ -92,11 +96,11 @@
         <div class="col-md-12">
           <div class="row">
               <div class="col-md-4">
-                  <h1 class="visible-xs"> Pershendetje, {{ Auth::user()->first_name }}</h1>
+                  <h1 class="visible-xs pershendetje"> Pershendetje, {{ Auth::user()->first_name }}</h1>
                   <img src="{{ URL::to('/') }}/images/{{ $results->finaltype }}.png" alt="personaliteti tipi avatar" class="img-responsive">
               </div>
               <div class="col-md-6">
-                <h1 class="hidden-xs" > Pershendetje, {{ Auth::user()->first_name }}</h1>
+                <h1 class="hidden-xs pershendetje"> Pershendetje, {{ Auth::user()->first_name }}</h1>
                 <h4>Resultati i fundit i Vlerësimit është: <a href="/tipi/{{ $results->finaltype }}">{{ $results->finaltype }}</a></h4>
                 <table class="table table-striped table-responsive">
                   <tr>
@@ -176,39 +180,24 @@
             <div class="col-md-12"> <h1>Krahaso me resultatet e kaluara</h1> </div>
             @foreach(Auth::user()->testResults->reverse() as $testResult)
             <div class="col-md-3">
-                <table class="table table-hover">
+                <table class="table table-hover flexed">
                     <tr>
-                        <td> Numri vlersimit </td>
-                        <td>{{ $testResult->id }} </td>
+                        <td> <b>{{ $testResult->finaltype }}</b> - {{ $testResult->rol_name }}</td>
                     </tr>
                     <tr>
-                        <td>E kriuar me: </td>
-                        <td>{{ $testResult->created_at->diffForHumans() }} </td>
+                        <td><b>{{ $testResult->intro_extro }}</b> {{ $testResult->first_final_procent_rez }}% </td>
                     </tr>
                     <tr>
-                        <td>Emërtimi:  </td>
-                        <td>{{ $testResult->rol_name }} </td>
+                        <td><b>{{ $testResult->intu_sens }}</b> {{ $testResult->ns_final_procent_rez }} %</td>
                     </tr>
                     <tr>
-                        <td>Codi</td>
-                        <td>{{ $testResult->finaltype }}</td>
-                    </tr>
-
-                    <tr>
-                        <td>{{ $testResult->intro_extro }} </td>
-                        <td>{{ $testResult->first_final_procent_rez }}% </td>
+                        <td><b>{{ $testResult->feeling_thinking }}</b> {{ $testResult->ft_final_procent_rez }}%</td>
                     </tr>
                     <tr>
-                        <td>{{ $testResult->intu_sens }}</td>
-                        <td> {{ $testResult->ns_final_procent_rez }} %</td>
+                        <td><b>{{ $testResult->judging_perspecting }}</b> {{ $testResult->jp_final_procent_rez }}%</td>
                     </tr>
                     <tr>
-                        <td>{{ $testResult->feeling_thinking }}</td>
-                        <td> {{ $testResult->ft_final_procent_rez }}% </td>
-                    </tr>
-                    <tr>
-                        <td>{{ $testResult->judging_perspecting }}</td>
-                        <td> {{ $testResult->jp_final_procent_rez }}%</td>
+                        <td>{{ $testResult->id }} {{ $testResult->created_at->diffForHumans() }} </td>
                     </tr>
                 </table>
               </div>

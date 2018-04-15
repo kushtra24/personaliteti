@@ -8683,6 +8683,10 @@ footer {
   margin: 25px 0;
 }
 
+footer .footer-assesment-button {
+  margin: 10px 0;
+}
+
 footer h4 {
   margin: 0 0 10px 0;
 }
@@ -8715,7 +8719,7 @@ footer ul li a:hover {
 }
 
 footer .designedBy {
-  float: right;
+  text-align: right;
 }
 
 .footer-description {
@@ -8743,13 +8747,8 @@ footer .designedBy {
 }
 
 .bar-percentage {
-  float: left;
-  background: rgba(0, 0, 0, 0.13);
-  border-radius: 4px;
-  padding: 9px 0px 0px 8px;
-  width: 21%;
-  height: 34px;
-  text-align: center;
+  font-size: 14px;
+  overflow: hidden;
 }
 
 .bar-container {
@@ -8928,6 +8927,14 @@ footer .designedBy {
   margin: inherit;
 }
 
+#sidebar #sidebar-archive,
+#sidebar #sidebar-categories,
+#sidebar #sidebar-latest {
+  background: #fff;
+  padding: 13px;
+  margin-top: 23px;
+}
+
 #sidebar #search .btn {
   margin: 0;
   padding: 5px 24px;
@@ -8936,7 +8943,6 @@ footer .designedBy {
 #sidebar h4 {
   text-transform: uppercase;
   font-weight: 700;
-  margin-top: 50px;
 }
 
 #sidebar ul {
@@ -8991,6 +8997,96 @@ footer a:hover .fa-caret-right {
   text-align: center;
   line-height: 288px;
   text-transform: uppercase;
+}
+
+progress {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  /* Dimensions */
+  width: 100%;
+  height: 2px;
+  /* Reset the appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+  /* Progress bar container for Firefox/IE10+ */
+  background-color: transparent;
+  /* Progress bar value for IE10+ */
+  color: red;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value,
+progress::-moz-progress-bar {
+  background-color: #ff9100;
+}
+
+#post {
+  text-align: justify;
+  word-break: break-all;
+}
+
+#post > img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+#post p {
+  font-size: 17px;
+}
+
+.single-post-title {
+  padding: 15px 20px;
+}
+
+.single-post-title > p {
+  text-transform: capitalize;
+}
+
+.single-post-title > h1 {
+  font-weight: 700;
+}
+
+.single-post-title p span:last-child {
+  display: none;
+}
+
+.comments article {
+  background: white;
+  padding: 7px;
+  margin: 15px 0;
+  display: block;
+}
+
+@media (max-width: 321px) {
+  .test-field input[type="radio"] {
+    margin: 0 3px;
+  }
+
+  .navbar-brand {
+    float: left;
+    padding: 4px 15px;
+  }
+
+  .navbar-brand > .navbar-brand > img {
+    display: block;
+    height: 40px;
+  }
+
+  .result-page .modal-body {
+    padding: 8px 28px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -9065,6 +9161,11 @@ footer a:hover .fa-caret-right {
     font-weight: normal;
     font-size: 12px;
     color: #FFF;
+  }
+
+  #show_register {
+    width: 100%;
+    margin: 15px 0;
   }
 }
 

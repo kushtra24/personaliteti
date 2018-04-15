@@ -16,8 +16,8 @@ return [
 
     'password' => 'Fjalkalimi duhet të jetë së paku 6 karaktere dhe të përshtatet me konfirmimin',
     'reset' => 'Fjalkalimi juaj është rikthyer',
-    'sent' => 'Jua keni dërguar një E-Mail për të rikthyer E-Mailin',
-    'token' => 'Ky xhiton për të rikthyer E-Mailin nuk është valide',
+    'sent' => 'Jau kemi dërguar një E-Mail për të rikthyer E-Mailin',
+    'token' => 'Ky zhiton për të rikthyer E-Mailin nuk është valide',
     'user' => "Nuk mund të gjejmë Përdorues me këtë E-Mail",
 
 ];

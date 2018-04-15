@@ -20,7 +20,6 @@ class PostTable extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('image');
-            $table->string('author')->nullable();
             $table->timestamps();
         });
     }

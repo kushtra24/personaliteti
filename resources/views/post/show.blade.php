@@ -1,75 +1,5 @@
 @extends('layouts.app')
 
-@section('style')
-<style>
-	progress {
-  /* Positioning */
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-
-  /* Dimensions */
-  width: 100%;
-  height: 2px;
-
-  /* Reset the appearance */
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-
-  /* Get rid of the default border in Firefox/Opera. */
-  border: none;
-
-  /* Progress bar container for Firefox/IE10+ */
-  background-color: transparent;
-
-  /* Progress bar value for IE10+ */
-  color: red;
-}
-
-progress::-webkit-progress-bar {
-  background-color: transparent;
-}
-
-progress::-webkit-progress-value {
-  background-color: red;
-}
-
-progress::-moz-progress-bar {
-  background-color: red;
-}
-#post{
-	text-align: justify;
-    word-break: break-all;
-    }
-
-#post>img{
-	display: block;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  margin-bottom: 50px;
-}
-
-#post p{
-	font-size: 17px;
-}
-
-.single-post-title{
-	padding: 15px 20px;
-}
-.single-post-title>h1{
-	font-weight: 700;
-}
-
-.single-post-title p span:last-child {
-    display: none;
-}
-
-</style>
-@endsection
-
 @section('content')
 <progress value="0"></progress>
 	<section id="post-{{ $postet->id }}">
@@ -118,7 +48,7 @@ progress::-moz-progress-bar {
         <div class="comments">
           @foreach($postet->comments->reverse() as $comment)
               <article>
-                <small><strong><i class="fas fa-user-circle"></i> {{ $comment->user->first_name}} {{ $comment->user->last_name}} <i class="fas fa-clock"></i> {{ $comment->created_at->diffForHumans() }}</strong></small>
+                <small><strong><i class="fas fa-user-circle"></i> {{ $comment->user->first_name}} {{-- {{ $comment->user->last_name}} --}} <i class="fas fa-clock"></i> {{ $comment->created_at->diffForHumans() }}</strong></small>
                 <p>{{ $comment->body}}</p>
               </article>
           @endforeach
@@ -155,11 +85,17 @@ progress::-moz-progress-bar {
 
 //progress bar
 $(document).ready(function() {
-    
+
+if($(window).width() < 600){
   var getMax = function(){
-    return $(document).height() - $(window).height();
+    return $(document).height() - $(window).height() - 550;
   }
-    
+}else{
+  var getMax = function(){
+    return $(document).height() - $(window).height() - 200;
+  }
+}
+
   var getValue = function(){
     return $(window).scrollTop();
   }
@@ -178,7 +114,7 @@ $(document).ready(function() {
       
     $(window).resize(function(){
       // On resize, both Max/Value attr needs to be calculated
-      progressBar.attr({ max: getMax(), value: getValue() });
+      progressBar.attr({ max: getMax(), value: getValue()});
     }); 
   
   } else {

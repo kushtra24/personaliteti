@@ -113,5 +113,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/categories/{id}/update', ['uses' => 'CategoryController@update', 'as' => 'category.update', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
     Route::post('/categories/delete/{id}', ['uses' => 'CategoryController@destroy', 'as' => 'category.destroy', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
 
+    //profile
+    Route::get('/profili/{id}/edit', ['uses' => 'UserController@edit', 'middleware' => 'roles', 'roles' => ['Admin', 'Author', 'visitor']]);
+    Route::post('/profili/{id}/update', ['uses' => 'UserController@update', 'as' => 'UserController.update', 'middleware' => 'roles', 'roles' => ['Admin', 'author', 'visitor']]);
 });
 

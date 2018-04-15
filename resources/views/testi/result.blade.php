@@ -6,10 +6,10 @@
     <img src="https://www.airbare.com.hk/_nuxt/img/logo_loading.fb960ed.gif" alt="Loading" />
 </div>
 
-<div class="container" id="hidden">
+<div class="container result-page" id="hidden">
     <div class="row">
-        <div class="col-md-4">
-            <h1>Ti je: <b> {{ $rol_name }} {{-- {{ Cookie::get('rol_name') }} --}}</b></h1>
+        <div class="col-sm-5">
+            <h1>Ti je: <b> {{ $rol_name }} {{-- {{ Cookie::get'(rol_name') }} --}}</b></h1>
           @if($FirstfinalProcentRez)
             {{-- <h3>{{ $FirstfinalProcentRez }}% {{ $introExtro }} </h3>
             <h3>{{ $nsfinalProcentRez }}% {{ $intuSens }}</h3>
@@ -41,7 +41,7 @@
         </div>
 
 @if($FirstfinalProcentRez)
-        <div class="col-md-8" id="animated-results">
+        <div class="col-sm-7" id="animated-results">
           <h1> Kodi: <b>@if ($finalType == null) {{ Cookie::get('finaltype') }} @else {{ $finalType }} @endif</b></h1>
           <div class="animated-result">
             <div class="traid">

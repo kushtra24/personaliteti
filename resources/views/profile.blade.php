@@ -22,7 +22,7 @@
         	<p><b>Tipi:</b> <span>{{ Auth()->user()->testResults->last()->finaltype }}</span></p>
 			<p><b>Gjinia:</b>
 				@if(Auth::user()->gjinia == "")
-					<a href="#" class="btn btn-default btn-xs pull-right">Shto gjini</a>
+					<a href="{{ action('UserController@edit', [$user->id]) }}" class="btn btn-default btn-xs pull-right">Shto gjini</a>
 				@else
 					{{Auth::user()->gjinia}}
 				@endif
