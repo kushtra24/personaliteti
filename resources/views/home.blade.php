@@ -178,30 +178,34 @@
 
           <div class="row">
             <div class="col-md-12"> <h1>Krahaso me resultatet e kaluara</h1> </div>
-            @foreach(Auth::user()->testResults->reverse() as $testResult)
-            <div class="col-md-3">
-                <table class="table table-hover flexed">
-                    <tr>
-                        <td> <b>{{ $testResult->finaltype }}</b> - {{ $testResult->rol_name }}</td>
-                    </tr>
-                    <tr>
-                        <td><b>{{ $testResult->intro_extro }}</b> {{ $testResult->first_final_procent_rez }}% </td>
-                    </tr>
-                    <tr>
-                        <td><b>{{ $testResult->intu_sens }}</b> {{ $testResult->ns_final_procent_rez }} %</td>
-                    </tr>
-                    <tr>
-                        <td><b>{{ $testResult->feeling_thinking }}</b> {{ $testResult->ft_final_procent_rez }}%</td>
-                    </tr>
-                    <tr>
-                        <td><b>{{ $testResult->judging_perspecting }}</b> {{ $testResult->jp_final_procent_rez }}%</td>
-                    </tr>
-                    <tr>
-                        <td>{{ $testResult->id }} {{ $testResult->created_at->diffForHumans() }} </td>
-                    </tr>
-                </table>
+              <div class="history-results">
+                @foreach(Auth::user()->testResults->reverse() as $testResult)
+                <div class="col-md-3">
+                  <div class="item">
+                      <table class="table table-hover">
+                          <tr>
+                              <td> <i class="fas fa-user-circle"></i> <a href="/tipi/{{ $testResult->finaltype }}"><b>{{ $testResult->finaltype }}</b></a>  - {{ $testResult->rol_name }}</td>
+                          </tr>
+                          <tr>
+                              <td><b>{{ $testResult->intro_extro }}</b> {{ $testResult->first_final_procent_rez }}% </td>
+                          </tr>
+                          <tr>
+                              <td><b>{{ $testResult->intu_sens }}</b> {{ $testResult->ns_final_procent_rez }} %</td>
+                          </tr>
+                          <tr>
+                              <td><b>{{ $testResult->feeling_thinking }}</b> {{ $testResult->ft_final_procent_rez }}%</td>
+                          </tr>
+                          <tr>
+                              <td><b>{{ $testResult->judging_perspecting }}</b> {{ $testResult->jp_final_procent_rez }}%</td>
+                          </tr>
+                          <tr>
+                              <td><i class="fas fa-id-card"></i> {{ $testResult->id }} <i class="fas fa-clock"></i> {{ $testResult->created_at->diffForHumans() }} </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                @endforeach
               </div>
-            @endforeach
           </div>
         </div>{{-- col-md-12 --}}
     </div>{{-- row --}}

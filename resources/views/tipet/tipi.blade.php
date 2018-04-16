@@ -56,7 +56,7 @@
 			</div>
 		</div>
 		<div class="col-md-3">
-			@if(Auth::check())
+			@if(Auth::check() && Auth::user()->hasAnyRole('User'))
 			<div class="placehodler">
 				<h3>Resultatet e juaja </h3>
 				<p> {{ Auth()->user()->testResults->last()->finaltype }} - {{ Auth()->user()->testResults->last()->rol_name }}</p>

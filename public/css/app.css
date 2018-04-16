@@ -8756,8 +8756,8 @@ footer .designedBy {
   border-radius: 10px;
   height: 10px;
   background: rgba(0, 0, 0, 0.13);
-  width: 78%;
-  margin: 12px 0px;
+  width: 100%;
+  margin: 0px;
   overflow: hidden;
 }
 
@@ -8825,6 +8825,11 @@ footer .designedBy {
   background-color: #8eb4cb;
 }
 
+.item {
+  background: white;
+  padding: 17px 17px 0 21px;
+}
+
 #the-types {
   text-align: center;
 }
@@ -8861,6 +8866,12 @@ footer .designedBy {
 }
 
 .single-type-meta h3 span {
+  font-weight: 700;
+}
+
+#type-single .description h1,
+#type-single .description h2,
+#type-single .description h3 {
   font-weight: 700;
 }
 

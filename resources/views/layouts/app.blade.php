@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -172,7 +173,6 @@
         </div>
     </div>
 </footer>
-migra
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

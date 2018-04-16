@@ -33,7 +33,12 @@ class SendVerificationEmail implements ShouldQueue
      */
     public function handle()
     {
+        try{
         $email = new EmailVerification($this->user);
         Mail::to($this->user->email)->send($email);
+        }
+        catch (\Exception $e){
+            return redirect('/login');
+        }
     }
 }
