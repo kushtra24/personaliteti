@@ -29,8 +29,8 @@
                             <th>Nr.</th>
                             <th>Pyetja</th>
                             <th>Teston</th>
-                            <th>created_at</th>
-                            <th>updated_at</th>
+                            <th>Krijuar</th>
+                            <th>Përditësuar</th>
                             <th>ID</th>
                           </tr>
                       </thead>

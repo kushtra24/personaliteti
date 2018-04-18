@@ -22,8 +22,9 @@
                             <th>ID</th>
                             <th>Titulli</th>
                             {{-- <th>Përmbajtja</th> --}}
-                            <th>Foto</th>
+                            <th>Categoria</th>
                             <th>Autori</th>
+                            <td>Komente</td>
                             <th>created_at</th>
                             <th>updated_at</th>
                           </tr>
@@ -46,8 +47,11 @@
                             </div>
                           </td>
                           {{-- <td>{!! str_limit($post->content, 50) !!}</td> --}}
-                          <td><img src="{{ $post->image }}" alt="postimg" width="100px" height="auto"></td>
+                          <td>
+                            @foreach($post->category as $category) {{ $category->name }}, @endforeach
+                          </td>
                           <td>{{ $post->user->first_name . " " . $post->user->last_name}}</td>
+                          <td>{{ $post->comments->count() }}</td>
                           <td>{{ $post->created_at }}</td>
                           <td>{{ $post->updated_at }}</td>
                         </tr>

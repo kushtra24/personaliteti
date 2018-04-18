@@ -168,6 +168,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $store->save();
     }
 
+
     // if (!Auth::check()){
         Cookie::queue(Cookie::make('finaltype', $this->finalType, 3000));
         Cookie::queue(Cookie::make('introExtro', $this->introExtro, 3000));

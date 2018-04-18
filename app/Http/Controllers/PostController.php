@@ -32,8 +32,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        $Categories = Category::all();
-        return view('post.create', compact('Categories'));
+        $categories = Category::all();
+        return view('post.create', compact('categories'));
     }
 
     /**
@@ -58,8 +58,6 @@ class PostController extends Controller
         $store->user_id = auth()->id();
         $store->title = $request['title'];
         $store->content = $request['content'];
-        // $store->category = $request['category'];
-        // $store->author = auth()->user()->first_name;
         
         $store->save();
 
@@ -106,8 +104,10 @@ class PostController extends Controller
     public function edit($id)
     {
         $posts = Post::find($id);
+        $categories = Category::all();
+        $chosenCategories = Category::with('users')->get(); $posts->category;
 
-        return view('post.edit', compact('posts'));
+        return view('post.edit', compact('posts', 'categories', 'chosenCategories'));
     }
 
     /**
@@ -122,22 +122,22 @@ class PostController extends Controller
         
         $store = Post::find($id);
         
-        //image
+         //image
         if($request->hasFile('file')){
             $filename = $request->file->getClientOriginalName();
             $filename = $request->file('file')->storeAs('/images', $filename, 'public');
             $store->image = $filename;
         }
+
         
         $store->user_id = auth()->id();
         $store->title = $request['title'];
         $store->content = $request['content'];
-        $store->author = auth()->user()->first_name;
-
+        
         $store->save();
 
-        $store->category()->sync($request->input('category'));
-        
+        $store->Category()->attach($request->input('category'));
+
         if ($store->save()) {
         $request->session()->flash('message.level', 'success');
         $request->session()->flash('message.content', 'Faqja eshte publikuar me sukses');

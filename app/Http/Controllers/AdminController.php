@@ -21,11 +21,7 @@ class AdminController extends Controller
                             ->groupBy('finaltype')
                             ->get();
 
-       // $countResults = DB::table('tests')
-       //               ->select(DB::raw('count(*) as Numri, finaltype'))
-       //               ->where('finaltype', '<>', 1)
-       //               ->groupBy('finaltype')
-       //               ->get();
+        
 
         return view('admin.index', compact('countResults'));
     }

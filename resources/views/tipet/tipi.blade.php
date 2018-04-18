@@ -69,8 +69,15 @@
 		             <p> {{ Auth()->user()->testResults->last()->created_at->diffForHumans() }}</p>
 				{{-- <a href="/compare?{{$tipet->{id} }}" class="btn btn-primary">Krahaso me ty</a> --}}
 			</div>
-
+			@elseif(Cookie::get('rol_name'))
+				<div class="placehodler">
+				<h3>Resultatet e juaja </h3>
+				<p>{{ Cookie::get('rol_name')}}</p>
+				<br>
+		            
+			</div>
 			@else
+
 			<div class="notLogedIn">
 				<h3>Sapo Erdhe?</h3>
 				<a href="/testip" class="btn btn-default">Fillo Vlersimin</a>

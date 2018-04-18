@@ -29,7 +29,7 @@ Route::get('/profile', 'UserController@index')->name('profile');
 Route::group(['test' => 'test'], function(){
     Route::get('/testip', 'TestController@doTheTest')->name('testi');
     Route::get('/result', 'TestController@getResults');
-    Route::post('/result', 'TestController@introExtroQuestions');
+    Route::post('/result', 'TestController@introExtroQuestions'); //->middleware('throttle:1,2')
     Route::post('/home', 'TestController@introExtroQuestions');
 });
 

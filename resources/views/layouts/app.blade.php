@@ -132,7 +132,7 @@
                 </h4>
                 <ul>
                     @foreach($posts as $post)
-                    <li> <a href="/post/{{ $post->id }}" title="{{$post->title}}">{!! str_limit($post->title, 40) !!}...</a></li>
+                    <li> <a href="/blog/{{ $post->id }}" title="{{$post->title}}">{!! str_limit($post->title, 40) !!}...</a></li>
                     <hr>
                     @endforeach
                 </ul>

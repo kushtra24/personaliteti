@@ -9,7 +9,7 @@
 <div class="container result-page" id="hidden">
     <div class="row">
         <div class="col-sm-5">
-            <h1>Ti je: <b> {{ $rol_name }} {{ Cookie::get('rol_name') }}</b></h1>
+            <h1>Ti je: <b> {{ $rol_name }} {{-- {{ Cookie::get('rol_name') }} --}}</b></h1>
           @if($FirstfinalProcentRez)
             {{-- <h3>{{ $FirstfinalProcentRez }}% {{ $introExtro }} </h3>
             <h3>{{ $nsfinalProcentRez }}% {{ $intuSens }}</h3>

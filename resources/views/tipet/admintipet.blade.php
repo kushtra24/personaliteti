@@ -24,10 +24,10 @@
                       <thead class="thead-inverse">
                           <tr>
                             <th>ID</th>
-                            <th>Type</th>
-                            <th>name</th>
-                            <th>created_at</th>
-                            <th>updated_at</th>
+                            <th>Tipi</th>
+                            <th>Emri</th>
+                            <th>Krjuar</th>
+                            <th>Përditësuar</th>
                           </tr>
                       </thead>
                       @foreach ($tipet as $tipi)
