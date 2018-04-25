@@ -8838,13 +8838,6 @@ footer .designedBy {
   margin: 50px 0;
 }
 
-.the-type:hover {
-  -webkit-box-shadow: 6px 3px 11px -4px rgba(184, 184, 184, 0.52);
-  box-shadow: 6px 3px 11px -4px rgba(184, 184, 184, 0.52);
-  border-radius: 7px;
-  background: #eff5f9;
-}
-
 .the-type h4 {
   font-size: 18px;
   font-weight: 700;
@@ -8853,16 +8846,18 @@ footer .designedBy {
 
 .the-type img {
   width: 200px;
-  -webkit-transition: .3s width ease-out;
-  transition: .3s width ease-out;
+  -webkit-transition: .3s transform ease-out;
+  transition: .3s transform ease-out;
 }
 
 .the-type:hover img {
-  width: 230px;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .the-type a {
   text-decoration: none;
+  position: relative;
 }
 
 .single-type-meta h3 span {

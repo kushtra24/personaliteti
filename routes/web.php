@@ -116,5 +116,10 @@ Route::group(['middleware' => 'web'], function () {
     //profile
     Route::get('/profili/{id}/edit', ['uses' => 'UserController@edit', 'middleware' => 'roles', 'roles' => ['Admin', 'Author', 'visitor']]);
     Route::post('/profili/{id}/update', ['uses' => 'UserController@update', 'as' => 'UserController.update', 'middleware' => 'roles', 'roles' => ['Admin', 'author', 'visitor']]);
+
+    //Gallery
+    Route::get('/galeria', ['uses' => 'GalleryController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+    Route::post('/galeria/store', ['uses' => 'GalleryController@store', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+
 });
 

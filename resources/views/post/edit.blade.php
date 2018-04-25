@@ -78,10 +78,10 @@
                                 <div class="checkbox">
                                     <ul>
                                         @foreach( $categories as $category)
-                                        <li>
-                                            <input type="checkbox" name="category[]" value="{{ $category->id }}" id="{{ $category->id }}" {{ $category->id == $posts->id ? 'checked' : '' }}>
-                                            <label for="{{ $category->id }}">{{ $category->name}}</label>
-                                        </li>
+                                            <li>
+                                                <input type="checkbox" name="category[]" value="{{ $category->id }}" id="{{ $category->id }}" {{ in_array($category->id, $postCategories) ? 'checked' : '' }}>
+                                                <label for="{{ $category->id }}">{{ $category->name}}</label>
+                                            </li>
                                         @endforeach
                                     </ul>
                                     <a href="/categories/create" target="_blank">Shto Kategori</a>
@@ -91,6 +91,7 @@
 
                      </form>
             </div>
+            
             <!-- /.row -->
 </div>
 <!-- /#page-wrapper -->

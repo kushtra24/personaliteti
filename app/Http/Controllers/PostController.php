@@ -103,11 +103,13 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $posts = Post::find($id);
-        $categories = Category::all();
-        $chosenCategories = Category::with('users')->get(); $posts->category;
+        $posts = Post::find($id);        
 
-        return view('post.edit', compact('posts', 'categories', 'chosenCategories'));
+        $postCategories = $posts->Category->pluck('id')->toArray();
+
+        $categories = Category::all();
+
+        return view('post.edit', compact('posts', 'categories', 'postCategories'));
     }
 
     /**

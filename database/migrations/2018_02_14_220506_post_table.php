@@ -16,7 +16,6 @@ class PostTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->integer('category_id')->nullable()->unsigned(); 
             $table->string('title');
             $table->text('content');
             $table->string('image');

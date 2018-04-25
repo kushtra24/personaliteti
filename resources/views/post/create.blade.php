@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary pull-right cleftButton" name="submit" id="submit"><i class="fa fa-save"></i> &nbsp; Ruaje</button>
+                        <button type="submit" class="btn btn-primary pull-right" name="submit" id="submit" accept="image/*"><i class="fa fa-save"></i> &nbsp; Ruaje</button>
                     </div>
                 </div>
                 <!-- /.col-lg-8 -->

@@ -22,10 +22,7 @@
     <script src="{{ asset('js/tinymce/tinymce.init.js') }}"></script>
 
     <!-- Styles -->
-    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     @yield('style')
-
-
 </head>
 
 <body>
@@ -86,7 +83,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"><i class="fas fa-images"></i> Galeria</a>
+                            <a href="/galeria"><i class="fas fa-images"></i> Galeria</a>
                         </li>  
                         @if (Auth::user() && Auth::user()->hasAnyRole('Admin'))                        
                              <li>
