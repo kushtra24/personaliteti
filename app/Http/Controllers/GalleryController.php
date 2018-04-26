@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use MediaUploader;
-
+use DB;
 class GalleryController extends Controller
 {
     /**
@@ -14,8 +14,9 @@ class GalleryController extends Controller
      */
     public function index(){
 
+        $posts = DB::table('media')->get();
 
-        return view('gallery.index');
+        return view('gallery.index', compact('posts'));
     }
 
     /**

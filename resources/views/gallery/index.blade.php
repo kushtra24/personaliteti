@@ -1,5 +1,62 @@
 @extends('layouts.appAdmin')
 
+@section('style')
+<style>
+
+.attachment-preview {
+    position: relative;
+    box-shadow: inset 0 0 15px rgba(0,0,0,.1), inset 0 0 0 1px rgba(0,0,0,.05);
+    background: #eee;
+    cursor: pointer;
+}
+
+
+.centered img {
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.prev-thumbnail {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity .1s;
+}
+
+.prev-thumbnail:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
+    overflow: hidden;
+}
+
+.centered {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate(50%,50%);
+    transform: translate(50%,50%);
+}
+
+.attachment-preview:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+</style>
+@endsection
 
 @section('dashboard')
  <div id="page-wrapper">
@@ -28,30 +85,18 @@
                         </div>
                     @endif
 
-                  {{-- <div class="table-responsive patients-overview">
-                    <table class="table table-hover table-striped">
-                      <thead class="thead-inverse">
-                          <tr>
-                            <th>ID</th>
-                            <th>Filename</th>
-                            <th>extention</th>
-                            <th>size</th>
-                            <th>mime type</th>
-                            <th>created_at</th>
-                            <th>updated_at</th>
-                          </tr>
-                      </thead>
-                      @foreach ($pages as $page)
-                        <tr class="testing-table">
-                          <td>{{ $page->id }}</td>
-                          <td>{{ $page->title }}</td>
-                          <td>{{ $page->slug }}</td>
-                          <td>{{ $page->created_at }}</td>
-                          <td>{{ $page->updated_at }}</td>
-                        </tr>
-                      @endforeach
-                    </table>
-                  </div> --}}
+                @forelse($posts as $post)
+                <div class="col-md-1">
+                  <div class="attachment-preview">
+                    <div class="prev-thumbnail">
+                      <div class="centered">
+                          <img src=" {{asset('storage/'.$post->filename . "." . $post->extension)}}" class=" img-responsive" alt="{{ $post->filename }}" >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                @endforeach
                     
                 </div>
                 <!-- /.col-lg-8 -->
