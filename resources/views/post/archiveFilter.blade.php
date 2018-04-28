@@ -11,7 +11,7 @@
 		@foreach($posts as $post)
 			<div class="col-md-4">
 					<div class="featured-image">
-						<img src="{{ $post->image }}" alt="featured img" class="img-responsive">
+						<img src="{{ $post->firstMedia('thumbnail')->getUrl() }}" alt="featured img" class="img-responsive">
 					</div>
 					<div class="post-container">
 						

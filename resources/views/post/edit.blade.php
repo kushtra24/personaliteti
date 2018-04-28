@@ -70,7 +70,7 @@
                                 <h4>Fotoja</h4>
                                 <div class="form-group">
                                     <input type="file" id="file" name="file" onchange="readURL(this);"><span id="filename"></span>
-                                    <img src="{{ $posts->image }}" alt="post image" id="imediateImage" class="img-responsive">
+                                    <img src="{{ $posts->firstMedia('thumbnail')->getUrl() }}" alt="post image" id="imediateImage" class="img-responsive">
                                 </div>
                             </div>
                             <div class="category section">

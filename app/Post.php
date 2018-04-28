@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Plank\Mediable\Mediable;
 
 class Post extends Model
 {
+    use Mediable;
     
     public function getImageAttribute($value)
     {

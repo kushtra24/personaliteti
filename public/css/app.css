@@ -8845,9 +8845,9 @@ footer .designedBy {
 }
 
 .the-type img {
-  width: 200px;
   -webkit-transition: .3s transform ease-out;
   transition: .3s transform ease-out;
+  max-height: 200px;
 }
 
 .the-type:hover img {

@@ -90,7 +90,7 @@
                   <div class="attachment-preview">
                     <div class="prev-thumbnail">
                       <div class="centered">
-                          <img src=" {{asset('storage/'.$post->filename . "." . $post->extension)}}" class=" img-responsive" alt="{{ $post->filename }}" >
+                          <img src="{{asset('storage/images/'.$post->filename . "." . $post->extension)}}" class=" img-responsive" alt="{{ $post->filename }}" >
                       </div>
                     </div>
                   </div>

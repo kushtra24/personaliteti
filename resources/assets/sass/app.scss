@@ -491,8 +491,8 @@ footer{
     text-transform: uppercase;
 }
 .the-type img {
-    width: 200px;
     transition: .3s transform ease-out;
+    max-height: 200px;
 }
 
 .the-type:hover img {

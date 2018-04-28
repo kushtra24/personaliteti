@@ -19,17 +19,7 @@ class GalleryController extends Controller
         return view('gallery.index', compact('posts'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        
-    }
-
-    /**
+       /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -38,7 +28,10 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
 
-        $media = MediaUploader::fromSource($request->file('file'))->upload();
+        $media = MediaUploader::fromSource($request->file('file'))
+        // place the file in a directory relative to the disk root
+        ->toDirectory('images')
+        ->upload();
 
         return back();
     }

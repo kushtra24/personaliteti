@@ -12,7 +12,7 @@
           | @foreach($postet->category as $category) <a href="{{ action('CategoryController@categoryfilter', [$category]) }}">{{ $category->name }}</a><span>,</span> @endforeach</p>
 			</div>
 			<div class="col-md-8" id="post">
-				<img src="{{ $postet->image }}" alt="featured img" class="img-responsive">
+				<img src="{{ $postet->firstMedia('thumbnail')->getUrl() }}" alt="featured img" class="img-responsive">
 				{!! $postet->content !!}
         <hr>
         <h4><b><i class="fas fa-comments"></i> {{ $postet->comments->count() }} Koment{{ $postet->comments->count() == 1 ? "" : "e" }} </b></h4>

@@ -40,7 +40,10 @@
 			<div class="col-md-8">
 				@foreach($posts as $post)
 					<div class="featured-image">
-						<img src="{{ $post->image }}" alt="featured img" class="img-responsive">
+						@if($post->hasMedia('thumbnail'))
+						<img src="{{ $post->firstMedia('thumbnail')->getUrl() }}" alt="featured img" class="img-responsive">
+						@endif
+
 					</div>
 					<div class="post-container">
 						

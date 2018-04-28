@@ -24,7 +24,7 @@
                             {{-- <th>Përmbajtja</th> --}}
                             <th>Categoria</th>
                             <th>Autori</th>
-                            <td>Komente</td>
+                            <th>Komente</th>
                             <th>created_at</th>
                             <th>updated_at</th>
                           </tr>

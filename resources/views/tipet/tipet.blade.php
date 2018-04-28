@@ -18,7 +18,7 @@
 			@foreach ($tipet->slice(0, 4) as $tipi)
 				<div class="col-md-3 the-type">
 					<a href="{{ action('TipetController@show', [$tipi]) }}">
-						<img src="{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<img src="{{ $tipi->type_img }}" alt="tipi">
 						<h4>{{ $tipi->name }}</h4>
 						<h5>{{ $tipi->type }}</h5>
 					</a>
@@ -32,7 +32,7 @@
 			@foreach ($tipet->slice(4, 4) as $tipi)
 				<div class="col-md-3 the-type">
 					<a href="{{ action('TipetController@show', ['id' => $tipi->id]) }}">
-						<img src="{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<img src="{{ $tipi->type_img }}" alt="tipi">
 						<h4>{{ $tipi->name }}</h4>
 						<h5>{{ $tipi->type }}</h5>
 					</a>
@@ -46,7 +46,7 @@
 			@foreach ($tipet->slice(8, 4) as $tipi)
 				<div class="col-md-3 the-type">
 					<a href="{{ action('TipetController@show', ['id' => $tipi->id]) }}">
-						<img src="{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<img src="{{ $tipi->type_img }}" alt="tipi">
 						<h4>{{ $tipi->name }}</h4>
 						<h5>{{ $tipi->type }}</h5>
 					</a>
@@ -59,7 +59,7 @@
 			@foreach ($tipet->slice(12, 4)  as $tipi)
 				<div class="col-md-3 the-type">
 					<a href="{{ action('TipetController@show', ['id' => $tipi->id]) }}">
-						<img src="{{ $tipi->type_img }}" alt="tipi" width="200px">
+						<img src="{{ $tipi->type_img }}" alt="tipi">
 						<h4>{{ $tipi->name }}</h4>
 						<h5>{{ $tipi->type }}</h5>
 					</a>

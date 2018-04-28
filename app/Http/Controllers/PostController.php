@@ -10,6 +10,7 @@ use Spatie\Analytics\Period;
 use App\Category;
 use Carbon\Carbon;
 use App\Http\Requests\PostRequest;
+use MediaUploader;
 
 class PostController extends Controller
 {
@@ -44,22 +45,22 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
-        // return $request->input('category');
         $store = new Post;
 
-        //image
-        if($request->hasFile('file')){
-            $filename = $request->file->getClientOriginalName();
-            $filename = $request->file('file')->storeAs('/images', $filename, 'public');
-            $store->image = $filename;
-        }
-
-        
         $store->user_id = auth()->id();
         $store->title = $request['title'];
         $store->content = $request['content'];
         
         $store->save();
+
+        //image
+        if($request->hasFile('file')){
+            $media = MediaUploader::fromSource($request->file('file'))
+                // place the file in a directory relative to the disk root
+                ->toDirectory('images')
+                ->upload();
+            $store->attachMedia($media, 'thumbnail');
+        }
 
         $store->Category()->attach($request->input('category'));
 
@@ -123,20 +124,22 @@ class PostController extends Controller
     {
         
         $store = Post::find($id);
-        
-         //image
-        if($request->hasFile('file')){
-            $filename = $request->file->getClientOriginalName();
-            $filename = $request->file('file')->storeAs('/images', $filename, 'public');
-            $store->image = $filename;
-        }
-
-        
+    
         $store->user_id = auth()->id();
         $store->title = $request['title'];
         $store->content = $request['content'];
         
         $store->save();
+
+        //image
+        if($request->hasFile('file')){
+            $media = MediaUploader::fromSource($request->file('file'))
+                // place the file in a directory relative to the disk root
+                ->toDirectory('images')
+                ->upload();
+            $store->attachMedia($media, 'thumbnail');
+        }
+
 
         $store->Category()->attach($request->input('category'));
 
