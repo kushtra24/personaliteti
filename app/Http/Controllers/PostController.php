@@ -65,6 +65,9 @@ class PostController extends Controller
                 ->upload();
             $store->attachMedia($media, 'thumbnail');
         }
+        else{
+            $store->attachMedia($media->id, 'thumbnail');
+        }
 
         $store->Category()->attach($request->input('category'));
 
