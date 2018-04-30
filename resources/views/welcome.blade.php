@@ -51,37 +51,29 @@
 		<h1>Ku ju ndihmon ky vlersim</h1>
 
 		<div class="komunikim col-md-6">
-			<div class="col-xs-12 col-md-4">
+			<div class="inner-part">
 				<i class="far fa-comments"></i>
-			</div>
-			<div class="col-md-8">
 				<h2>Komunikim</h2>
 				<p>Disa njerëz janë të prirur natyrshëm që të përqëndrohen në pamjen e madhe dhe të flasin për idetë e mëdha. Të tjerë përqendrohen në detaje, fakte dhe në atë që duket qartë. Duke kuptuar se si njerëzit marrin dhe shprehin informacione, ju mund të flisni me çdo temë në një mënyrë që rezonon më efektivisht me ta.</p>
 			</div>
 		</div>
-		<div class="karrier col-md-6">			
-			<div class="col-xs-12 col-md-4">
+		<div class="karrier col-md-6">
+			<div class="inner-part">
 				<i class="fab fa-telegram-plane"></i>
-			</div>
-			<div class="col-md-8">
 				<h2>Karrier</h2>
 				<p>Gjetja e një karriere të duhur për ju, mund të jetë një përpjekje e lodhshme dhe frustruese, por vlerësimi i personalitetit mund të ju ndihmojë. Duke e njohur veten, duke njohur nevojat e atyre që janë përreth jush dhe duke identifikuar ne cfar fusha mund të lulëzoni natyrshëm, qasja juaj në zhvillimin e karrierës bëhet shumë më e lehtë.</p>
 			</div>
 		</div>
 		<div class="lidhje col-md-6">
-			<div class="col-xs-12 col-md-4">
+			<div class="inner-part">
 				<i class="far fa-heart"></i>
-			</div>
-			<div class="col-md-8">
 				<h2>lIDHJE BASHKSHORTORE</h2>
 				<p>Ndoshta bashkshorti/ja juaj ju kupton, ose ju e keni të vështirë duke u kuptuar me një mik apo një anëtar të familjes. A jeni duke thënë të njëjtat gjëra, por në mënyra të ndryshme? Apo ndoshta po kërkoni të krijoni ekuilibrin në një mënyrë që ju plotëson më shumë. Preferencat e personalitetit tuaj mund të kenë diçka për të thënë për këtë.</p>
 			</div>
 		</div>
 		<div class="vendimarrje col-md-6">
-			<div class="col-xs-12 col-md-4">
+			<div class="inner-part">
 				<i class="far fa-compass"></i>
-			</div>
-			<div class="col-md-8">
 				<h2>Vendimarrje</h2>
 				<p>Shumë njerëz i afrohen vendimmarrjes në aspektin e rezultateve të drejtpërdrejta dhe implikimeve (p.sh., nëse kthehem në shkollë, do të kushtojë kaq..). Sidoqoftë, rezultatet e nënkuptuara dhe ato që ndikojnë në thelbin tënd nuk janë gjithmonë aq të dukshme (p.sh., a do të përshtatet ky format i mësimdhënjes me mua?). Ne mund t'ju ndihmojmë t'i zbuloni këtë.</p>
 			</div>

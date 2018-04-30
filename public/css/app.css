@@ -8350,6 +8350,10 @@ button.close {
   }
 }
 
+section {
+  margin: 38px 0;
+}
+
 .navbar-default {
   background-color: inherit;
   border-color: inherit;
@@ -8501,7 +8505,7 @@ button.close {
 }
 
 #cka_vlerson h1 {
-  margin: 61px auto 15px;
+  margin: 0 auto;
   font-size: 52px;
   font-weight: 700;
 }
@@ -8520,8 +8524,8 @@ button.close {
 }
 
 #cka_vlerson p {
-  line-height: 29px;
-  text-align: justify;
+  line-height: 25px;
+  text-align: center;
 }
 
 #cka_vlerson .komunikim i {
@@ -8677,6 +8681,21 @@ button.close {
   to {
     -webkit-transform: rotate(359deg);
   }
+}
+
+.inner-part {
+  padding: 15px;
+  text-align: center;
+  border: 2px solid #ececec;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  margin-top: 30px;
+}
+
+.inner-part:hover {
+  -webkit-box-shadow: -4px 10px 19px 0px #cccccc;
+          box-shadow: -4px 10px 19px 0px #cccccc;
+  background: white;
 }
 
 footer {
@@ -8851,8 +8870,8 @@ footer .designedBy {
 }
 
 .the-type:hover img {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .the-type a {
@@ -9172,12 +9191,6 @@ progress::-moz-progress-bar {
   #show_register {
     width: 100%;
     margin: 15px 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  #cka_vlerson i {
-    float: right;
   }
 }
 

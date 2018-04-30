@@ -19,6 +19,20 @@
         padding-bottom: 10px;
         border-color: #ccc;
     }
+
+    .modal-body{
+        overflow: scroll;
+        max-height: 500px;
+    }
+
+    .attachment-preview{
+        margin: 7px 0;
+    }
+
+    .modal-body img {
+        border: 2px solid gray;
+    }
+
 </style>
 @endsection
 
@@ -71,9 +85,10 @@
                     <div class="foto section">
                         <h4>Fotoja</h4>
                         <div class="form-group">
-                                <input type="file" id="file" name="file" onchange="readURL(this);" required><span id="filename"></span>
+                                <input type="file" class="" id="file" name="file" onchange="readURL(this);" required><span id="filename"></span>
                                 <img src="" alt="" id="imediateImage" class="img-responsive">
                         </div>
+                        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal"> Shto foto</a>
                     </div>
                     <div class="category section">
                         <h4>Category</h4>
@@ -93,6 +108,35 @@
             </form>
         </div>
         <!-- /.row -->
+
+
+<div class="modal fade " tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Shto fotografi</h4>
+      </div>
+      <div class="modal-body">
+        @forelse($posts as $post)
+        <div class="col-md-2">
+            <div class="centered">
+                <input type="radio" id="image-{{ $post->id}}" value="" name="post-image" class="hidden">
+                <label for="image-{{ $post->id }}">
+                  <img src="{{asset('storage/images/'.$post->filename . "." . $post->extension)}}" class="{{ $post->id }} img-responsive" alt="{{ $post->id }}" >
+                </label>
+            </div>
+        </div>
+        @endforeach
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary save">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 </div>
 <!-- /#page-wrapper -->
 
@@ -101,6 +145,17 @@
 @section('adminscripts')
   <script>
 
+    $('.modal-body img').click(function(){
+        if ($(".modal-body input").is(":checked")) {
+            $(this).css('border-color', 'red');
+            jQuery('.modal-body img').not(jQuery(this)).css('border-color', 'gray');
+        }
+        else{
+            $(this).css('border-color', 'gray');
+        }
+    });
+
+   
 
     //Show image imediately
     function readURL(input) {

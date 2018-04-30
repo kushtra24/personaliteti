@@ -11,6 +11,7 @@ use App\Category;
 use Carbon\Carbon;
 use App\Http\Requests\PostRequest;
 use MediaUploader;
+use DB;
 
 class PostController extends Controller
 {
@@ -34,7 +35,10 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('post.create', compact('categories'));
+
+        $posts = DB::table('media')->get();
+
+        return view('post.create', compact('categories', 'posts'));
     }
 
     /**

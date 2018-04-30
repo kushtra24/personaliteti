@@ -108,7 +108,7 @@
 
 //Form validation
 $('#submit').click(function() {
-    if(!$("input").is(":checked")) {
+    if($("input[type='radio']").parent().hasClass('checked') == false) {
       $('.alert').removeClass('hide');
         event.preventDefault();
     }

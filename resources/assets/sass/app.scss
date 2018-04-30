@@ -9,6 +9,11 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+
+section{
+	margin: 38px 0;
+}
+
 .navbar-default {
     background-color: inherit;
     border-color: inherit;
@@ -142,7 +147,7 @@
     	display: flex;
     	flex-flow: row wrap;
     	h1 {
-    		margin: 61px auto 15px;
+    		margin: 0 auto;
     		font-size: 52px;
     		font-weight: 700;
 		}
@@ -158,8 +163,8 @@
 		    }
 		}
 		p {
-    		line-height: 29px;
-    		text-align: justify;
+    		line-height: 25px;
+    		text-align: center;
 		}
 
 		.komunikim{
@@ -312,6 +317,18 @@ input[type="radio"] {
 		to {
 				-webkit-transform: rotate(359deg);
 		}
+}
+
+.inner-part {
+	 &:hover {
+    	box-shadow: -4px 10px 19px 0px #cccccc;
+    	background: white;
+	}
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #ececec;
+    transition: all 0.5s ease-out;
+    margin-top: 30px;
 }
 
 
@@ -477,31 +494,23 @@ footer{
     margin: 50px 0;
 }
 
-// .the-type:hover{
-// 	-webkit-box-shadow: 6px 3px 11px -4px rgba(184,184,184,0.52);
-// 	-moz-box-shadow: 6px 3px 11px -4px rgba(184,184,184,0.52);
-// 	box-shadow: 6px 3px 11px -4px rgba(184,184,184,0.52);
-// 	border-radius: 7px;
-// 	background: #eff5f9;
-// }
-
-.the-type h4 {
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.the-type img {
-    transition: .3s transform ease-out;
-    max-height: 200px;
-}
-
-.the-type:hover img {
-	transform: scale(1.4);
-}
-
-.the-type a{
-	text-decoration: none;
-	position: relative;
+.the-type{
+	h4 {
+	    font-size: 18px;
+	    font-weight: 700;
+	    text-transform: uppercase;
+	}
+	img {
+	    transition: .3s transform ease-out;
+	    max-height: 200px;
+	}
+	&:hover img {
+		transform: scale(1.2);
+	}
+	a{
+		text-decoration: none;
+		position: relative;
+	}
 }
 // __________________________________________________________________________________________Tipi
 
