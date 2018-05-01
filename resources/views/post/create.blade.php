@@ -29,8 +29,14 @@
         margin: 7px 0;
     }
 
-    .modal-body img {
+    .centered label{
+        height: 80px;
+        overflow: hidden;
         border: 2px solid gray;
+    }
+
+    .selected{
+        border: 2px solid red !important;
     }
 
 </style>
@@ -84,11 +90,10 @@
                 <div class="col-md-3">
                     <div class="foto section">
                         <h4>Fotoja</h4>
-                        <div class="form-group">
-                                <input type="file" class="" id="file" name="file" onchange="readURL(this);" required><span id="filename"></span>
-                                <img src="" alt="" id="imediateImage" class="img-responsive">
-                        </div>
-                        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal"> Shto foto</a>
+                        <img src="" alt="" id="imediateImage" class="img-responsive">
+                        <input type="text" value="" id="fotoID" class="hidden" name="fotoID" >
+                        <a href="#" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal"> Shto foto</a>
+                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" id="remove-foto"> Heq foton</a>
                     </div>
                     <div class="category section">
                         <h4>Category</h4>
@@ -105,37 +110,40 @@
                         </div>
                     </div>
                 </div>
+
+                 <div class="modal fade " tabindex="-1" role="dialog" id="myModal">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Shto fotografi</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-group">
+                                <input type="file" class="" id="file" name="file" onchange="readURL(this);" accept="image/*"><span id="filename"></span>
+                        </div>
+                        @forelse($posts as $post)
+                        <div class="col-md-2">
+                            <div class="centered">
+                                <input type="radio" id="image-{{ $post->id}}" value="{{ $post->id}}" name="postImage" class="hidden">
+                                <label for="image-{{ $post->id }}">
+                                  <img src="{{asset('storage/images/'.$post->filename . "." . $post->extension)}}" class="{{ $post->id }} img-responsive" alt="{{ $post->id }}" >
+                                </label>
+                            </div>
+                        </div>
+                        @endforeach
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary saveModal" disabled="disabled" data-dismiss="modal">Save changes</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
             </form>
         </div>
         <!-- /.row -->
-
-
-<div class="modal fade " tabindex="-1" role="dialog" id="myModal">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Shto fotografi</h4>
-      </div>
-      <div class="modal-body">
-        @forelse($posts as $post)
-        <div class="col-md-2">
-            <div class="centered">
-                <input type="radio" id="image-{{ $post->id}}" value="" name="post-image" class="hidden">
-                <label for="image-{{ $post->id }}">
-                  <img src="{{asset('storage/images/'.$post->filename . "." . $post->extension)}}" class="{{ $post->id }} img-responsive" alt="{{ $post->id }}" >
-                </label>
-            </div>
-        </div>
-        @endforeach
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary save">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 </div>
 <!-- /#page-wrapper -->
@@ -145,21 +153,36 @@
 @section('adminscripts')
   <script>
 
-    $('.modal-body img').click(function(){
-        if ($(".modal-body input").is(":checked")) {
-            $(this).css('border-color', 'red');
-            jQuery('.modal-body img').not(jQuery(this)).css('border-color', 'gray');
-        }
-        else{
-            $(this).css('border-color', 'gray');
-        }
+    //make a red border on a clicked image on modal
+    $('.centered label').click(function(){//if clicked the image
+        $(this).addClass('selected'); // add a red morder to the image
+        $('.centered label').not($(this)).removeClass('selected'); //remove the red border from the previeouse selected image
+        $('.saveModal').removeAttr('disabled'); // remove attribute desabled from save modal button
     });
 
-   
+    //add the value of the clicked input type radio of the selected image to the hidden input of the image
+     $('.modal-body input').change(function() {
+        $('#fotoID').val($(this).val()); // add the value of the input to the input with the id of fotoID
+    });
+
+     $('.saveModal').click(function (){ //on click save modal button
+        var image = $('.centered .selected img').attr('src'); // get the src attrubute from the selected image store to the image variable
+        $('#imediateImage').attr("src", image); // add the image sec to the imadeiate image
+        $('#file').val('');  // remove the file value 
+     });
+
+     $('#remove-foto, .closeModal').click(function(){ //on click remove foto button
+        $('#fotoID').val(''); // remove the value of the fotoID input
+        $('#file').val(''); // remove the value of the file input button
+        $('.saveModal').attr('disabled', 'desabled'); // add arrtibute desable to the save modal button
+        $('.centered label').not($(this)).removeClass('selected'); // make the background of the img gray again
+        $('#imediateImage').attr("src", ''); // remove the src of the image
+     });
 
     //Show image imediately
-    function readURL(input) {
+    function readURL(input) { // read the url from
         if (input.files && input.files[0]) {
+            $('#myModal').modal('hide');
             var reader = new FileReader();
             reader.onload = function (e) {
             $('#imediateImage')

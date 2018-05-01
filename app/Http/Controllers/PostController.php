@@ -66,14 +66,14 @@ class PostController extends Controller
             $store->attachMedia($media, 'thumbnail');
         }
         else{
-            $store->attachMedia($media->id, 'thumbnail');
+            $store->attachMedia($request['fotoID'], 'thumbnail');
         }
 
         $store->Category()->attach($request->input('category'));
 
         if ($store->save()) {
-        $request->session()->flash('message.level', 'success');
-        $request->session()->flash('message.content', 'Faqja eshte publikuar me sukses');
+            $request->session()->flash('message.level', 'success');
+            $request->session()->flash('message.content', 'Faqja eshte publikuar me sukses');
         } else {
             $request->session()->flash('message.level', 'danger');
             $request->session()->flash('message.content', 'Dicka nuk shkoje mirë!');
@@ -117,7 +117,9 @@ class PostController extends Controller
 
         $categories = Category::all();
 
-        return view('post.edit', compact('posts', 'categories', 'postCategories'));
+        $medias = DB::table('media')->get();
+
+        return view('post.edit', compact('posts', 'categories', 'postCategories', 'medias'));
     }
 
     /**
@@ -135,7 +137,9 @@ class PostController extends Controller
         $store->user_id = auth()->id();
         $store->title = $request['title'];
         $store->content = $request['content'];
-        
+
+        $store->Category()->sync($request->input('category'));
+
         $store->save();
 
         //image
@@ -144,11 +148,13 @@ class PostController extends Controller
                 // place the file in a directory relative to the disk root
                 ->toDirectory('images')
                 ->upload();
-            $store->attachMedia($media, 'thumbnail');
+            $store->syncMedia($media, 'thumbnail');
+        }
+        elseif($request['fotoID'] != '-1'){
+            $store->syncMedia($request['fotoID'], 'thumbnail');
         }
 
 
-        $store->Category()->attach($request->input('category'));
 
         if ($store->save()) {
         $request->session()->flash('message.level', 'success');
