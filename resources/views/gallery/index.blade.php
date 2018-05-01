@@ -3,57 +3,19 @@
 @section('style')
 <style>
 
-.attachment-preview {
-    position: relative;
-    box-shadow: inset 0 0 15px rgba(0,0,0,.1), inset 0 0 0 1px rgba(0,0,0,.05);
-    background: #eee;
-    cursor: pointer;
-}
+    .attachment-preview{
+        margin: 7px 0;
+    }
 
+    .centered label{
+        height: 80px;
+        overflow: hidden;
+        border: 2px solid gray;
+    }
 
-.centered img {
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-}
-
-.prev-thumbnail {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-    transition: opacity .1s;
-}
-
-.prev-thumbnail:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
-    overflow: hidden;
-}
-
-.centered {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translate(50%,50%);
-    transform: translate(50%,50%);
-}
-
-.attachment-preview:before {
-    content: "";
-    display: block;
-    padding-top: 100%;
-}
+    .selected{
+        border: 2px solid red !important;
+    }
 
 </style>
 @endsection
@@ -86,16 +48,48 @@
                     @endif
 
                 @forelse($posts as $post)
-                <div class="col-md-1">
-                  <div class="attachment-preview">
-                    <div class="prev-thumbnail">
-                      <div class="centered">
-                          <img src="{{asset('storage/images/'.$post->filename . "." . $post->extension)}}" class=" img-responsive" alt="{{ $post->filename }}" >
-                      </div>
+                    <div class="col-md-2">
+                        <div class="centered">
+                            <input type="radio" id="image-{{ $post->id}}" value="{{ $post->id}}" name="postImage" class="">
+                            <label for="image-{{ $post->id }}">
+                              <img src="{{asset('storage/images/'.$post->filename . "." . $post->extension)}}" class="{{ $post->id }} img-responsive" alt="{{ $post->id }}" >
+                            </label>
+
+                              <form method="POST" action="{{ route('gallery.destroy', [$post->id]) }}">
+                                {{ csrf_field() }}
+                                  <button class="btn btn-danger btn-xs" type="submit">fshije</button>
+                              </form>
+                            
+                        </div>
                     </div>
-                  </div>
-                </div>
                 @endforeach
+
+
+
+                <div class="modal fade " tabindex="-1" role="dialog" id="myModal">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Informacionet e fotografisë</h4>
+                      </div>
+                      <div class="modal-body">
+                        <table class="table-responsive table">
+                            <thead>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                <td>{{ $post->id}}</td>
+                            </tbody>
+                        </table>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary saveModal" disabled="disabled" data-dismiss="modal">Save changes</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
                     
                 </div>
                 <!-- /.col-lg-8 -->
@@ -106,16 +100,32 @@
 
 @endsection
 
-@section('style')
+@section('adminscripts')
+<script>
+        //make a red border on a clicked image on modal
+    $('.centered label').click(function(){//if clicked the image
+        $(this).addClass('selected'); // add a red morder to the image
+        $('.centered label').not($(this)).removeClass('selected'); //remove the red border from the previeouse selected image
+        $('.saveModal').removeAttr('disabled'); // remove attribute desabled from save modal button
+    });
 
-<style>
+    //add the value of the clicked input type radio of the selected image to the hidden input of the image
+     $('.modal-body input').change(function() {
+        $('#fotoID').val($(this).val()); // add the value of the input to the input with the id of fotoID
+    });
 
-.setting{
-  display: none;
-}
+     $('.saveModal').click(function (){ //on click save modal button
+        var image = $('.centered .selected img').attr('src'); // get the src attrubute from the selected image store to the image variable
+        $('#imediateImage').attr("src", image); // add the image sec to the imadeiate image
+        $('#file').val('');  // remove the file value 
+     });
 
-.testing-table:hover .setting{
-  display: block;
-}
-</style>
+     $('#remove-foto, .closeModal').click(function(){ //on click remove foto button
+        $('#fotoID').val(''); // remove the value of the fotoID input
+        $('#file').val(''); // remove the value of the file input button
+        $('.saveModal').attr('disabled', 'desabled'); // add arrtibute desable to the save modal button
+        $('.centered label').not($(this)).removeClass('selected'); // make the background of the img gray again
+        $('#imediateImage').attr("src", ''); // remove the src of the image
+     });
+</script>
 @endsection

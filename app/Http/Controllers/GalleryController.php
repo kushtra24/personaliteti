@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use MediaUploader;
 use DB;
+use Mediable;
+
 class GalleryController extends Controller
 {
     /**
@@ -44,30 +46,9 @@ class GalleryController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        $media = Post::find($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+        return view('gallery.index', compact('media') );
     }
 
     /**
@@ -78,6 +59,12 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+
+        $post = Media::find($id);
+
+        $post->delete();
+
+        return back();
     }
 }
