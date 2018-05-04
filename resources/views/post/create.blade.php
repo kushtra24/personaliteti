@@ -120,7 +120,7 @@
                       </div>
                       <div class="modal-body">
                         <div class="form-group">
-                                <input type="file" class="" id="file" name="file" onchange="readURL(this);" accept="image/*"><span id="filename"></span>
+                                <input type="file" id="file" name="file" onchange="readURL(this);" accept="image/*"><span id="filename"></span>
                         </div>
                         @forelse($posts as $post)
                         <div class="col-md-2">

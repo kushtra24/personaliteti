@@ -17,9 +17,13 @@
 
     <!-- font awesome  -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <script src="{{ asset('js/dropzone.js') }}"></script>
     
     <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
     <script src="{{ asset('js/tinymce/tinymce.init.js') }}"></script>
+
+
 
     <!-- Styles -->
     @yield('style')

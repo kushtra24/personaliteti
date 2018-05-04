@@ -31,16 +31,15 @@
 
     <!-- /.row -->
             <div class="row">
-              <div class="col-md-3">
-                 <div class="upload">
-                        <form  method="POST" action="{{ action('GalleryController@store') }}" enctype="multipart/form-data">
-                          {{ csrf_field() }}
-                          <input type="file" id="file" name="file" >
-                           <button type="submit" class="btn btn-primary" name="submit" accept="image/*"><i class="fa fa-save"></i> &nbsp; Ruaje</button>
-                        </form>
-                    </div>
-              </div>
-                <div class="col-lg-12">
+              <div class="col-md-12">
+                    <form action="{{ action('GalleryController@store') }}" method="POST" class="dropzone" enctype="multipart/form-data">
+                      {{ csrf_field() }}
+                      <div class="fallback">
+                        <input name="file" type="file" multiple />
+                      </div>
+                    </form>
+                    <hr>
+
                     @if(session()->has('message.level'))
                         <div class="alert alert-{{ session('message.level') }}"> 
                         {!! session('message.content') !!}
@@ -50,10 +49,12 @@
                 @forelse($posts as $post)
                     <div class="col-md-2">
                         <div class="centered">
-                            <input type="radio" id="image-{{ $post->id}}" value="{{ $post->id}}" name="postImage" class="">
+                            <input type="radio" id="image-{{ $post->id}}" value="{{ $post->id}}" name="postImage" class="hidden">
                             <label for="image-{{ $post->id }}">
                               <img src="{{asset('storage/images/'.$post->filename . "." . $post->extension)}}" class="{{ $post->id }} img-responsive" alt="{{ $post->id }}" >
                             </label>
+
+                                <p> <b>{{ $post->filename }}</b></p>
 
                               <form method="POST" action="{{ route('gallery.destroy', [$post->id]) }}">
                                 {{ csrf_field() }}
@@ -62,7 +63,7 @@
                             
                         </div>
                     </div>
-                @endforeach
+                  @endforeach
 
 
 
