@@ -23,8 +23,8 @@
         <div class="col-md-2 col-md-offset-1"><i class="fas fa-ban fa-3x"></i> <p>Është pa pagesë</p></div>
         <div class="col-md-2"> <i class="fab fa-buromobelexperte fa-3x"></i><p>Ndahët në 4 rubrika me nga 11 pyetje</p></div>
         <div class="col-md-2"><i class="fas fa-stopwatch fa-3x"></i></i> <p>Nuk merr më shumë kohë se 10 min</p></div>
-        <div class="col-md-2"><i class="fas fa-street-view fa-3x"></i><p>Përgjigjuni sinqerisht për të marr resultat më të saktë</p> </div>
-        <div class="col-md-2"><i class="far fa-dot-circle fa-3x"></i> <p>Lëni sa më pakë Pyetje neotrale</p></div>
+        <div class="col-md-2"><i class="fas fa-street-view fa-3x"></i><p>Përgjigjuni sinqerisht për të marr resultat të saktë</p> </div>
+        <div class="col-md-2"><i class="far fa-dot-circle fa-3x"></i> <p>Lëni sa më pak Pyetje neotrale</p></div>
 
       </div>
     </div>
