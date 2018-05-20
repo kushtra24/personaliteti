@@ -13,16 +13,15 @@
 <div class="container edit-user-profile">
     <div class="row">
 
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 user-data">
 
 			<form  method="POST" action="{{ route('UserController.update', [$user->id]) }}" enctype="multipart/form-data">
               	{!! csrf_field() !!}
 
 			<h3>
-				{{ Auth::user()->first_name }} {{ Auth::user()->last_name }} 
-				<b>Tipi: </b><span>{{ Auth()->user()->testResults->last()->finaltype }}</span>
+				{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
 			</h3>
-
+			<p><b>Tipi: </b><span>{{ Auth()->user()->testResults->last()->finaltype }}</span></p>
 			<p><b>Emaili:</b> {{ Auth::user()->email }}</p>
 			
 			<p><b>Profil i verifikuar:</b> {{ (Auth::user()->verified == '0' ? 'Jo' : 'Po') }}</p>

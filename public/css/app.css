@@ -9483,7 +9483,8 @@ progress::-moz-progress-bar {
   display: block;
 }
 
-.user-profile .user-data h3 {
+.user-profile .user-data h3,
+.edit-user-profile .user-data h3 {
   text-transform: capitalize;
 }
 
