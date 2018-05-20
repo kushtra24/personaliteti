@@ -80,7 +80,7 @@
 
 			<div class="notLogedIn">
 				<h3>Sapo Erdhe?</h3>
-				<a href="/testip" class="btn btn-default">Fillo Vlersimin</a>
+			<a href="{{ route('testi') }}" class="btn btn-default">Fillo Vlersimin</a>
 				<p>Nëse ke llogari <a href="{{ route('login')}}"> Kyqu</a></p>
 			</div>
 			@endif

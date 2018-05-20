@@ -8494,6 +8494,10 @@ section {
   color: #fff;
 }
 
+.no-left-margin {
+  margin-left: 0;
+}
+
 #cka_vlerson {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9092,6 +9096,10 @@ progress::-moz-progress-bar {
   padding: 7px;
   margin: 15px 0;
   display: block;
+}
+
+.user-profile .user-data h3 {
+  text-transform: capitalize;
 }
 
 @media (max-width: 321px) {

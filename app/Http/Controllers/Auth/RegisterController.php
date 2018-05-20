@@ -58,7 +58,6 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'age' => 'required|integer|max:99|min:8',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -97,7 +96,6 @@ class RegisterController extends Controller
         $store->jp_final_procent_rez = Cookie::get('jpfinalProcentRez', 'Coockies janë çkyqur');
         $store->rol_name = Cookie::get('rol_name', 'Coockies janë çkyqur');
         $store->save();
-
 
         return $user;
     }

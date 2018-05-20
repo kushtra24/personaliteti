@@ -67,7 +67,7 @@ class TestController extends Controller
 
 
     public function getResults(){
-            return redirect('testip');
+            return redirect('vlersimi');
     }
 
     /**
@@ -97,7 +97,7 @@ class TestController extends Controller
             ]);
         // }
         // else{
-        //     return redirect('testip');
+        //     return redirect('vlersimi');
         // }
     }
 

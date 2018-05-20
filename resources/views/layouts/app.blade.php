@@ -124,7 +124,7 @@
                     <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a>
                     <a href="#"><i class="fab fa-youtube-square fa-2x"></i></i></a>
                 </div>
-                <a href="/testip" class="btn btn-default footer-assesment-button">Fillo Vlersimin</a>
+            <a href="{{ route('testi') }}" class="btn btn-default footer-assesment-button">Fillo Vlersimin</a>
             </div>
             <div class="col-md-3">
                 <h4>

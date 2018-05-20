@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Carbon\Carbon;
 class UserController extends Controller
 {
 
@@ -25,6 +26,7 @@ class UserController extends Controller
     public function index()
     {
         $user = User::all();
+
         return view('profile', compact('user'));
     }
 
@@ -36,9 +38,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $profile = User::find($id);
+        $user = User::find($id);
 
-        return view('profile.edit', compact('profile'));
+
+
+        return view('profile.edit', compact('user'));
     }
 
         /**
@@ -52,12 +56,13 @@ class UserController extends Controller
     {
         
         $store = User::find($id);
-        
        
-        $store->title = $request['title'];
-        $store->content = $request['content'];
-        $store->author = auth()->user()->first_name;
-
+        $store->gjinia = $request['gjinia'];
+        $store->adresa = $request['adresa'];
+        $store->shteti = $request['shteti'];
+        $store->shkollimi = $request['shkollimi'];
+        $store->vendlindja = $request['vendlindja'];
+        $store->hobby = $request['hobby'];
         $store->save();
         
         if ($store->save()) {

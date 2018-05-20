@@ -24,10 +24,8 @@ Route::get('/categoryfilter/{category}', 'CategoryController@categoryfilter')->n
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/profile', 'UserController@index')->name('profile');
-
 Route::group(['test' => 'test'], function(){
-    Route::get('/testip', 'TestController@doTheTest')->name('testi');
+    Route::get('/vlersimi', 'TestController@doTheTest')->name('testi');
     Route::get('/result', 'TestController@getResults');
     Route::post('/result', 'TestController@introExtroQuestions'); //->middleware('throttle:1,2')
     Route::post('/home', 'TestController@introExtroQuestions');
@@ -97,7 +95,6 @@ Route::group(['middleware' => 'web'], function () {
     //Comments
     Route::get('/comments', ['uses' => 'CommentController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
     Route::get('/comments/create', ['uses' => 'CommentController@create', 'middleware' => 'roles', 'roles' => ['Admin']]);
-    // Route::post('/comments/store/{$post}', ['uses' => 'CommentController@store', 'as' => 'comments.post','middleware' => 'roles', 'roles' => ['Admin']]);
     Route::post('/post/{post}/comment', 'CommentController@store')->name('comment.store');
     Route::get('/comments/{id}', ['uses' => 'CommentController@show', 'middleware' => 'roles', 'roles' => ['Admin']]);
     Route::get('/comments/{id}/edit', ['uses' => 'CommentController@edit', 'middleware' => 'roles', 'roles' => ['Admin']]);
@@ -114,8 +111,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/categories/delete/{id}', ['uses' => 'CategoryController@destroy', 'as' => 'category.destroy', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
 
     //profile
-    Route::get('/profili/{id}/edit', ['uses' => 'UserController@edit', 'middleware' => 'roles', 'roles' => ['Admin', 'Author', 'visitor']]);
-    Route::post('/profili/{id}/update', ['uses' => 'UserController@update', 'as' => 'UserController.update', 'middleware' => 'roles', 'roles' => ['Admin', 'Author', 'visitor']]);
+    Route::get('/profile', ['uses' => 'UserController@index', 'as' => 'profile', 'middleware' => 'roles', 'roles' => ['Admin', 'Author', 'User']]);
+    Route::get('/profili/{id}/edit', ['uses' => 'UserController@edit', 'middleware' => 'roles', 'roles' => ['Admin', 'Author', 'User']]);
+    Route::post('/profili/{id}/update', ['uses' => 'UserController@update', 'as' => 'UserController.update', 'middleware' => 'roles', 'roles' => ['Admin', 'Author', 'User']]);
 
     //Gallery
     Route::get('/galeria', ['uses' => 'GalleryController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);

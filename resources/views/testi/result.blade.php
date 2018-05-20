@@ -156,7 +156,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
-                                <input id="age" type="number" class="form-control" min="0" max="100" name="age" placeholder="Mosha" autocomplete="age" value="{{ old('age') }}">
+                                <input id="age" type="date" class="form-control" name="age" placeholder="Mosha" autocomplete="age" value="{{ old('age') }}">
                                 @if ($errors->has('age'))
                                   <span class="help-block">
                                       <strong>{{ $errors->first('age') }}</strong>
