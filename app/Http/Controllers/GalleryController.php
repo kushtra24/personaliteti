@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use MediaUploader;
 use DB;
-use Mediable;
+use Plank\Mediable\Media;
 
 class GalleryController extends Controller
 {
@@ -59,8 +59,6 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        
-
         $post = Media::find($id);
 
         $post->delete();
