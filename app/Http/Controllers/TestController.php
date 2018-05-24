@@ -34,10 +34,7 @@ class TestController extends Controller
 
         $questions = Question::take(44)->inRandomOrder()->get();
 
-        $spajtohem = "S'pajtohem";
-        $pajtohem = "Pajtohem";
-
-        return view('testi.create', compact('spajtohem', 'pajtohem', 'questions'));
+        return view('testi.create', compact('questions'));
     }
 
     /**

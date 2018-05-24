@@ -53,7 +53,7 @@
                 <div class="question form-group">
                     <h4 style="font-weight: 700;">{{ $question->question }}</h4>
                     <fieldset  class="test-field">
-                        <p class="hidden-xs spajtohem-lg">{{ $spajtohem }}</p>
+                        <p class="hidden-xs spajtohem-lg">{{ $question->spajtohem }}</p>
                         <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3" title="Nuk pajtohem fare">
 
                         <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2" title="Nuk pajtohem">
@@ -67,11 +67,11 @@
                         <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2" title="Pajtohem">
                         
                         <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3" title="Pajtohem shumë">
-                        <p class="hidden-xs pajtohem-lg">{{$pajtohem}}</p>
+                        <p class="hidden-xs pajtohem-lg">{{$question->pajtohem}}</p>
                     </fieldset>
                     <div class="pajtohem visible-xs">
-                        <div class="col-xs-6"><p>{{ $spajtohem }}</p></div>
-                        <div class="col-xs-6"><p>{{$pajtohem}}</p></div>
+                        <div class="col-xs-6"><p>{{ $question->spajtohem }}</p></div>
+                        <div class="col-xs-6"><p>{{$question->pajtohem}}</p></div>
                     </div>
                 </div>
                 @endforeach

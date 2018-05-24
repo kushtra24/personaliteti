@@ -11,11 +11,7 @@
         <div class="col-sm-5">
             <h1>Ti je: <b> {{ $rol_name }} {{-- {{ Cookie::get('rol_name') }} --}}</b></h1>
           @if($FirstfinalProcentRez)
-            {{-- <h3>{{ $FirstfinalProcentRez }}% {{ $introExtro }} </h3>
-            <h3>{{ $nsfinalProcentRez }}% {{ $intuSens }}</h3>
-            <h3>{{ $ftfinalProcentRez }}% {{$feelingThinking}}</h3>
-            <h3>{{ $jpfinalProcentRez }}% {{$judgingPerspecting}}</h3> --}}
-            <img src="../{{ $tipi->type_img }}" alt="tipi featured" width="100%" class="img-responsive">
+            <img src="../{{ $tipi->type_img }}" alt="tipi featured" class="img-responsive result-img">
             <br>
             <h4> {!! str_limit($tipi->shortDescription, 450) !!}</h4>
             <br>

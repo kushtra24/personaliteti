@@ -41,6 +41,8 @@ class QuestionsController extends Controller
         $store = new Question;
 
         $store->question = $request['pyetja'];
+        $store->pajtohem = $request['pajtohem'];
+        $store->spajtohem = $request['spajtohem'];
         $store->purpose = $request['purpose'];
         $store->save();
 
@@ -93,6 +95,8 @@ class QuestionsController extends Controller
         $questions = Question::find($id);
 
         $questions->question = $request['pyetja'];
+        $questions->pajtohem = $request['pajtohem'];
+        $questions->spajtohem = $request['spajtohem'];
         $questions->purpose = $request['purpose'];
         $questions->save();
 

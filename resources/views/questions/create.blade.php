@@ -38,6 +38,14 @@
                         </div>
 
                         <div class="form-group">
+                            <input type="text" class="form-control" name="pajtohem" placeholder="Pajtohem" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="spajtohem" placeholder="S'pajtohem" required>
+                        </div>
+
+                        <div class="form-group">
                             <div class="form-group">
                                 <select class="form-control" name="purpose" required>
                                     <option value=""> Teston</option>

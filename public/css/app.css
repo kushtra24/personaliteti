@@ -9181,6 +9181,16 @@ footer .designedBy {
   opacity: 1;
 }
 
+.result-page {
+  text-align: center;
+}
+
+.result-img {
+  height: 350px;
+  width: auto;
+  margin: 0 auto;
+}
+
 /* COLORS */
 
 .azure {
