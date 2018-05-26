@@ -8968,49 +8968,52 @@ section {
   outline: 0;
 }
 
-.test-field input[type="radio"]:nth-child(2) {
+.test-field input[type="radio"]:nth-child(1) {
   width: 40px;
   height: 40px;
 }
 
-.test-field input[type="radio"]:nth-child(3) {
+.test-field input[type="radio"]:nth-child(2) {
+  width: 30px;
+  height: 30px;
+}
+
+.test-field input[type="radio"]:nth-child(6) {
   width: 30px;
   height: 30px;
 }
 
 .test-field input[type="radio"]:nth-child(7) {
-  width: 30px;
-  height: 30px;
-}
-
-.test-field input[type="radio"]:nth-child(8) {
   width: 40px;
   height: 40px;
 }
 
-.test-field input[type="radio"]:nth-child(n+6) {
+.test-field input[type="radio"].left {
   color: #5ebfd8;
 }
 
-.test-field input[type="radio"]:nth-child(-n+4) {
+.test-field input[type="radio"].right {
   color: #734e5f;
 }
 
 .question {
   text-align: center;
+  margin-bottom: 24px;
+  padding: 26px 0;
+  background: #f8fcff;
 }
 
 .question .pajtohem-lg {
-  float: right;
+  text-align: left;
 }
 
 .question .spajtohem-lg {
-  float: left;
+  text-align: right;
 }
 
 .question p {
   font-weight: bold;
-  line-height: 40px;
+  margin-right: 10px;
 }
 
 #progress-container {

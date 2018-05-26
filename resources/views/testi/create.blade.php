@@ -13,8 +13,8 @@
       
   <div class="center">
       
-      <h1>Pyetsori</h1>
-      <p>Ky eshte pyetsori per te identifikuar tipin e juaj</p>
+      <h1><b> Pyetsori i Personalitetit </b></h1>
+      {{-- <p>Pyetsori i Personalitetit</p> --}}
 
     <div class="row">
 
@@ -29,7 +29,7 @@
       </div>
     </div>
     <hr>
-
+    <br>
     </div>
 
 
@@ -44,30 +44,32 @@
               <li role="presentation"><a href="#thirdSet" aria-controls="thirdSet" role="tab" data-toggle="tab">think/feel</a></li>
               <li role="presentation" class="lastSet "><a href="#lastSet" aria-controls="lastSet" role="tab" data-toggle="tab">judge/perspect</a></li>
             </ul>
-
+    </div>
             <!-- Tab panes -->
             <div class="tab-content" id="all-tabs">
 
 
                 @foreach( $questions as $question)
                 <div class="question form-group">
-                    <h4 style="font-weight: 700;">{{ $question->question }}</h4>
+                        <div class="">
+                            <h4 style="font-weight: 700;">{{ $question->question }}</h4>
+                        </div>
                     <fieldset  class="test-field">
-                        <p class="hidden-xs spajtohem-lg">{{ $question->spajtohem }}</p>
-                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3" title="Nuk pajtohem fare">
-
-                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2" title="Nuk pajtohem">
-
-                        <input type="radio"  name="q[{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1" title="Nuk pajtohem pak">
-                        
-                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}neotral1" value="0" title="Neotral">
-                        
-                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1r" class="right" value="1" title="Pajtohem pak">
-                        
-                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2" title="Pajtohem">
-                        
-                        <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3" title="Pajtohem shumë">
-                        <p class="hidden-xs pajtohem-lg">{{$question->pajtohem}}</p>
+                        <div class="col-md-3">
+                            <p class="hidden-xs spajtohem-lg">{{ $question->spajtohem }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3" title="Nuk pajtohem fare">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2" title="Nuk pajtohem">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1" title="Nuk pajtohem pak">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}neotral1" value="0" title="Neotral">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1r" class="right" value="1" title="Pajtohem pak">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2" title="Pajtohem">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3" title="Pajtohem shumë">
+                        </div>
+                        <div class="col-md-3">
+                            <p class="hidden-xs pajtohem-lg">{{$question->pajtohem}}</p>
+                        </div>
                     </fieldset>
                     <div class="pajtohem visible-xs">
                         <div class="col-xs-6"><p>{{ $question->spajtohem }}</p></div>
@@ -77,23 +79,22 @@
                 @endforeach
 
               
-              <div class="form-group">
-              <div class="col-md-6">
-                <a id="goBack" class="tab-prev btn btn-warning btn-lg btn-block hide" data-toggle="tooltip" data-placement="top" title="Ktheu">Ktheu</a>
+              <div class="form-group col-md-8 col-md-offset-2">
+                <div class="col-md-6">
+                    <a id="goBack" class="tab-prev btn btn-warning btn-lg btn-block hide" data-toggle="tooltip" data-placement="top" title="Ktheu">Ktheu</a>
+                </div>
+                <div class="col-md-6">
+                    <a id="goforward" class="tab-forward btn btn-success btn-lg btn-block" data-toggle="tooltip" data-placement="top" title="Vazhdo">Vazhdo</a>
+                </div>
+                <input type="submit" class="btn btn-primary btn-lg btn-block hide" value="Perfundo" id="submit">
               </div>
-              <div class="col-md-6">
-                <a id="goforward" class="tab-forward btn btn-success btn-lg btn-block" data-toggle="tooltip" data-placement="top" title="Vazhdo">Vazhdo</a>
-              </div>
-              </div>
-              <input type="submit" class="btn btn-primary btn-lg btn-block hide" value="Perfundo" id="submit">
-              
                   <div class="alert alert-danger hide"> Keni lënë Pyetje pa përzgjedhur, Shfrytezoni butonin "Kthehu" per te shikuar</div>
 
           </div><!-- end of teb content -->
         </form>
 
 
-    </div>{{-- row end --}}
+    {{-- </div>row end --}}
 </div>{{-- conteiner --}}
 
 <div id="fb-root"></div>
@@ -108,7 +109,7 @@
 
 //Form validation
 $('#submit').click(function() {
-    if($("input[type='radio']").parent().hasClass('checked') == false) {
+    if($("input[type='radio']").parent().each().hasClass('checked') == false) {
       $('.alert').removeClass('hide');
         event.preventDefault();
     }
@@ -191,7 +192,7 @@ $('.tab-forward').click(function(){
 
 
         $('html, body').animate({
-            scrollTop: $(".tab-content").offset().top
+            scrollTop: $(".test-rules").offset().top
         }, 1000);
 
 });

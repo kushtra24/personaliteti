@@ -229,27 +229,27 @@ input[type="radio"] {
 
   &:focus { outline: 0; }
 
-	&:nth-child(2){
+	&:nth-child(1){
 		width: 40px;
 		height: 40px;
 	}
-	&:nth-child(3){
+	&:nth-child(2){
+		width: 30px;
+		height: 30px;
+	}
+	&:nth-child(6){
 		width: 30px;
 		height: 30px;
 	}
 	&:nth-child(7){
-		width: 30px;
-		height: 30px;
-	}
-	&:nth-child(8){
 		width: 40px;
 		height: 40px;
 	}
 	
-	&:nth-child(n+6){
+	&.left{
 		color: #5ebfd8;
 	}
-	&:nth-child(-n+4){
+	&.right{
 		color: #734e5f;
 
 	}
@@ -258,15 +258,18 @@ input[type="radio"] {
 
 .question{
 	text-align: center;
+	margin-bottom: 24px;
+    padding: 26px 0;
+    background: #f8fcff;
 	.pajtohem-lg{
-		float: right;
+		text-align: left;
 	}
 	.spajtohem-lg{
-		float: left;
+		text-align: right;
 	}
 	p{
 		font-weight: bold;
-		line-height: 40px;
+		margin-right: 10px;
 	}
 }
 

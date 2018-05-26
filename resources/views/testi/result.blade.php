@@ -8,6 +8,8 @@
 
 <div class="container result-page" id="hidden">
     <div class="row">
+        <h1>Resultatet</h1>
+        <p><em> Këto resultate tregojnë preferencat e juaja në kater rubrikat e mëposhtme, dhe mund të ndryshojnë kohë pas kohe</em></p>
         <div class="col-sm-5">
             <h1>Ti je: <b> {{ $rol_name }} {{-- {{ Cookie::get('rol_name') }} --}}</b></h1>
           @if($FirstfinalProcentRez)
@@ -201,7 +203,6 @@
 @section('scripts')
   <script>
 
-// if($(window).width() < 961){
     $( document ).ready(function() {
       $('.container').removeAttr('id');
       $('#loading').hide();
@@ -225,6 +226,16 @@
         });
       });
     });
-// }
+
+    $( document ).ready(function() {
+        setTimeout(function(){
+            $('#myModal').addClass('in').css('display', 'block');
+        }, 10000);
+        
+        $('.close-icon').click(function() {
+            $('#myModal').removeClass('in').css('display', 'none');
+        });
+    });
+
   </script>
 @endsection
