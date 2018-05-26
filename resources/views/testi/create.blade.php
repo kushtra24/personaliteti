@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-           
 @section('content')
 <div class="container testing-page">
 
@@ -20,11 +19,11 @@
 
       <div class="test-rules" style="margin: 40px 0">
 
-        <div class="col-md-2 col-md-offset-1"><i class="fas fa-ban fa-3x"></i> <p>Është pa pagesë</p></div>
-        <div class="col-md-2"> <i class="fab fa-buromobelexperte fa-3x"></i><p>Ndahët në 4 rubrika me nga 11 pyetje</p></div>
-        <div class="col-md-2"><i class="fas fa-stopwatch fa-3x"></i></i> <p>Nuk merr më shumë kohë se 10 min</p></div>
-        <div class="col-md-2"><i class="fas fa-street-view fa-3x"></i><p>Përgjigjuni sinqerisht për të marr resultat më të saktë</p> </div>
-        <div class="col-md-2"><i class="far fa-dot-circle fa-3x"></i> <p>Lëni sa më pakë Pyetje neotrale</p></div>
+        <div class="col-md-2 bounce col-md-offset-1"><i class="fas fa-ban fa-3x"></i> <p>Është pa pagesë</p></div>
+        <div class="col-md-2 bounce"> <i class="fab fa-buromobelexperte fa-3x"></i><p>Ndahët në 4 rubrika me nga 11 pyetje</p></div>
+        <div class="col-md-2 bounce"><i class="fas fa-stopwatch fa-3x"></i></i> <p>Nuk merr më shumë kohë se 10 min</p></div>
+        <div class="col-md-2 bounce"><i class="fas fa-street-view fa-3x"></i><p>Përgjigjuni sinqerisht për të marr resultat më të saktë</p> </div>
+        <div class="col-md-2 bounce"><i class="far fa-dot-circle fa-3x"></i> <p>Lëni sa më pakë Pyetje neotrale</p></div>
 
       </div>
     </div>
@@ -33,10 +32,10 @@
     </div>
 
 
-    <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+    
         <form method="POST" action="/result" class="form-horizontal">
         {{ csrf_field() }}
-        
+        <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs hide" role="tablist" id="myTabs">
               <li role="presentation" class="active"><a href="#firstSet" aria-controls="firstSet" role="tab" data-toggle="tab">Intro/extro</a></li>
@@ -44,7 +43,7 @@
               <li role="presentation"><a href="#thirdSet" aria-controls="thirdSet" role="tab" data-toggle="tab">think/feel</a></li>
               <li role="presentation" class="lastSet "><a href="#lastSet" aria-controls="lastSet" role="tab" data-toggle="tab">judge/perspect</a></li>
             </ul>
-    </div>
+        </div>
             <!-- Tab panes -->
             <div class="tab-content" id="all-tabs">
 
@@ -54,11 +53,11 @@
                         <div class="">
                             <h4 style="font-weight: 700;">{{ $question->question }}</h4>
                         </div>
-                    <fieldset  class="test-field">
-                        <div class="col-md-3">
-                            <p class="hidden-xs spajtohem-lg">{{ $question->spajtohem }}</p>
+                    <div  class="test-field">
+                        <div class="col-md-3 answer-lg">
+                            <div class="hidden-xs spajtohem-lg">{{ $question->spajtohem }}</div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 circles">
                             <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3" title="Nuk pajtohem fare">
                             <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2" title="Nuk pajtohem">
                             <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1" title="Nuk pajtohem pak">
@@ -67,10 +66,10 @@
                             <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2" title="Pajtohem">
                             <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3" title="Pajtohem shumë">
                         </div>
-                        <div class="col-md-3">
-                            <p class="hidden-xs pajtohem-lg">{{$question->pajtohem}}</p>
+                        <div class="col-md-3 answer-lg">
+                            <div class="hidden-xs pajtohem-lg">{{$question->pajtohem}}</div>
                         </div>
-                    </fieldset>
+                    </div>
                     <div class="pajtohem visible-xs">
                         <div class="col-xs-6"><p>{{ $question->spajtohem }}</p></div>
                         <div class="col-xs-6"><p>{{$question->pajtohem}}</p></div>
@@ -80,7 +79,7 @@
 
               
               <div class="form-group col-md-8 col-md-offset-2">
-                <div class="col-md-6">
+                <div class="col-md-2 col-md-offset-4">
                     <a id="goBack" class="tab-prev btn btn-warning btn-lg btn-block hide" data-toggle="tooltip" data-placement="top" title="Ktheu">Ktheu</a>
                 </div>
                 <div class="col-md-6">
@@ -109,7 +108,7 @@
 
 //Form validation
 $('#submit').click(function() {
-    if($("input[type='radio']").parent().each().hasClass('checked') == false) {
+    if($("input[type='radio']:checked").each('.circles').hasClass('checked') == false) {
       $('.alert').removeClass('hide');
         event.preventDefault();
     }

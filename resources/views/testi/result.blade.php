@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('style')
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+@endsection
 @section('content')
 
 <div id="loading">
@@ -136,7 +138,7 @@
                         {{ csrf_field() }}
                         <div class="col-md-61">
                             <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }} ">
-                                <input id="first_name" type="text" class="form-control" name="first_name" placeholder="Emri" autocomplete="name" value="{{ old('name') }}" required autofocus>
+                                <input id="first_name" type="text" class="form-control" name="first_name" placeholder="Emri" autocomplete="given-name" value="{{ old('name') }}" required autofocus>
                                 @if ($errors->has('first_name'))
                                   <span class="help-block">
                                       <strong>{{ $errors->first('first_name') }}</strong>
@@ -145,7 +147,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-                                <input id="name" type="text" class="form-control" name="last_name" placeholder="Mbiemri" autocomplete="surname" value="{{ old('name') }}" required>
+                                <input id="name" type="text" class="form-control" name="last_name" placeholder="Mbiemri" autocomplete="family-name" value="{{ old('name') }}" required>
                                 @if ($errors->has('last_name'))
                                   <span class="help-block">
                                       <strong>{{ $errors->first('last_name') }}</strong>
@@ -154,7 +156,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
-                                <input id="age" type="date" class="form-control" name="age" placeholder="Mosha" autocomplete="age" value="{{ old('age') }}">
+                                <input type="text" id="datepicker" class="form-control" name="age" placeholder="Data e lindjes" autocomplete="age" value="{{ old('age') }}">
                                 @if ($errors->has('age'))
                                   <span class="help-block">
                                       <strong>{{ $errors->first('age') }}</strong>
@@ -201,6 +203,8 @@
 @endsection
 
 @section('scripts')
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <script>
 
     $( document ).ready(function() {
@@ -227,6 +231,7 @@
       });
     });
 
+    //drigger modal after a period second time
     $( document ).ready(function() {
         setTimeout(function(){
             $('#myModal').addClass('in').css('display', 'block');
@@ -236,6 +241,17 @@
             $('#myModal').removeClass('in').css('display', 'none');
         });
     });
+
+    //datepicker
+    $( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: "dd-mm-yy",
+      minDate: "-99Y", 
+      maxDate: "-12Y" 
+    });
+  } );
 
   </script>
 @endsection

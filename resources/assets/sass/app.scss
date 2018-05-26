@@ -197,6 +197,7 @@ section{
 // Testing page testip
 // Input design
 .test-field{
+	height: 45px;
 input[type="radio"] {
   appearance:none;
   margin:0 13px;
@@ -736,7 +737,25 @@ progress::-webkit-progress-value, progress::-moz-progress-bar {
 	}
 }
 
+// __________________________________________________________________________________________ Profile
 
+
+.bounce{
+
+	-webkit-animation: point-up-down 1s linear infinite alternate;
+		animation: point-up-down 1s linear infinite alternate;
+	}
+	
+	@-webkit-keyframes point-up-down {
+		0% {
+			-webkit-transform: translateY(3px);
+			transform: translateY(3px);
+		}
+		100% {
+			-webkit-transform: translateY(-3px);
+			transform: translateY(-3px);
+		}
+	}
 
 
 

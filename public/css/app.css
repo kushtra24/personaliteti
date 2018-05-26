@@ -8933,6 +8933,10 @@ section {
   color: #8f749f;
 }
 
+.test-field {
+  height: 45px;
+}
+
 .test-field input[type="radio"] {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -9501,6 +9505,23 @@ progress::-moz-progress-bar {
   text-transform: capitalize;
 }
 
+.bounce {
+  -webkit-animation: point-up-down 1s linear infinite alternate;
+  animation: point-up-down 1s linear infinite alternate;
+}
+
+@-webkit-keyframes point-up-down {
+  0% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
 @media (max-width: 321px) {
   .test-field input[type="radio"] {
     margin: 0 3px;
@@ -9557,7 +9578,7 @@ progress::-moz-progress-bar {
   }
 
   .test-field input[type="radio"] {
-    margin: 0 6px;
+    margin: 0 2px;
   }
 
   #progress-container .progress {
@@ -9598,6 +9619,32 @@ progress::-moz-progress-bar {
   #show_register {
     width: 100%;
     margin: 15px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .test-field {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .answer-lg {
+    display: table;
+    height: 45px;
+  }
+
+  .spajtohem-lg,
+  .pajtohem-lg {
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 700;
+  }
+
+  .circles,
+  .answer-lg {
+    padding: 0;
   }
 }
 

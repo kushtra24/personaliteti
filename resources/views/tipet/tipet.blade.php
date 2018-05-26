@@ -6,7 +6,7 @@
 
 	<section id="heading-welcomepage">
 		<h1>Tipet e Personaliteteve</h1>
-		<h4>Keto jane tipet e personaliteteve ne nje vend, shtypni mbi te per te lexuar me shum</h4>
+		<h4>Këto janë tipet e përsonaliteteve në një vend, shtypni mbi të për të lexuar më shumë</h4>
 		<hr>
 	</section>
 
