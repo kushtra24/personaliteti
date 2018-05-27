@@ -62,10 +62,9 @@ class TestController extends Controller
         return view('testi.edit');
     }
 
-
-    public function getResults(){
-            return redirect('vlersimi');
-    }
+    // public function getResults(){
+    //         return redirect('/result');
+    // }
 
     /**
      * Returns the variables and the results to the view
@@ -268,7 +267,6 @@ public function intuitiveOrSensing($result){
             $this->judgingPerspecting = "Perspektivë";
         }
         elseif ($result === 0) {
-            $result = 1;
             $this->judgingPerspecting = "Perspektivë";
         }
         else{

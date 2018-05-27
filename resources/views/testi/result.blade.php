@@ -154,6 +154,7 @@
                                   </span>
                                 @endif
                             </div>
+                            
 
                             <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
                                 <input type="text" id="datepicker" class="form-control" name="age" placeholder="Data e lindjes" autocomplete="age" value="{{ old('age') }}">
@@ -190,7 +191,6 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            {{-- <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Mbylle</button> --}}
                             <button type="submit" class="btn btn-primary">Regjistrohu</button>
                         </div>
                     </form>
@@ -233,14 +233,19 @@
 
     //drigger modal after a period second time
     $( document ).ready(function() {
-        setTimeout(function(){
-            $('#myModal').addClass('in').css('display', 'block');
-        }, 10000);
-        
-        $('.close-icon').click(function() {
-            $('#myModal').removeClass('in').css('display', 'none');
-        });
+        if(!$("#show_register").length == 0) {
+            setTimeout(function(){
+                $('#myModal').addClass('in').css('display', 'block');
+            }, 20000);
+            
+            $('.close-icon').click(function() {
+                $('#myModal').removeClass('in').css('display', 'none');
+            });
+        }
     });
+
+    
+
 
     //datepicker
     $( function() {

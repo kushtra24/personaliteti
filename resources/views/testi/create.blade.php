@@ -33,7 +33,7 @@
 
 
     
-        <form method="POST" action="/result" class="form-horizontal">
+        <form method="POST" action="{{ route('result') }}" class="form-horizontal">
         {{ csrf_field() }}
         <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
             <!-- Nav tabs -->
