@@ -1,5 +1,25 @@
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
+    .test-field {
+        margin: 0 auto;
+        width: 80%;
+    }
 
+}
 
-	
+@media (min-width: 992px) {
+    
+    .answer-lg{
+        display: table;
+        height: 45px;
+    }
+    .spajtohem-lg, .pajtohem-lg{
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: 700;
+    }
+
+    .circles, .answer-lg{
+        padding: 0;
+    }
+
 }

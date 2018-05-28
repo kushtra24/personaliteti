@@ -130,7 +130,6 @@ section{
     }
 }
 
-
 .btn-warning{
 	color: $brand-warning;
 	border-color: $brand-warning;
@@ -142,6 +141,10 @@ section{
 		border-color: $brand-warning;
 		color: #fff;
     }
+}
+
+.no-left-margin{
+	margin-left: 0;
 }
 
 	#cka_vlerson {
@@ -194,6 +197,7 @@ section{
 // Testing page testip
 // Input design
 .test-field{
+	height: 45px;
 input[type="radio"] {
   appearance:none;
   margin:0 13px;
@@ -226,27 +230,27 @@ input[type="radio"] {
 
   &:focus { outline: 0; }
 
-	&:nth-child(2){
+	&:nth-child(1){
 		width: 40px;
 		height: 40px;
 	}
-	&:nth-child(3){
+	&:nth-child(2){
+		width: 30px;
+		height: 30px;
+	}
+	&:nth-child(6){
 		width: 30px;
 		height: 30px;
 	}
 	&:nth-child(7){
-		width: 30px;
-		height: 30px;
-	}
-	&:nth-child(8){
 		width: 40px;
 		height: 40px;
 	}
 	
-	&:nth-child(n+6){
+	&.left{
 		color: #5ebfd8;
 	}
-	&:nth-child(-n+4){
+	&.right{
 		color: #734e5f;
 
 	}
@@ -255,15 +259,18 @@ input[type="radio"] {
 
 .question{
 	text-align: center;
+	margin-bottom: 24px;
+    padding: 26px 0;
+    background: #f8fcff;
 	.pajtohem-lg{
-		float: right;
+		text-align: left;
 	}
 	.spajtohem-lg{
-		float: left;
+		text-align: right;
 	}
 	p{
 		font-weight: bold;
-		line-height: 40px;
+		margin-right: 10px;
 	}
 }
 
@@ -334,7 +341,7 @@ input[type="radio"] {
 
 
 
-// __________________________________________________________________________________________Footer
+// __________________________________________________________________________________________ Footer
 
 
 footer{
@@ -378,7 +385,7 @@ footer{
 	margin: 11px 0;
 }
 
-// __________________________________________________________________________________________Results
+// __________________________________________________________________________________________ Results
 
 
 #container { text-align: center; margin: 20px; }
@@ -399,14 +406,6 @@ footer{
 .wrap { padding: 8px; }
 
 .bar-percentage {
-  // float: left;
-  // background: rgba(0,0,0,0.13);
-  // -webkit-border-radius: 4px;
-  // -moz-border-radius: 4px;
-  // border-radius: 4px;
-  // padding: 9px 0px 0px 8px;
-  // width: 21%;
-  // height: 34px;
   font-size: 14px;
   overflow: hidden;
 }
@@ -435,6 +434,16 @@ footer{
   -moz-opacity: 1;
   -khtml-opacity: 1;
   opacity: 1;
+}
+
+.result-page{
+	text-align: center;
+}
+
+.result-img{
+	height: 350px;
+	width: auto;
+	margin: 0 auto;
 }
 
 /* COLORS */
@@ -478,14 +487,14 @@ footer{
 }
 
 
-// __________________________________________________________________________________________home
+// __________________________________________________________________________________________ home
 
 .item {
     background: white;
     padding: 17px 17px 0 21px;
 }
 
-// __________________________________________________________________________________________Tipet
+// __________________________________________________________________________________________ Tipet
 
 #the-types{
 	text-align: center;
@@ -513,7 +522,7 @@ footer{
 		position: relative;
 	}
 }
-// __________________________________________________________________________________________Tipi
+// __________________________________________________________________________________________ Tipi
 
 .single-type-meta h3 span{
 	font-weight: 700; 
@@ -528,7 +537,7 @@ footer{
 
 }
 
-// __________________________________________________________________________________________Alert
+// __________________________________________________________________________________________ Alert
 
 .alert {
     transform: translateX(100%);
@@ -644,7 +653,7 @@ footer a:hover .fa-caret-right{
 }
 
 
-// __________________________________________________________________________________________Single post
+// __________________________________________________________________________________________ Single post
 
 // Upper progress bar
 progress {
@@ -718,10 +727,35 @@ progress::-webkit-progress-value, progress::-moz-progress-bar {
 	    display: block;
 	}
 }
+// __________________________________________________________________________________________ Profile
+
+.user-profile, .edit-user-profile{
+	.user-data{
+		h3{
+			text-transform: capitalize;
+		}
+	}
+}
+
+// __________________________________________________________________________________________ Profile
 
 
+.bounce{
 
-
+	-webkit-animation: point-up-down 1s linear infinite alternate;
+		animation: point-up-down 1s linear infinite alternate;
+	}
+	
+	@-webkit-keyframes point-up-down {
+		0% {
+			-webkit-transform: translateY(3px);
+			transform: translateY(3px);
+		}
+		100% {
+			-webkit-transform: translateY(-3px);
+			transform: translateY(-3px);
+		}
+	}
 
 
 

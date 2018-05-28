@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -17,6 +18,7 @@ class User extends Authenticatable
     protected $fillable = [
         'first_name', 'last_name', 'age', 'email', 'password', 'email_token'
     ];
+    
 
     /**
      * The attributes that should be hidden for arrays.
@@ -64,6 +66,11 @@ class User extends Authenticatable
 
     public function comment(){
         return $this->hasMany(Comment::Class);
+    }
+
+    public function setageAttribute($value)
+    {
+        $this->attributes['age'] =  Carbon::parse($value);
     }
 
 

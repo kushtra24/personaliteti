@@ -32,21 +32,35 @@
                         
                      <form  method="POST" action="{{ route('QuestionsController.update', [$questions->id]) }}" >
                       {!! csrf_field() !!}
-                       
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="pyetja" value="{{ $questions->question }}" required>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="pyetja" value="{{ $questions->question }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="spajtohem" value="{{ $questions->spajtohem }}" placeholder="Majtas (Extrovert | Shqisor | Mendim | perspektivë)" required>
+                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <select class="form-control" name="purpose" required >
-                                    <option value=""> Teston</option>
-                                    <option value="IntroExtro" {{ $questions->purpose == "IntroExtro" ? 'selected="selected"' : '' }}>Extrovert / Introvert</option>
-                                    <option value="intuitionSensing" {{ $questions->purpose == "intuitionSensing" ? 'selected="selected"' : '' }}>Shqisor / Intuitive</option>
-                                    <option value="feelingThinking" {{ $questions->purpose == "feelingThinking" ? 'selected="selected"' : '' }}>Mendim (Thinking) / Ndjenjë (Feeling)</option>
-                                    <option value="jundgingPerciving" {{ $questions->purpose == "jundgingPerciving" ? 'selected="selected"' : '' }}>Perspektivë / Gjykues (Judging)</option>
-                                    <p>{{$questions->purpose}}</p>
-                                </select>
+                                <input type="text" class="form-control" name="pajtohem" value="{{ $questions->pajtohem }}" placeholder="Djthtas (introvert | intuitive | Ndjenje | Gjykues)" required>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <select class="form-control" name="purpose" required >
+                                        <option value=""> Teston</option>
+                                        <option value="IntroExtro" {{ $questions->purpose == "IntroExtro" ? 'selected="selected"' : '' }}>Extrovert / Introvert</option>
+                                        <option value="intuitionSensing" {{ $questions->purpose == "intuitionSensing" ? 'selected="selected"' : '' }}>Shqisor / Intuitive</option>
+                                        <option value="feelingThinking" {{ $questions->purpose == "feelingThinking" ? 'selected="selected"' : '' }}>Mendim (Thinking) / Ndjenjë (Feeling)</option>
+                                        <option value="jundgingPerciving" {{ $questions->purpose == "jundgingPerciving" ? 'selected="selected"' : '' }}>Perspektivë / Gjykues (Judging)</option>
+                                        <p>{{$questions->purpose}}</p>
+                                    </select>
+                                </div>
                             </div>
                         </div>
 

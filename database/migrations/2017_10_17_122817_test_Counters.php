@@ -13,7 +13,7 @@ class TestCounters extends Migration
      */
     public function up()
     {
-        Schema::create('test_Counters', function (Blueprint $table) {
+        Schema::create('test_counters', function (Blueprint $table) {
             $table->bigInteger('test_counter');
         });
 

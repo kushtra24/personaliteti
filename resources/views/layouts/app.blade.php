@@ -117,14 +117,14 @@
                     {{--{{ config('app.name', 'Personaliteti') }}--}}
                     <img src="{{asset('images/logo.png')}}" height="40px">
                 </a>
-                <p class="footer-description">Merr një përshkrim të vetvëtes, njihu më tepër rreth fuqive dhe dobësive tuaja.</p>
-                <p>Teste te bëra deri me tani {{ $counter }}</p>
+                <p class="footer-description">Merr një përshkrim të vetëvetës, njihu më tepër rreth fuqive dhe dobësive tuaja.</p>
+                <p>Vlersime deri më tani {{ $counter }}</p>
                 <div class="footer-solcial-icons">
                     <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
                     <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a>
                     <a href="#"><i class="fab fa-youtube-square fa-2x"></i></i></a>
                 </div>
-                <a href="/testip" class="btn btn-default footer-assesment-button">Fillo Vlersimin</a>
+            <a href="{{ route('testi') }}" class="btn btn-default footer-assesment-button">Fillo Vlersimin</a>
             </div>
             <div class="col-md-3">
                 <h4>
@@ -155,7 +155,7 @@
                     E nevojshme
                 </h4>
                 <ul>
-                    <li> <a href="/faqe/impressum"><i class="fas fa-caret-right"></i> Impressum</a></li>
+                    <li> <a href="/faqe/impressum"><i class="fas fa-caret-right"></i> Impresum</a></li>
                     <li> <a href="/faqe/kushtet_perdorimit"><i class="fas fa-caret-right"></i> Kushtet e përdorimit</a></li>
                     <li> <a href="/faqe/politikat_privatesise"><i class="fas fa-caret-right"></i> Politika e privatesisë</a></li>
                 </ul>
@@ -168,7 +168,7 @@
                     {{ date("Y") }}. Të gjitha të drejtat e rezervuara. </p>
             </div>
             <div class="designedBy col-md-6">
-                <p> Designed and developed by: <a href="http://kushtrim.net" target="_blank"> Kushtrim.net</a></p>
+                <p> Dizajnuar dhe ndertuar nga: <a href="http://kushtrim.net" target="_blank"> Kushtrim.net</a></p>
             </div>
         </div>
     </div>
@@ -176,8 +176,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    {{-- <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea' });</script> --}}
     @yield('scripts')
 </body>
 </html>

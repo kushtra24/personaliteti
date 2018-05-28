@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('style')
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+@endsection
 @section('content')
 
 <div id="loading">
@@ -8,14 +10,12 @@
 
 <div class="container result-page" id="hidden">
     <div class="row">
+        <h1>Resultatet</h1>
+        <p><em> Këto resultate tregojnë preferencat e juaja në kater rubrikat e mëposhtme, dhe mund të ndryshojnë kohë pas kohe</em></p>
         <div class="col-sm-5">
             <h1>Ti je: <b> {{ $rol_name }} {{-- {{ Cookie::get('rol_name') }} --}}</b></h1>
           @if($FirstfinalProcentRez)
-            {{-- <h3>{{ $FirstfinalProcentRez }}% {{ $introExtro }} </h3>
-            <h3>{{ $nsfinalProcentRez }}% {{ $intuSens }}</h3>
-            <h3>{{ $ftfinalProcentRez }}% {{$feelingThinking}}</h3>
-            <h3>{{ $jpfinalProcentRez }}% {{$judgingPerspecting}}</h3> --}}
-            <img src="../{{ $tipi->type_img }}" alt="tipi featured" width="100%" class="img-responsive">
+            <img src="../{{ $tipi->type_img }}" alt="tipi featured" class="img-responsive result-img">
             <br>
             <h4> {!! str_limit($tipi->shortDescription, 450) !!}</h4>
             <br>
@@ -138,7 +138,7 @@
                         {{ csrf_field() }}
                         <div class="col-md-61">
                             <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }} ">
-                                <input id="first_name" type="text" class="form-control" name="first_name" placeholder="Emri" autocomplete="name" value="{{ old('name') }}" required autofocus>
+                                <input id="first_name" type="text" class="form-control" name="first_name" placeholder="Emri" autocomplete="given-name" value="{{ old('name') }}" required autofocus>
                                 @if ($errors->has('first_name'))
                                   <span class="help-block">
                                       <strong>{{ $errors->first('first_name') }}</strong>
@@ -147,16 +147,17 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-                                <input id="name" type="text" class="form-control" name="last_name" placeholder="Mbiemri" autocomplete="surname" value="{{ old('name') }}" required>
+                                <input id="name" type="text" class="form-control" name="last_name" placeholder="Mbiemri" autocomplete="family-name" value="{{ old('name') }}" required>
                                 @if ($errors->has('last_name'))
                                   <span class="help-block">
                                       <strong>{{ $errors->first('last_name') }}</strong>
                                   </span>
                                 @endif
                             </div>
+                            
 
                             <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
-                                <input id="age" type="number" class="form-control" min="0" max="100" name="age" placeholder="Mosha" autocomplete="age" value="{{ old('age') }}">
+                                <input type="text" id="datepicker" class="form-control" name="age" placeholder="Data e lindjes" autocomplete="age" value="{{ old('age') }}">
                                 @if ($errors->has('age'))
                                   <span class="help-block">
                                       <strong>{{ $errors->first('age') }}</strong>
@@ -190,7 +191,6 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            {{-- <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Mbylle</button> --}}
                             <button type="submit" class="btn btn-primary">Regjistrohu</button>
                         </div>
                     </form>
@@ -203,9 +203,10 @@
 @endsection
 
 @section('scripts')
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <script>
 
-// if($(window).width() < 961){
     $( document ).ready(function() {
       $('.container').removeAttr('id');
       $('#loading').hide();
@@ -229,6 +230,33 @@
         });
       });
     });
-// }
+
+    //drigger modal after a period second time
+    $( document ).ready(function() {
+        if(!$("#show_register").length == 0) {
+            setTimeout(function(){
+                $('#myModal').addClass('in').css('display', 'block');
+            }, 20000);
+            
+            $('.close-icon').click(function() {
+                $('#myModal').removeClass('in').css('display', 'none');
+            });
+        }
+    });
+
+    
+
+
+    //datepicker
+    $( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: "dd-mm-yy",
+      minDate: "-99Y", 
+      maxDate: "-12Y" 
+    });
+  } );
+
   </script>
 @endsection

@@ -36,6 +36,18 @@
                         <div class="form-group">
                             <input type="text" class="form-control" name="pyetja" placeholder="Pyetja" required>
                         </div>
+                        
+                        <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="spajtohem" placeholder="Majtas (Extrovert | Shqisor | Mendim | perspektivë)" required>
+                        </div>
+                        </div>
+
+                        <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="pajtohem" placeholder="Djthtas (introvert | intuitive | Ndjenje | Gjykues)" required>
+                        </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="form-group">

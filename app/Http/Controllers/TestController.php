@@ -34,10 +34,7 @@ class TestController extends Controller
 
         $questions = Question::take(44)->inRandomOrder()->get();
 
-        $spajtohem = "S'pajtohem";
-        $pajtohem = "Pajtohem";
-
-        return view('testi.create', compact('spajtohem', 'pajtohem', 'questions'));
+        return view('testi.create', compact('questions'));
     }
 
     /**
@@ -65,10 +62,9 @@ class TestController extends Controller
         return view('testi.edit');
     }
 
-
-    public function getResults(){
-            return redirect('testip');
-    }
+    // public function getResults(){
+    //         return redirect('/result');
+    // }
 
     /**
      * Returns the variables and the results to the view
@@ -97,7 +93,7 @@ class TestController extends Controller
             ]);
         // }
         // else{
-        //     return redirect('testip');
+        //     return redirect('vlersimi');
         // }
     }
 
@@ -167,7 +163,9 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $store->rol_name = $this->rol_name;
         $store->save();
     }
-
+    else{
+        // save results to not registerd table
+    }
 
     // if (!Auth::check()){
         Cookie::queue(Cookie::make('finaltype', $this->finalType, 3000));
@@ -201,7 +199,6 @@ public function extrovertOrintrovert($result)
 
     }
     elseif ($result === 0) {
-        $result = 1;
         $this->introExtro = "Extrovert";
     }
     else{
@@ -226,7 +223,6 @@ public function intuitiveOrSensing($result){
         $this->intuSens = "Shqisor";
     }
     elseif ($result === 0) {
-        $result = 1;
         $this->intuSens = "Shqisor";
     }
     else{
@@ -249,7 +245,6 @@ public function intuitiveOrSensing($result){
             $this->feelingThinking = "Mendim (Thinking)";
         }
         elseif ($result === 0) {
-            $result = 1;
             $this->feelingThinking = "Ndjenjë (Feeling)";
         }
         else{
@@ -272,7 +267,6 @@ public function intuitiveOrSensing($result){
             $this->judgingPerspecting = "Perspektivë";
         }
         elseif ($result === 0) {
-            $result = 1;
             $this->judgingPerspecting = "Perspektivë";
         }
         else{
