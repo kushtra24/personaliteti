@@ -13,11 +13,11 @@
         <h1>Resultatet</h1>
         <p><em> Këto resultate tregojnë preferencat e juaja në kater rubrikat e mëposhtme, dhe mund të ndryshojnë kohë pas kohe</em></p>
         <div class="col-sm-5">
-            <h1>Ti je: <b> {{ $rol_name }} {{-- {{ Cookie::get('rol_name') }} --}}</b></h1>
-          @if($FirstfinalProcentRez)
-            <img src="../{{ $tipi->type_img }}" alt="tipi featured" class="img-responsive result-img">
+            <h1>Ti je: <b> {{ $results->rol_name }} {{-- {{ Cookie::get('rol_name') }} --}}</b></h1>
+          @if($results->first_final_procent_rez)
+          <img src="{{ URL::to('/') }}/images/{{ $results->finaltype }}.png" alt="personaliteti tipi avatar" class="img-responsive result-img">
             <br>
-            <h4> {!! str_limit($tipi->shortDescription, 450) !!}</h4>
+            {{-- <h4> {!! str_limit($tipi->shortDescription, 450) !!}</h4> --}}
             <br>
           @endif
           @if ($errors->has('email'))
@@ -40,9 +40,9 @@
             @endif
         </div>
 
-@if($FirstfinalProcentRez)
+@if($results->first_final_procent_rez)
         <div class="col-sm-7" id="animated-results">
-          <h1> Kodi: <b>@if ($finalType == null) {{ Cookie::get('finaltype') }} @else {{ $finalType }} @endif</b></h1>
+          <h1> Kodi: <b>@if ($results->finaltype == null) {{ Cookie::get('finaltype') }} @else {{ $results->finaltype }} @endif</b></h1>
           <div class="animated-result">
             <div class="traid">
                 <h3>Mendimet</h3>
@@ -52,7 +52,7 @@
             </div>
             <div id="bar-1" class="bar-main-container azure">
                 <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $FirstfinalProcentRez }}" final-type-name="{{ $introExtro }}"></div>
+                    <div class="bar-percentage" data-percentage="{{ $results->first_final_procent_rez }}" final-type-name="{{ $results->intro_extro }}"></div>
                     <div class="bar-container">
                         <div class="bar"></div>
                     </div>
@@ -69,7 +69,7 @@
             </div>
              <div id="bar-2" class="bar-main-container emerald">
                 <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $nsfinalProcentRez }}" final-type-name="{{ $intuSens }}"></div>
+                    <div class="bar-percentage" data-percentage="{{ $results->ns_final_procent_rez }}" final-type-name="{{ $results->intu_sens }}"></div>
                     <div class="bar-container">
                         <div class="bar"></div>
                     </div>
@@ -87,7 +87,7 @@
 
             <div id="bar-3" class="bar-main-container violet">
                 <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $ftfinalProcentRez }}" final-type-name="{{ $feelingThinking }}"></div>
+                    <div class="bar-percentage" data-percentage="{{ $results->ft_final_procent_rez }}" final-type-name="{{ $results->feeling_thinking }}"></div>
                     <div class="bar-container">
                         <div class="bar"></div>
                     </div>
@@ -105,7 +105,7 @@
 
             <div id="bar-4" class="bar-main-container yellow">
                 <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $jpfinalProcentRez }}" final-type-name="{{ $judgingPerspecting }}"></div>
+                    <div class="bar-percentage" data-percentage="{{ $results->jp_final_procent_rez }}" final-type-name="{{ $results->judging_perspecting }}"></div>
                     <div class="bar-container">
                         <div class="bar"></div>
                     </div>

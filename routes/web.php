@@ -26,9 +26,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['test' => 'test'], function(){
     Route::get('/vlersimi', 'TestController@doTheTest')->name('testi');
-    Route::get('/result', 'Auth\RegisterController@notvalide');
+    // Route::get('/result', 'Auth\RegisterController@notvalide');
     Route::post('/result', 'TestController@introExtroQuestions')->name('result'); //->middleware('throttle:1,2')
-    Route::post('/home', 'TestController@introExtroQuestions');
+    Route::get('/result', 'TestController@introExtroQuestionsResult');
 });
 
 Route::post('/search', 'PostController@search');

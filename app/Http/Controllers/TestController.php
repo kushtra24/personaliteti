@@ -72,25 +72,30 @@ class TestController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function introExtroQuestionsResult(){
-
-
         // if(){
             //to get the short description
-            $tipi = \App\Tipi::where('type', $this->finalType)->first();
+            // $tipi = \App\Tipi::where('type', $this->finalType)->first();
 
-            return view('testi.result')->with([
-                'finalType' => $this->finalType,
-                'introExtro' => $this->introExtro,
-                'FirstfinalProcentRez' => $this->FirstfinalProcentRez,
-                'intuSens' => $this->intuSens,
-                'nsfinalProcentRez' => $this->nsfinalProcentRez,
-                'feelingThinking' => $this->feelingThinking,
-                'ftfinalProcentRez' => $this->ftfinalProcentRez,
-                'judgingPerspecting' => $this->judgingPerspecting,
-                'jpfinalProcentRez' => $this->jpfinalProcentRez,
-                'rol_name' => $this->rol_name,
-                'tipi' => $tipi
-            ]);
+            $results = DB::table('tests')->latest()->first();
+
+            // dd($results);
+
+            return view('testi.result', compact('results'));
+
+                // return redirect('result');
+            // return view('testi.result')->with([
+            //     'finalType' => $this->finalType,
+            //     'introExtro' => $this->introExtro,
+            //     'FirstfinalProcentRez' => $this->FirstfinalProcentRez,
+            //     'intuSens' => $this->intuSens,
+            //     'nsfinalProcentRez' => $this->nsfinalProcentRez,
+            //     'feelingThinking' => $this->feelingThinking,
+            //     'ftfinalProcentRez' => $this->ftfinalProcentRez,
+            //     'judgingPerspecting' => $this->judgingPerspecting,
+            //     'jpfinalProcentRez' => $this->jpfinalProcentRez,
+            //     'rol_name' => $this->rol_name,
+            //     'tipi' => $tipi
+            // ]);
         // }
         // else{
         //     return redirect('vlersimi');
@@ -148,9 +153,12 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $answer->save();
     }
 
-    if (Auth::check()) {
+    
         $store = new Test();
-        $store->user_id = Auth::user()->id;
+
+        if (Auth::check()) {
+            $store->user_id = Auth::user()->id;
+        }
         $store->finaltype = $this->finalType;
         $store->intro_extro = $this->introExtro;
         $store->first_final_procent_rez = $this->FirstfinalProcentRez;
@@ -162,10 +170,6 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $store->jp_final_procent_rez = $this->jpfinalProcentRez;
         $store->rol_name = $this->rol_name;
         $store->save();
-    }
-    else{
-        // save results to not registerd table
-    }
 
     // if (!Auth::check()){
         Cookie::queue(Cookie::make('finaltype', $this->finalType, 3000));
@@ -182,7 +186,8 @@ public function introExtroQuestions(CookieJar $cookieJar)
 
     
 
-    return $this->introExtroQuestionsResult();
+    // return $this->introExtroQuestionsResult();
+    return redirect('result');
 
 
 } //end of function

@@ -61,7 +61,7 @@ return [
     'min'                  => [
         'numeric' => ' :attribute duhet te jete minumum :min.',
         'file'    => 'The :attribute must be at least :min kilobytes.',
-        'string'  => 'The :attribute must be at least :min characters.',
+        'string'  => ':attribute-i duhet të jetë së paku :min karaktere i gjatë.',
         'array'   => 'The :attribute must have at least :min items.',
     ],
     'not_in'               => 'The selected :attribute is invalid.',

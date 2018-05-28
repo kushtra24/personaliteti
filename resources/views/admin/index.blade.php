@@ -106,8 +106,20 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-8">
-                    
-                    
+                    <table class="table table-striped table-responsive">
+                        <thead>
+                            <th>Question</th>
+                            <th>Value</th>
+                            <th>Testee</th>
+                        </thead>
+                        {{-- @foreach($countQuestions as $countQuestion)
+                        <tr>
+                            <td>{{ $countQuestion->question_id }}</td>
+                            <td>{{ $countQuestion->value }}</td>
+                            <td>{{ $countQuestion->testee }}</td>
+                        </tr>
+                        @endforeach --}}
+                    </table>
                 </div>
                 <!-- /.col-lg-8 -->
                 <div class="col-lg-4">

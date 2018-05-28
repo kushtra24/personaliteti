@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Test;
 use DB;
+use App\Answer;
 class AdminController extends Controller
 {
     /**
@@ -21,9 +22,10 @@ class AdminController extends Controller
                             ->groupBy('finaltype')
                             ->get();
 
+        $countQuestions = Answer::all();
         
 
-        return view('admin.index', compact('countResults'));
+        return view('admin.index', compact('countResults', 'countQuestions'));
     }
 
     /**

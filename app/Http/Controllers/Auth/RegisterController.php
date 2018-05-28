@@ -130,8 +130,4 @@ class RegisterController extends Controller
         }
     }
 
-    public function notvalide(){
-        return redirect('/register');
-    }
-
 }

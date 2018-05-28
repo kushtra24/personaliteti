@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-8 col-md-offset-2">
          @if(Cookie::get('finaltype'))
             <div class="panel panel-default">
@@ -100,10 +100,10 @@
                     </form>
                 </div>
             </div>
-        @else
+        @else --}}
         <h3>Na vjen keq kjo faqe nuk është e qasëshme në këtë menyrë</h3>
-        @endif
-        </div>
-    </div>
+        {{-- @endif --}}
+        {{-- </div> --}}
+    {{-- </div> --}}
 </div>
 @endsection
