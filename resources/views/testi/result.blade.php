@@ -244,9 +244,6 @@
         }
     });
 
-    
-
-
     //datepicker
     $( function() {
     $( "#datepicker" ).datepicker({
@@ -257,6 +254,57 @@
       maxDate: "-12Y" 
     });
   } );
+
+// event.preventDefault();
+//            var form = new FormData(this); 
+
+// $.ajax({
+//     method: "POST",
+    {{-- // url: "{{ action('TestController@store') }}", --}}
+//     data: form,
+//     cache: false,
+//     contentType: false,
+//     processData: false,
+//     success: function (data) {
+{{-- //         window.location.replace('{{ action('TestController@index', ['purpose' => request('purpose')]) }}'); --}}
+//     },
+//     error: function (data) {
+//         $('#save').prop('disabled', false);
+//         if (data.responseJSON.title) {
+//             $('#title_error').empty().append(' <span class="help-block" style="color:red;"><strong>' + data.responseJSON.title + '</strong></span>');
+//         }
+//         if (data.responseJSON.content) {
+//             $('#content_error').empty().append(' <span class="help-block" style="color:red;"><strong>' + data.responseJSON.content + '</strong></span>');
+//         }
+
+//         if (data.responseJSON['story_photo.upload']) {
+//             $('#photo-error').empty().append(' <span class="help-block" style="color:red;"><strong>' + data.responseJSON['story_photo.upload'] + '</strong></span>');
+//         }
+
+//         if (data.responseJSON['story_photo.attach']) {
+//             $('#photo-error').empty().append(' <span class="help-block" style="color:red;"><strong>' + data.responseJSON['story_photo.attach'] + '</strong></span>');
+//         }
+//         if (data.responseJSON.institutions) {
+//             $('#institutions_error').empty().append(' ' +
+//                 '<span class="help-block" style="color:red;">' +
+//                 '<strong>' + data.responseJSON.institutions + '</strong>' +
+//                 '</span>');
+//         }
+//         if (data.responseJSON.donors) {
+//             $('#patients_error').empty().append(' ' +
+//                 '<span class="help-block" style="color:red;">' +
+//                 '<strong>' + data.responseJSON.donors + '</strong>' +
+//                 '</span>');
+//         }
+//         if (data.responseJSON.patients) {
+//             $('#donors_error').empty().append(' ' +
+//                 '<span class="help-block" style="color:red;">' +
+//                 '<strong>' + data.responseJSON.patients + '</strong>' +
+//                 '</span>');
+//         }
+//         window.scrollTo(0, 0);
+//     } 
+
 
   </script>
 @endsection

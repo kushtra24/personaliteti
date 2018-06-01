@@ -207,13 +207,12 @@ class PostController extends Controller
     
 
     public function blog(){
-        $posts = Post::orderBy('id','desc')->paginate(4);
+
+        $posts = Post::with("user", "media", "category")->orderBy('id','desc')->paginate(4);
 
         $archives = Post::archives();
 
         $categories = Category::all();
-
-        // $pages = Analytics::fetchVisitorsAndPageViews(Period::days(7));
 
         return view('post.blog', compact('posts', 'archives', 'categories'));
     }
