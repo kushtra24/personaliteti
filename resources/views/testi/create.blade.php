@@ -65,6 +65,7 @@
                 @endforeach
 
                 <div class="form-group col-md-8 col-md-offset-2">
+
                     <div class="col-md-2 col-md-offset-4">
                         <a id="goBack" class="tab-prev btn btn-warning btn-lg btn-block hide" data-toggle="tooltip" data-placement="top" title="Ktheu"><i class="fas fa-long-arrow-alt-left"></i></a>
                     </div>
@@ -72,10 +73,11 @@
                     <div class="col-md-6">
                         <a id="goforward" class="tab-forward btn btn-primary btn-lg btn-block" data-toggle="tooltip" data-placement="top" title="Vazhdo">Vazhdo</a>
                     </div>
-                    
+
                     <div class="col-md-6">
                         <input type="submit" class="btn btn-success btn-lg btn-block hide" value="Perfundo" id="submit">
                     </div>
+
                 </div>
                 <div class="alert alert-danger hide"> Keni lënë Pyetje pa përzgjedhur, Shfrytezoni butonin "Kthehu" per te shikuar</div>
             </div><!-- end of teb content -->
@@ -161,6 +163,7 @@ $('#goBack').click(function() {
         $('.question:nth-child(n+22):nth-child(-n+31)').removeClass('hide');
         $('.question:nth-child(n+32)').addClass('hide');
         $(".tab-forward").removeClass("hide");
+        $('#submit').addClass('hide');
     }
 });
 // Go back button
