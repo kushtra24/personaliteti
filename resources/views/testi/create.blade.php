@@ -16,15 +16,12 @@
       {{-- <p>Pyetsori i Personalitetit</p> --}}
 
     <div class="row">
-
       <div class="test-rules" style="margin: 40px 0">
-
-        <div class="col-md-2 bounce col-md-offset-1"><i class="fas fa-ban fa-3x"></i> <p>Është pa pagesë</p></div>
-        <div class="col-md-2 bounce"> <i class="fab fa-buromobelexperte fa-3x"></i><p>Ndahët në 4 rubrika me nga 11 pyetje</p></div>
-        <div class="col-md-2 bounce"><i class="fas fa-stopwatch fa-3x"></i></i> <p>Nuk merr më shumë kohë se 10 min</p></div>
-        <div class="col-md-2 bounce"><i class="fas fa-street-view fa-3x"></i><p>Përgjigjuni sinqerisht për të marr resultat më të saktë</p> </div>
-        <div class="col-md-2 bounce"><i class="far fa-dot-circle fa-3x"></i> <p>Lëni sa më pakë Pyetje neotrale</p></div>
-
+        <div class="col-md-2 bounce col-md-offset-1"><i class="fas fa-ban fa-4x"></i> <p>Është pa pagesë</p></div>
+        <div class="col-md-2 bounce"> <i class="fab fa-buromobelexperte fa-4x"></i><p>Ndahët në 4 rubrika me nga 11 pyetje</p></div>
+        <div class="col-md-2 bounce"><i class="fas fa-stopwatch fa-4x"></i></i> <p>Nuk merr më shumë kohë se 10 min</p></div>
+        <div class="col-md-2 bounce"><i class="fas fa-street-view fa-4x"></i><p>Përgjigjuni sinqerisht për të marr resultat më të saktë</p> </div>
+        <div class="col-md-2 bounce"><i class="far fa-dot-circle fa-4x"></i> <p>Lëni sa më pakë Pyetje neotrale</p></div>
       </div>
     </div>
     <hr>
@@ -35,19 +32,9 @@
     
         <form method="POST" action="{{ route('result') }}" class="form-horizontal">
         {{ csrf_field() }}
-        <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs hide" role="tablist" id="myTabs">
-              <li role="presentation" class="active"><a href="#firstSet" aria-controls="firstSet" role="tab" data-toggle="tab">Intro/extro</a></li>
-              <li role="presentation"><a href="#secondSet" aria-controls="secondSet" role="tab" data-toggle="tab">intuiting/sensing</a></li>
-              <li role="presentation"><a href="#thirdSet" aria-controls="thirdSet" role="tab" data-toggle="tab">think/feel</a></li>
-              <li role="presentation" class="lastSet "><a href="#lastSet" aria-controls="lastSet" role="tab" data-toggle="tab">judge/perspect</a></li>
-            </ul>
-        </div>
+      
             <!-- Tab panes -->
             <div class="tab-content" id="all-tabs">
-
-
                 @foreach( $questions as $question)
                 <div class="question form-group">
                         <div class="">
@@ -58,9 +45,9 @@
                             <div class="hidden-xs spajtohem-lg">{{ $question->spajtohem }}</div>
                         </div>
                         <div class="col-md-6 circles">
-                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3" title="Nuk pajtohem fare">
-                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2" title="Nuk pajtohem">
-                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1" title="Nuk pajtohem pak">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3" title="Pajtohem shum">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2" title="Pajtohem">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1" title="Pajtohem pak">
                             <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}neotral1" value="0" title="Neotral">
                             <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1r" class="right" value="1" title="Pajtohem pak">
                             <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2" title="Pajtohem">
@@ -77,19 +64,21 @@
                 </div>
                 @endforeach
 
-              
-              <div class="form-group col-md-8 col-md-offset-2">
-                <div class="col-md-2 col-md-offset-4">
-                    <a id="goBack" class="tab-prev btn btn-warning btn-lg btn-block hide" data-toggle="tooltip" data-placement="top" title="Ktheu">Ktheu</a>
-                </div>
-                <div class="col-md-6">
-                    <a id="goforward" class="tab-forward btn btn-success btn-lg btn-block" data-toggle="tooltip" data-placement="top" title="Vazhdo">Vazhdo</a>
-                </div>
-                <input type="submit" class="btn btn-primary btn-lg btn-block hide" value="Perfundo" id="submit">
-              </div>
-                  <div class="alert alert-danger hide"> Keni lënë Pyetje pa përzgjedhur, Shfrytezoni butonin "Kthehu" per te shikuar</div>
+                <div class="form-group col-md-8 col-md-offset-2">
+                    <div class="col-md-2 col-md-offset-4">
+                        <a id="goBack" class="tab-prev btn btn-warning btn-lg btn-block hide" data-toggle="tooltip" data-placement="top" title="Ktheu"><i class="fas fa-long-arrow-alt-left"></i></a>
+                    </div>
 
-          </div><!-- end of teb content -->
+                    <div class="col-md-6">
+                        <a id="goforward" class="tab-forward btn btn-primary btn-lg btn-block" data-toggle="tooltip" data-placement="top" title="Vazhdo">Vazhdo</a>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-success btn-lg btn-block hide" value="Perfundo" id="submit">
+                    </div>
+                </div>
+                <div class="alert alert-danger hide"> Keni lënë Pyetje pa përzgjedhur, Shfrytezoni butonin "Kthehu" per te shikuar</div>
+            </div><!-- end of teb content -->
         </form>
 
 
@@ -152,13 +141,14 @@ $('.tab-forward').click(function() {
         $('#submit').removeClass('hide');
         $('.question:nth-child(n+23):nth-child(-n+33)').addClass('hide');
         $('.question:nth-child(n+34)').removeClass('hide');
+        $('#goforward').addClass('hide');
     }
 });
 
 
 // Go back button
 $('#goBack').click(function() {
-    count = count - 1;
+    count--;
     if(count==0){
         $('.question:nth-child(n+11)').addClass('hide');
         $('.question:nth-child(-n+11)').removeClass('hide');
@@ -183,9 +173,9 @@ $('.tab-forward').click(function(){
     $('.nav-tabs > .active').next('li').find('a').trigger('click');
 
   //hide the tab-forward button if the tab arrives to the last set
-  if($('.lastSet').hasClass('active')) {
-        $(".tab-forward").addClass("hide");
-    }
+  //if($('.lastSet').hasClass('active')) {
+   //     $(".tab-forward").addClass("hide");
+  //  }
 
         $("#goBack").removeClass("hide");
 
@@ -196,20 +186,6 @@ $('.tab-forward').click(function(){
 
 });
 
-// go back button
-$('.tab-prev').click(function(){
-    //go forward on tabs    
-    $('.nav-tabs > .active').prev('li').find('a').trigger('click');
-
-    if($('.lastSet').hasClass('active')) {
-        $("#goforward").removeClass("hide");
-    }
-
-    if($('.secondSet').hasClass('active')) {
-        $("#goBack").addClass("hide");
-    }
-
-});
 
 // facebook comments
 (function(d, s, id) {

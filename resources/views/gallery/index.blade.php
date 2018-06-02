@@ -28,7 +28,6 @@
         </div>
         <!-- /.col-lg-12 -->
     </div>
-
     <!-- /.row -->
             <div class="row">
               <div class="col-md-12">
@@ -64,34 +63,6 @@
                         </div>
                     </div>
                   @endforeach
-
-
-
-                <div class="modal fade " tabindex="-1" role="dialog" id="myModal">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Informacionet e fotografisë</h4>
-                      </div>
-                      <div class="modal-body">
-                        <table class="table-responsive table">
-                            <thead>
-                                <th></th>
-                            </thead>
-                            <tbody>
-                                <td>{{ $post->id}}</td>
-                            </tbody>
-                        </table>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary saveModal" disabled="disabled" data-dismiss="modal">Save changes</button>
-                      </div>
-                    </div><!-- /.modal-content -->
-                  </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
-                    
                 </div>
                 <!-- /.col-lg-8 -->
             </div>

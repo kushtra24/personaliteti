@@ -143,7 +143,7 @@ If there are any questions regarding this privacy policy you may contact us usin
         DB::table('pages')->insert([
             'title' => "Kushtet perdorimit",
             'slug' => "kushtet_perdorimit",
-            'content' => "<p>
+            'content' => '<p>
 
             Terms of Service ("Terms")  
 ==========================
@@ -251,7 +251,7 @@ If you have any questions about these Terms, please contact us.
 
 
             
-            </p>",
+            </p>',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
