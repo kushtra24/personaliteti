@@ -32,7 +32,7 @@
 <div class="container">
 
 	<section id="heading-welcomepage">
-		<h1>Gjejë Personalitetin tuaj, Tani!</h1>
+		<h1>{{ __('homepage.gjeje') }}</h1>
 		<h4>Fillo vlersimin e personalitetit dhe mahnitu me saktesinë që ofron resultati juaj i përsonalitetit</h4>
 
 		<a href="{{ route('testi') }}" class="btn btn-primary">Fillo Vlersimin</a>

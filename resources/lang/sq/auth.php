@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'These credencials are not',
+    'failed' => 'These credentials do not match our records.',
     'throttle' => 'Shumë përpjekje për identifikim. Provo sërish në :seconds sekonda.',
 
 ];

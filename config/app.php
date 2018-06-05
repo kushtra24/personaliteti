@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'sq',
     // 'locale' => 'es_ES.UTF-8', 
     // 'locale' => 'es_ES.utf8',
 
