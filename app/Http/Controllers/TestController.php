@@ -72,34 +72,10 @@ class TestController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function introExtroQuestionsResult(){
-        // if(){
-            //to get the short description
-            // $tipi = \App\Tipi::where('type', $this->finalType)->first();
 
             $results = DB::table('tests')->latest()->first();
 
-            // dd($results);
-
             return view('testi.result', compact('results'));
-
-                // return redirect('result');
-            // return view('testi.result')->with([
-            //     'finalType' => $this->finalType,
-            //     'introExtro' => $this->introExtro,
-            //     'FirstfinalProcentRez' => $this->FirstfinalProcentRez,
-            //     'intuSens' => $this->intuSens,
-            //     'nsfinalProcentRez' => $this->nsfinalProcentRez,
-            //     'feelingThinking' => $this->feelingThinking,
-            //     'ftfinalProcentRez' => $this->ftfinalProcentRez,
-            //     'judgingPerspecting' => $this->judgingPerspecting,
-            //     'jpfinalProcentRez' => $this->jpfinalProcentRez,
-            //     'rol_name' => $this->rol_name,
-            //     'tipi' => $tipi
-            // ]);
-        // }
-        // else{
-        //     return redirect('vlersimi');
-        // }
     }
 
 public function introExtroQuestions(CookieJar $cookieJar)
@@ -153,7 +129,6 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $answer->save();
     }
 
-    
         $store = new Test();
 
         if (Auth::check()) {
@@ -184,11 +159,8 @@ public function introExtroQuestions(CookieJar $cookieJar)
         Cookie::queue(Cookie::make('rol_name', $this->rol_name, 3000));
     // }
 
-    
-
     // return $this->introExtroQuestionsResult();
     return redirect('result');
-
 
 } //end of function
 

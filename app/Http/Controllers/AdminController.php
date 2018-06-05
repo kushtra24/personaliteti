@@ -7,6 +7,8 @@ use App\User;
 use App\Test;
 use DB;
 use App\Answer;
+use App\Question;
+
 class AdminController extends Controller
 {
     /**
@@ -17,15 +19,45 @@ class AdminController extends Controller
     public function index()
     {
 
-       $countResults = Test::select(DB::raw('count(*) as Numri, finaltype'))
+        $registerdUsers = user::count();
+
+        $writtenPosts = DB::table('posts')->count();
+
+        $comments = DB::table('comments')->count();
+
+        $countResults = Test::select(DB::raw('count(*) as Numri, finaltype'))
                             ->where('finaltype', '<>', 1)
                             ->groupBy('finaltype')
                             ->get();
 
-        $countQuestions = Answer::all();
-        
+        $getTestee = request('testee');
+        $answers = Answer::with('question')->where('testee', '=', $getTestee)->get();
+    
+        $questions = Question::withCount([
+            'answers as answer_minus_3' => function($query){
+            $query->where('value', -3);
+        },
+            'answers as answer_minus_2' => function($query){
+            $query->where('value', -2);
+        },
+            'answers as answer_minus_1' => function($query){
+            $query->where('value', -1);
+        },
+            'answers as answer_0' => function($query){
+            $query->where('value', 0);
+        },
+            'answers as answer_1' => function($query){
+            $query->where('value', 1);
+        },
+            'answers as answer_2' => function($query){
+            $query->where('value', 2);
+        },
+            'answers as answer_3' => function($query){
+            $query->where('value', 3);
+        }
+        ])->get();
 
-        return view('admin.index', compact('countResults', 'countQuestions'));
+        return view('admin.index', compact('registerdUsers', 'writtenPosts', 'comments', 'countResults', 'questions', 'answers'));
     }
 
     /**
