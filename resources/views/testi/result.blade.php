@@ -175,7 +175,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <input id="password" type="password" class="form-control" placeholder="Fjalkalimi" name="password" autocomplete="new-password" required>
+                                <input id="password" type="password" class="form-control" placeholder="Fjalëkalimi" name="password" autocomplete="new-password" required>
                                 @if ($errors->has('password'))
                                   <span class="help-block">
                                     <strong>{{ $errors->first('password') }}</strong>
@@ -184,7 +184,7 @@
                             </div>
 
                             <div class="form-group">
-                                <input id="password-confirm" type="password" class="form-control" placeholder="Përsërit Fjalkalimin" autocomplete="retype-password" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control" placeholder="Përsërit Fjalëkalimin" autocomplete="retype-password" name="password_confirmation" required>
                             </div>
                             <div class="form-group">
                                 <label for="agree">Duke u regjistruar ju pranoni <a href="/faqe/politikat_privatesise" target="_blank"> Politikat e privatesis</a></label>

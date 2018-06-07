@@ -78,7 +78,7 @@
     text = text.replace("March", "Mars");
     text = text.replace("April", "Prill");
     text = text.replace("May", "Mai");
-    text = text.replace("June", "Qershorë");
+    text = text.replace("June", "Qershor");
     text = text.replace("July", "Korrik");
     text = text.replace("August", "Gusht");
     text = text.replace("September", "Shtatorë");

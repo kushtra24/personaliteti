@@ -33,18 +33,17 @@
 
 	<section id="heading-welcomepage">
 		<h1>{{ __('homepage.gjeje') }}</h1>
-		<h4>Fillo vlersimin e personalitetit dhe mahnitu me saktesinë që ofron resultati juaj i përsonalitetit</h4>
+		<h4>Fillo vlerësimin e personalitetit dhe mahnitu me saktesinë që ofron resultati juaj i përsonalitetit</h4>
 
 		<a href="{{ route('testi') }}" class="btn btn-primary">Fillo Vlersimin</a>
-		{{-- <br><small>Pa pages, nuk eshte e nevojshme regjistrimi</small> --}}
 		<br>
 		<img src="{{ asset('images/homepage.png') }}" class="img-responsive" alt="homepage image">
 	</section>
 
 	<section id="welcome-content-middle">
 		<i class="fas fa-heart fa-5x"></i>
-		<h3>Pak rreth teoriës së përgjithshme të vlersimit</h3>
-		<p>Bazuar në studimet dhe mësimet e Carl Jung mbi tipet e përsonalitetit, ne kemi ndërtuar një pyëtsorë që jep një indikator për orientimin e përsonalitetit tuaj. Pyetsori ofron një indikator me të cilen mund të përcaktohet tipi i përsonalitetit tuaj.</p>
+		<h3>Pak rreth teorisë së përgjithshme të vlersimit</h3>
+		<p>Bazuar në studimet dhe mësimet e Carl Jung mbi tipet e përsonalitetit, ne kemi ndërtuar një pyetsorë që jep një indikator për orientimin e përsonalitetit tuaj. Pyetsori ofron një indikator me të cilin mund të përcaktohet tipi i përsonalitetit tuaj.</p>
 	</section>
 	
 	<section id="cka_vlerson" class="col-md-offset-31">
@@ -61,31 +60,31 @@
 			<div class="inner-part">
 				<i class="fab fa-telegram-plane"></i>
 				<h2>Karrier</h2>
-				<p>Gjetja e një karriere të duhur për ju, mund të jetë një përpjekje e lodhshme dhe frustruese, por vlerësimi i personalitetit mund të ju ndihmojë. Duke e njohur veten, duke njohur nevojat e atyre që janë përreth jush dhe duke identifikuar ne cfar fusha mund të lulëzoni natyrshëm, qasja juaj në zhvillimin e karrierës bëhet shumë më e lehtë.</p>
+				<p>Gjetja e një karriere të duhur për ju, mund të jetë një përpjekje e lodhshme dhe frustruese, por vlerësimi i personalitetit mund të ju ndihmojë. Duke e njohur veten, duke njohur nevojat e atyre që janë përreth jush dhe duke identifikuar në çfarë fusha mund të lulëzoni natyrshëm, qasja juaj në zhvillimin e karrierës bëhet shumë më e lehtë.</p>
 			</div>
 		</div>
 		<div class="lidhje col-md-6">
 			<div class="inner-part">
 				<i class="far fa-heart"></i>
-				<h2>Lidhje bashkshortore</h2>
-				<p>Ndoshta bashkshorti/ja juaj ju kupton, ose ju e keni të vështirë duke u kuptuar me një mik apo një anëtar të familjes. A jeni duke thënë të njëjtat gjëra, por në mënyra të ndryshme? Apo ndoshta po kërkoni të krijoni ekuilibrin në një mënyrë që ju plotëson më shumë. Preferencat e personalitetit tuaj mund të kenë diçka për të thënë për këtë.</p>
+				<h2>Lidhje bashkëshortore</h2>
+				<p>Ndoshta bashkëshorti/ja juaj nuk ju kupton, ose ju e keni të vështirë të kuphoheni me një mik apo një anëtar të familjes. A jeni duke thënë të njëjtat gjëra, por në mënyra të ndryshme? Apo ndoshta po kërkoni të krijoni ekuilibrin në një mënyrë që ju plotëson më shumë. Preferencat e personalitetit tuaj mund të kenë diçka për të thënë për këtë.</p>
 			</div>
 		</div>
 		<div class="vendimarrje col-md-6">
 			<div class="inner-part">
 				<i class="far fa-compass"></i>
-				<h2>Vendimarrje</h2>
-				<p>Shumë njerëz i afrohen vendimmarrjes në aspektin e rezultateve të drejtpërdrejta dhe implikimeve (p.sh., nëse kthehem në shkollë, do të kushtojë kaq..). Sidoqoftë, rezultatet e nënkuptuara dhe ato që ndikojnë në thelbin tënd nuk janë gjithmonë aq të dukshme (p.sh., a do të përshtatet ky format i mësimdhënjes me mua?). Ne mund t'ju ndihmojmë t'i zbuloni këtë.</p>
+				<h2>Vendimmarrje</h2>
+				<p>Shumë njerëz i afrohen vendimmarrjes në aspektin e rezultateve të drejtpërdrejta dhe implikimeve (p.sh., nëse kthehem në shkollë, do të kushtojë kaq..). Sidoqoftë, rezultatet e nënkuptuara dhe ato që ndikojnë në thelbin tënd nuk janë gjithmonë aq të dukshme (p.sh., a do të përshtatet ky format i mësimdhënjes me mua?). Ne mund t'ju ndihmojmë t'i zbuloni këto.</p>
 			</div>
 		</div>
 	</section>
 
 	<section class="testimonials">
-		<h1>Çfarë thojnë të tjerët?</h1>
+		<h1>Çfarë thonë të tjerët?</h1>
 		<i class="fas fa-quote-left fa-5x quote-icon"></i>
 		<div class="owl-carousel">
 		  <div class="col-md-8 col-md-offset-2">
-			<p>Ishte fascinuese të lexojë gjëra rreth përsonalitetit timë, ishin tejët të sakta, nuk besoja çfar isha duke lëxuar. Aq të sakta ishin sa që mendoja që është shkruarë posaqerisht për mua</p>
+			<p>Ishte fascinuese të lexojë rreth përsonalitetit tim, ishin tejët të sakta, nuk besoja çfarë isha duke lëxuar. Aq të sakta ishin sa që mendoja që është shkruar posaqërisht për mua</p>
 			<div class="avatar"><img src="{{ asset('images/enfj.png') }}" alt="testimonial avatar"></div>
 		  </div>
 

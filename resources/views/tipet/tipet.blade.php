@@ -41,7 +41,7 @@
 		</div>
 
 		<div id="shoqeri" class="type-group row">
-			<h1><strong>Shoqeri</strong></h1>
+			<h1><strong>Shoqëri</strong></h1>
 
 			@foreach ($tipet->slice(8, 4) as $tipi)
 				<div class="col-md-3 the-type">

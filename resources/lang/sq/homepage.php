@@ -11,7 +11,6 @@ return [
     |
     */
 
-    'gjeje' => 'Gjejë Personalitetin tuaj, Tani!',
-    'throttle' => 'Shumë përpjekje për identifikim. Provo sërish në :seconds sekonda.',
+    'gjeje' => 'Gjeni personalitetin tuaj, tani!',
 
 ];
