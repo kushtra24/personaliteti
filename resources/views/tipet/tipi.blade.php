@@ -27,9 +27,8 @@
 	<section id="heading-welcomepage">
 		@foreach($tipi as $tipi)
 
-			<img src="../{{ $tipi->featured_Image }}" alt="tipi featured" width="100%" class="img-responsive">
+			<img src="../{{ $tipi->feat_img }}" alt="tipi featured" width="100%" class="img-responsive">
 			<h1>Tipi {{ $tipi->type }}</h1>
-			{{-- <img src="../{{ $tipi->type_img }}" alt="tipi" width="70px" class="img-responsive"> --}}
 			<h4>Nryshe njihet edhe si {{ $tipi->name }}</h4>
 			<hr>
 		@endforeach
@@ -74,10 +73,8 @@
 				<h3>Resultatet e juaja </h3>
 				<p>{{ Cookie::get('rol_name')}}</p>
 				<br>
-		            
 			</div>
 			@else
-
 			<div class="notLogedIn">
 				<h3>Sapo Erdhe?</h3>
 			<a href="{{ route('testi') }}" class="btn btn-default">Fillo Vlersimin</a>

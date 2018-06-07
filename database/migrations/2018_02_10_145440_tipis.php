@@ -20,6 +20,7 @@ class Tipis extends Migration
             $table->text('shortDescription');
             $table->text('description');
             $table->string('type_img');
+            $table->string('feat_img')->nullable();
             $table->string('featured_Image');
             $table->timestamps();
         });

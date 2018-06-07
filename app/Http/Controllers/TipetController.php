@@ -77,7 +77,12 @@ class TipetController extends Controller
         //Updating the fields to the database based on the id
         $tipi = Tipi::find($id);
 
-        //image
+        if($request->hasFile('featFile')){
+            $filename = $request->featFile->getClientOriginalName();
+            $filename = $request->file('featFile')->storeAs('/images', $filename);
+            $tipi->feat_img = $filename;
+        }
+
         if($request->hasFile('file')){
             $filename = $request->file->getClientOriginalName();
             $filename = $request->file('file')->storeAs('/images', $filename);

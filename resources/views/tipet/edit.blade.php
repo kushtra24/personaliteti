@@ -27,6 +27,16 @@
                       {{ csrf_field() }}
 
                         <div class="form-group">
+                          <label for="featFile" class="col-sm-2 control-label">Type Image</label>
+                            <div class="col-sm-10">
+
+                            <input type="file" id="featFile" name="featFile" onchange="readURL(this);"><span id="filename"></span>
+
+                          <img src="../{{ $tipi->feat_img }}" alt="Type image" width="50px" id="imediateImage1">
+                           </div>
+                        </div>
+                    
+                        <div class="form-group">
                           <label for="type" class="col-sm-2 control-label">Kodi</label>
                             <div class="col-sm-10">
 
@@ -43,7 +53,7 @@
                         </div>
 
                         <div class="form-group">
-                          <label for="FileNo" class="col-sm-2 control-label">Type Image</label>
+                          <label for="file" class="col-sm-2 control-label">Type Image</label>
                             <div class="col-sm-10">
 
                         <input type="file" id="file" name="file" onchange="readURL(this);"><span id="filename"></span>
@@ -51,16 +61,16 @@
                           <img src="../{{ $tipi->type_img }}" alt="Type image" width="50px" id="imediateImage1">
                            </div>
                         </div>
-
+                        
                         <div class="form-group">
-                          <label for="FileNo" class="col-sm-2 control-label">Pershkrimi shkurt</label>
+                          <label for="short" class="col-sm-2 control-label">Pershkrimi shkurt</label>
                             <div class="col-sm-10">
                           <textarea class="form-control" rows="5" id="short" name="shortDescription">{{ $tipi->shortDescription }}</textarea>
                            </div>
                         </div>
 
                         <div class="form-group">
-                          <label for="FileNo" class="control-label">Pershkrimi</label>
+                          <label for="editor" class="control-label">Pershkrimi</label>
                             <div class="col-sm-12">
                           <textarea name="description" id="editor">{{ $tipi->description }}</textarea>
                            </div>
