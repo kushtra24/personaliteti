@@ -16,9 +16,13 @@ class CreateAnswersTable extends Migration
         Schema::create('answers', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('question_id');
-            $table->tinyInteger('value');
-            $table->string('testee')->nullable();
-            $table->timestamps();
+            $table->tinyInteger('m3');
+            $table->tinyInteger('m2');
+            $table->tinyInteger('m1');
+            $table->tinyInteger('n0');
+            $table->tinyInteger('p1');
+            $table->tinyInteger('p2');
+            $table->tinyInteger('p3');
         });
     }
 

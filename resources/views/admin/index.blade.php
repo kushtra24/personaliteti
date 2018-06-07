@@ -103,22 +103,37 @@
                     </div>
                 </div>
             </div>
+
+
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-8">
                     <table class="table table-striped table-responsive">
                         <thead>
                             <th>Question</th>
-                            <th>Value</th>
-                            <th>Testee</th>
+                            <th>-3</th>
+                            <th>-2</th>
+                            <th>-1</th>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
                         </thead>
-                        {{-- @foreach($countQuestions as $countQuestion)
+                        @foreach($countQuestions as $countquestion)
                         <tr>
-                            <td>{{ $countQuestion->question_id }}</td>
-                            <td>{{ $countQuestion->value }}</td>
-                            <td>{{ $countQuestion->testee }}</td>
+                            <td>{{ $countquestion->question_id }}</td>
+                            <td>{{ $countquestion->m3 }}</td>
+                            <td>{{ $countquestion->m2 }}</td>
+                            <td>{{ $countquestion->m1 }}</td>
+                            <td>
+                                @if( $countquestion->n0 > 10 ) <span style="color: red">{{ $countquestion->n0 }}</span>
+                                @else {{ $countquestion->n0 }} 
+                                @endif</td>
+                            <td>{{ $countquestion->p1 }}</td>
+                            <td>{{ $countquestion->p2 }}</td>
+                            <td>{{ $countquestion->p3 }}</td>
                         </tr>
-                        @endforeach --}}
+                        @endforeach
                     </table>
                 </div>
                 <!-- /.col-lg-8 -->

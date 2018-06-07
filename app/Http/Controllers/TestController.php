@@ -104,9 +104,6 @@ class TestController extends Controller
 
 public function introExtroQuestions(CookieJar $cookieJar)
 {
-    // increment the test Counter by one
-    DB::table('test_counters')->increment('test_counter');
-
 
     // store the final results of the question
     $introExtroResult = 0;
@@ -134,6 +131,42 @@ public function introExtroQuestions(CookieJar $cookieJar)
     }
 
 
+    // foreach (request()->input('q') as $qid => $value) {
+    //     $answer = new Answer();    
+    //     $answer->question_id = $qid;
+    //     $answer->value = $value;
+    // }
+
+    // Save the answers to the answeres table on the database
+    foreach(request()->input('q') as $qid => $value) {
+        $answer = Answer::find($qid);
+
+        if($value == -3){
+            $answer->m3++;
+        }
+        elseif($value == -2){
+            $answer->m2++;
+        }
+        elseif($value == -1){
+            $answer->m1++;
+        }
+        elseif($value == 0){
+            $answer->n0++;
+        }
+        elseif($value == 1){
+            $answer->p1++;
+        }
+        elseif($value == 2){
+            $answer->p2++;
+        }
+        elseif($value == 3){
+            $answer->p3++;
+        }
+        
+        $answer->save();
+    }
+    
+
     $this->extrovertOrintrovert($introExtroResult);
 
     $this->intuitiveOrSensing($intuitionSensingResult);
@@ -143,15 +176,6 @@ public function introExtroQuestions(CookieJar $cookieJar)
     $this->judgingOrperspecting($jundgingPercivingResult);
 
     $this->finalTypeName($this->introExtro, $this->intuSens, $this->feelingThinking, $this->judgingPerspecting);
-
-    // Save the answers to the answeres table on the database
-    foreach (request()->input('q') as $qid => $value) {
-        $answer = new Answer();    
-        $answer->question_id = $qid;
-        $answer->value = $value;
-        $answer->testee = TestCounter::first()->test_counter;;
-        $answer->save();
-    }
 
     
         $store = new Test();
@@ -184,7 +208,8 @@ public function introExtroQuestions(CookieJar $cookieJar)
         Cookie::queue(Cookie::make('rol_name', $this->rol_name, 3000));
     // }
 
-    
+    // increment the test Counter by one
+    DB::table('test_counters')->increment('test_counter');
 
     // return $this->introExtroQuestionsResult();
     return redirect('result');

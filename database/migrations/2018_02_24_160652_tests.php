@@ -15,7 +15,7 @@ class Tests extends Migration
     {
         Schema::create('tests', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_id');
+            $table->string('user_id')->nullable();
             $table->string('finaltype');
             $table->string('intro_extro');
             $table->tinyInteger('first_final_procent_rez');

@@ -23,7 +23,6 @@ class AdminController extends Controller
                             ->get();
 
         $countQuestions = Answer::all();
-        
 
         return view('admin.index', compact('countResults', 'countQuestions'));
     }
