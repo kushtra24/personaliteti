@@ -64,6 +64,7 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 Route::group(['middleware' => 'web'], function () {
 
     Route::get('/admin', ['uses' => 'AdminController@index', 'as' => 'admin', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
+
     //Posts
     Route::get('/post', ['uses' => 'PostController@index', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);
     Route::get('/post/create', ['uses' => 'PostController@create', 'middleware' => 'roles', 'roles' => ['Admin', 'Author']]);

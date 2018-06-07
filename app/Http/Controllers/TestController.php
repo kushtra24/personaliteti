@@ -72,34 +72,10 @@ class TestController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function introExtroQuestionsResult(){
-        // if(){
-            //to get the short description
-            // $tipi = \App\Tipi::where('type', $this->finalType)->first();
 
             $results = DB::table('tests')->latest()->first();
 
-            // dd($results);
-
             return view('testi.result', compact('results'));
-
-                // return redirect('result');
-            // return view('testi.result')->with([
-            //     'finalType' => $this->finalType,
-            //     'introExtro' => $this->introExtro,
-            //     'FirstfinalProcentRez' => $this->FirstfinalProcentRez,
-            //     'intuSens' => $this->intuSens,
-            //     'nsfinalProcentRez' => $this->nsfinalProcentRez,
-            //     'feelingThinking' => $this->feelingThinking,
-            //     'ftfinalProcentRez' => $this->ftfinalProcentRez,
-            //     'judgingPerspecting' => $this->judgingPerspecting,
-            //     'jpfinalProcentRez' => $this->jpfinalProcentRez,
-            //     'rol_name' => $this->rol_name,
-            //     'tipi' => $tipi
-            // ]);
-        // }
-        // else{
-        //     return redirect('vlersimi');
-        // }
     }
 
 public function introExtroQuestions(CookieJar $cookieJar)
@@ -136,36 +112,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
     //     $answer->question_id = $qid;
     //     $answer->value = $value;
     // }
-
-    // Save the answers to the answeres table on the database
-    foreach(request()->input('q') as $qid => $value) {
-        $answer = Answer::find($qid);
-
-        if($value == -3){
-            $answer->m3++;
-        }
-        elseif($value == -2){
-            $answer->m2++;
-        }
-        elseif($value == -1){
-            $answer->m1++;
-        }
-        elseif($value == 0){
-            $answer->n0++;
-        }
-        elseif($value == 1){
-            $answer->p1++;
-        }
-        elseif($value == 2){
-            $answer->p2++;
-        }
-        elseif($value == 3){
-            $answer->p3++;
-        }
-        
-        $answer->save();
-    }
-    
+   
 
     $this->extrovertOrintrovert($introExtroResult);
 
@@ -177,7 +124,14 @@ public function introExtroQuestions(CookieJar $cookieJar)
 
     $this->finalTypeName($this->introExtro, $this->intuSens, $this->feelingThinking, $this->judgingPerspecting);
 
-    
+    // Save the answers to the answeres table on the database
+    foreach (request()->input('q') as $qid => $value) {
+        $answer = new Answer();    
+        $answer->question_id = $qid;
+        $answer->value = $value;
+        $answer->testee = TestCounter::first()->test_counter;;
+        $answer->save();
+    }
         $store = new Test();
 
         if (Auth::check()) {
@@ -213,7 +167,6 @@ public function introExtroQuestions(CookieJar $cookieJar)
 
     // return $this->introExtroQuestionsResult();
     return redirect('result');
-
 
 } //end of function
 
