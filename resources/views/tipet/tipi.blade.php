@@ -26,11 +26,8 @@
 
 	<section id="heading-welcomepage">
 		@foreach($tipi as $tipi)
-
 			<img src="../{{ $tipi->feat_img }}" alt="tipi featured" width="100%" class="img-responsive">
-			<h1>Tipi {{ $tipi->type }}</h1>
-			<h4>Nryshe njihet edhe si {{ $tipi->name }}</h4>
-			<hr>
+			
 		@endforeach
 	</section>
 
@@ -50,6 +47,10 @@
 	
 	<div class="row">
 		<div class="col-md-9">
+				<h1>Tipi {{ $tipi->type }}</h1>
+				<h4>Nryshe njihet edhe si {{ $tipi->name }}</h4>
+				<hr>
+				
 			<div class="description">
 				{!! $tipi->description !!}
 			</div>
