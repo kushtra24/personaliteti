@@ -37,12 +37,15 @@ class PageController extends Controller
      */
     public function store(PostToPage $request)
     {
-        $store = new Page;
+        // $store = new Page;
 
-        $store->title = $request['title'];
-        $store->slug = $request['slug'];
-        $store->content = $request['content'];
-        $store->save();
+        // $store->title = $request['title'];
+        // $store->slug = $request['slug'];
+        // $store->content = $request['content'];
+        // $store->save();
+
+        $store = Page::create($request->all());
+
 
         if ($store->save()) {
         $request->session()->flash('message.level', 'success');

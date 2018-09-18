@@ -40,8 +40,6 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-
-
         return view('profile.edit', compact('user'));
     }
 

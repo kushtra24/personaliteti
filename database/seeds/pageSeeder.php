@@ -29,114 +29,62 @@ class pageSeeder extends Seeder
         DB::table('pages')->insert([
             'title' => "Politikat privatesise",
             'slug' => "politikat_privatesise",
-            'content' => "<p>
-Our Contact Information
-This privacy policy has been compiled to better serve those who are concerned with how their ‘Personally identifiable information’ (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.
+            'content' => '<h1>Privacy Policy of personalitetet.com</h1>
 
-What personal information do we collect from the people that visit our blog, website or app?
-
-When ordering or registering on our site, as appropriate, you may be asked to enter your
-When do we collect information?
-
-We collect information from you when you subscribe to a newsletter, fill out a form or enter information on our site.
-
-How do we use your information?
-
-We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways:
-
-• To personalize user’s experience and to allow us to deliver the type of content and product offerings in which you are most interested.
-• To send periodic emails regarding your order or other products and services.
-
-How do we protect visitor information?
-
-Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible.
-
-We use regular Malware Scanning.
-
-We do not use an SSL certificate
-• We only provide articles and information. We never ask for personal or private information like email addresses, or credit card numbers.
-
-Do we use ‘cookies’?
-
-Yes. Cookies are small files that a site or its service provider transfers to your computer’s hard drive through your Web browser (if you allow) that enables the site’s or service provider’s systems to recognize your browser and capture and remember certain information. For instance, we use cookies to help us remember and process the items in your shopping cart. They are also used to help us understand your preferences based on previous or current site activity, which enables us to provide you with improved services. We also use cookies to help us compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future.
-
-We use cookies to:
-• Keep track of advertisements.
-
-You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser (like Internet Explorer) settings. Each browser is a little different, so look at your browser’s Help menu to learn the correct way to modify your cookies.
-
-If you disable cookies off, some features will be disabled It won’t affect the user’s experience that make your site experience more efficient and some of our services will not function properly.
-
-However, you can still place orders .
-
-Third-party disclosure
-
-We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information unless we provide users with advance notice. This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential. We may also release information when it’s release is appropriate to comply with the law, enforce our site policies, or protect ours or others’ rights, property, or safety.
-
-However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.
-
-Third-party links
-
-Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.
-
-Google
-
-Google’s advertising requirements can be summed up by Google’s Advertising Principles. They are put in place to provide a positive experience for users. https://support.google.com/adwordspolicy/answer/1316548?hl=en
-
-We have not enabled Google AdSense on our site but we may do so in the future.
-
-California Online Privacy Protection Act
-
-CalOPPA is the first state law in the nation to require commercial websites and online services to post a privacy policy. The law’s reach stretches well beyond California to require a person or company in the United States (and conceivably the world) that operates websites collecting personally identifiable information from California consumers to post a conspicuous privacy policy on its website stating exactly the information being collected and those individuals with whom it is being shared, and to comply with this policy. – See more at: http://consumercal.org/california-online-privacy-protection-act-caloppa/#sthash.0FdRbT51.dpuf
-
-According to CalOPPA we agree to the following:
-Users can visit our site anonymously.
-Once this privacy policy is created, we will add a link to it on our home page or as a minimum on the first significant page after entering our website.
-Our Privacy Policy link includes the word ‘Privacy’ and can be easily be found on the page specified above.
-
-Users will be notified of any privacy policy changes:
-• On our Privacy Policy Page
-Users are able to change their personal information:
-• By emailing us
-
-How does our site handle do not track signals?
-We honor do not track signals and do not track, plant cookies, or use advertising when a Do Not Track (DNT) browser mechanism is in place.
-
-Does our site allow third-party behavioral tracking?
-It’s also important to note that we allow third-party behavioral tracking
-
-COPPA (Children Online Privacy Protection Act)
-
-When it comes to the collection of personal information from children under 13, the Children’s Online Privacy Protection Act (COPPA) puts parents in control. The Federal Trade Commission, the nation’s consumer protection agency, enforces the COPPA Rule, which spells out what operators of websites and online services must do to protect children’s privacy and safety online.
-
-We do not specifically market to children under 13.
-
-Fair Information Practices
-
-The Fair Information Practices Principles form the backbone of privacy law in the United States and the concepts they include have played a significant role in the development of data protection laws around the globe. Understanding the Fair Information Practice Principles and how they should be implemented is critical to comply with the various privacy laws that protect personal information.
-
-In order to be in line with Fair Information Practices we will take the following responsive action, should a data breach occur:
-We will notify the users via in-site notification
-• Within 1 business day
-
-We also agree to the Individual Redress Principle, which requires that individuals have a right to pursue legally enforceable rights against data collectors and processors who fail to adhere to the law. This principle requires not only that individuals have enforceable rights against data users, but also that individuals have recourse to courts or government agencies to investigate and/or prosecute non-compliance by data processors.
-
-CAN SPAM Act
-
-The CAN-SPAM Act is a law that sets the rules for commercial email, establishes requirements for commercial messages, gives recipients the right to have emails stopped from being sent to them, and spells out tough penalties for violations.
-
-We collect your email address in order to:
-
-To be in accordance with CANSPAM we agree to the following:
-
-If at any time you would like to unsubscribe from receiving future emails, you can email us at
-and we will promptly remove you from ALL correspondence.
-
-Contacting Us
-
-If there are any questions regarding this privacy policy you may contact us using the information below.
+            <p>personalitetet.com operates the http://www.personalitetet.com website, which provides the SERVICE.</p>
             
-            </p>",
+            <p>This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the personalitetet.com website.</p>
+            
+            <p>If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
+            
+            <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at http://www.personalitetet.com, unless otherwise defined in this Privacy Policy.</p>
+            
+            <h2>Information Collection and Use</h2>
+            
+            <p>For a better experience while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to your name, phone number, and postal address. The information that we collect will be used to contact or identify you.</p>
+            
+            <h2>Log Data</h2>
+            
+            <p>We want to inform you that whenever you visit our Service, we collect information that your browser sends to us that is called Log Data. This Log Data may include information such as your computer’s Internet Protocol ("IP") address, browser version, pages of our Service that you visit, the time and date of your visit, the time spent on those pages, and other statistics.</p>
+            
+            <h2>Cookies</h2>
+            
+            <p>Cookies are files with small amount of data that is commonly used an anonymous unique identifier. These are sent to your browser from the website that you visit and are stored on your computer’s hard drive.</p>
+            
+            <p>Our website uses these "cookies" to collection information and to improve our Service. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your computer. If you choose to refuse our cookies, you may not be able to use some portions of our Service.</p>
+            
+            <h2>Service Providers</h2>
+            
+            <p>We may employ third-party companies and individuals due to the following reasons:</p>
+            
+            <ul>
+                <li>To facilitate our Service;</li>
+                <li>To provide the Service on our behalf;</li>
+                <li>To perform Service-related services; or</li>
+                <li>To assist us in analyzing how our Service is used.</li>
+            </ul>
+            
+            <p>We want to inform our Service users that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
+            
+            <h2>Security</h2>
+            
+            <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+            
+            <h2>Links to Other Sites</h2>
+            
+            <p>Our Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+            
+            <p>Children’s Privacy</p>
+            
+            <p>Our Services do not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
+            
+            <h2>Changes to This Privacy Policy</h2>
+            
+            <p>We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page. <a href="https://gdprprivacypolicy.net">This privacy policy was created with the GDPR Generator</a>.</p>
+            
+            <h2>Contact Us</h2>
+            
+            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
@@ -160,9 +108,7 @@ compliance with these Terms. These Terms apply to all visitors, users and
 others who access or use the Service.
 
 By accessing or using the Service you agree to be bound by these Terms. If you
-disagree with any part of the terms then you may not access the Service. This
-Terms of Service agreement for personalitetet based on the Terms and
-Conditions from [TermsFeed](https://termsfeed.com/).
+disagree with any part of the terms then you may not access the Service.
 
 Accounts  
 --------
@@ -256,16 +202,25 @@ If you have any questions about these Terms, please contact us.
         ]);
 
         DB::table('pages')->insert([
-            'title' => "impressum",
+            'title' => "IMPRESSUM",
             'slug' => "impressum",
-            'content' => "<p>Content of a simple post</p>",
+            'content' => '
+<p>Personalitetet.com është faqe edukuese dhe vetdijesuëse rreth tipeve të përsonaliteteve, bazuar në studimët e Carl G. Jung</p>
+<p>Për çfardo kërkes apo ankesë mund të drejtohuni në informacionet në vazhdim</p>
+
+Kontakt
+<a href:mailto:info@personalitetet.com>info@personalitetet.com</a>
+            ',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('pages')->insert([
-            'title' => "Pyetjet me te shpeshta",
+            'title' => "Pyetjët më të shpeshta",
             'slug' => "pts",
-            'content' => "<p>Content of a simple post</p>",
+            'content' => '
+            <h2> </h2>
+            
+            ',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
     }

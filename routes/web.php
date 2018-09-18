@@ -32,6 +32,7 @@ Route::group(['test' => 'test'], function(){
 });
 
 Route::post('/search', 'PostController@search');
+Route::post('/admin', 'AdminController@questionResult');
 
  Route::get('faqe/{slug}', function($slug)
     {

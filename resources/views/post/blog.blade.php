@@ -42,7 +42,10 @@
 					<div class="featured-image">
 						@if($post->hasMedia('thumbnail'))
 						<img src="{{ $post->firstMedia('thumbnail')->getUrl() }}" alt="featured img" class="img-responsive">
+						@else
+						<img src="/images/blog-default.png" alt="featured img" class="img-responsive">
 						@endif
+						
 
 					</div>
 					<div class="post-container">

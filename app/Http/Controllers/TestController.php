@@ -80,9 +80,6 @@ class TestController extends Controller
 
 public function introExtroQuestions(CookieJar $cookieJar)
 {
-    // increment the test Counter by one
-    DB::table('test_counters')->increment('test_counter');
-
 
     // store the final results of the question
     $introExtroResult = 0;
@@ -110,6 +107,13 @@ public function introExtroQuestions(CookieJar $cookieJar)
     }
 
 
+    // foreach (request()->input('q') as $qid => $value) {
+    //     $answer = new Answer();    
+    //     $answer->question_id = $qid;
+    //     $answer->value = $value;
+    // }
+   
+
     $this->extrovertOrintrovert($introExtroResult);
 
     $this->intuitiveOrSensing($intuitionSensingResult);
@@ -128,7 +132,6 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $answer->testee = TestCounter::first()->test_counter;;
         $answer->save();
     }
-
         $store = new Test();
 
         if (Auth::check()) {
@@ -158,6 +161,9 @@ public function introExtroQuestions(CookieJar $cookieJar)
         Cookie::queue(Cookie::make('jpfinalProcentRez', $this->jpfinalProcentRez, 3000));
         Cookie::queue(Cookie::make('rol_name', $this->rol_name, 3000));
     // }
+
+    // increment the test Counter by one
+    DB::table('test_counters')->increment('test_counter');
 
     // return $this->introExtroQuestionsResult();
     return redirect('result');
