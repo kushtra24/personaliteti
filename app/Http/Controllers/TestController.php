@@ -124,14 +124,6 @@ public function introExtroQuestions(CookieJar $cookieJar)
 
     $this->finalTypeName($this->introExtro, $this->intuSens, $this->feelingThinking, $this->judgingPerspecting);
 
-    // Save the answers to the answeres table on the database
-    foreach (request()->input('q') as $qid => $value) {
-        $answer = new Answer();    
-        $answer->question_id = $qid;
-        $answer->value = $value;
-        $answer->testee = TestCounter::first()->test_counter;;
-        $answer->save();
-    }
         $store = new Test();
 
         if (Auth::check()) {
@@ -164,6 +156,15 @@ public function introExtroQuestions(CookieJar $cookieJar)
 
     // increment the test Counter by one
     DB::table('test_counters')->increment('test_counter');
+
+    // Save the answers to the answeres table on the database
+    foreach (request()->input('q') as $qid => $value) {
+        $answer = new Answer();    
+        $answer->question_id = $qid;
+        $answer->value = $value;
+        $answer->testee = TestCounter::first()->test_counter;;
+        $answer->save();
+    }
 
     // return $this->introExtroQuestionsResult();
     return redirect('result');
@@ -225,13 +226,13 @@ public function intuitiveOrSensing($result){
 
         //Determine of the results are introvertet or extrovertet
         if ($result < 0) {
-            $this->feelingThinking = "Mendim (Thinking)";
+            $this->feelingThinking = "Arsye";
         }
         elseif ($result === 0) {
-            $this->feelingThinking = "Ndjenjë (Feeling)";
+            $this->feelingThinking = "Ndjenjë";
         }
         else{
-            $this->feelingThinking = "Ndjenjë (Feeling)";
+            $this->feelingThinking = "Ndjenjë";
         }
 
         $this->evaluate($result);
@@ -247,13 +248,13 @@ public function intuitiveOrSensing($result){
 
         //Determine of the results are introvertet or extrovertet
         if ($result < 0) {
-            $this->judgingPerspecting = "Perspektivë";
+            $this->judgingPerspecting = "Kërkues";
         }
         elseif ($result === 0) {
-            $this->judgingPerspecting = "Perspektivë";
+            $this->judgingPerspecting = "Kërkues";
         }
         else{
-            $this->judgingPerspecting = "Gjykues (Judging)";
+            $this->judgingPerspecting = "Gjykues";
         }
 
         $this->evaluate($result);
@@ -282,67 +283,67 @@ public function evaluate($result){
 
 // putting out the final 4 letters of the personality type.
 public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgingPerspecting){
-    if ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Gjykues (Judging)"){
+    if ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Arsye" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "INTJ";
         $this->rol_name = "Arkitekti";
     }
-    elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Perspektivë"){
+    elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Arsye" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "INTP";
         $this->rol_name ="Racionali";
     }
-    elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Gjykues (Judging)"){
+    elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Arsye" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ENTJ";
         $this->rol_name ="Komanderi";
     }
-    elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Perspektivë"){
+    elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Arsye" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ENTP";
         $this->rol_name ="Debatisti";
     }
-    elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
+    elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "INFJ";
         $this->rol_name ="Diplomati";
     }
-    elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Perspektivë"){
+    elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "INFP";
         $this->rol_name ="Mediatori";
     }
-    elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
+    elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ENFJ";
         $this->rol_name ="Protagonisti";
     }
-    elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Perspektivë"){
+    elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ENFP";
         $this->rol_name ="Mikpritesi";
     }
-    elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
+    elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ISFJ";
         $this->rol_name ="Logjistiku";
     }
-    elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Gjykues (Judging)"){
+    elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Arsye" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ISTJ";
         $this->rol_name ="Mbrojtesi";
     }
-    elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
+    elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ESTJ";
         $this->rol_name ="Ekzekutivi";
     }
-    elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Gjykues (Judging)"){
+    elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ESFJ";
         $this->rol_name ="Konsulenti";
     }
-    elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Perspektivë"){
+    elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Arsye" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ISTP";
         $this->rol_name ="Virtuozi";
     }
-    elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Perspektivë"){
+    elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ISFP";
         $this->rol_name ="Adventuristi";
     }
-    elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Mendim (Thinking)" && $judgingPerspecting == "Perspektivë"){
+    elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Arsye" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ESTP";
         $this->rol_name ="Ndermarresi";
     }
-    elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë (Feeling)" && $judgingPerspecting == "Perspektivë"){
+    elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ESFP";
         $this->rol_name ="Lozenjeri";
     }

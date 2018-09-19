@@ -171,7 +171,7 @@
                         <table class="table table-striped table-responsive">
                             <thead>
                                 <th>Kodi</th>
-                                <th>Numri</th>
+                                <th>Shuma</th>
                             </thead>
                             @foreach($countResults as $countResult)
                             <tr>

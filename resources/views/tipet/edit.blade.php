@@ -70,9 +70,58 @@
                         </div>
 
                         <div class="form-group">
-                          <label for="editor" class="control-label">Pershkrimi</label>
+                          <label for="editor" class="control-label">Hyrje</label>
                             <div class="col-sm-12">
-                          <textarea name="description" id="editor">{{ $tipi->description }}</textarea>
+                          <textarea name="hyrje" id="editor">{{ $tipi->hyrje }}</textarea>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="editor" class="control-label">Forcat - Dobesit</label>
+                            <div class="col-sm-12">
+                          <textarea name="forcatDobesit" id="editor">{{ $tipi->forcatDobesit }}</textarea>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="editor" class="control-label">Lidhjet</label>
+                            <div class="col-sm-12">
+                          <textarea name="lidhjet" id="editor">{{ $tipi->lidhjet }}</textarea>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="editor" class="control-label">Miqesite</label>
+                            <div class="col-sm-12">
+                          <textarea name="miqesite" id="editor">{{ $tipi->miqesite }}</textarea>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="editor" class="control-label">Si Prinder</label>
+                            <div class="col-sm-12">
+                          <textarea name="siPrinder" id="editor">{{ $tipi->siPrinder }}</textarea>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="editor" class="control-label">Profesioni</label>
+                            <div class="col-sm-12">
+                          <textarea name="profesioni" id="editor">{{ $tipi->profesioni }}</textarea>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="editor" class="control-label">VendiPunes</label>
+                            <div class="col-sm-12">
+                          <textarea name="vendiPunes" id="editor">{{ $tipi->vendiPunes }}</textarea>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="editor" class="control-label">Shtese</label>
+                            <div class="col-sm-12">
+                          <textarea name="shtese" id="editor">{{ $tipi->shtese }}</textarea>
                            </div>
                         </div>
 

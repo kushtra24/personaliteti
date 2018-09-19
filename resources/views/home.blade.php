@@ -187,16 +187,16 @@
                               <td> <i class="fas fa-user-circle"></i> <a href="/tipi/{{ $testResult->finaltype }}"><b>{{ $testResult->finaltype }}</b></a>  - {{ $testResult->rol_name }}</td>
                           </tr>
                           <tr>
-                              <td><b>{{ $testResult->intro_extro }}</b> {{ $testResult->first_final_procent_rez }}% </td>
+                              <td><b>{{ $testResult->intro_extro }}</b> <span>{{ $testResult->first_final_procent_rez }}%</span> </td>
                           </tr>
                           <tr>
-                              <td><b>{{ $testResult->intu_sens }}</b> {{ $testResult->ns_final_procent_rez }} %</td>
+                              <td><b>{{ $testResult->intu_sens }}</b> <span>{{ $testResult->ns_final_procent_rez }}%</span></td>
                           </tr>
                           <tr>
-                              <td><b>{{ $testResult->feeling_thinking }}</b> {{ $testResult->ft_final_procent_rez }}%</td>
+                              <td><b>{{ $testResult->feeling_thinking }}</b> <span>{{ $testResult->ft_final_procent_rez }}%</span></td>
                           </tr>
                           <tr>
-                              <td><b>{{ $testResult->judging_perspecting }}</b> {{ $testResult->jp_final_procent_rez }}%</td>
+                              <td><b>{{ $testResult->judging_perspecting }}</b> <span>{{ $testResult->jp_final_procent_rez }}%</span></td>
                           </tr>
                           <tr>
                               <td><i class="fas fa-id-card"></i> {{ $testResult->id }} <i class="fas fa-clock"></i> {{ $testResult->created_at->diffForHumans() }} </td>

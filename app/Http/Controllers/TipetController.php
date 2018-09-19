@@ -92,7 +92,14 @@ class TipetController extends Controller
         $tipi->type = $request['type'];
         $tipi->name = $request['name'];
         $tipi->shortDescription = $request['shortDescription'];
-        $tipi->description = $request['description'];
+        $tipi->hyrje = $request['hyrje'];
+        $tipi->forcatDobesit = $request['forcatDobesit'];
+        $tipi->lidhjet = $request['lidhjet'];
+        $tipi->miqesite = $request['miqesite'];
+        $tipi->siPrinder = $request['siPrinder'];
+        $tipi->profesioni = $request['profesioni'];
+        $tipi->vendiPunes = $request['vendiPunes'];
+        $tipi->shtese = $request['shtese'];
 
         $tipi->save();
 

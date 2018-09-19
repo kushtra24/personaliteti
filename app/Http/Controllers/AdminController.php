@@ -31,6 +31,7 @@ class AdminController extends Controller
                             ->get();
 
         $getTestee = request('testee');
+        
         $answers = Answer::with('question')->where('testee', '=', $getTestee)->get();
     
         $questions = Question::withCount([

@@ -251,7 +251,8 @@
       changeYear: true,
       dateFormat: "dd-mm-yy",
       minDate: "-99Y", 
-      maxDate: "-12Y" 
+      maxDate: "-12Y",
+      yearRange: "-99:-12",
     });
   } );
 

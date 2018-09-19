@@ -201,8 +201,9 @@ class PostController extends Controller
         }
 
         $posts = $posts->get();
+        $postCounter = Post::count(id);
         
-        return view('post.archiveFilter', compact('posts'));
+        return view('post.archiveFilter', compact('posts', 'postCounter'));
     }
     
 
@@ -213,8 +214,10 @@ class PostController extends Controller
         $archives = Post::archives();
 
         $categories = Category::all();
+        
+        $postCounter = Post::count('id');
 
-        return view('post.blog', compact('posts', 'archives', 'categories'));
+        return view('post.blog', compact('posts', 'archives', 'categories', 'postCounter'));
     }
 
 
@@ -225,7 +228,6 @@ class PostController extends Controller
 
         $query = Post::where('title','LIKE','%'.$q.'%')->orWhere('content','LIKE','%'.$q.'%')->get();
         
-
         if(count($query) > 0)
             return view('post.searchResult')->withDetails($query)->withQuery ( $q );
         else

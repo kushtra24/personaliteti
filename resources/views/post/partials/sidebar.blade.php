@@ -20,9 +20,11 @@
             @foreach($archives as $archive)
             <li>
             	<a href="/archiveFilter?month={{ $archive->month }}&year={{ $archive->year }}" class="archives">{{$archive->month}} <span>{{ $archive->year }}</span></a>
-            	{{-- {{ $archive->month }} --}}
+                {{-- {{ $archive->month }} --}}
+                
             </li>
             @endforeach
+            <p>{{ $postCounter }} postime deri me tani </p>
         </ul>
     </div>
     <div id="sidebar-categories">
@@ -37,18 +39,19 @@
         </ul>
     </div>
 
-@if(Request::is('blog'))
-
+@if(Request::is('/blog'))
 @else
     <div id="sidebar-latest">
         <h4>Të fundit</h4>
         @foreach($posts->slice(0, 5) as $post)
             <a href="/blog/{{ $post->id }}">{{ $post->title }}</a>
+
             {{-- {!! str_limit($post->content, 100) !!} --}}
             <hr>
         @endforeach
     </div>
 @endif
+
 
 </div>
 

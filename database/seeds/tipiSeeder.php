@@ -14,379 +14,276 @@ class tipiSeeder extends Seeder
         DB::table('tipis')->insert([
             'type' => "INTJ",
 	        'name' => "Arkitekti",
-            'description' => '<p>&Euml;sht&euml; vetmi n&euml; maje, por pasi q&euml; jan&euml; nj&euml; prej personaliteteve m&euml; t&euml; rralla dhe m&euml; t&euml; aft&euml; strategjikisht, INTJ-t&euml; e kuptojn&euml; k&euml;t&euml;. INTJ-t&euml; p&euml;rb&euml;jn&euml; vet&euml;m dy p&euml;rqind t&euml; popullsis&euml; dhe femrat me k&euml;t&euml; lloj personaliteti jan&euml; ve&ccedil;an&euml;risht t&euml; rralla, duke p&euml;rb&euml;r&euml; vet&euml;m 0.8% t&euml; popullsis&euml;- &euml;sht&euml; shpesh sfid&euml; p&euml;r ta t&euml; gjejn&euml; njer&euml;z q&euml; mendojn&euml; si ta dhe t&euml; cil&euml;t jan&euml; n&euml; gjendje t&euml; shtyhen me intelektualizmin e pam&euml;shirsh&euml;m dhe manovrat e shahut. Njer&euml;zit me k&euml;t&euml; lloj personaliteti jan&euml; imagjinar&euml; por t&euml; vendosur, ambicioz por privat, jasht&euml;zakonisht kurioz por nuk e harxhojn&euml; energjin&euml; e tyre pa nevoj&euml;.</p>
-<p>Me nj&euml; etje t&euml; natyrshme p&euml;r dituri q&euml; shfaqet n&euml; f&euml;mij&euml;ri, INTJ-ve shpesh u ipet titulli &ldquo;apasionues i librit&rdquo; si f&euml;mij&euml;. Edhe pse bashk&euml;moshatar&euml;t e tyre synojn&euml; t&rsquo;i ofendojn&euml;, INTJ-t&euml; fillojn&euml; t&euml; identifikohen me k&euml;t&euml; dhe jan&euml; madje krenar&euml;, duke shijuar trungun e gjer&euml; e t&euml; thell&euml; t&euml; dituris&euml; s&euml; tyre. INTJ-t&euml; gjithashtu p&euml;lqejn&euml; t&euml; ndajn&euml; me t&euml; tjer&euml;t at&euml; &ccedil;far&euml; dijn&euml;, me vet&euml;besim n&euml; njohurin&euml; q&euml; kan&euml; p&euml;r l&euml;nd&euml; t&euml; caktuara, por p&euml;r shkak t&euml; cil&euml;sive Intuitive (N) dhe Judging (J) ata parap&euml;lqejn&euml; t&euml; krijojn&euml; dhe zbatojn&euml; nj&euml; plan t&euml; shk&euml;lqyer brenda fush&euml;s s&euml; &nbsp;tyre n&euml; vend se t&euml; ndajn&euml; mendimet e tyre sikur t&euml; ishin thashetheme.</p>
-<p><em>&nbsp;&ldquo;Nuk e ke t&euml; drejt&euml;n e mendimit t&euml; lir&euml;. E ke t&euml; drejt&euml;n e mendimit t&euml; informuar. Askush nuk e ka t&euml; drejt&euml;n e t&euml; qen&euml;t injorant.&rdquo;</em></p>
-<p><em>Harlan Ellison</em></p>
-<p>Paradoksal p&euml;r shum&euml; t&euml; tjer&euml;, INTJ-t&euml; jan&euml; n&euml; gjendje t&euml; jetojn&euml; me kontradikta t&euml; m&euml;dha t&euml; cilat sidoqoft&euml; kan&euml; mjaft kuptim- t&euml; pakt&euml;n n&euml;se i shikojm&euml; prej nj&euml; perspektive racionale. P&euml;r shembull, INTJ-t&euml; jan&euml; n&euml; t&euml; njёjt&euml;n koh&euml; edhe idealist&euml;t m&euml; optimist edhe cinik&euml;t m&euml; t&euml; m&euml;dhenj, kombinim n&euml; dukje i pamundur. Por kjo &euml;sht&euml; shkaku q&euml; INTJ-t&euml; besojn&euml; se me p&euml;rpjekje, intelegjenc&euml; dhe interesim, asgj&euml; nuk &euml;sht&euml; e pamundur nd&euml;rsa n&euml; t&euml; njёjt&euml;n koh&euml; ata besojn&euml; se njer&euml;zit jan&euml; t&euml; interesuar vet&euml;m n&euml; p&euml;rfitime vetiake, shum&euml; dembel dhe shkurtpam&euml;s p&euml;r t&rsquo;i arritur k&euml;to rezultate fantastike. Prap&euml; pikpamja cinike e realitetit v&euml;shtir&euml; se ndalon nj&euml; INTJ t&euml; interesuar p&euml;r t&euml; arrituar rezultatin t&euml; cilin beson se &euml;sht&euml; i r&euml;nd&euml;sish&euml;m.</p>
-<p><strong>Nё &ccedil;&euml;shtje t&euml; parimit, q&euml;ndro i pal&euml;kundur</strong></p>
-<p>INTJ-t&euml; rrezatojn&euml; vet&euml;besim dhe nj&euml; aureol&euml; t&euml; misterit, dhe v&euml;shgimet e tyre mendjemprehta, idet&euml; origjinale e logjika mahnit&euml;se u mund&euml;son atyre t&euml; b&euml;jn&euml; ndryshim me an&euml; t&euml; vullnetit dhe forc&euml;s s&euml; personalitetit. Nganj&euml;her&euml;, duket sikur INTJ-t&euml; kan&euml; prirje n&euml; zb&euml;rthimin dhe rind&euml;rtimin e &ccedil;do ideje ose sistemi me t&euml; cilin p&euml;rballen, duke dh&euml;n&euml; nj&euml; ndjenj&euml; perfeksionizmi madje edhe morali. &Ccedil;dokush q&euml; nuk ka talent t&euml; shkoj&euml; n&euml; hapa t&euml; barabart&euml; me proceset e INTJ-ve ose akoma m&euml; keq n&euml;se ata nuk shohin r&euml;nd&euml;sin&euml; e tyre, ka gjas&euml; t&euml; humb menj&euml;her&euml; dhe p&euml;rgjithmon&euml; respektin e tyre.</p>
-<p>Rregullat, kufizimet dhe traditat janё mallkim p&euml;r INTJ-t&euml; - &ccedil;do gj&euml; duhet t&euml; jet&euml; e hapur p&euml;r dyshim dhe rivler&euml;sim dhe n&euml;se shohin ndonj&euml; rrug&euml; INTJ-t&euml; do t&euml; veprojn&euml; n&euml; m&euml;nyr&euml; t&euml; pap&euml;lqyeshme q&euml; t&euml; realizojn&euml; idet&euml; dhe metodat e tyre t&euml; cilat jan&euml; teknikisht m&euml; t&euml; mira, nganj&euml;her&euml; t&euml; pandjeshme dhe thuajse gjithmon&euml; jokonformiste.</p>
-<p>Kjo nuk duhet t&euml; merret gabimisht si ngutshm&euml;ri- INTJ-t&euml; do t&euml; p&euml;rpiqen t&euml; q&euml;ndrojn&euml; racional pa marr&euml; parasysh sa t&euml;rheq&euml;s mund t&euml; duket q&euml;llimi p&euml;rfundimtar. &Ccedil;do ide pa marr&euml; parasysh a ka lindur nga brenda apo ka ardhur nga jasht&euml;, duhet patjet&euml;r t&euml; kaloj filterin e pam&euml;shirsh&euml;m dhe t&euml; p&euml;rhersh&euml;m &ldquo;a do t&euml; funksionoj kjo?&rdquo;. Ky mekaniz&euml;m zbatohet &ccedil;do her&euml;, tek &ccedil;do gj&euml; dhe &ccedil;dokush dhe kjo u shkakton INTJ-ve problem.</p>
-<p><strong>Njeriu reflekton m&euml; shum&euml; n&euml;se udh&euml;ton vet&euml;m</strong></p>
-<p>INTJ-t&euml; jan&euml; t&euml; shk&euml;lqyesh&euml;m dhe me vet&euml;besim n&euml; trungun e dituris&euml; q&euml; kan&euml; fituar me koh&euml;, por fatkeq&euml;sisht ana shoq&euml;rore ka pak gjasa t&euml; jet&euml; nj&euml;ra prej atyre &ccedil;&euml;shtjeve. G&euml;njeshtrat e vogla, bisedat e thjeshta e t&euml; pakuptimta jan&euml; shum&euml; t&euml; v&euml;shtira p&euml;r nj&euml; tip q&euml; vuan p&euml;r v&euml;rtet&euml;si dhe thell&euml;si, por INTJ-t&euml; mund t&euml; shkojn&euml; aq larg sa t&euml; shohin normat shoq&euml;rore si budallall&euml;k. Ironikisht, &euml;sht&euml; shpesh m&euml; s&euml; miri p&euml;r ta t&euml; q&euml;ndrojn&euml; aty ku jan&euml; rehat- larg qendr&euml;s s&euml; v&euml;mendjes- ku vet&euml;besimi i natyrsh&euml;m mbizot&euml;ron n&euml; INTJ-t&euml;, gjat&euml; koh&euml;s q&euml; punojn&euml; me gj&euml;ra t&euml; njohura ata mund t&euml; sh&euml;rbejn&euml; si drejtues s&euml; vetes, duke t&euml;rhequr njer&euml;zit me temperament apo interesa t&euml; p&euml;rbashk&euml;t, n&euml; m&euml;nyr&euml; romantike apo ndryshe.</p>
-<p>INTJ-t&euml; p&euml;rcaktohen nga prirja e tyre p&euml;r t&euml; l&euml;vizur p&euml;rmes jet&euml;s sikur ajo t&euml; ishte nj&euml; tabel&euml; gjigante e shahut, duke l&euml;vizur pjes&euml;t me v&euml;mendje dhe intelegjenc&euml;, gjithmon&euml; duke p&euml;rdorur taktika t&euml; reja, strategji dhe plane t&euml; mundshme, vazhdimisht duke i tejkaluar moshatar&euml;t e tyre n&euml; m&euml;nyr&euml; q&euml; t&euml; mbajn&euml; kontrollin e nj&euml; situate gjat&euml; koh&euml;s q&euml; rrisin lirin&euml; e tyre p&euml;r t&euml; l&euml;vizur. Kjo nuk do t&euml; thot&euml; q&euml; INTJ-t&euml; veprojn&euml; pa nd&euml;rgjegje, por p&euml;r shum&euml; tipe Feeling (F), mosp&euml;lqimi i INTJ-ve p&euml;r t&euml; vepruar n&euml; baz&euml; t&euml; ndjenjave e b&euml;n t&euml; duket n&euml; at&euml; m&euml;nyr&euml; dhe kjo shpjegon pse shume kriminel&euml; fiktiv (dhe heronj&euml; t&euml; keqkuptuar) krijohen n&euml; k&euml;t&euml; tip t&euml; personalitetit.</p>
-<h2>2. Pikat e forta dhe dob&euml;sit&euml; e INTJ-ve</h2>
-<h2>Pikat e forta t&euml; INTJ-ve</h2>
-<p><strong>T&euml; shpejt, imagjinar&euml; dhe me mendje strategjike</strong>- INTJ-t&euml; krenohen me mendjet e tyre, duke shfryt&euml;zuar &ccedil;do shanc&euml; p&euml;r t&euml; rritur diturin&euml; e tyre dhe kjo tregon fuqin&euml; dhe fleksibilitetin e t&euml; menduarit t&euml; tyre strategjik. Kurioz t&euml; pangopur dhe gjithmon&euml; t&euml; gatsh&euml;m p&euml;r nj&euml; sfid&euml; intelektuale, INTJ-t&euml; mund t&euml; shohin gj&euml;rat prej shum&euml; pik&euml;pamjeve. INTJ-t&euml; nuk e p&euml;rdorin kreativitetin dhe imagjinat&euml;n e tyre p&euml;r pun&euml; artistike, por p&euml;r t&euml; planifikuar mund&euml;sit&euml; dhe drejtimet e veprimeve p&euml;r &ccedil;do skenar&euml; t&euml; mundsh&euml;m.</p>
-<p><strong>Vet&euml;besim t&euml; lart&euml;</strong>- INTJ-t&euml; i besojn&euml; racionalizmit t&euml; tyre m&euml; shum&euml; se &ccedil;do gj&euml;j&euml; tjet&euml;r, k&euml;shtu q&euml; kur ata arrijn&euml; n&euml; nj&euml; p&euml;rfundim, nuk kan&euml; arsye t&euml; dyshojn&euml; n&euml; gjetjet e tyre. Kjo krijon nj&euml; stil komunikimi t&euml; sinqert&euml; dhe t&euml; drejtp&euml;rdrejt&euml; q&euml; nuk zbrapset nga pritshm&euml;rit&euml; apo rolet shoq&euml;rore. Kur INTJ-t&euml; kan&euml; t&euml; drejt&euml;, ata kan&euml; t&euml; drejt&euml; dhe asnj&euml; lloj triku politik nuk do ta ndryshon at&euml; fakt- pa marr&euml; parasysh a &euml;sht&euml; t&euml; p&euml;rmir&euml;suarit e ndonj&euml; personi, procesi, apo vetvetes, ata nuk zgjedhin rrug&euml; tjet&euml;r.</p>
-<p><strong>T&euml; pavarur dhe p&euml;rcaktues</strong>- ky kreativitet, vet&euml;besim dhe logjik&euml; b&euml;hen bashk&euml; p&euml;r t&euml; formuar persona t&euml; cil&euml;t i dalin zot vetes dhe marrin p&euml;rgjegj&euml;si p&euml;r veprimet e tyre. Personalitetet me autoritet nuk u b&euml;jn&euml; p&euml;rshtypje INTJ-ve dhe as normat shoq&euml;rore e traditat. Pa marr parasysh sa e famshme &euml;sht&euml; di&ccedil;ka, n&euml;se ata kan&euml; nj&euml; ide m&euml; t&euml; mir&euml;, INTJ-t&euml; do t&rsquo;i dalin kund&euml;r &ccedil;dokujt q&euml; kan&euml; nevoj&euml; vet&euml;m q&euml; ta ndryshojn&euml; at&euml; gj&euml;. Ose nj&euml; ide &euml;sht&euml; krejt racionale ose &euml;sht&euml; e gabuar dhe INTJ- do t&euml; zbatojn&euml; k&euml;t&euml; n&euml; argumentet e tyre si dhe n&euml; sjelljet e tyre, duke q&euml;ndruar t&euml; qet&euml; dhe t&euml; shk&euml;putur nga keto konflikte q&euml; nganj&euml;her&euml; jan&euml; t&euml; ngarkuara me ndjenja. INTJ-t&euml; do t&euml; preken vet&euml;m nga ato q&euml; ndjekin rregullin e tyre.</p>
-<p><strong>Pun&euml;tor&euml; dhe t&euml; vendosur</strong>- n&euml;se di&ccedil;ka zgjon interesin e tyre, INTJ-t&euml; mund t&euml; jen&euml; &ccedil;udit&euml;risht t&euml; p&euml;rkushtuar n&euml; pun&euml;n e tyre, duke shpenzuar or&euml; t&euml; t&euml;ra dhe p&euml;rpjekje t&euml; m&euml;dha p&euml;r t&euml; realizuar nj&euml; ide. INTJ-t&euml; jan&euml; jasht&euml;zakonisht t&euml; aft&euml; dhe n&euml;se detyrat e p&euml;rmbushin kriterin e q&euml;llimit t&euml; m&euml;tutjesh&euml;m, ata do t&euml; gjejn&euml; nj&euml; m&euml;nyr&euml; t&euml; bashkojn&euml; dhe t&rsquo;i p&euml;rfundojn&euml; ato detyra. Sidoqoft&euml;, kjo d&euml;shir&euml; p&euml;r efikasitet mund t&euml; &ccedil;oj n&euml; nj&euml; lloj dembelie, ku INTJ-t&euml; gjejn&euml; m&euml;nyra t&rsquo;i kalojn&euml; gj&euml;rat q&euml; duken t&euml; panevojshme dhe q&euml; nuk duken se k&euml;rkojn&euml; sasi t&euml; madhe t&euml; t&euml; menduarit- kjo mund t&euml; jet&euml; e rrezikshme pasi q&euml; nganj&euml;her&euml; t&euml; rikontrollosh pun&euml;t nuk &euml;sht&euml; rregull i panevojsh&euml;m.</p>
-<p><strong>Mendjehapur</strong>- gjith&euml; ky racionaliz&euml;m &ccedil;on n&euml; nj&euml; tip personaliteti intelektualisht perceptues, pasi q&euml; INTJ-t&euml; q&euml;ndrojn&euml; t&euml; hapur p&euml;r ide t&euml; reja, t&euml; mb&euml;shtetura n&euml; logjik&euml;, edhe n&euml;se (e sidomos n&euml;se) i v&euml;rtetojn&euml; si t&euml; gabuara mendimet e m&euml;hershme t&euml; INTJ-ve. Kur p&euml;rballen me vende t&euml; panjohura, si&ccedil; jan&euml; stilet e ndryshme t&euml; jetes&euml;s, INTJ-t&euml; p&euml;rdorin aft&euml;sin&euml; e tyre p&euml;r t&rsquo;i kuptuar gj&euml;rat dhe pavar&euml;sinё poashtu dhe mosp&euml;lqimin ndaj rregullave dhe traditave, q&euml; &ccedil;on n&euml; ndjenja shoq&euml;rore liberale.</p>
-<p><strong>Njoh&euml;s n&euml; shum&euml; fusha, ekspert&euml; n&euml; asnj&euml;</strong>- mendja e tyre e hapur, vendosm&euml;ria, pavar&euml;sia, vet&euml;besimi dhe aft&euml;sit&euml; strategjike krijojn&euml; persona t&euml; cil&euml;t jan&euml; t&euml; gatsh&euml;m t&euml; b&euml;jn&euml; &ccedil;do gj&euml; q&euml; duan. Duke arritur t&euml; analizojn&euml; &ccedil;do gj&euml; q&euml; jeta ua v&euml; p&euml;rpara, INTJ-t&euml; kan&euml; aft&euml;si t&euml; p&euml;rdorin metodologjin&euml; themelore e thuajse t&euml; gjitha sistemeve dhe t&euml; zbatojn&euml; k&euml;to koncepte kudo q&euml; ka nevoj&euml;. INTJ-t&euml; priren t&euml; zgjedhin profesione duke filluar prej arkitekt&euml;ve IT e deri tek politikan&euml; gjeni.</p>
-<p><strong>Dob&euml;sit&euml; e INTJ-ve</strong></p>
-<p><strong>Arrogant</strong>-INTJ-t&euml; jan&euml; plot&euml;sisht n&euml; gjendje ta &ccedil;ojn&euml; vet&euml;besimin e tyre shume lart&euml;, duke besuar gabimisht se i kan&euml; zgjidhur t&euml; gjitha problemet p&euml;rkat&euml;se t&euml; nj&euml; &ccedil;&euml;shtje dhe duke mbyllur veten ndaj mendimeve t&euml; atyre q&euml; besojn&euml; se jan&euml; intelektualisht m&euml; t&euml; ul&euml;t. Kombinuar me mosrrespektin q&euml; kan&euml; ndaj normave shoq&euml;rore, INTJ-t&euml; mund t&euml; jen&euml; eg&euml;rsisht t&euml; pandjesh&euml;m n&euml; t&euml; b&euml;rit t&euml; qart&euml; t&euml; mendimeve t&euml; tyre ndaj t&euml; tjer&euml;ve.</p>
-<p><strong>Gjykues</strong>- INTJ-t&euml; priren t&euml; kan&euml; besim t&euml; plot&euml; n&euml; procesin e tyre t&euml; t&euml; menduarit, sepse argumentet racionale jan&euml; thuajse gjithmon&euml; t&euml; sakta- t&euml; pakt&euml;n n&euml; teori. N&euml; praktik&euml;, faktor&euml;t emocional dhe historia jan&euml; shum&euml; me ndikim dhe si dob&euml;si e INTJ-ve &euml;sht&euml; se i konsiderojn&euml; k&euml;ta faktor&euml; dhe p&euml;rsonat q&euml; i p&euml;rqafojn&euml; ato si jo logjik, duke mos i shqyrtuar ato dhe duke i konsideruar mb&euml;shtet&euml;sit e tyre t&euml; bllokuar n&euml; nj&euml; nivel t&euml; ul&euml;t t&euml; mendimit, duke e b&euml;r&euml; t&euml; pamundur t&euml; d&euml;gjohen.</p>
-<p><strong>Tejet analitik</strong>- nj&euml; tem&euml; q&euml; p&euml;rs&euml;ritet shpesh me INTJ-t&euml; &euml;sht&euml; aft&euml;sia e tyre analitike, por kjo pik&euml; e fort&euml; mund t&euml; kthehet n&euml; t&euml; met&euml; aty ku logjika nuk udh&euml;heq- si&ccedil; &euml;sht&euml; me lidhjet njer&euml;zore. Kur mendjet e tyre kritike dhe nganj&euml;her&euml; niveli i perfeksionizmit neurotik (si&ccedil; ndodh&euml; shpesh me INTJ-t&euml; turbulent) zbatohen tek njer&euml;zit e tjer&euml; dhe p&euml;rve&ccedil; shok&euml;ve t&euml; q&euml;ndruesh&euml;m t&euml; tjer&euml;t duhet t&euml; mbajn&euml; pak distanc&euml; shpesh t&euml; p&euml;rhershme.</p>
-<p><strong>Urrejn&euml; ambientet e strukturuara -</strong>P&euml;r INTJ-t&euml; &euml;sht&euml; e pap&euml;lqyeshme t&rsquo;i ndjek&euml;sh verb&euml;risht rregullat e paraprir&euml;sve pa i kuptuar ato dhe ata p&euml;r&ccedil;mojn&euml; edhe m&euml; shum&euml; personalitetet autoritative t&euml; cil&euml;t verb&euml;risht i mb&euml;shtesin ato rregulla dhe ligje pa e kuptuar q&euml;llimin e tyre. &Ccedil;dokush q&euml; preferon gjendjen ekzistuese apo vler&euml;son stabilitetin dhe sigurin&euml; m&euml; shum&euml; se vetёvendosjen, ka gjasa t&euml; ndeshet me INTJ-t&euml;. Pa marr&euml; parasysh a &euml;sht&euml; ligji i atij vendi apo thjesht norm&euml; shoq&euml;rore, ky mosp&euml;lqim zbatohet p&euml;r t&euml; gjitha nj&euml;jt&euml; duke b&euml;r&euml; shpesh jet&euml;n m&euml; t&euml; v&euml;shtir&euml; se q&euml; duhet t&euml; jet&euml;.</p>
-<p><strong>T&euml; paditur n&euml; romancё</strong> -ky mosp&euml;lqim p&euml;r rregullat dhe prirja p&euml;r t&euml; st&euml;ranalizuar dhe t&euml; jen&euml; gjykues, madje arrogant, t&euml; gjitha krijojn&euml; nj&euml; tip personaliteti q&euml; &euml;sht&euml; injorant p&euml;r takime dashurie. &Euml;sht&euml; mjaft sfiduese p&euml;r INTJ-t&euml; t&euml; ken&euml; nj&euml; lidhje t&euml; re e cila zgjat&euml; aq sa &euml;sht&euml; e nevojshme p&euml;r ta q&euml; t&euml; zbatojn&euml; t&euml; gjith&euml; fuqin&euml; e analizave t&euml; tyre n&euml; proceset e t&euml; menduarit dhe sjelljet e partner&euml;ve t&euml; mundsh&euml;m. T&euml; mundohen m&euml; shum&euml; n&euml; m&euml;nyrat q&euml; INTJ-t&euml; din&euml; m&euml; s&euml; miri mund vet&euml;m t&rsquo;i b&euml;j gjёrat m&euml; keq dhe fatkeq&euml;sisht &euml;sht&euml; e zakonshme p&euml;r ta q&euml; thjesht t&euml; heqin dor&euml; s&euml; k&euml;rkuari. Ironikisht, k&euml;tu ata jan&euml; m&euml; t&euml; mir&euml;t dhe me gjas&euml; t&euml; t&euml;rheqin nj&euml; partner.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<ol start="3">
-<li><strong> personaliteti INTJ dhe ndjenjat</strong></li>
-</ol>
-<p>INTJ-t&euml; karakterizohen nga vet&euml;besimi, logjika dhe vendimmarrja e jasht&euml;zakonshme, por gjith&euml; k&euml;to fshehin nj&euml; pik&euml; t&euml; dob&euml;t- ndjenjat e tyre. Vet idea e shprehjes s&euml; ndjenjave &euml;sht&euml; sinonim me joracionalitetin dhe dob&euml;sin&euml; p&euml;r shum&euml; INTJ, nj&euml; paraqitje e munges&euml;s s&euml; vetkontrollit dhe mendimit t&euml; shkurt&euml; q&euml; v&euml;shtir&euml; se mund t&rsquo;i b&euml;j ball&euml; drit&euml;s s&euml; fort&euml; t&euml; s&euml; v&euml;rtet&euml;s faktike.</p>
-<p>Ky mosbesim ndaj ndjenjave &euml;sht&euml; i kuptuesh&euml;m, pasi q&euml; ndjenja (Feeling-F) &euml;sht&euml; tipari m&euml; pak i zhvilluar tek INTJ-t&euml;- si &ccedil;do mjet i komplikuar, duart e trajnuara mund ta p&euml;rdorin p&euml;r ndikim t&euml; jashtёzakonsh&euml;m, nd&euml;rsa ato t&euml; patrajnuarat b&euml;jn&euml; pun&euml; t&euml; ngath&euml;t dhe t&euml; rrezikshme.</p>
-<p>Njer&euml;zit me personalitetin INTJ krenohen me faktin se mund t&euml; q&euml;ndrojn&euml; racional dhe logjik gjat&euml; gjith&euml; koh&euml;s, duke konsideruar informacionin e sinqert&euml; dhe t&euml; drejtp&euml;rdrejt&euml; si m&euml; suprem se eufemizmi dhe r&euml;ndom&euml;sia n&euml; pothuajse &ccedil;do situat&euml;. Sidoqoft&euml;, n&euml; shum&euml; m&euml;nyra, k&euml;to cil&euml;si t&euml; vetёp&euml;rmbajtjes dhe shk&euml;putjes nuk jan&euml; arm&euml;t e s&euml; v&euml;rtet&euml;s si&ccedil; duken nga jasht&euml;, por jan&euml; mburojat e krijuara p&euml;r t&euml; mbrojtur ndjenjat e brendshme q&euml; INTJ-t&euml; ndjejn&euml;. N&euml; t&euml; v&euml;rtet&euml;, shkaku q&euml; ndjenjat e tyre jan&euml; nj&euml; mjet kaq pak i zhvilluar, INTJ-t&euml; shpesh i ndjejn&euml; ato m&euml; fuqish&euml;m se shum&euml; tipe duksh&euml;m m&euml; t&euml; ndjesh&euml;m sepse ata thjesht&euml; nuk kan&euml; m&euml;suar se si t&rsquo;i kontrollojn&euml; ato si duhet.</p>
-<p>Ky &euml;sht&euml; nj&euml; model sfidues q&euml; INTJ-t&euml; ta menaxhojn&euml; sidomos tipet m&euml; t&euml; rinj dhe m&euml; Turbulent t&euml; cil&euml;t tashm&euml; jan&euml; me m&euml; pak besim se q&euml; do t&euml; d&euml;shironin t&euml; dukeshin. K&euml;to ndjenja jan&euml; n&euml; kund&euml;rshtim me iden&euml; q&euml; INTJ-t&euml; e kan&euml; p&euml;r vetveten si shembuj t&euml; p&euml;rkryer t&euml; logjik&euml;s dhe dituris&euml; dhe mund t&euml; shkojn&euml; aq larg sa t&euml; pretendojn&euml; se nuk kan&euml; ndjenja fare. Kjo nuk do t&euml; thot&euml; q&euml; njer&euml;zit me k&euml;t&euml; lloj personaliteti duhet t&euml; shihen e as t&euml; d&euml;shirojn&euml; t&euml; jen&euml; gjeni gjakftoht&euml; dhe t&euml; pandjesh&euml;m q&euml; jetojn&euml; me rregullin se ndjenjat jan&euml; p&euml;r t&euml; dob&euml;tit. INTJ-t&euml; duhet ta kuptojn&euml; se kjo nuk &euml;sht&euml; e v&euml;rtet&euml; dhe kurr&euml; nuk do t&euml; jet&euml;.</p>
-<p>INTJ-t&euml; m&euml; t&euml; pjekur dhe m&euml; me vetёbesim- Assertive gjejn&euml; m&euml;nyra m&euml; t&euml; p&euml;rshtatshme p&euml;r t&euml; menaxhuar ndjenjat e tyre. Edhe pse ata kurr&euml; nuk do t&euml; ndihen rehat t&rsquo;i shfaqin ndjenjat e tyre n&euml; publik, INTJ-t&euml; mund t&euml; m&euml;sojn&euml; t&rsquo;i p&euml;rdorin ato, t&rsquo;i drejtojn&euml; pran&euml; logjik&euml;s s&euml; tyre q&euml; t&rsquo;i ndihmojn&euml; INTJ-ve t&rsquo;i arrijn&euml; synimet e tyre. Edhe pse duket kontradiktore, kjo mund t&euml; arrihet n&euml; shum&euml; m&euml;nyra.</p>
-<p>S&euml; pari, INTJ-t&euml; jan&euml; t&euml; orientuar drejt synimeve, me ide afatgjate t&euml; bazuara n&euml; logjik&euml;. Kur di&ccedil;ka u shkakton reagim emocional, i mir&euml; apo i keq, ajo energji mund t&euml; p&euml;rdoret si shtyt&euml;s p&euml;r t&rsquo;i &ccedil;uar p&euml;rpara synimet e tyre, duke u ndihmuar planeve racionale dhe t&euml; paracaktuar. S&euml; dyti, ndjenjat jan&euml; kanarina figurative n&euml; nj&euml; minier&euml; th&euml;ngjilli, duke d&euml;shmuar se di&ccedil;ka nuk &euml;sht&euml; n&euml; rregull edhe pse logjika ende nuk mund ta shoh. K&euml;to ndjenja mund t&rsquo;i ndihmojn&euml; INTJ-ve t&euml; p&euml;rdorin logjik&euml;n e tyre p&euml;r t&euml; b&euml;r&euml; pyetje q&euml; nuk u &euml;sht&euml; kujtuar t&euml; parashtrojn&euml;: &ldquo;Kjo &euml;sht&euml; shqet&euml;suese. Pse? &Ccedil;far&euml; duhet b&euml;r&euml; p&euml;r ta rregulluar?&rdquo;</p>
-<h2><em>Pyetje me guxim</em></h2>
-<p>N&euml; k&euml;t&euml; m&euml;nyr&euml;, ndjenjat e INTJ-ve nuk jan&euml; m&euml;nyra p&euml;r t&euml; adresuar nj&euml; vendim, por m&euml; shum&euml; nj&euml; shenj&euml; se nj&euml; vendim duhet adresuar. Tipari Thinking (T) i INTJ-ve luan rolin e v&euml;llaut m&euml; t&euml; madh mbrojt&euml;s&nbsp; p&euml;r tiparin Feeling (F)-&nbsp; duke v&euml;rejtur se di&ccedil;ka e ka shqet&euml;suar v&euml;llan&euml; m&euml; t&euml; dob&euml;t, ai hyn n&euml; aksion, duke e l&euml;n&euml; logjik&euml;n t&euml; flas&euml; dhe ta zgjidh &ccedil;&euml;shtjen n&euml; vend se t&euml; ankohet p&euml;r pasojat.</p>
-<p>Sidoqoft&euml;, vjen nj&euml; moment, kur logjika &euml;sht&euml; thjesht mjeti i gabuar p&euml;r nj&euml; pun&euml; t&euml; caktuar, ku nuk ka zgjidhje racionale p&euml;r nj&euml; problem dhe mu n&euml; k&euml;to situata INTJ-t&euml; duhet t&euml; p&euml;rdorin ndjenjat e tyre (Feeling-F) haptazi. Do t&euml; ishte mir&euml; p&euml;r INTJ-t&euml; q&euml; t&euml; praktikojn&euml; koh&euml; pas kohe ose t&euml; pakt&euml;n t&euml; jen&euml; t&euml; vet&euml;dijsh&euml;m sepse sado q&euml; t&euml; provojn&euml; &euml;sht&euml; e pamundur t&rsquo;i ndajn&euml; ndjenjat nga procesi i vendimarrjes. &Euml;sht&euml; fakt q&euml; INTJ-t&euml; ndjejn&euml;, thell&euml;, dhe kjo i b&euml;n m&euml; t&euml; mir&euml; e jo m&euml; t&euml; k&euml;qinj.</p>
-<p><strong>4.lidhjet e INTJ-ve</strong></p>
-<p>N&euml; romanc&euml;, njer&euml;zit me personalitetin INTJ u afrohen gj&euml;rave n&euml; t&euml; nj&euml;jt&euml;n m&euml;nyr&euml; si&ccedil; b&euml;jn&euml; me gati &ccedil;do situat&euml;: ata hartojn&euml; nj&euml; varg t&euml; veprimeve t&euml; llogaritura me nj&euml; synim p&euml;rfundimtar t&euml; parashikuar dhe t&euml; d&euml;shiruesh&euml;m- nj&euml; lidhje t&euml; sh&euml;ndosh&euml; dhe afatgjat&euml;. N&euml; vend se t&euml; bien kok&euml; e k&euml;mb&euml; n&euml; furtun&euml;n e pasionit dhe romanc&euml;s, INTJ-t&euml; identifikojn&euml; partner&euml;t e mundsh&euml;m t&euml; cil&euml;t p&euml;rmbushin kriteret e paracaktuar, e kthejn&euml; procesin e takimeve n&euml; varg t&euml; &nbsp;tabelave mat&euml;se dhe vazhdojn&euml; t&euml; zbatojn&euml; planin me nj&euml; p&euml;rpikm&euml;ri t&euml; papar&euml;.</p>
-<p>N&euml; nj&euml; bot&euml; racionale, kjo &euml;sht&euml; nj&euml; metod&euml; q&euml; nuk d&euml;shton kurr&euml;- por n&euml; realitet, kjo nuk merr parasysh detaje t&euml; r&euml;nd&euml;sishme q&euml; INTJ-t&euml; jan&euml; t&euml; prir&euml; t&rsquo;i anashkalojn&euml; para kohe, si&ccedil; &euml;sht&euml; natyra njer&euml;zore. INTJ-t&euml; jan&euml; intelektual t&euml; shk&euml;lqyesh&euml;m, duke krijuar nj&euml; bot&euml; n&euml; mendjet e tyre e cila &euml;sht&euml; m&euml; e p&euml;rkryer se realiteti. Njer&euml;zit q&euml; hyjn&euml; n&euml; k&euml;t&euml; bot&euml; duhet t&rsquo;i p&euml;rshtaten k&euml;saj fantazie dhe mund t&euml; jet&euml; jasht&euml;zakonisht v&euml;shtir&euml; p&euml;r INTJ-t&euml; t&euml; gjejn&euml; dik&euml;nd p&euml;r k&euml;t&euml; detyr&euml;. Kuptohet q&euml; t&euml; gjejn&euml; partnerin e duhur &euml;sht&euml; sfida m&euml; e madhe me t&euml; cil&euml;n shumica e INTJ-ve do t&euml; p&euml;rballen.</p>
-<p>Ndjenja, tradita dhe emocioni jan&euml; pikat e dob&euml;ta t&euml; INTJ-ve. Ata i shohin normat shoq&euml;rore si&ccedil; &euml;sht&euml; gjentilesa si budallall&euml;k, madje p&euml;rulje. Problemi &euml;sht&euml; se k&euml;to norma jan&euml; krijuar si m&euml;nyr&euml; p&euml;r t&euml; zbutur njoftimet dhe p&euml;r t&euml; krijuar lidhje, p&euml;r t&euml; menaxhuar mund&euml;sit&euml;, bazat e lidhjeve personale. Prirja e INTJ-ve p&euml;r sinqeritet miq&euml;sor n&euml; fjal&euml; dhe vepra mund t&euml; c&euml;non k&euml;t&euml; rregull shoq&euml;ror, duke b&euml;r&euml; takimet e dashuris&euml; shum&euml; t&euml; v&euml;shtira p&euml;r ta.</p>
-<p>Gjat&euml; koh&euml;s q&euml; pjeken, INTJ-t&euml; do t&euml; fillojn&euml; t&rsquo;i shohin k&euml;ta faktor&euml; si t&euml; r&euml;nd&euml;sish&euml;m, duke p&euml;rfshirё ritmin dhe pjes&euml;n emocionale n&euml; planet e tyre. Por n&euml; nd&euml;rkoh&euml; mund t&euml; jet&euml; e rrezikshme ve&ccedil;an&euml;risht p&euml;r INTJ-t&euml; turbulent- sidomos n&euml;se goditen shum&euml; her&euml; ata mund t&euml; arrijn&euml; n&euml; p&euml;rfundimin se t&euml; gjith&euml; jan&euml; thjesht&euml; joracional, ose thjesht&euml; m&euml; t&euml; ul&euml;t se ata intelektualisht. N&euml;se cinizmi fillon t&euml; ket&euml; efektin e tij, INTJ-t&euml; mund t&euml; p&euml;rfundojn&euml; duke r&euml;n&euml; n&euml; kurthin e t&euml; shfaqurit q&euml;llimisht arroganc&euml; intelektuale, duke b&euml;r&euml; vetmin&euml; zgjedhjen e tyre.</p>
-<p>Ana pozitive e &ldquo;t&euml; dor&euml;zuarit&rdquo; t&euml; INTJ-ve &euml;sht&euml; se ata jan&euml; m&euml; s&euml; shumti t&euml;rheq&euml;s kur nuk mundohen t&euml; jen&euml; t&euml; till&euml;, gjat&euml; koh&euml;s q&euml; punojn&euml; n&euml; nj&euml; ambient me t&euml; cilin jan&euml; m&euml;suar, ku vetёbesimi dhe intelegjenca e tyre mund t&euml; shihen n&euml; veprim. Duke u lejuar t&euml; tjer&euml;ve t&euml; vijn&euml; tek ta &euml;sht&euml; shpesh strategjia m&euml; e mir&euml; e INTJ-ve dhe n&euml;se nuhasin nj&euml; mund&euml;si p&euml;r lidhje, ata nuk do t&euml; kursejn&euml; asnj&euml; p&euml;rpjekje q&euml; t&euml; zhvillojn&euml; dhe mbajn&euml; q&euml;ndrueshm&euml;rin&euml; dhe k&euml;naq&euml;sin&euml; afatgjate.</p>
-<p>Gjat&euml; koh&euml;s q&euml; lidhja rritet, partner&euml;t e INTJ-ve do t&euml; gjejn&euml; nj&euml; shoq&euml;rues imagjinativ dhe entuziast i cili do t&euml; ndajё bot&euml;n e tyre dhe n&euml; t&euml; nj&euml;jt&euml;n koh&euml; do t&rsquo;u jep nj&euml; sasi t&euml; madhe t&euml; liris&euml; dhe besimit. P&euml;rderisa INTJ-t&euml; mund q&euml; kurr&euml; t&euml; mos jen&euml; rehat t&rsquo;i shprehin ndjenjat e tyre dhe t&euml; shpenzojn&euml; m&euml; shum&euml; koh&euml; duke folur p&euml;r intimitetin se sa t&euml; p&euml;rfshihen n&euml; t&euml;, gjithmon&euml; mund t&euml; mb&euml;shtetesh n&euml; ta p&euml;r t&euml; menduar nj&euml; zgjidhje me p&euml;rfitime t&euml; dyanshme n&euml; &ccedil;do &ccedil;&euml;shtje.</p>
-<p>INTJ-t&euml; k&euml;rkojn&euml; lidhje t&euml; forta dhe t&euml; thella dhe i besojn&euml; dituris&euml; dhe logjik&euml;s s&euml; tyre p&euml;r t&rsquo;u siguruar q&euml; partneri i tyre &euml;sht&euml; i k&euml;naqur si intelektualisht ashtu edhe fizikisht.</p>
-<p>Por kur vijm&euml; tek k&euml;naq&euml;sia emocionale, INTJ-t&euml; jan&euml; thjesht jasht&euml; elementit t&euml; tyre. Jo t&euml; gjith&euml; partner&euml;t k&euml;naqen si&ccedil; b&euml;jn&euml; INTJ-t&euml; n&euml; t&euml; shikuarit e konflikteve dhe nevojave emocionale sikur enigm&euml; e cila duhet analizuar dhe zgjidhur. Nganj&euml;her&euml; emocionet duhet shprehur sepse thjesht ke nevoj&euml; dhe t&euml; vendos&euml;sh &ccedil;do shp&euml;rthim n&euml;n llup&euml; nuk &euml;sht&euml; gjithmon&euml; e dobishme. N&euml;se kjo b&euml;het zakon, ose INTJ-t&euml; mendojn&euml; se mund t&euml; b&euml;het, ata jan&euml; n&euml; gjendje q&euml; thjesht&euml; ta p&euml;rfundojn&euml; lidhjen, n&euml; vend s&euml; t&rsquo;i st&euml;rzgjasin gj&euml;rat.</p>
-<p><strong><em>E v&euml;rteta dhe morali</em></strong></p>
-<p>INTJ-t&euml; jan&euml; njer&euml;z jasht&euml;zakonisht t&euml; thell&euml; dhe intelegjent t&euml; cil&euml;t sjellin q&euml;ndrueshm&euml;ri dhe mendjempreht&euml;si n&euml; lidhjet e tyre romantike. Ata vler&euml;sojn&euml; sinqeritetin, komunikimin e hapur dhe gjith&euml; faktor&euml;t e lidhjes jan&euml; t&euml; hapur p&euml;r diskutim dhe ndryshim, por kjo duhet t&euml; jet&euml; e dyanshme. INTJ-t&euml; b&euml;jn&euml; at&euml; &ccedil;far&euml; mendojn&euml; se &euml;sht&euml; e drejt&euml; dhe kjo mund t&euml; duket shpesh si e ftoht&euml;- &euml;sht&euml; e r&euml;nd&euml;sishme t&euml; dihet se INTJ-t&euml; nuk i marrin leht&euml; k&euml;to vendime. Ata shpenzojn&euml; sasi t&euml; jashtёzakohnshme t&euml; koh&euml;s dhe energjis&euml; duke provuar t&euml; kuptojn&euml; si dhe pse gj&euml;rat shkojn&euml; keq, ve&ccedil;an&euml;risht n&euml;se ja kan&euml; p&euml;rkushtuar veten lidhjes dhe sigurisht q&euml; l&euml;ndohen thell&euml; kur gj&euml;rat nuk shkojn&euml; mir&euml;.</p>
-<p>&Euml;sht&euml; sfid&euml; t&euml; gjejn&euml; partner q&euml; ndajn&euml; t&euml; nj&euml;jtat vlera- edhe pse tipat intuitive (N) jan&euml; jo t&euml; zakonsh&euml;m, ata mund t&euml; jen&euml; t&euml; domosdossh&euml;m p&euml;r shum&euml; INTJ pasiq&euml; q&euml; &nbsp;ndarja e k&euml;saj cil&euml;sie krijon nj&euml; ndjenj&euml; t&euml; menj&euml;hershme t&euml; p&euml;rkat&euml;sis&euml; reciproke. T&euml; ken&euml; nj&euml; apo dy cil&euml;si balancuese si&ccedil; jan&euml; Extraversion (E), Feeling (F) ose Prospecting (P) mund t&euml; ndihmoj&euml; n&euml; t&euml; mbajturit e nj&euml; lidhje t&euml; gjall&euml; dhe t&euml; drejtuar n&euml; rritje duke mbajtur INTJ-t&euml; t&euml; p&euml;rfshir&euml; me njer&euml;z tjer&euml;, n&euml; kontakt me ndjenjat e tyre dhe t&euml; hapur p&euml;r mund&euml;si tjera.</p>
-<h1>5. INTJ-t&euml; si shok&euml;</h1>
-<p>Njer&euml;zit me personalitetin INTJ priren t&euml; ken&euml; m&euml; shum&euml; sukses n&euml; t&euml; krijuarit e miq&euml;sive sesa q&euml; kan&euml; n&euml; lidhjet romantike, por sidoqoft&euml; ata vuajn&euml; nga shum&euml; pengesa t&euml; njejta, duke z&euml;vend&euml;suar proceset racionale p&euml;r mb&euml;shtetje emocionale. Kjo larg&euml;si intelektuale priret t&euml; ndikoj n&euml; t&euml; dy m&euml;nyrat, duke i b&euml;r&euml; INTJ-t&euml; t&euml; v&euml;shtir&euml; p&euml;r tu kuptuar dhe njohur si dhe duke b&euml;r&euml; t&euml; mos duan t&euml; kuptojn&euml; ask&euml;nd q&euml; ata mendojn&euml; se nuk &euml;sht&euml; n&euml; t&euml; njёjtin nivel me ta. &Euml;sht&euml; shpesh e pamundur t&rsquo;i tejkaloni k&euml;to pengesa pa nj&euml; lloj lidhjeje t&euml; menj&euml;hershme e mund&euml;suar nga t&euml; poseduarit e tiparit intuitiv (N).</p>
-<p>INTJ-t&euml; priren t&euml; kan&euml; mendime t&euml; vendosura rreth asaj se &ccedil;ka funksionin, &ccedil;ka jo, p&euml;r &ccedil;ka po k&euml;rkojn&euml; dhe p&euml;r &ccedil;ka jo. K&euml;to shije diskriminuese duken si arrogante, por INTJ-t&euml; thjesht&euml; p&euml;rgjigjen se &euml;sht&euml; nj&euml; mekaniz&euml;m filtrues bazik q&euml; i lejon ata t&euml; drejtojn&euml; v&euml;mendjen e tyre aty ku do t&euml; jet&euml; m&euml; s&euml; miri.&nbsp; N&euml; realitet, n&euml; shoq&euml;ri, INTJ-t&euml; k&euml;rkojn&euml; nj&euml; shpirt binjak intelektual m&euml; shum&euml; se &ccedil;do gj&euml; tjet&euml;r dhe ata q&euml; nuk jan&euml; t&euml; p&euml;rgatitur p&euml;r at&euml; lloj lidhjeje jan&euml; thjesht&euml; t&euml; m&euml;rzitsh&euml;m. INTJ-t&euml; kan&euml; nevoj t&rsquo;i ndajn&euml; idet&euml;- dhe nj&euml; rreth me thashetheme p&euml;r shok&euml;t e p&euml;rbashk&euml;t nuk &euml;sht&euml; nj&euml; lloj jet&euml; shoq&euml;rore p&euml;r ta.</p>
-<p>INTJ-t&euml; do t&euml; mbajn&euml; kontakte me vet&euml;m pak shok&euml; t&euml; mir&euml;, duke shmangur rrethe m&euml; t&euml; m&euml;dha t&euml; t&euml; af&euml;rmve n&euml; favor t&euml; thell&euml;sis&euml; dhe cil&euml;sis&euml;.</p>
-<p>M&euml; tej, t&euml; ken&euml; m&euml; shum&euml; se pak shok&euml; do t&euml; rrezikonte ndjenj&euml;n e pavar&euml;sis&euml; dhe vet&euml;k&euml;naq&euml;sis&euml; s&euml; INTJ-ve- ata me qejf heqin dor&euml; nga shoq&euml;ria p&euml;r t&euml; siguruar k&euml;t&euml; liri. INTJ-t&euml; zbatojn&euml; k&euml;t&euml; ide madje edhe me ata q&euml; p&euml;rshtaten n&euml; rregullat e tyre shoq&euml;rore, duke k&euml;rkuar pak v&euml;mendje dhe sh&euml;rbim p&euml;r t&euml; vazhduar shoq&euml;rin&euml; dhe duke p&euml;rkrahur t&euml; nj&euml;jt&euml;n pavar&euml;si tek shok&euml;t e tyre.</p>
-<p>Kur vjen puna p&euml;r mb&euml;shtetje emocionale, INTJ-t&euml; jan&euml; larg t&euml; qen&euml;t rehat. Ata t&euml;r&euml; koh&euml;n i ndrydhin ndjenjat e tyre me mburoja t&euml; racionalitetit dhe logjik&euml;s dhe presin prej shok&euml;ve t&euml; tyre t&euml; b&euml;jn&euml; t&euml; njёjt&euml;n gj&euml;. Kur ndodhin situata emocionale, INTJ-t&euml; mund t&euml; mos ken&euml; ide se si t&rsquo;i b&euml;jn&euml; ball&euml; atyre n&euml; m&euml;nyr&euml; t&euml; p&euml;rshtatshme, nj&euml; kontrast i madh krahasuar me kapacitetin e tyre p&euml;r vet&euml;p&euml;rmbajtje dhe vet&euml;udh&euml;zim t&euml; vendosur.</p>
-<p><strong><em>Por shoq&euml;rit&euml; jan&euml; t&euml; &ccedil;muara</em></strong></p>
-<p>Sidoqoft&euml;, kur jan&euml; n&euml; zon&euml;n e tyre t&euml; rehatis&euml;, mes njer&euml;zve q&euml; i njohin dhe i respektojn&euml; INTJ-t&euml; nuk kan&euml; problem t&euml; relaksohen dhe g&euml;zohen. Sarkazma dhe humori i tyre i err&euml;t nuk jan&euml; p&euml;r persona me zem&euml;r t&euml; dob&euml;t, e as p&euml;r ata q&euml; e kan&euml; problem t&euml; lexojn&euml; mes rreshtave, por p&euml;r ata q&euml; i kuptojn&euml; k&euml;to INTJ-t&euml; i shohin si tregues fantastik t&euml; historive. Kjo ua limiton pak a shum&euml; grupin e shok&euml;ve duke i l&euml;n&euml; me tipet Analists dhe Diplomat pasi q&euml; parap&euml;lqimi i tipeve Observant (S) p&euml;r nj&euml; komunikim m&euml; t&euml; drejtp&euml;rdrejt&euml; shpesh i l&euml; t&euml; dyja pal&euml;t t&euml; acaruara.</p>
-<p>Nuk &euml;sht&euml; leht&euml; t&euml; b&euml;hesh shok i mir&euml; me INTJ-t&euml;. M&euml; shum&euml; se traditat e nje udh&euml;rr&euml;fyesi shoq&euml;ror ose marrjen pjes&euml; n&euml; rutin&euml;n e nj&euml;ri-tjetrit, INTJ-t&euml; kan&euml; k&euml;rkesa t&euml; v&euml;shtira p&euml;r aft&euml;si intelektuale, sinqeritet t&euml; pakompromis dhe nj&euml; d&euml;shir&euml; t&euml; rriten dhe m&euml;sojn&euml; si individ&euml; t&euml; pavarur. INTJ-t&euml; jan&euml; t&euml; talentuar, tё men&ccedil;ur dhe t&euml; orientuar drejt zhvillimit dhe presin e p&euml;rkrahin shok&euml;t e tyre q&euml; t&euml; ken&euml; t&euml; njёjtin q&euml;ndrim. &Ccedil;dokush q&euml; nuk arrin t&rsquo;i p&euml;rmbush k&euml;to do t&euml; cil&euml;sohen si t&euml; m&euml;rzitsh&euml;m- &ccedil;dokush q&euml; i p&euml;rmbush k&euml;to k&euml;rkesa do t&rsquo;i vler&euml;soj ata, duke krijuar nj&euml; shoq&euml;ri t&euml; fuqishme dhe motivuese e cila do ta kaloj testin e koh&euml;s.</p>
-<h1>6. iNTJ-t&euml; si prind&euml;r</h1>
-<p>T&euml; qen&euml;t prind&euml;r, sikur shum&euml; lidhje t&euml; tjera, &euml;sht&euml; nj&euml; sfid&euml; mjaft e madhe p&euml;r INTJ-t&euml;. Pasi q&euml; jan&euml; shum&euml; t&euml; fokusuar n&euml; mendime racionale, logjik&euml; dhe analiz&euml; t&euml; shkakut dhe pasoj&euml;s, INTJ-t&euml; jan&euml; shpesh t&euml; pap&euml;rgatitur p&euml;r tu marr&euml; me dik&euml;nd q&euml; nuk i ka zhvilluar k&euml;to aft&euml;si dhe nga t&euml; cil&euml;t nuk mund thjesht t&euml; largohet. Fatmir&euml;sisht, INTJ-t&euml; jan&euml; ve&ccedil;an&euml;risht t&euml; aft&euml; t&euml; p&euml;rkushtohen m&euml; nj&euml; projekt afatgjat&euml;, sidomos nj&euml; t&euml; kuptimt&euml; si&ccedil; &euml;sht&euml; t&euml; qen&euml;t prind&euml;r, me gjith&euml; forc&euml;n intelektuale q&euml; mund t&euml; mbledhin.</p>
-<p><strong><em>Shpresoj q&euml; men&ccedil;uria jon&euml; do t&euml; rritet me fuqin&euml; ton&euml;&hellip;</em></strong></p>
-<p>E para dhe m&euml; e r&euml;nd&euml;sishmja, INTJ-t&euml; prind&euml;r kan&euml; shum&euml; mund&euml;si q&euml; kurr&euml; t&euml; mos jen&euml; n&euml; gjendje t&euml; japin at&euml; lloj ngroht&euml;sie dhe p&euml;rk&euml;dhelje q&euml; pritet nga prind&euml;rit. INTJ-t&euml; jan&euml; racional, perfeksionist, shpesh t&euml; pandjesh&euml;m dhe sigurisht jo t&euml; prirur t&euml; shfaqin fizikisht dashurin&euml; e tyre - do t&euml; duhet p&euml;rpjekje e plot&euml; dhe e vet&euml;dijshme p&euml;r t&rsquo;i frenuar dhe p&euml;rshtatur k&euml;to cil&euml;si tek nevojat e f&euml;mij&euml;ve, sidomos n&euml; vitet n&euml; fillim. N&euml;se kan&euml; nj&euml; f&euml;mij&euml; jasht&euml;zakonisht t&euml; ndjesh&euml;m, INTJ-t&euml; rrezikojn&euml; tё shtypin joq&euml;llimisht ato ndjenja ose t&euml; duken si t&euml; ftoht&euml; dhe t&euml; pakujdesh&euml;m.&nbsp;</p>
-<p>Madje edhe f&euml;mij&euml;t m&euml; pak t&euml; ndjesh&euml;m do t&euml; ken&euml; nevoj&euml; p&euml;r mb&euml;shtetje emocionale her&euml; pas here, sidomos kur u afrohen adoleshenc&euml;s- INTJ-t&euml;, m&euml; shum&euml; sesa tipet e tjera Analiste, kan&euml; problem n&euml; menaxhimin e ndjenjave t&euml; tyre n&euml; nj&euml; m&euml;nyr&euml; t&euml; sh&euml;ndetshme e lere m&euml; t&euml; t&euml; tjer&euml;ve. Si rezultat, INTJ-t&euml; priren t&rsquo;i shmangen mb&euml;shtetjes emocionale &ldquo;joproduktive&rdquo;, dhe n&euml; vend t&euml; k&euml;saj t&euml; marrin nj&euml; q&euml;ndrim q&euml; bazohet vet&euml;m n&euml; zgjidhje t&euml; problemeve. Dhe k&euml;tu INTJ-t&euml; jan&euml; m&euml; t&euml; mir&euml;t-t&euml; diskutojn&euml; nj&euml; dilem&euml; n&euml; m&euml;nyr&euml; q&euml; t&rsquo;i gjejn&euml; shkaktar&euml;t e paduksh&euml;m dhe t&euml; zhvillojn&euml; nj&euml; plan p&euml;r ta zgjidhur problemin q&euml; n&euml; thelb.</p>
-<p><em>Sidoqoft&euml; INTJ-t&euml; nuk u tregojn&euml; f&euml;mij&euml;ve t&euml; tyre &ccedil;far&euml; t&euml; b&euml;jn&euml;- ata i nxisin ata, i b&euml;jn&euml; t&euml; p&euml;rdorin mendjet e tyre q&euml; t&euml; arrijn&euml; n&euml; p&euml;rfundimet e njёjta, ose edhe m&euml; t&euml; mira.</em></p>
-<p>INTJ-t&euml; gjithashtu e din&euml; se shpesh jeta &euml;sht&euml; m&euml;suesi m&euml; i mir&euml; dhe do t&euml; provojn&euml; t&euml; jen&euml; sa m&euml; liberal, duke i lejuar f&euml;mij&euml;ve t&euml; tyre t&euml; ken&euml; aventurat e tyre dhe t&euml; marrin vendimet vet, duke i zhvilluar m&euml; tej aft&euml;sit&euml; e t&euml; menduarit kritik. Kjo nuk do t&euml; thot&euml; se prind&euml;rit INTJ jan&euml; t&euml; but&euml;- larg asaj- m&euml; shum&euml;, ata presin q&euml; f&euml;mij&euml;t e tyre t&euml; shfryt&euml;zojn&euml; pavar&euml;sin&euml; me p&euml;rgjegj&euml;si&nbsp; dhe shpesh vet&euml; pesha e k&euml;saj p&euml;rgjegj&euml;sie &euml;sht&euml; e mjaftueshme p&euml;r t&euml; vendosur rregulla t&euml; p&euml;rgjithshme. Sidoqoft&euml; kur ka nevoj&euml;, prind&euml;rit INTJ do t&euml; komunikojn&euml; hapur dhe sinqerisht me f&euml;mij&euml;t e tyre, duke besuar se t&euml; dish t&euml; v&euml;rtet&euml;n &euml;sht&euml; m&euml; mir&euml; se t&euml; mos dish, ose akoma m&euml; keq t&euml; jesh gabim.</p>
-<p><strong><em>&hellip;Dhe na m&euml;son se sa m&euml; pak q&euml; p&euml;rdorim fuqin&euml; ton&euml;, ajo do t&euml; b&euml;het m&euml; e madhe.</em></strong></p>
-<p>N&euml;se f&euml;mij&euml;t e tyre jan&euml; pranues t&euml; k&euml;saj qasje, INTJ-t&euml; prind&euml;r do t&euml; gjejn&euml; veten t&euml; respektuar dhe besuar. INTJ-t&euml; jan&euml; komunikues t&euml; shk&euml;lqyesh&euml;m at&euml;her&euml; kur duan dhe do t&euml; paraqesin problemet si mund&euml;si p&euml;r rritje personale, duke i ndihmuar f&euml;mij&euml;ve t&euml; tyre t&euml; krijojn&euml; m&euml;nyr&euml;n e tyre t&euml; t&euml; menduarit racional dhe aft&euml;sive t&euml; pavarura p&euml;r zgjidhje t&euml; problemeve q&euml; do t&euml; zbatohet n&euml; situat&euml; &ccedil;do her&euml; e m&euml; komplekse gjat&euml; koh&euml;s sa rriten, duke rritur vet&euml;besimin e tyre gjat&euml; koh&euml;s q&euml; &ccedil;ajn&euml; rrug&euml;n p&euml;rpara. Synimi p&euml;rfundimtar i INTJ-ve prind&euml;r &euml;sht&euml; t&euml; sigurohen se f&euml;mij&euml;t e tyre jan&euml; t&euml; p&euml;rgaditur t&rsquo;i b&euml;jn&euml; ball&euml; &ccedil;far&euml;do gj&euml;je q&euml; jeta u v&euml; n&euml; rrug&euml;.</p>
-<p>Gjith&euml; kjo &euml;sht&euml; p&euml;rpjekje e filozofis&euml; s&euml; INTJ-ve p&euml;r vet&euml;udh&euml;zim dhe n&euml; k&euml;t&euml; m&euml;nyr&euml; ata p&euml;rpiqen t&rsquo;i b&euml;jn&euml; f&euml;mij&euml;t e tyre si ta, duke punuar t&euml; krijojn&euml; t&euml; rritur t&euml; aft&euml; t&euml; cil&euml;t mund t&euml; vazhdojn&euml; &nbsp;t&euml; p&euml;rdorin mendjet e tyre dhe t&rsquo;i ndihmojn&euml; f&euml;mij&euml;t e tyre kur t&euml; vij koha. INTJ-t&euml; e kuptojn&euml; se kjo gj&euml; nuk mund t&euml; ndodh&euml; n&euml;se ata i mbrojn&euml; f&euml;mij&euml;t e tyre nga &ccedil;do gj&euml; e lig&euml; dhe e d&euml;mshme, por besojn&euml; se n&euml;se u japin f&euml;mij&euml;ve t&euml; tyre mjetet e duhura, ata nuk do t&euml; ken&euml; nevoj&euml; p&euml;r mbrojtje.</p>
-<p>&nbsp;</p>
-<ol start="7">
-<li><strong> karrierat e Intj-ve</strong></li>
-</ol>
-<p>Aft&euml;sia profesionale &euml;sht&euml; shpesh l&euml;mia n&euml; t&euml; cil&euml;n INTJ-t&euml; shk&euml;lqejn&euml; m&euml; s&euml; shumti. Kapaciteti i tyre p&euml;r t&euml; p&euml;rvet&euml;suar teori dhe parime t&euml; v&euml;shtira e komplekse dhe t&euml; shndёrrojn&euml; ato n&euml; ide dhe strategji t&euml; qarta e t&euml; zbatueshme ia kalon &ccedil;do tipi tjet&euml;r. INTJ-t&euml; jan&euml; n&euml; gjendje t&euml; filtrojn&euml; zhurm&euml;n e nj&euml; situate, duke identifikuar telin kryesor q&euml; duhet t&euml;rhequr p&euml;r t&rsquo;i zgjidhur ngat&euml;rresat e t&euml; tjer&euml;ve n&euml; m&euml;nyr&euml; q&euml; ato mund t&euml; rivendosen n&euml; funsksionet e tyre t&euml; cilat jan&euml; &ccedil;udit&euml;risht t&euml; thjeshta.</p>
-<p>Sfida e v&euml;rtet&euml; p&euml;r INTJ-t&euml; &euml;sht&euml; se p&euml;r tu d&euml;gjuar idet&euml; e tyre inovative (dhe p&euml;r persona m&euml; pak mendjempreht&euml;, u duket kund&euml;r-intuitive), ata kan&euml; nevoj&euml; p&euml;r dik&euml;nd q&euml; do t&rsquo;i d&euml;gjoj dhe krijimi e nj&euml; raporti t&euml; p&euml;rzem&euml;rt me persona autoritativ nuk &euml;sht&euml; nd&euml;r pikat e forta t&euml; INTJ-ve. N&euml; fillim t&euml; karrier&euml;s s&euml; tyre, INTJ-t&euml; shpesh do t&euml; vuajn&euml; nga detyrat e thjeshta dhe refuzime t&euml; p&euml;rs&euml;ritura gjat&euml; koh&euml;s q&euml; zhvillojn&euml; aft&euml;sit&euml; e tyre n&euml; shkatht&euml;si t&euml; qarta q&euml; flasin vet.</p>
-<p>INTJ-t&euml; shpesh do t&euml; gjejn&euml; m&euml;nyra se si ta automatizojn&euml; rutin&euml;n dhe detyrat aq t&euml; thjeshta dhe gjat&euml; koh&euml;s q&euml; p&euml;rparojn&euml;, vet&euml;besimi, p&euml;rkushtimi dhe intelegjenca kreative e natyrshme do tu hapin dyert p&euml;r komplikimin dhe lirin&euml; t&euml; cil&euml;n e d&euml;shirojn&euml;.</p>
-<p>INTJ-t&euml; p&euml;lqejn&euml; t&euml; punojn&euml; vet&euml;m ose m&euml; s&euml; shumti me grupe t&euml; vogla ku mund t&euml; rrisin n&euml; maksimum kreativitetin dhe p&euml;rq&euml;ndrimin e tyre pa nd&euml;rprerjet e vazhdueshme nga pyetjet e koleg&euml;ve ose takimeve me mbik&euml;qyr&euml;s. P&euml;r k&euml;t&euml; arsye, INTJ-t&euml; kan&euml; pak gjas&euml; t&euml; gjenden n&euml; role t&euml; rrepta administrative ose &ccedil;do gj&euml; q&euml; k&euml;rkon biseda t&euml; vazhdueshme dhe pun&euml; n&euml; grup. M&euml; shum&euml;, INTJ-t&euml; parap&euml;lqejn&euml; pozitat e &ldquo;vetmitarit&rdquo; si&ccedil; jan&euml; inxhinier&euml; t&euml; mekanik&euml;s apo programimit, avokat&euml; ose konsultues. Ata pranojn&euml; vet&euml;m udh&euml;heq&euml;s t&euml; aft&euml; q&euml; u ndihmojnё n&euml; k&euml;to q&euml;llime dhe refuzojn&euml; autoritetin e atyre q&euml; hezitojn&euml;.</p>
-<p>Q&euml;ndrimi i tyre i pavarur dhe k&euml;rkesa e palodhur p&euml;r aft&euml;si n&euml;nkupton q&euml; INTJ-t&euml; absolutisht urrejn&euml; ata q&euml; ecin p&euml;rpara me m&euml;nyra m&euml; pak meritore si&ccedil; jan&euml; t&euml; af&euml;rmit dhe lidhjet politike. INTJ-t&euml; kan&euml; standarte ve&ccedil;an&euml;risht t&euml; larta dhe n&euml;se e shohin nj&euml; koleg&euml; ose mbikqyr&euml;s si t&euml; paaft&euml; dhe t&euml; padobish&euml;m, respekti p&euml;r ta do t&euml; humbet menj&euml;her&euml; dhe p&euml;rgjithmon&euml;. INTJ-t&euml; vler&euml;sojn&euml; iniciativat, vendosm&euml;rin&euml;, mendjempreht&euml;sin&euml; dhe p&euml;rkushtimin si dhe besojn&euml; q&euml; t&euml; gjith&euml; duhet t&euml; p&euml;rfundojn&euml; pun&euml;n e tyre m&euml; standartet m&euml; t&euml; larta t&euml; mundshme.</p>
-<p>Gjat&euml; koh&euml;s q&euml; karrierat e tyre p&euml;rparojn&euml; dhe fama e tyre rritet, nj&euml;jt&euml; do t&euml; zhvillohet edhe nd&euml;rlikimi i detyrave dhe projekteve t&euml; INTJ-ve. Ata k&euml;rkojn&euml; p&euml;rparim dhe zhvillim, sfida t&euml; reja dhe teori dhe shpesh i p&euml;rmbushin k&euml;to duke hyr&euml; n&euml; pozita m&euml; aktive strategjike. P&euml;rderisa nuk u intereson qendra e v&euml;mendjes, INTJ-ve u p&euml;lqen t&euml; kontrollojn&euml; idet&euml; e tyre dhe shpesh do t&euml; kalojn&euml; n&euml; role m&euml; t&euml; ul&euml;ta por me ndikim si menaxher&euml; t&euml; projektve, inxhinier&euml;, strateg marketingu, analist&euml; t&euml; sistemit ose strateg t&euml; ushtris&euml;.</p>
-<p>N&euml; t&euml; v&euml;rtet&euml;, vizioni, kreativiteti dhe aft&euml;sia e INTJ- n&euml; p&euml;rfundimin e k&euml;tyre planeve u jep mundёsi p&euml;r sukses n&euml; thuajse &ccedil;do profesion q&euml; k&euml;rkon prej tyre t&euml; mendojn&euml; p&euml;r at&euml; se &ccedil;far&euml; jan&euml; duke b&euml;r&euml;. P&euml;rderisa disa profesione, si&ccedil; jan&euml; ato me paga t&euml; ul&euml;ta dhe burime njer&euml;zore, haptazi nuk hyjn&euml; n&euml; pikat e tyre t&euml; forta, INTJ- jan&euml; t&euml; aft&euml; t&euml; krijojn&euml; vendin e tyre t&euml; rehatsh&euml;m n&euml; thuajse &ccedil;do insitucion, duke p&euml;rfshir&euml; t&euml; vetin, n&euml; t&euml; cilin i vendosin mendjet e tyre.</p>
-<h1>&nbsp;</h1>
-<h1>8. INTj-t&euml; n&euml; vendin e pun&euml;s</h1>
-<p>M&euml; shum&euml; se &ccedil;do gj&euml; tjet&euml;r, INTJ-t&euml; duan t&euml; jen&euml; n&euml; gjendje t&euml; kapin pun&euml; intelektualisht interesante me minimnumin e nd&euml;rhyrjeve t&euml; jashtme, as m&euml; pak as m&euml; shum&euml;. Teknikat koh&euml;-harxhuese t&euml; administrimit si&ccedil; jan&euml; m&euml;nyrat p&euml;r nd&euml;rtimin e besimit, takimet p&euml;r p&euml;rparimin dhe kritikat e st&euml;rzgjatura n&euml; form&euml;n e sandui&ccedil;it, t&euml; gjitha do t&rsquo;i m&euml;rzisin INTJ-t&euml;- e gjitha &ccedil;ka ata duan qoft&euml; si n&euml;npun&euml;s, koleg&euml; ose menaxher&euml;, &euml;sht&euml; t&rsquo;i p&euml;rkushtohen synimeve t&euml; tyre me standartet m&euml; t&euml; larta t&euml; p&euml;rsosm&euml;ris&euml; teknike dhe t&euml; jen&euml; t&euml; rrethuar nga njer&euml;z q&euml; i ndajn&euml; t&euml; njёjtat vlera.</p>
-<p>Kjo i b&euml;n ata t&euml; duken si pun&euml;tor&euml; shembullor dhe n&euml; shum&euml; m&euml;nyra t&euml; till&euml; jan&euml;, por ka shum&euml; &nbsp;tipe, sidomos ata q&euml; ndajn&euml; kombinimin tipareve e Observant (S) dhe Feeling (F) t&euml; cil&euml;t do t&euml; konsiderojn&euml; pun&euml;n (ose &ccedil;far&euml;do lloj lidhje tjet&euml;r) me INTJ-t&euml; si jasht&euml;zakonisht sfiduese. INTJ-t&euml; kan&euml; kod mjaft t&euml; rrept&euml; t&euml; udh&euml;heqjes kur vjen fjala p&euml;r pun&euml;n e tyre dhe n&euml;se shohin koleg&euml;t e tyre duke i vler&euml;suar aktivitetet shoq&euml;rore dhe pun&euml;n &ldquo;mjaftuesh&euml;m t&euml; mir&euml;&rdquo; kundrejt p&euml;rsosm&euml;ris&euml; absolute at&euml;her&euml; do t&euml; shfaqen probleme. P&euml;r k&euml;t&euml; arsye, INTJ-t&euml; preferojn&euml; t&euml; punojn&euml; n&euml; grupe t&euml; vogla dhe me persona q&euml; mendojn&euml; njejt&euml; si ta- me vet&euml;m nj&euml; person n&euml;se &euml;sht&euml; nevoja.</p>
-<h2>INTJ-t&euml; si n&euml;npun&euml;s</h2>
-<p>INTJ-t&euml; jan&euml; njer&euml;z t&euml; pavarur dhe mund t&euml; acarohen shpejt n&euml;se e gjejn&euml; veten n&euml; pozita t&euml; p&euml;rcaktuara q&euml; e kufizojn&euml; lirin&euml; e tyre. Me udh&euml;zimin e nj&euml; menaxheri liberal, INTJ-t&euml; do t&euml; ngrisin veten n&euml; pozita t&euml; ekspert&euml;ve, duke p&euml;rfunduar pun&euml;n e tyre jo me ambicien p&euml;r tu ngritur n&euml; detyr&euml; por shkaku q&euml; e meritojnё. INTJ-t&euml; k&euml;rkojn&euml; dhe vler&euml;sojn&euml; menaxher&euml;t e vendosur, logjik t&euml; cil&euml;t jan&euml; n&euml; gjendje t&rsquo;i drejtojn&euml; me aft&euml;si, t&euml; japin kritika kur &euml;sht&euml; e nevojshme dhe t&rsquo;i t&euml;rheqin ato vendime me arsye t&euml; bazuar.</p>
-<p>Mos harroni se k&euml;tu po definohen pritshm&euml;rit&euml; e INTJ-ve p&euml;r menaxher&euml;t e tyre dhe jo e kund&euml;rta si&ccedil; ndodh me disa personalitete tjera. Titujt nuk kan&euml; kurrfar r&euml;nd&euml;sie p&euml;r INTJ-t&euml; - besimi dhe respekti fitohen dhe INTJ-t&euml; presin q&euml; kjo t&euml; jet&euml; nj&euml; gj&euml; e dyanshme, duke dh&euml;n&euml; dhe marr&euml; k&euml;shilla, kritika dhe rezultate. INTJ-t&euml; presin q&euml; menaxher&euml;t e tyre t&euml; jan&euml; mjaftuesh&euml;m intelegjent dhe t&euml; fort&euml; p&euml;r t&euml; qen&euml; n&euml; gjendje ta p&euml;rballojn&euml; k&euml;t&euml; model. Nj&euml; INTJ i heshtur p&euml;r&ccedil;on munges&euml; t&euml; respektit m&euml; shum&euml; se do b&euml;jn&euml; gjith&euml; sfidat e tyre ndonj&euml;her&euml;.</p>
-<h2>&nbsp;</h2>
-<h2>INTJ-t&euml; si koleg&euml;</h2>
-<p>Puna aktive n&euml; grup nuk &euml;sht&euml; gj&euml; e mir&euml; p&euml;r njer&euml;zit me personalitetin INTJ- ashp&euml;rsisht t&euml; pavarur dhe privat, INTJ-t&euml; p&euml;rdorin mendjet e tyre t&euml; shkath&euml;ta dhe mendjepreht&euml;sin&euml; p&euml;r t&rsquo;u shmangur bisedave me tё tjer&euml;, presionit t&euml; pun&euml;s dhe krijojn&euml; situata ku ata nuk pengohen nga metodat m&euml; pak intelegjente, m&euml; pak t&euml; afta dhe m&euml; pak t&euml; adaptueshme. N&euml; vend t&euml; k&euml;saj ata ka mund&euml;si t&euml; b&euml;jn&euml; shaka duke i b&euml;r&euml; t&euml; lexojn&euml; mes rreshtave dhe t&rsquo;i l&euml;n&euml;&nbsp; t&euml; mirren vet&euml;m me pun&euml;n q&euml; do t&euml; ishte shum&euml; m&euml; e leht&euml; n&euml;se do t&rsquo;i kishin d&euml;gjuar k&euml;shillat e INTJ-ve.</p>
-<p>INTJ-t&euml; jan&euml; analist&euml; t&euml; shk&euml;lqyer dhe ka mund&euml;si t&euml; mbledhin nj&euml; grup t&euml; vog&euml;l t&euml; koleg&euml;ve besnik p&euml;r t&rsquo;i p&euml;rfshir&euml; n&euml; mbledhjet e tyre, duke i p&euml;rjashtuar ata q&euml; i p&euml;rcjellin shum&euml; detajet ose t&euml; cil&euml;t akoma nuk e kan&euml; fituar respektin e INTJ-ve. Por me shum&euml; gjas&euml;, INTJ-t&euml; do ta marrin iniciativ&euml;n vet- Ata duan t&euml; shfryt&euml;zojn&euml; sfidat dhe p&euml;rgjegj&euml;sit&euml; dhe perfeksionizmi e vendosm&euml;ria zakonisht n&euml;nkuptojn&euml; q&euml; puna del e past&euml;r dhe e dobishme, duke u dh&euml;n&euml; INTJ-ve k&euml;naq&euml;sin&euml; e dyfisht&euml; t&euml; vetmis&euml; dhe fitores.</p>
-<h2>&nbsp;</h2>
-<p><strong>INTJ-t&euml; si menaxher&euml;</strong></p>
-<p>Edhe pse do t&euml; &ccedil;uditen kur ta d&euml;gjojn&euml;, INTJ-t&euml; jan&euml; lider&euml; t&euml; natyrsh&euml;m dhe kjo shfaqet n&euml; stilin e tyre t&euml; udh&euml;heqjes. INTJ-t&euml; vler&euml;sojn&euml; inovacionin dhe efektshm&euml;rin&euml; m&euml; shum&euml; se &ccedil;do cil&euml;si tjet&euml;r dhe me qejf do t&euml; l&euml;n&euml; anash hierarkin&euml;, protokollin e madje edhe besimet e tyre n&euml;se u paraqiten argumente racionale se pse gj&euml;rat duhet t&euml; ndryshojn&euml;.&nbsp; INTJ-t&euml; p&euml;rkrahin lirin&euml; dhe fleksibilitetin n&euml; vendin e pun&euml;s, duke parapёlqyer t&euml; angazhojn&euml; n&euml;npun&euml;sit e tyre si t&euml; barabart&euml;, duke i respektuar dhe shp&euml;rblyer iniciativa si dhe duke p&euml;rshtatur nj&euml; strategji drejtuese &ldquo;p&euml;rgjegj&euml;sit&euml; shkojn&euml; tek mendja m&euml; e mir&euml;&rdquo; nd&euml;rsa duar m&euml; t&euml; afta menaxhojn&euml; pun&euml;n e p&euml;rditshme.</p>
-<p>Por kjo lloj lirie nuk &euml;sht&euml; vet&euml;m e lejuar, por e k&euml;rkuar- ata q&euml; jan&euml; m&euml;suar thjesht t&rsquo;u tregojn&euml; &ccedil;far&euml; t&euml; b&euml;jn&euml;, t&euml; cil&euml;t jan&euml; t&euml; paaft&euml; t&euml; drejtojn&euml; veten dhe sfidojn&euml; pik&euml;pamjet ekzistuese, do t&euml; ken&euml; problem t&rsquo;i p&euml;rmbushin standartet jasht&euml;zakonisht t&euml; larta t&euml; INTJ-ve. Efektshm&euml;ria dhe rezultatet jan&euml; kryesore p&euml;r INTJ-t&euml; dhe sjelljet q&euml; i sabotojn&euml; k&euml;to kushte shtypen pa pik&euml; m&euml;shire. N&euml;se n&euml;npun&euml;sit mundohen t&euml; kompenzojn&euml; dob&euml;sit&euml; n&euml; k&euml;to aspekte duke provuar t&euml; krijojn&euml; nj&euml; lidhje shoq&euml;rore me menaxher&euml;t INTJ-t&euml;, do t&euml; d&euml;shtojn&euml; keq- tashethemet n&euml; zyr&euml; dhe lajkat nuk jan&euml; m&euml;nyrat e duhura p&euml;r t&rsquo;u afruar me INTJ-t&euml;-- vet&euml;m aft&euml;sia e spikatur e arrin k&euml;t&euml;.</p>
-<p>&nbsp;</p>',
-	        'shortDescription' => '<p>&Euml;sht&euml; vetmi n&euml; maje, por pasi q&euml; jan&euml; nj&euml; prej personaliteteve m&euml; t&euml; rralla dhe m&euml; t&euml; aft&euml; strategjikisht, INTJ-t&euml; e kuptojn&euml; k&euml;t&euml;. INTJ-t&euml; p&euml;rb&euml;jn&euml; vet&euml;m dy p&euml;rqind t&euml; popullsis&euml; dhe femrat me k&euml;t&euml; lloj personaliteti jan&euml; ve&ccedil;an&euml;risht t&euml; rralla, duke p&euml;rb&euml;r&euml; vet&euml;m 0.8% t&euml; popullsis&euml;- &euml;sht&euml; shpesh sfid&euml; p&euml;r ta t&euml; gjejn&euml; njer&euml;z q&euml; mendojn&euml; si ta dhe t&euml; cil&euml;t jan&euml; n&euml; gjendje t&euml; shtyhen me intelektualizmin e pam&euml;shirsh&euml;m dhe manovrat e shahut. Njer&euml;zit me k&euml;t&euml; lloj personaliteti jan&euml; imagjinar&euml; por t&euml; vendosur, ambicioz por privat, jasht&euml;zakonisht kurioz por nuk e harxhojn&euml; energjin&euml; e tyre pa nevoj&euml;.</p>
-<p>Me nj&euml; etje t&euml; natyrshme p&euml;r dituri q&euml; shfaqet n&euml; f&euml;mij&euml;ri, INTJ-ve shpesh u ipet titulli &ldquo;apasionues i librit&rdquo; si f&euml;mij&euml;. Edhe pse bashk&euml;moshatar&euml;t e tyre synojn&euml; t&rsquo;i ofendojn&euml;, INTJ-t&euml; fillojn&euml; t&euml; identifikohen me k&euml;t&euml; dhe jan&euml; madje krenar&euml;, duke shijuar trungun e gjer&euml; e t&euml; thell&euml; t&euml; dituris&euml; s&euml; tyre. INTJ-t&euml; gjithashtu p&euml;lqejn&euml; t&euml; ndajn&euml; me t&euml; tjer&euml;t at&euml; &ccedil;far&euml; dijn&euml;, me vet&euml;besim n&euml; njohurin&euml; q&euml; kan&euml; p&euml;r l&euml;nd&euml; t&euml; caktuara, por p&euml;r shkak t&euml; cil&euml;sive Intuitive (N) dhe Judging (J) ata parap&euml;lqejn&euml; t&euml; krijojn&euml; dhe zbatojn&euml; nj&euml; plan t&euml; shk&euml;lqyer brenda fush&euml;s s&euml; &nbsp;tyre n&euml; vend se t&euml; ndajn&euml; mendimet e tyre sikur t&euml; ishin thashetheme.</p>
-<blockquote>
-<p><em>&nbsp;&ldquo;Nuk e ke t&euml; drejt&euml;n e mendimit t&euml; lir&euml;. E ke t&euml; drejt&euml;n e mendimit t&euml; informuar. Askush nuk e ka t&euml; drejt&euml;n e t&euml; qen&euml;t injorant.&rdquo;</em></p>
-<p><em>Harlan Ellison</em></p>
-</blockquote>',
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
+            'shortDescription' => "This is a short description of the KËSHILLUESI",
 	        'type_img' => "images/INTJ.png",
-	        'featured_Image' => "images/feat.png",
+	        'feat_img' => "images/feat.png",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "INFJ",
 	        'name' => "KËSHILLUESI",
-            'description' => "This is a short description of the KËSHILLUESI",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
 	        'shortDescription' => "This is a short description of the KËSHILLUESI",
 	        'type_img' => "images/INFJ.png",
-	        'featured_Image' => "images/feat.png",
+	        'feat_img' => "images/feat.png",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "ISTJ",
             'name' => "INSPEKTORI",
-            'description' => "This is a short description of the INSPEKTORI",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the INSPEKTORI",
             'type_img' => "images/ISTJ.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "ISFJ",
-            'name' => "mbrojtësi",
-            'description' => "This is a short description of the mbrojtësi",
+            'name' => "Mbrojtësi",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the mbrojtësi",
             'type_img' => "images/ISFJ.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "INTP",
-            'name' => "FILOZOFЁT",
-            'description' => "This is a short description of the FILOZOFЁT",
+            'name' => "Mendimtari",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the FILOZOFЁT",
             'type_img' => "images/INTP.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "INFP",
             'name' => "NDËRMJETËSUESI",
-            'description' => "This is a short description of the NDËRMJETËSUESI",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the NDËRMJETËSUESI",
             'type_img' => "images/INFP.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "ISTP",
             'name' => "I SHKATHËTI",
-            'description' => "This is a short description of the I SHKATHËTI",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the I SHKATHËTI",
             'type_img' => "images/ISTP.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "ISFP",
-            'name' => "aventurierët",
-            'description' => "This is a short description of the aventurierët",
+            'name' => "Aventuristi",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the aventurierët",
             'type_img' => "images/ISFP.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "ENTJ",
             'name' => "KOMANDANTI",
-            'description' => "This is a short description of the KOMANDANTI",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the KOMANDANTI",
             'type_img' => "images/ENTJ.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
-        DB::table('tipis')->insert([
-            'type' => "ENFJ",
-            'name' => "Protagonistët",
-            'description' => '<blockquote>
-<p><em>&Ccedil;do gj&euml; q&euml; b&euml;n tani paraqitet jasht&euml; dhe ka ndikim te t&euml; gjith&euml;. Q&euml;ndrimi yt mund t&euml; ndri&ccedil;oj zemra ose t&euml; shkaktoj shqet&euml;sim. Fryma jote mund t&euml; rrezatoj dashuri ose t&euml; mbuloj dhom&euml;n me depresion. Shikimi yt mund t&euml; shkaktoj g&euml;zim. Fjal&euml;t e tua mund t&euml; inspirojn&euml; liri. &Ccedil;do akt i yti mund t&euml; hap zemra dhe mendje. </em></p>
-<p>David Deida</p>
-</blockquote>
-<p>Protagonist&euml;t jan&euml; udh&euml;heq&euml;s t&euml; lir&euml;, t&euml; mbushur me pasion dhe kariz&euml;m. P&euml;rb&euml;jn&euml; rreth dy p&euml;rqind t&euml; popull&euml;sis&euml; dhe jan&euml; shpeshher&euml; politikan&euml;t, trajner&euml;t dhe m&euml;suesit ton&euml; q&euml; arrijn&euml; t&euml; inspirojn&euml; t&euml; tjer&euml;t t&euml; b&euml;jn&euml; bot&euml;n vend m&euml; t&euml; mir&euml;. Me nj&euml; vet&euml;besim t&euml; natyrsh&euml;m q&euml; sjell&euml; ndikim, Protagonist&euml;t gjejn&euml; k&euml;naq&euml;si dhe krenari kur udh&euml;zojn&euml; t&euml; tjer&euml;t t&euml; punojn&euml; bashk&euml; q&euml; t&euml; p&euml;rmir&euml;sojn&euml; veten dhe komunitetin e tyre.</p>
-<p>Njer&euml;zit t&euml;rhiqen nga personalitetet e forta dhe Protagonist&euml;t rrezatojn&euml; origjinalitet, interesim dhe altruiz&euml;m e nuk kan&euml; frik&euml; t&euml; ngrisin z&euml;rin e t&euml; thon&euml; at&euml; q&euml; mendojn&euml; se duhet t&euml; thuhet. Atyre iu duket i leht&euml; dhe i natyrsh&euml;m komunikimi me t&euml; tjer&euml;t, sidomos personalisht. Tipari i tyre Intuitiv (N) i ndihmon njer&euml;zit me k&euml;t&euml; lloj personaliteti t&euml; arrijn&euml; t&rsquo;i afrohen &ccedil;do mendjeje, qoft&euml; me fakte dhe logjik&euml; ose me emocion. Protagonist&euml;t leht&euml; shohin motivet e njer&euml;zve dhe ngjarjeve q&euml; duken t&euml; shk&euml;putura dhe jan&euml; n&euml; gjendje t&rsquo;i bashkojn&euml; k&euml;to ide e ti shprehin ato si nj&euml; q&euml;llim t&euml; p&euml;rbashk&euml;t me nj&euml; m&euml;nyr&euml; t&euml; t&euml; shprehurit q&euml; &euml;sht&euml; m&euml;se e mrekullueshme.</p>
-<p>Interesimi q&euml; Protagonist&euml;t e kan&euml; p&euml;r t&euml; tjer&euml;t &euml;sht&euml; i sinqert&euml;, ndoshta edhe pak i tepruar- kur ata besojn&euml; te dikush p&euml;rfshihen shum&euml; n&euml; problemet e personit tjet&euml;r dhe kan&euml; shum&euml; besim tek ta. Fatmirsisht, ky besim ka gjasa t&euml; jet&euml; nj&euml; profeci p&euml;rmbush&euml;se p&euml;r ta, sepse altruizmi i Protagonist&euml;ve dhe origjinaliteti i tyre i inspirojn&euml; njer&euml;zit q&euml; duan t&euml; b&euml;hen verzione m&euml; t&euml; mira t&euml; vetes. Por, n&euml;se ata nuk jan&euml; t&euml; kujdessh&euml;m, mund ta rrisin shum&euml; optimizmin e tyre, ndonj&euml;her&euml; duke i shtyer t&euml; tjer&euml;t m&euml; larg sesa q&euml; munden ose duan t&euml; shkojn&euml;.</p>
-<p>ENFJ-t&euml; jan&euml; t&euml; rrezikuar poashtu edhe nga nj&euml; kurth: ata kan&euml; nj&euml; kapacitet t&euml; pamas&euml; p&euml;r t&euml; reflektuar dhe analizuar ndjenjat e tyre, por n&euml;se p&euml;rfshihen shum&euml; n&euml; telashin e dikujt tjet&euml;r atyre do u krijohet nj&euml; lloj hipokondrie emocionale dhe do i shohin problemet e njer&euml;zve tjer&euml; te vetja dhe do mundohen t&euml; rregullojn&euml; di&ccedil;ka q&euml; s&rsquo;&euml;sht&euml; e prishur. N&euml;se arrijn&euml; n&euml; nj&euml; pik&euml; ku jan&euml; t&euml; penguar nga kufizimet q&euml; dikush tjet&euml;r po p&euml;rjeton, ata nuk e kan&euml; aft&euml;sin&euml; t&euml; shohin p&euml;rtej dilem&euml;s apo t&euml; japin ndihm&euml;. Kur kjo ndodh, &euml;sht&euml; e r&euml;nd&euml;sishme p&euml;r Protagonist&euml;t q&euml; t&euml; t&euml;rhiqen dhe ta p&euml;rdorin at&euml; vet&euml;reflektim p&euml;r t&euml; dalluar &ccedil;ka po ndjejn&euml; n&euml; t&euml; v&euml;rtet&euml; dhe &ccedil;ka &euml;sht&euml; nj&euml; &ccedil;&euml;shtje e ve&ccedil;uar q&euml; duhet t&euml; shikohet prej nj&euml; perspektive tjet&euml;r.&nbsp;</p>
-<p>&nbsp;</p>
-<p><em>&hellip; Pengesat nuk duhet t&euml; na largojn&euml; nga mb&euml;shtetja e nj&euml; &ccedil;&euml;shtjeje q&euml; besojm&euml; q&euml; &euml;sht&euml; e drejt&euml; </em></p>
-<p>&nbsp;</p>
-<p>Protagonist&euml;t jan&euml; njer&euml;z t&euml; sinqert&euml; dhe t&euml; dashur q&euml; flasin at&euml; q&euml; duhet th&euml;n&euml; dhe b&euml;jn&euml; at&euml; q&euml; duhet b&euml;r&euml; si dhe asgj&euml; nuk i b&euml;n m&euml; t&euml; lumtur sesa t&euml; udh&euml;heqin nj&euml; detyr&euml;, t&euml; bashkojn&euml; dhe motivojn&euml; ekipin e tyre me entuziaz&euml;m ngjit&euml;s.</p>
-<p>Njer&euml;zit me k&euml;t&euml; lloj personaliteti jan&euml; altruist&euml; t&euml; pasionuar, ndonj&euml;her&euml; edhe m&euml; shum&euml; se q&euml; duhet. Ata nuk kan&euml; frik&euml; t&euml; heqin keq p&euml;rderisa mbrojn&euml; njer&euml;zit dhe idet&euml; n&euml; t&euml; cilat besojn&euml;. Nuk &euml;sht&euml; &ccedil;udi q&euml; shum&euml; Protagonist&euml; t&euml; famsh&euml;m jan&euml; ikona kulturore ose politike- ky lloj personaliteti do t&euml; udh&euml;heq rrug&euml;n drejt nj&euml; t&euml; ardhme m&euml; t&euml; ndritur, qoft&euml; duke e udh&euml;hequr nj&euml; komb n&euml; p&euml;rparim ose duke udh&euml;hequr ekip&euml;n e tyre t&euml; vog&euml;l t&euml; lig&euml;s s&euml; softballit drejt fitores s&euml; merituar.&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<ol start="2">
-<li><strong> Pikat e forta dhe dob&euml;sit&euml;</strong></li>
-</ol>
-<p><strong>Pikat e forta</strong></p>
-<p><strong>Tolerant&euml;</strong> - Protagonist&euml;t jan&euml; persona q&euml; v&euml;rtet&euml; din&euml; t&euml; punojn&euml; n&euml; grup dhe ata e din&euml; se kjo do t&euml; thot&euml; q&euml; duhet t&euml; d&euml;gjojn&euml; mendimet e t&euml; tjer&euml;ve edhe n&euml;se ato jan&euml; n&euml; kund&euml;rshtim me t&euml; tyret. Ata e pranojn&euml; q&euml; nuk i kan&euml; t&euml; gjitha p&euml;rgjigjet dhe jan&euml; shpesh pranues t&euml; kund&euml;rshtimit p&euml;r aq koh&euml; sa &euml;sht&euml; i dobish&euml;m.</p>
-<p><strong>T&euml; besuesh&euml;m</strong> &ndash; Gj&euml;ja q&euml; i inatos Protagonist&euml;t m&euml; s&euml; shumti &euml;sht&euml; idea e t&euml; l&euml;nit n&euml; balt&euml; nj&euml; person ose &ccedil;&euml;shtje n&euml; t&euml; cil&euml;n besojn&euml;. N&euml;se &euml;sht&euml; e mundur, gjithmon&euml; mund t&euml; mb&euml;shtetesh te Protagonist&euml;t p&euml;r ndihm&euml; gjat&euml; koh&euml;rave t&euml; v&euml;shtira.</p>
-<p><strong>Karizmatik</strong> &ndash; Sharmi dhe popullariteti jan&euml; cil&euml;si q&euml; Protagonist&euml;t i kan&euml; me shumic&euml;. Ata instiktivisht e din&euml; si t&euml; kaplojn&euml; audienc&euml;n dhe t&euml; kuptojn&euml; disponimin dhe motivimin n&euml; m&euml;nyra q&euml; i lejon ata t&euml; komunikojn&euml; me arsye, emocion, pasion, p&euml;rmbajtje- &ccedil;far&euml;do q&euml; k&euml;rkon situata. Imitues t&euml; talentuar, Protagonist&euml;t jan&euml; t&euml; aft&euml; t&euml; ndryshojn&euml; tonin dhe sjelljen p&euml;r tu p&euml;rshtatur me audienc&euml;n, duke i q&euml;ndruar besnik&euml; z&euml;rit t&euml; tyre.</p>
-<p><strong>Altruist&euml;</strong> &ndash; Bashkimi i k&euml;tyre cil&euml;sive &euml;sht&euml; d&euml;shira e pal&euml;kundur e Protagonist&euml;ve t&euml; b&euml;jn&euml; mir&euml; p&euml;r komunitetin e tyre, qoft&euml; kjo n&euml; sht&euml;pin&euml; e tyre ose n&euml; sken&euml;n globale. T&euml; ngroht&euml; dhe bujar&euml;, Protagonist&euml;t sinqerisht besojn&euml; se vet&euml;m n&euml;se mund t&rsquo;i bashkojn&euml; njer&euml;zit do krijojn&euml; nj&euml; bot&euml; t&euml; mir&euml;. <br /><br /></p>
-<p>&nbsp;</p>
-<p><strong>Udh&euml;heq&euml;s t&euml; natyrsh&euml;m</strong> &ndash; M&euml; shum&euml; sesa k&euml;rkojn&euml; autoritet p&euml;r vete, ENFJ-t&euml; shpesh p&euml;rfundojn&euml; n&euml; role udh&euml;heq&euml;sie nga k&euml;rkesa e t&euml; tjer&euml;ve, t&euml; shtyr&euml; nga admiruesit e shumt&euml; t&euml; personalitetit t&euml; tyre t&euml; fort&euml; dhe vizionit pozitiv.</p>
-<p><strong>Dob&euml;sit&euml; </strong></p>
-<p><strong>Idealist&euml; t&euml; tep&euml;rt</strong>- Njer&euml;zit me k&euml;t&euml; lloj personaliteti mund t&euml; zihen n&euml; befasi kur e kuptojn&euml; q&euml; p&euml;r shkak t&euml; nj&euml; keqkuptimi t&euml; thjesht&euml; njer&euml;zit luftojn&euml; kund&euml;r tyre, edhe n&euml;se e kan&euml; q&euml;llimin e mir&euml;. M&euml; shum&euml; ka gjasa q&euml; ata t&euml; ndjejn&euml; dhembshuri sesa zem&euml;rim p&euml;r k&euml;t&euml; kund&euml;rshtim dhe mund t&euml; fitojn&euml; nj&euml; reputacion si naiv.</p>
-<p><strong>Shum&euml; altruist&euml;</strong>- Protagonist&euml;t mund t&euml; fundosen n&euml; premtimet e tyre, duke i ndjer&euml; problemet e t&euml; tjer&euml;ve si t&euml; tyret dhe duke u munduar shum&euml; t&euml; mbajn&euml; fjal&euml;n. N&euml;se ata nuk jan&euml; t&euml; kujdessh&euml;m, mund t&euml; zgjerohen shum&euml; dhe t&euml; mos jen&euml; n&euml; gjendje t&euml; ndihmojn&euml; ask&euml;nd.</p>
-<p><strong>Shum&euml; t&euml; ndjesh&euml;m</strong>- P&euml;rderisa i pranojn&euml; kritikat, duke i par&euml; ato si veg&euml;l p&euml;r t&euml; udh&euml;hequr nj&euml; ekip m&euml; t&euml; mire, &euml;sht&euml; e leht&euml; p&euml;r Protagonist&euml;t t&rsquo;i marrin ato pak si shum&euml; af&euml;r zemr&euml;s. Ndjeshm&euml;ria e tyre ndaj t&euml; tjer&euml;ve do t&euml; thot&euml; q&euml; Protagonist&euml;t ndonj&euml;her&euml; i ndjejn&euml; problemet q&euml; nuk jan&euml; t&euml; tyret dhe mundohen t&euml; ndreqin gj&euml;ra q&euml; nuk ndreqen duke u brengosur se nuk po b&euml;jn&euml; mjaftuesh&euml;m.</p>
-<p><strong>Vet&euml;besim t&euml; luhatsh&euml;m</strong> &ndash; Protagonist&euml;t e definojn&euml; vet&euml;besimin e tyre nga ajo n&euml;se jan&euml; n&euml; gjendje t&rsquo;u p&euml;rmbahen idealeve t&euml; tyre dhe ndonj&euml;her&euml; duan t&euml; d&euml;gjojn&euml; kritika m&euml; shum&euml; nga pasiguria sesa vet&euml;besimi, gjithmon&euml; duke vrar&euml; mendjen n&euml;s&euml; mund t&euml; punojn&euml; m&euml; mir&euml;. N&euml;se ata d&euml;shtojn&euml; t&euml; p&euml;rfundojn&euml; nj&euml; synim ose t&euml; ndihmojn&euml; dik&euml; q&euml; u kan&euml; premtuar ndihm&euml;, vet&euml;besimi i tyre do p&euml;soj r&euml;nie t&euml; sigurt.&nbsp;</p>
-<p><strong>E kan&euml; problem t&euml; marrin vendime t&euml; r&euml;nd&euml;sishme</strong> &ndash; N&euml;se e gjejn&euml; veten n&euml; mes nj&euml; dileme, Protagonist&euml;t mund t&euml; mbesin si t&euml; ngrir&euml;, duke i imagjinuar t&euml; gjitha pasojat e veprimeve t&euml; tyre, sidomos n&euml;se ato pasoja jan&euml; njer&euml;zore.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<ol start="3">
-<li><strong> LIDHJET E PROTAGONIST&Euml;VE </strong></li>
-</ol>
-<p><em>Njer&euml;zit q&euml; kan&euml; k&euml;t&euml; personalitet ndihen m&euml; s&euml; miri kur jan&euml; n&euml; lidhje dhe pak lloje t&euml; tjera jan&euml; m&euml; t&euml; etur t&euml; tregohen t&euml; p&euml;rkushtuar ndaj partner&euml;ve q&euml; kan&euml; zgjedhur.</em> Protagonist&euml;t i marrin lidhjet seriozisht, duke i zgjedhur partner&euml;t q&euml; kan&euml; synim lidhje t&euml; gjata m&euml; tep&euml;r se t&euml; afruarit e zakonsh&euml;m q&euml; priten nga llojet e grupit Explorer. V&euml;rtet&euml; q&euml; nuk ka g&euml;zim m&euml; t&euml; madh p&euml;r Protagonist&euml;t sesa t&euml; ndihmojn&euml; n&euml; synimin e dikujt q&euml; ata duan dhe nd&euml;rlidhja e jet&euml;ve q&euml; nj&euml; lidhje serioze p&euml;rfaq&euml;son &euml;sht&euml; mund&euml;sia e p&euml;rkryer p&euml;r t&euml; b&euml;r&euml; at&euml;.</p>
-<p><strong>Eci ngadal&euml;, por asnj&euml;her&euml; nuk kthehem prapa</strong></p>
-<p>Edhe n&euml; fillim t&euml; lidhjes, njer&euml;zit me k&euml;t&euml; lloj personaliteti jan&euml; t&euml; gatsh&euml;m t&euml; tregojn&euml; p&euml;rkushtimin e tyre duke harxhuar koh&euml; p&euml;r t&euml; paraqitur veten si partner t&euml; besuesh&euml;m dhe t&euml; q&euml;ndruesh&euml;m.</p>
-<p>Tipari i tyre Intuitiv (N) i ndihmon ata q&euml; t&euml; jen&euml; n&euml; hap me ndryshimet e shpejta t&euml; disponimit q&euml; jan&euml; t&euml; zakonshme n&euml; fillim t&euml; lidhjeve, por Protagonist&euml;t prap&euml; do mb&euml;shteten n&euml; bisedat p&euml;r ndjenjat e p&euml;rbashk&euml;ta, duke kontrolluar pulsin e lidhjes e duke pyetur sesi jan&euml; gj&euml;rat dhe n&euml;se ka di&ccedil;ka q&euml; mund t&euml; b&euml;jn&euml; ata. P&euml;rderisa kjo mund t&euml; ndihmoj n&euml; shmangjen e konfliktit, t&euml; cilin Protagonist&euml;t e urrejn&euml;, ata do rrezikojn&euml; q&euml; t&euml; duken imponues. Protagonist&euml;t duhet mos harrojn&euml; q&euml; ndonj&euml;her&euml; e vetmja gj&euml; e keqe &euml;sht&euml; t&euml; pyes&euml;sh shpesh se &ccedil;far&euml; &euml;sht&euml; keq.</p>
-<p>ENFJ-t&euml; nuk kan&euml; nevoj&euml; p&euml;r shum&euml; gj&euml;ra p&euml;r t&euml; qen&euml; t&euml; lumtur, thjesht t&euml; din&euml; se partner&euml;t e tyre jan&euml; t&euml; lumtur dhe q&euml; ata t&euml; shprehin k&euml;t&euml; lumturi p&euml;rmes gjesteve t&euml; dukshme. T&rsquo;i ndihmojn&euml; t&euml; tjer&euml;t me synimet e tyre &euml;sht&euml; meraku tyre kryesor dhe ata do b&euml;jn&euml; t&euml; pamundur&euml;n t&euml; ndihmojn&euml; partner&euml;t q&euml; t&rsquo;i realizojn&euml; &euml;ndrrat. Mir&euml;po, n&euml;se nuk jan&euml; t&euml; kujdessh&euml;m, ky mision p&euml;r t&rsquo;i b&euml;r&euml; partner&euml;t t&euml; lumtur s&rsquo;do u l&euml; koh&euml; t&euml; kujdesen p&euml;r nevojat e veta dhe &euml;sht&euml; e r&euml;nd&euml;sishme q&euml; t&euml; mbajn&euml; mend q&euml; edhe ata t&euml; shprehin nevojat e tyre, sidomos n&euml; fazat e hershme t&euml; lidhjes.</p>
-<p><strong>Nuk mund tu ik&euml;sh p&euml;rgjegj&euml;sive t&euml; s&euml; nes&euml;rmes duke i shmangur ato sot </strong></p>
-<p>Prirja e Protagonist&euml;ve t&euml; shmangin &ccedil;do lloj konflikti, ndonj&euml;her&euml; edhe duke sakrifikuar parimet e tyre q&euml; t&euml; mbajn&euml; paqe, mund t&euml; shkaktojn&euml; probleme afatgjate n&euml;se fshehin problemin kryesor. N&euml; an&euml;n tjet&euml;r, njer&euml;zit me ket&euml; lloj personaliteti ndonj&euml;her&euml; aq shum&euml; provojn&euml; t&euml; parandalojn&euml; konfliktet sa kjo i b&euml;n t&euml; duken nevojtar&euml; dhe t&euml; pasigurt&euml;. ENFJ-t&euml; investojn&euml; t&euml; gjitha ndjenjat n&euml; lidhjen e tyre dhe jan&euml; aq t&euml; etur t&rsquo;i k&euml;naqin t&euml; tjer&euml;t sa mund t&euml; &ccedil;oj n&euml; d&euml;shtimin e lidhjes. Kur kjo ndodh, ata p&euml;rjetojn&euml; ndjenja t&euml; forta faji dhe tradhtie sepse i shohin t&euml;r&euml; p&euml;rpjekjet e tyre q&euml; po u rr&euml;shqasin nga dora.</p>
-<p>Sidoqoft&euml; n&euml;se partner&euml;t potencial&euml; i vler&euml;sojn&euml; k&euml;to cil&euml;si dhe u kthejn&euml; k&euml;to t&euml; mira Protagonist&euml;t do g&euml;zojn&euml; nj&euml; lidhje me pasion, t&euml; gjat&euml; e t&euml; lumtur. Protagonist&euml;t njihen si t&euml; dashuruar q&euml; jan&euml; t&euml; interesuar m&euml; shum&euml; n&euml; rutin&euml; dhe stabilitet sesa n&euml; spontanitet n&euml; jet&euml;t e tyre seksuale, por gjithmon&euml; t&euml; dedikuar ti ndihmojn&euml; partner&euml;t. P&euml;rfundimisht, Protagonist&euml;t besojn&euml; se lumturia e vetme &euml;sht&euml; lumturia e p&euml;rbashk&euml;t dhe k&euml;to jan&euml; gj&euml;rat q&euml; p&euml;rb&euml;jn&euml; nj&euml; lidhje t&euml; suksesshme.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<ol start="4">
-<li><strong> MIQ&Euml;SIT&Euml; </strong></li>
-</ol>
-<p><strong>PROTAGONIST&Euml;T SI SHOK&Euml; </strong></p>
-<p>Kur dalim te miq&euml;sit&euml;, Protagonist&euml;t jan&euml; &ccedil;do gj&euml; p&euml;rveq pasiv&euml;. P&euml;rderisa disa lloje personalitetesh mund t&euml; pranojn&euml; t&euml; mirat e t&euml; k&euml;qijat e miq&euml;sive, ndjenjat e tyre q&euml; shtohen dhe zbehen me koh&euml;, Protagonist&euml;t do b&euml;jn&euml; p&euml;rpjekje t&euml; mbajn&euml; k&euml;to lidhje duke i par&euml; si thelb&euml;sore dhe t&euml; r&euml;nd&euml;sishme, jo di&ccedil;ka q&euml; e l&euml;n&euml; tu ik&euml; nga pakujdesia apo p&euml;rtacia.</p>
-<p><em>Filozofia e nj&euml; lidhjeje t&euml; sinqert&euml; &euml;sht&euml; thelb&euml;sore p&euml;r ENFJ-t&euml; dhe p&euml;rderisa &euml;sht&euml; e dukshme n&euml; vendin e pun&euml;s dhe n&euml; romanc&euml;, &euml;sht&euml; edhe m&euml; e qart&euml; n&euml; miq&euml;si.</em></p>
-<p><strong>Gjith&euml; jet&euml;n time jam munduar t&euml; shkul gjemba dhe t&euml; mbjell lule, kudo qe lulet mund te rriten</strong></p>
-<p>Njer&euml;zit me k&euml;t&euml; lloj personaliteti u p&euml;lqen t&rsquo;i njohin t&euml; tjer&euml;t dhe nuk e kan&euml; problem t&euml; flasin me persona t&euml; &ccedil;far&euml;do personaliteti, me persona q&euml; kan&euml; mendime t&euml; tjera. Edhe n&euml; mosmarr&euml;veshje, perspektivat e tjera jan&euml; magjeps&euml;se p&euml;r Protagonist&euml;t- edhe pse si shumica e njer&euml;zve ata m&euml; s&euml; miri komunikojn&euml; me njer&euml;z me t&euml; cil&euml;t kan&euml; parime dhe ideale t&euml; p&euml;rbashk&euml;ta. Tipet e grupit t&euml; Diplomat&euml;ve dhe Analist&euml;ve jan&euml; m&euml; s&euml; miri n&euml; gjendje t&euml; kuptojn&euml; pik&euml;pamjen e Protagonist&euml;ve q&euml; &euml;sht&euml; shum&euml; idealistike p&euml;r shumic&euml;n. Jan&euml; k&euml;ta shok&euml; t&euml; af&euml;rt me t&euml; cil&euml;t ENFJ-t&euml; v&euml;rtet&euml; hapen duke i mbajtur lidhjet e shumta t&euml; tjera n&euml; nj&euml; fush&euml; m&euml; pak serioze, por me t&euml; nj&euml;jt&euml;n mb&euml;shtetje dhe inkurajim.</p>
-<p>T&euml; tjer&euml;t v&euml;rtet&euml; i &ccedil;mojn&euml; shok&euml;t ENFJ, duke vler&euml;suar ngroht&euml;sin&euml;, mir&euml;sin&euml; dhe optimizmin e sinqert&euml; dhe g&euml;zimin q&euml; ata sjellin. Protagonist&euml;t duan t&euml; jen&euml; miqt&euml; m&euml; t&euml; mir&euml; t&euml; mundsh&euml;m dhe kjo shihet n&euml; m&euml;nyr&euml;n sesi ata nuk jan&euml; t&euml; interesuar vet&euml;m n&euml; interesat sip&euml;rfaq&euml;sore t&euml; miqve t&euml; tyre, por n&euml; pasionet, shpresat dhe &euml;ndrrat. Asgj&euml; nuk i b&euml;n ata m&euml; t&euml; lumtur sesa t&rsquo;i shohin mir&euml; njer&euml;zit q&euml; ata duan dhe jan&euml; m&euml;se t&euml; gatsh&euml;m t&euml; ndajn&euml; koh&euml; dhe energji p&euml;r t&rsquo;i ndihmuar miqt&euml;.&nbsp;</p>
-<p><strong>Ne duhet t&euml; jemi shum&euml; t&euml; m&euml;dhenj q&euml; t&euml; mos ndikohemi nga ofendimet dhe shum&euml; fisnik&euml; p&euml;r t&euml; ofenduar dik&euml;</strong></p>
-<p>P&euml;rderisa Protagonist&euml;ve u p&euml;lqen t&euml; zgjatin dor&euml;n p&euml;r ndihm&euml;, personalitetet tjera thjesht nuk kan&euml; energjin&euml; t&euml; jen&euml; n&euml; hap me ta- duke krijuar lodhje t&euml; m&euml;tejshme, njer&euml;zit me k&euml;t&euml; personalitet mund t&euml; ndihen t&euml; ofenduar q&euml; t&euml; tjer&euml;t nuk po ua kthejn&euml; t&euml; mirat kur kan&euml; mund&euml;si. P&euml;rfundimisht, marrja dhe dh&euml;nia nga Protagonist&euml;t mund t&euml; b&euml;het mbyt&euml;se p&euml;r tipat q&euml; jan&euml; m&euml; t&euml; interesuar n&euml; momentin e tanish&euml;m sesa n&euml; t&euml; ardhmen ose ata me vet&euml;besim t&euml; lart&euml; q&euml; jan&euml; t&euml; k&euml;naqur me at&euml; q&euml; jan&euml; andaj nuk kan&euml; interesim p&euml;r t&euml; p&euml;rmirsuar veten dhe tu p&euml;rmbahen synimeve t&euml; Protagonist&euml;ve.</p>
-<p>Kur kjo ndodh ENFJ-t&euml; mund t&euml; b&euml;hen kritikues n&euml;se u duket e nevojshme. P&euml;rderisa zakonisht me takt dhe shpesh t&euml; gatsh&euml;m p&euml;r ndihm&euml;, n&euml;se miqt&euml; irritohen nga p&euml;rpjekjet e Protagonist&euml;ve p&euml;r t&rsquo;i shtyer p&euml;rpara, ata do kund&euml;rshtojn&euml; edhe m&euml; shum&euml;. N&euml;se kjo ndodh Protagonist&euml;t nuk duhet ta marrin personalisht dhe t&euml; ken&euml; nj&euml; q&euml;ndrim m&euml; pak serioz.</p>
-<p>Mir&euml;po p&euml;rfundimisht, Protagonist&euml;t do e kuptojn&euml; se entuziazmi dhe optimizmi i tyre i pal&euml;kundur do i shp&euml;rblej ata me lidhje t&euml; k&euml;naqshme me njer&euml;z q&euml; vler&euml;sojn&euml; dhe e ndajn&euml; vizionin dhe origjinalitetin e tyre. G&euml;zimi q&euml; Protagonist&euml;t kan&euml; p&euml;r t&rsquo;i shtyer gj&euml;rat p&euml;rpara do t&euml; thot&euml; q&euml; gjithmon&euml; ka nj&euml; lloj q&euml;llimi pas miq&euml;sive t&euml; tyre dhe ata krijojn&euml; lidhje q&euml; nuk thehen leht&euml;.</p>
-<p>&nbsp;</p>
-<ol start="5">
-<li><strong> Si prind&euml;r </strong></li>
-</ol>
-<p><strong>ENFJ-t&euml; prind&euml;r</strong></p>
-<p>Si udh&euml;heq&euml;s t&euml; natyrsh&euml;m, Protagonist&euml;t jan&euml; prind&euml;r t&euml; shk&euml;lqyer q&euml; mundohen t&euml; arrijn&euml; nj&euml; balanc&euml; mes t&euml; qen&euml;t miq inkurajues dhe mb&euml;shtet&euml;s t&euml; f&euml;mij&euml;ve t&euml; tyre e n&euml; t&euml; nj&euml;jt&euml;n koh&euml; punojn&euml; q&euml; t&rsquo;ua m&euml;sojn&euml; ndjenj&euml;n e p&euml;rgjegj&euml;sis&euml;. N&euml;se Protagonist&euml;t e kan&euml; nj&euml; pik&euml; t&euml; fort&euml; &euml;sht&euml; q&euml; t&euml; ofrojn&euml; mb&euml;shtetje emocionale, nuk t&euml; tregojn&euml; &ccedil;far&euml; t&euml; b&euml;sh por t&euml; ndihmojn&euml; dhe t&euml; inkurajojn&euml; t&euml; ndjek&euml;sh zemr&euml;n.</p>
-<p><em>Prind&euml;rit Protagonist&euml; do inkurajojn&euml; f&euml;mij&euml;t e tyre t&euml; eksplorojn&euml; dhe t&euml; rriten duke vler&euml;suar individualitetin e njer&euml;zve q&euml; sjellin n&euml; jet&euml; dhe i rrisin. </em></p>
-<p>Protagonist&euml;t si prind&euml;r jan&euml; krenar&euml; q&euml; ushqejn&euml; dhe inspirojn&euml; vlera t&euml; m&euml;dha dhe kujdesen q&euml; baza e k&euml;tyre vlerave t&euml; vjen nga mir&euml;kuptimi, jo nga bindja. &Ccedil;fardo q&euml; u duhet f&euml;mij&euml;ve t&euml; tyre p&euml;r tu rritur e p&euml;r t&euml; m&euml;suar, Protagonist&euml;t harxhojn&euml; koh&euml; e energji p&euml;r ta mund&euml;suar at&euml;. P&euml;rderisa n&euml; momente dob&euml;sie mund t&rsquo;i dor&euml;zohen ndonj&euml; sjelljeje m&euml; manipulative, Protagonist&euml;t m&euml; s&euml; shumti mb&euml;shteten n&euml; sharmin dhe idealizmin e tyre t&euml; sigurohen q&euml; f&euml;mij&euml;t v&euml;rtet&euml; t&rsquo;i pranojn&euml; k&euml;to m&euml;sime.</p>
-<p>Pasi kan&euml; mosp&euml;lqim ndaj konfliktit, Protagonist&euml;t si prind&euml;r mundohen q&euml; t&euml; sigurohen se sht&euml;pit&euml; e tyre t&euml; ofrojn&euml; nj&euml; ambient t&euml; sigurt dhe t&euml; qet&euml;. P&euml;rderisa mund t&euml; tregohen kritik&euml;, ajo nuk &euml;sht&euml; pika e tyre e fort&euml; dhe nuk u vjen natyrsh&euml;m t&euml; marrin masat e nevojshme p&euml;r diciplin&euml;. Mir&euml;po, ENFJ-t&euml; kan&euml; standarte t&euml; larta p&euml;r f&euml;mij&euml;t, duke i inkurajuar ata t&euml; b&euml;hen m&euml; t&euml; mir&euml;t q&euml; munden dhe kur konfrontimet ndodhin ata mundohen t&euml; paraqesin vet&euml;m shembuj, m&euml;sime morale q&euml; shpresojn&euml; q&euml; f&euml;mij&euml;t e tyre t&rsquo;i kuptojn&euml;.</p>
-<p>Me t&euml; hyr&euml; n&euml; periudh&euml;n e adoleshenc&euml;s f&euml;mij&euml;t e tyre fillojn&euml; t&euml; marrin vendime vet&euml;, ndonj&euml;her&euml; edhe kund&euml;r d&euml;shirave t&euml; prind&euml;rve- p&euml;rderisa Protagonist&euml;t e b&euml;jn&euml; m&euml; t&euml; mir&euml;n t&euml; pranojn&euml; k&euml;t&euml; me hijeshi dhe humor, ata mund t&euml; ndihen t&euml; l&euml;nduar krahas k&euml;tij rebelimi. ENFJ-t&euml; jan&euml; t&euml; ndjesh&euml;m dhe n&euml;se kritikohen nga f&euml;mij&euml;t ata do m&euml;rziten shum&euml;.</p>
-<p>&nbsp;</p>
-<p><strong>Gjithcka q&euml; jam, ose dua t&euml; b&euml;hem i detyrohem engjullit tim, n&euml;n&euml;s</strong></p>
-<p>Fatmirsisht, k&euml;to raste do jen&euml; t&euml; rralla. Fal&euml; intuit&euml;s, Protagonis&euml;t jan&euml; t&euml; kuptush&euml;m dhe pavarsisht nervoz&euml;s momentale f&euml;mij&euml;t e tyre do mbajn&euml; mend ngroht&euml;sin&euml; e v&euml;rtet&euml;, kujdesin&euml;, dashurin&euml; dhe inkurajimin q&euml; gjithmon&euml; kan&euml; marr nga prind&euml;rit ENFJ. Ata rriten me m&euml;simet q&euml; u jan&euml; futur n&euml; karakter dhe e din&euml; se jan&euml; m&euml; mir&euml; fal&euml; p&euml;rpjekjeve t&euml; prind&euml;rve t&euml; tyre.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<ol start="6">
-<li><strong> KARRIERA</strong></li>
-</ol>
-<p>Kur dalim te karriera, njer&euml;zit me k&euml;t&euml; lloj personaliteti ia v&euml;n&euml; syrin asaj q&euml; duan m&euml; shum&euml;- t&euml; ndihmojn&euml; njer&euml;zit e tjer&euml;! P&euml;r fat t&euml; tyre, njer&euml;zve u p&euml;lqen kur ndihmohen dhe jan&euml; t&euml; gatsh&euml;m t&euml; paguajn&euml; p&euml;r k&euml;t&euml; q&euml; do t&euml; thot&euml; se Protagonist&euml;t nuk kan&euml; shum&euml; nevoj&euml; p&euml;r inspirim n&euml; k&euml;rkim t&euml; nj&euml; pune me kuptim.</p>
-<p><strong>Mos u brengos n&euml;se nuk je i njohur, por p&euml;rpiqu ta meritosh at&euml; njohje</strong></p>
-<p>ENFJ-t&euml; tregojn&euml; interesim t&euml; ve&ccedil;ant&euml; p&euml;r njer&euml;zit e tjer&euml;, duke u afruar atyre me shoq&euml;ri t&euml; ngroht&euml; dhe ndihm&euml; t&euml; sinqert&euml; q&euml; rall&euml; kalon pa u dalluar. Profesionet altruiste si puna sociale dhe fetare, m&euml;simdh&euml;nia, k&euml;shillimi jan&euml; t&euml; gjitha rrug&euml; t&euml; famshme p&euml;r ta sepse u dh&euml;n&euml; mund&euml;si q&euml; t&euml; ndihmojn&euml; t&euml; tjer&euml;t t&euml; m&euml;sojn&euml;, t&euml; rriten e t&euml; b&euml;hen m&euml; t&euml; pavarur. Ky q&euml;ndrim, bashk&euml; me aft&euml;sit&euml; e tyre shoq&euml;rore, intelegjenc&euml;n emocionale dhe prirjen q&euml; t&euml; jen&euml; &ldquo;ai personi q&euml; i njeh t&euml; gjith&euml;&rdquo; i b&euml;n t&euml; p&euml;rshtatsh&euml;m p&euml;r nj&euml; num&euml;r t&euml; madh profesionesh. Protagonist&euml;t mund t&euml; jen&euml; administrator&euml; t&euml; natyrsh&euml;m t&euml; burimeve njer&euml;zove, kordinator&euml; t&euml; eventeve dhe politikan&euml;- &ccedil;fardo q&euml; i ndihmon nj&euml; komuniteti ose organizate t&euml; funksionoj m&euml; mir&euml;.</p>
-<p>Duke i p&euml;rmbledhur t&euml; gjitha k&euml;to, Protagonist&euml;t jan&euml; n&euml; gjendje t&euml; shprehin veten n&euml; m&euml;nyr&euml; t&euml; sinqert&euml; dhe kreative, duke u lejuar atyre tu afrohen pozicioneve si p&euml;rfaq&euml;sues t&euml; shitjeve dhe k&euml;shilltar&euml; reklamash nga nj&euml; k&euml;nd i ve&ccedil;ant&euml; idealistik duke i kuptuar k&euml;rkesat dhe d&euml;shirat e konsumator&euml;ve n&euml; m&euml;nyr&euml; intuitive dhe punojn&euml; q&euml; t&rsquo;i b&euml;jn&euml; ata t&euml; lumtur. Sidoqoft&euml;, Protagonist&euml;t duhet t&euml; sigurohen q&euml; fokusi i tyre t&euml; jen&euml; njer&euml;zit e jo sistemet. Ata nuk jan&euml; t&euml; prer&euml; p&euml;r t&euml; marr vendime n&euml; pozicionet e qeverisjes n&euml; korporat&euml;- do ndihen keq duke e ditur q&euml; vendimi i tyre u ka kushtuar dikujt vendin e pun&euml;s ose q&euml; produkti i tyre i ka kushtuar dikujt jet&euml;n.</p>
-<p>Pasi intuit&euml;n e kan&euml; cil&euml;sin&euml; kryesore do t&euml; thot&euml; q&euml; karrierat si zbatimi i ligjit dhe sh&euml;rbimi ushtarak do i lodhin shpejt Protagonist&euml;t. P&euml;rderisa t&euml; mrekulluesh&euml;m n&euml; organizimin e festave, n&euml; situatat e rrezikshme Protagonist&euml;t thjesht nuk do jen&euml; n&euml; gjendje t&euml; mbajn&euml; p&euml;rqendrimin n&euml; gj&euml;rat q&euml; i rrethojn&euml;.</p>
-<p><strong>Gjithmon&euml; mbaj n&euml; mend se vendimi yt p&euml;r t&euml; pasur sukses &euml;sht&euml; m&euml; i r&euml;nd&euml;sish&euml;m se &ccedil;do vendim tjet&euml;r </strong></p>
-<p>&Euml;sht&euml; e kuptueshme q&euml; ENFJ-t&euml; t&euml; jen&euml; ata q&euml; mbajn&euml; k&euml;to sh&euml;rbime vitale t&euml; organizuara mir&euml;, duke i shfryt&euml;zuar pik&euml;pamjet e tyre afatgjata, aft&euml;sit&euml; me njer&euml;zit dhe idealizmin q&euml; t&euml; ken&euml; sukses n&euml; situatat e r&euml;nd&euml;sishme, p&euml;rderisa personalitetet tjera merren me krizat e momentit. Njer&euml;zit me k&euml;t&euml; lloj personaliteti gjithmon&euml; jan&euml; t&euml; gatsh&euml;m p&euml;r nj&euml; sfid&euml;- dhe asgj&euml; nuk i emocionon m&euml; shum&euml; sesa t&euml; ndihmojn&euml; t&euml; tjer&euml;t. Por p&euml;rderisa t&euml; gatsh&euml;m t&euml; trajnohen n&euml; aft&euml;sit&euml; e nevojshme, Protagonist&euml;t gjithmon&euml; do shprehin nj&euml; preferenc&euml; p&euml;r at&euml; lloj ndihme q&euml; shkakton ndryshim afatgjat&euml;.</p>
-<p><em>Protagonist&euml;t duhet t&euml; ndjejn&euml; vler&euml;simin dhe mir&euml;njohjen e njer&euml;zve q&euml; kan&euml; ndihmuar n&euml; m&euml;nyr&euml; q&euml; t&euml; jen&euml; t&euml; lumtur. </em></p>
-<p>&nbsp;</p>
-<p>Profesionet e dhunshme do shqet&euml;sojn&euml; mendjet dhe zemrat e ndjeshme t&euml; Protagonist&euml;ve, sidomos n&euml;se kritikohen pavarsisht p&euml;rpjekjeve t&euml; tyre. N&euml; an&euml;n tjet&euml;r, Protagonist&euml;t jan&euml; nj&euml; grup i gjithansh&euml;m dhe i shkath&euml;t q&euml; i t&euml;rheq ata drejt pun&euml;ve n&euml; administrat&euml; dhe politik&euml;. K&euml;to mund t&rsquo;i ndihmojn&euml; t&euml; p&euml;rqendrohen kur jan&euml; n&euml; stresin e momentit, duke e ditur se &ccedil;do sekond i p&euml;rpjekjeve q&euml; ata b&euml;jn&euml; kontribojn&euml; n&euml; di&ccedil;ka m&euml; t&euml; r&euml;nd&euml;sishme se vetja.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>&nbsp;</strong></p>
-<p><strong>&nbsp;</strong></p>
-<ol start="7">
-<li><strong> ENFJ-T&Euml; N&Euml; VENDIN E PUN&Euml;S<br /><br /></strong>ENFJ-t&euml; jan&euml; t&euml; men&ccedil;ur, t&euml; ngroht&euml;, idealist&euml;, sharmant&euml;, kreativ&euml;, t&euml; shoq&euml;ruesh&euml;m&hellip; me k&euml;to t&euml; mira, Protagonist&euml;t jan&euml; n&euml; gjendje t&euml; shk&euml;lqejn&euml; n&euml; shum&euml; role t&euml; ndryshme, n&euml; &ccedil;do mosh&euml;. P&euml;r m&euml; tep&euml;r, ata thjesht u p&euml;lqejn&euml; njer&euml;zve dhe kjo cil&euml;si i ndihmon t&euml; ken&euml; sukses kudo q&euml; punojn&euml; me t&euml; tjer&euml;t.</li>
-</ol>
-<p><strong>Protagonist&euml;t si n&euml;npun&euml;s</strong></p>
-<p>Si n&euml;npun&euml;s, Protagonist&euml;t shpesh do n&euml;nvler&euml;sojn&euml; vetveten- sidoqoft&euml; ata shpejt l&euml;n&euml; p&euml;rshtypje te menaxher&euml;t. M&euml;sojn&euml; shpejt dhe jan&euml; t&euml; shk&euml;lqyesh&euml;m n&euml; kryerjen e disa detyrave nj&euml;koh&euml;sisht. Njer&euml;zit me k&euml;t&euml; lloj personaliteti jan&euml; n&euml; gjendje t&euml; mbajn&euml; p&euml;rgjegj&euml;si t&euml; shumta me aft&euml;si dhe humor t&euml; mir&euml;. ENFJ-t&euml; jan&euml; pun&euml;tor&euml;, t&euml; besuesh&euml;m dhe t&euml; gatsh&euml;m p&euml;r ndihm&euml;- por kjo mund t&euml; jet&euml; thik&euml; me dy teha sepse disa menaxher&euml; do mundohen t&euml; p&euml;rfitojn&euml; nga ta duke b&euml;r&euml; shum&euml; k&euml;rkesa dhe duke i mbingarkuar me pun&euml; shtes&euml;. Protagonist&euml;t jan&euml; kund&euml;r konfliktit dhe mundohen t&euml; shmangin kritikat e panevojshme dhe sipas t&euml; gjitha gjasave do pranojn&euml; k&euml;to detyra shtes&euml; n&euml; m&euml;nyr&euml; q&euml; t&euml; ruajn&euml; p&euml;rshtypjen pozitive dhe nj&euml; ambient t&euml; qet&euml;.&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>Protagonist&euml;t si koleg&euml; </strong></p>
-<p>Si koleg&euml;, d&euml;shira e Protagonist&euml;ve p&euml;r t&euml; ndihmuar dhe t&euml; bashk&euml;punuar &euml;sht&euml; edhe m&euml; e dukshme sepse ata t&euml;rheqin koleg&euml;t n&euml; grupe ku t&euml; gjith&euml; ndihen rehat t&euml; shprehin mendimet dhe sygjerimet e tyre, punojn&euml; s&euml; bashku q&euml; t&euml; p&euml;rfundojn&euml; pun&euml;n sa m&euml; mir&euml;. Toleranca e Protagonist&euml;ve, fakti q&euml; jan&euml; mendjehapur dhe leht&euml; t&euml; shoq&euml;ruesh&euml;m e b&euml;n t&euml; leht&euml; p&euml;r ta t&euml; kuptohen me koleg&euml;t, por poashtu e b&euml;n shum&euml; t&euml; leht&euml; q&euml; t&euml; tjer&euml;t t&rsquo;i kalojn&euml; problemet te Protagonist&euml;t. ENFJ-t&euml; jan&euml; t&euml; ndjesh&euml;m ndaj k&euml;rkesave t&euml; t&euml; tjer&euml;ve dhe roli i tyre si nd&euml;rlidh&euml;s shoq&euml;ror do t&euml; thot&euml; q&euml; &euml;sht&euml; e pamundur q&euml; atyre t&euml; mos u paraqiten probleme, koleg&euml;t gjithmon&euml; do k&euml;rkojn&euml; ndihm&euml; nga ta.</p>
-<p>&nbsp;</p>
-<p><strong>Protagonist&euml;t si menaxher&euml; </strong></p>
-<p>P&euml;rderisa shum&euml; t&euml; aft&euml; si n&euml;npun&euml;s dhe koleg&euml;, talenti i Protagonist&euml;ve &euml;sht&euml; n&euml; grupet e menaxhimit ku kapaciteti i tyre si komunikues inspirues dhe ndjeshm&euml;ria ndaj nevojave t&euml; t&euml; tjer&euml;ve shihet v&euml;rtet&euml;. Si menaxher&euml;, Protagonist&euml;t i kombinojn&euml; aft&euml;sit&euml; e tyre p&euml;r t&euml; njohur motivet individuale me sharmin e natyrsh&euml;m q&euml; kan&euml;, jo vet&euml;m q&euml; t&euml; shtyjn&euml; grupin dhe projektet p&euml;rpara, por t&euml; b&euml;jn&euml; q&euml; grupet e tyre t&euml; duan t&euml; shkojn&euml; p&euml;rpara. Ata ndonj&euml;her&euml; mund t&euml; p&euml;rkulen para manipulimeve, alternativa tjet&euml;r t&euml; jet&euml; konfrontimi direkt, por synimi i Protagonist&euml;ve &euml;sht&euml; q&euml; gjithmon&euml; t&euml; p&euml;rfundojn&euml; at&euml; q&euml; kan&euml; nisur n&euml; nj&euml; m&euml;nyr&euml; q&euml; i l&euml; t&euml; gjith&euml; t&euml; k&euml;naqur me rolet dhe rezultatet e arrira bashk&euml;.</p>',
-            'shortDescription' => '<blockquote>
-<p><em>&Ccedil;do gj&euml; q&euml; b&euml;n tani paraqitet jasht&euml; dhe ka ndikim te t&euml; gjith&euml;. Q&euml;ndrimi yt mund t&euml; ndri&ccedil;oj zemra ose t&euml; shkaktoj shqet&euml;sim. Fryma jote mund t&euml; rrezatoj dashuri ose t&euml; mbuloj dhom&euml;n me depresion. Shikimi yt mund t&euml; shkaktoj g&euml;zim. Fjal&euml;t e tua mund t&euml; inspirojn&euml; liri. &Ccedil;do akt i yti mund t&euml; hap zemra dhe mendje. </em></p>
-<p>David Deida</p>
-</blockquote>
-<p>Protagonist&euml;t jan&euml; udh&euml;heq&euml;s t&euml; lir&euml;, t&euml; mbushur me pasion dhe kariz&euml;m. P&euml;rb&euml;jn&euml; rreth dy p&euml;rqind t&euml; popull&euml;sis&euml; dhe jan&euml; shpeshher&euml; politikan&euml;t, trajner&euml;t dhe m&euml;suesit ton&euml; q&euml; arrijn&euml; t&euml; inspirojn&euml; t&euml; tjer&euml;t t&euml; b&euml;jn&euml; bot&euml;n vend m&euml; t&euml; mir&euml;. Me nj&euml; vet&euml;besim t&euml; natyrsh&euml;m q&euml; sjell&euml; ndikim, Protagonist&euml;t gjejn&euml; k&euml;naq&euml;si dhe krenari kur udh&euml;zojn&euml; t&euml; tjer&euml;t t&euml; punojn&euml; bashk&euml; q&euml; t&euml; p&euml;rmir&euml;sojn&euml; veten dhe komunitetin e tyre.</p>
-<p>Njer&euml;zit t&euml;rhiqen nga personalitetet e forta dhe Protagonist&euml;t rrezatojn&euml; origjinalitet, interesim dhe altruiz&euml;m e nuk kan&euml; frik&euml; t&euml; ngrisin z&euml;rin e t&euml; thon&euml; at&euml; q&euml; mendojn&euml; se duhet t&euml; thuhet. Atyre iu duket i leht&euml; dhe i natyrsh&euml;m komunikimi me t&euml; tjer&euml;t, sidomos personalisht. Tipari i tyre Intuitiv (N) i ndihmon njer&euml;zit me k&euml;t&euml; lloj personaliteti t&euml; arrijn&euml; t&rsquo;i afrohen &ccedil;do mendjeje, qoft&euml; me fakte dhe logjik&euml; ose me emocion. Protagonist&euml;t leht&euml; shohin motivet e njer&euml;zve dhe ngjarjeve q&euml; duken t&euml; shk&euml;putura dhe jan&euml; n&euml; gjendje t&rsquo;i bashkojn&euml; k&euml;to ide e ti shprehin ato si nj&euml; q&euml;llim t&euml; p&euml;rbashk&euml;t me nj&euml; m&euml;nyr&euml; t&euml; t&euml; shprehurit q&euml; &euml;sht&euml; m&euml;se e mrekullueshme.</p>
-<p>Interesimi q&euml; Protagonist&euml;t e kan&euml; p&euml;r t&euml; tjer&euml;t &euml;sht&euml; i sinqert&euml;, ndoshta edhe pak i tepruar- kur ata besojn&euml; te dikush p&euml;rfshihen shum&euml; n&euml; problemet e personit tjet&euml;r dhe kan&euml; shum&euml; besim tek ta. Fatmirsisht, ky besim ka gjasa t&euml; jet&euml; nj&euml; profeci p&euml;rmbush&euml;se p&euml;r ta, sepse altruizmi i Protagonist&euml;ve dhe origjinaliteti i tyre i inspirojn&euml; njer&euml;zit q&euml; duan t&euml; b&euml;hen verzione m&euml; t&euml; mira t&euml; vetes. Por, n&euml;se ata nuk jan&euml; t&euml; kujdessh&euml;m, mund ta rrisin shum&euml; optimizmin e tyre, ndonj&euml;her&euml; duke i shtyer t&euml; tjer&euml;t m&euml; larg sesa q&euml; munden ose duan t&euml; shkojn&euml;.</p>
-<p>ENFJ-t&euml; jan&euml; t&euml; rrezikuar poashtu edhe nga nj&euml; kurth: ata kan&euml; nj&euml; kapacitet t&euml; pamas&euml; p&euml;r t&euml; reflektuar dhe analizuar ndjenjat e tyre, por n&euml;se p&euml;rfshihen shum&euml; n&euml; telashin e dikujt tjet&euml;r atyre do u krijohet nj&euml; lloj hipokondrie emocionale dhe do i shohin problemet e njer&euml;zve tjer&euml; te vetja dhe do mundohen t&euml; rregullojn&euml; di&ccedil;ka q&euml; s&rsquo;&euml;sht&euml; e prishur. N&euml;se arrijn&euml; n&euml; nj&euml; pik&euml; ku jan&euml; t&euml; penguar nga kufizimet q&euml; dikush tjet&euml;r po p&euml;rjeton, ata nuk e kan&euml; aft&euml;sin&euml; t&euml; shohin p&euml;rtej dilem&euml;s apo t&euml; japin ndihm&euml;. Kur kjo ndodh, &euml;sht&euml; e r&euml;nd&euml;sishme p&euml;r Protagonist&euml;t q&euml; t&euml; t&euml;rhiqen dhe ta p&euml;rdorin at&euml; vet&euml;reflektim p&euml;r t&euml; dalluar &ccedil;ka po ndjejn&euml; n&euml; t&euml; v&euml;rtet&euml; dhe &ccedil;ka &euml;sht&euml; nj&euml; &ccedil;&euml;shtje e ve&ccedil;uar q&euml; duhet t&euml; shikohet prej nj&euml; perspektive tjet&euml;r.&nbsp;</p>',
-            'type_img' => "images/ENFJ.png",
-            'featured_Image' => "images/feat.png",
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
+        DB::table('tipis')->insert([		
+            'type' => "	ENFJ	",
+            'name' => "	Protagonisti	",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
+            'shortDescription' => "	Çdo gjë që bën tani paraqitet jashtë dhe ka ndikim te të gjithë. Qëndrimi yt mund të ndriçoj zemra ose të shkaktoj shqetësim. Fryma jote mund të rrezatoj dashuri ose të mbuloj dhomën me depresion. Shikimi yt mund të shkaktoj gëzim. Fjalët e tua mund të inspirojnë liri. Çdo akt i yti mund të hap zemra dhe mendje	",
+            'type_img' => "	images/ESTP.png	",
+            'feat_img' => "	images/feat-ESTP.png	",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),		
+           ]);		
+           
 
         DB::table('tipis')->insert([
             'type' => "ESTJ",
             'name' => "zbatuesi",
-            'description' => "This is a short description of the zbatuesi",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the zbatuesi",
             'type_img' => "images/ESTJ.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "ESFJ",
             'name' => "Ofruesi",
-            'description' => "This is a short description of the Ofruesi",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the Ofruesi",
             'type_img' => "images/ESFJ.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "ENTP",
             'name' => "debatuesi",
-            'description' => "This is a short description of the debatuesi",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the debatuesi",
             'type_img' => "images/ENTP.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "ENFP",
             'name' => "Përkrahësi",
-            'description' => "This is a short description of the Përkrahësi",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the Përkrahësi",
             'type_img' => "images/ENFP.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('tipis')->insert([
             'type' => "ESTP",
             'name' => "sipërmarrësi",
-            'description' => "This is a short description of the sipërmarrësi",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
             'shortDescription' => "This is a short description of the sipërmarrësi",
             'type_img' => "images/ESTP.png",
-            'featured_Image' => "images/feat.png",
+            'feat_img' => "images/feat.png",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
-        DB::table('tipis')->insert([
-            'type' => "ESFP",
-            'name' => "ARGËTUESI",
-            'description' => "This is a short description of the ARGËTUESI",
-            'shortDescription' => "This is a short description of the ARGËTUESI",
-            'type_img' => "images/ESFP.png",
-            'featured_Image' => "images/feat.png",
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
+        DB::table('tipis')->insert([		
+            'type' => "	ESFP",
+            'name' => "	ARGËTUESI",
+            'hyrje' => "",
+            'forcatDobesit' => "",
+            'lidhjet' => "",
+            'miqesite' => "",
+            'siPrinder' => "",
+            'profesioni' => "",
+            'vendiPunes' => "",
+            'shtese' => "",
+            'shortDescription' => "	Jam egoiste, e paduruar dhe pak e pasigurt. Bëj gabime, dal jashtë kontrollit dhe ndonjëherë është vështirë të merresh me mua. Mirëpo, nëse nuk mund të më durosh në më të keqen time, sigurisht që nuk e meriton më të mirën. 	",
+            'type_img' => "images/ESTP.png",
+            'feat_img' => "	images/feat-ESTP.png	",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),		
+            ]);		
+            
 
     }
 }

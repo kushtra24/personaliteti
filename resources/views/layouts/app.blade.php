@@ -125,7 +125,7 @@
                     {{--{{ config('app.name', 'Personaliteti') }}--}}
                     <img src="{{asset('images/logo.png')}}" height="40px">
                 </a>
-                <p class="footer-description">Merr një përshkrim të vetëvetës, njihu më tepër rreth fuqive dhe dobësive tuaja.</p>
+                <p class="footer-description">Merreni një përshkrim të vetvetes, mësoni më tepër rreth fuqive dhe dobësive tuaja.</p>
                 <p>Vlersime deri më tani {{ $counter }}</p>
                 <div class="footer-solcial-icons">
                     <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
