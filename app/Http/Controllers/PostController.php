@@ -185,7 +185,7 @@ class PostController extends Controller
 
         $post->delete();
 
-        return back();
+        return redirect('post');
     }
 
     public function archiveFilterd(){
@@ -201,9 +201,10 @@ class PostController extends Controller
         }
 
         $posts = $posts->get();
-        $postCounter = Post::count(id);
         
-        return view('post.archiveFilter', compact('posts', 'postCounter'));
+        // $postCounter = Post::count('id');
+        
+        // return view('post.archiveFilter', compact('posts', 'postCounter'));
     }
     
 
@@ -215,9 +216,9 @@ class PostController extends Controller
 
         $categories = Category::all();
         
-        $postCounter = Post::count('id');
+        // $postCounter = Post::count('id');
 
-        return view('post.blog', compact('posts', 'archives', 'categories', 'postCounter'));
+        // return view('post.blog', compact('posts', 'archives', 'categories', 'postCounter'));
     }
 
 

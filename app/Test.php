@@ -11,4 +11,9 @@ class Test extends Model
         return $this->belongTo(User::Class);
     }
 
+    public function tipi()
+    {
+        return $this->belongsTo(Tipi::class);
+    }
+
 }

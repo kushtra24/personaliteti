@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Tipi;
 use App\Http\Requests\TypeRequest;
 use Carbon\Carbon;
-
+use MediaUploader;
 
 class TipetController extends Controller
 {
@@ -77,17 +77,30 @@ class TipetController extends Controller
         //Updating the fields to the database based on the id
         $tipi = Tipi::find($id);
 
+
+        //image
         if($request->hasFile('featFile')){
-            $filename = $request->featFile->getClientOriginalName();
-            $filename = $request->file('featFile')->storeAs('/images', $filename);
-            $tipi->feat_img = $filename;
+            $media = MediaUploader::fromSource($request->file('featFile'))
+                // place the file in a directory relative to the disk root
+                ->toDirectory('images')
+                ->upload();
+            $tipi->syncMedia($media, 'thumbnail');
         }
 
-        if($request->hasFile('file')){
-            $filename = $request->file->getClientOriginalName();
-            $filename = $request->file('file')->storeAs('/images', $filename);
-            $tipi->type_img = $filename;
+         //image
+         if($request->hasFile('file')){
+            $media = MediaUploader::fromSource($request->file('file'))
+                // place the file in a directory relative to the disk root
+                ->toDirectory('images')
+                ->upload();
+            $tipi->syncMedia($media, 'tipiImg');
         }
+
+        // if($request->hasFile('file')){
+        //     $filename = $request->file->getClientOriginalName();
+        //     $filename = $request->file('file')->storeAs('/images', $filename);
+        //     $tipi->type_img = $filename;
+        // }
 
         $tipi->type = $request['type'];
         $tipi->name = $request['name'];

@@ -83,20 +83,9 @@ class RegisterController extends Controller
 
         $user->roles()->attach(Role::where('name', 'User')->first());
 
-        // Store the values of the cookies into the database depending on the current user that is loged in
-        // $store = new Test;
-        // $store->user_id = $user->id;
-        // $store->finaltype = Cookie::get('finaltype', 'Coockies janë çkyqur');
-        // $store->intro_extro = Cookie::get('introExtro', 'Coockies janë çkyqur');
-        // $store->first_final_procent_rez = Cookie::get('FirstfinalProcentRez', 'Coockies janë çkyqur');
-        // $store->intu_sens = Cookie::get('intuSens', 'Coockies janë çkyqur');
-        // $store->ns_final_procent_rez = Cookie::get('nsfinalProcentRez', 'Coockies janë çkyqur');
-        // $store->feeling_thinking = Cookie::get('feelingThinking', 'Coockies janë çkyqur');
-        // $store->ft_final_procent_rez = Cookie::get('ftfinalProcentRez', 'Coockies janë çkyqur');
-        // $store->judging_perspecting = Cookie::get('judgingPerspecting', 'Coockies janë çkyqur');
-        // $store->jp_final_procent_rez = Cookie::get('jpfinalProcentRez', 'Coockies janë çkyqur');
-        // $store->rol_name = Cookie::get('rol_name', 'Coockies janë çkyqur');
-        // $store->save();
+        $tests = Test::latest();
+        $tests->user_id = $user->id;
+        $tests->save();
 
         return $user;
     }

@@ -38,7 +38,7 @@
                           <td>{{ $tipi->created_at }}
                             <div class="setting">
 
-                            <a class="btn btn-success btn-xs" href="{{ action('TipetController@show', ['id' => $tipi->id]) }}" role="button">View</a>
+                            <a class="btn btn-success btn-xs" href="{{ action('TipetController@show', ['id' => $tipi->type]) }}" role="button" target="_blank">View</a>
 
                             <a class="btn btn-warning btn-xs" href="{{ action('TipetController@edit', ['id' => $tipi->id]) }}" role="button">Edit</a>
                             </div>

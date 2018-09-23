@@ -50,8 +50,7 @@
 
 	<section id="heading-welcomepage">
 		@foreach($tipi as $tipi)
-			<img src="../{{ $tipi->feat_img }}" alt="tipi featured" width="100%" class="img-responsive">
-			
+			<img src="@if($tipi->hasMedia('thumbnail')) {{ $tipi->firstMedia('thumbnail')->getUrl() }} @endif" alt="tipi featured" width="100%" class="img-responsive">
 		@endforeach
 	</section>
 

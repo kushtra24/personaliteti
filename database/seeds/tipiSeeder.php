@@ -176,7 +176,7 @@ class tipiSeeder extends Seeder
             'vendiPunes' => "",
             'shtese' => "",
             'shortDescription' => "	Çdo gjë që bën tani paraqitet jashtë dhe ka ndikim te të gjithë. Qëndrimi yt mund të ndriçoj zemra ose të shkaktoj shqetësim. Fryma jote mund të rrezatoj dashuri ose të mbuloj dhomën me depresion. Shikimi yt mund të shkaktoj gëzim. Fjalët e tua mund të inspirojnë liri. Çdo akt i yti mund të hap zemra dhe mendje	",
-            'type_img' => "	images/ESTP.png	",
+            'type_img' => "	images/ENFJ.png	",
             'feat_img' => "	images/feat-ESTP.png	",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),		
            ]);		
@@ -279,7 +279,7 @@ class tipiSeeder extends Seeder
             'vendiPunes' => "",
             'shtese' => "",
             'shortDescription' => "	Jam egoiste, e paduruar dhe pak e pasigurt. Bëj gabime, dal jashtë kontrollit dhe ndonjëherë është vështirë të merresh me mua. Mirëpo, nëse nuk mund të më durosh në më të keqen time, sigurisht që nuk e meriton më të mirën. 	",
-            'type_img' => "images/ESTP.png",
+            'type_img' => "images/ESFP.png",
             'feat_img' => "	images/feat-ESTP.png	",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),		
             ]);		

@@ -31,13 +31,6 @@
                 <div class="alert alert-danger" role="alert" >{{ $errors->first('password') }}</div>
               </span>
             @endif
-
-            @if (Auth::check())
-                <a href="{{ route('register') }}" class="btn btn-primary">Shiko detajet</a>
-            @else
-                <p>Regjistrohu tani per t'i ruajtur keto resultate</p>
-                <button id="show_register" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Regjistrohu</button>
-            @endif
         </div>
 
 @if($results->first_final_procent_rez)
@@ -45,10 +38,10 @@
           <h1> Kodi: <b>@if ($results->finaltype == null) {{ Cookie::get('finaltype') }} @else {{ $results->finaltype }} @endif</b></h1>
           <div class="animated-result">
             <div class="traid">
-                <h3>Mendimet</h3>
+                <h3>Mendja</h3>
             </div>
             <div class="traid-discription">
-                <p>Kjo veti tregon se si veprojme me ambientin</p>
+                <p>Kjo veçori tregon se si vepron me ambientin</p>
             </div>
             <div id="bar-1" class="bar-main-container azure">
                 <div class="wrap">
@@ -65,7 +58,7 @@
                 <h3>Energjia</h3>
             </div>
             <div class="traid-discription">
-                <p>Kjo veti tregon ku ne perciellim energjien mentale</p>
+                <p>Kjo veçori tregon se ku e drejton energjinë mendore</p>
             </div>
              <div id="bar-2" class="bar-main-container emerald">
                 <div class="wrap">
@@ -82,7 +75,7 @@
                 <h3>Natyrshmeria</h3>
             </div>
             <div class="traid-discription">
-                <p>Kjo veti tregon se si marrim vendime dhe perballemi me emocione </p>
+                <p>Kjo veçori përcakton se si marr vendime dhe përballon emocionet</p>
             </div>
 
             <div id="bar-3" class="bar-main-container violet">
@@ -100,7 +93,7 @@
                 <h3>Teknika</h3>
             </div>
             <div class="traid-discription">
-                <p>Kjo veti tregon se si Marrim vendime</p>
+                <p>Kjo veçori reflekton qasjen për të punuar, planifikuar dhe vendimmarrjës</p>
             </div>
 
             <div id="bar-4" class="bar-main-container yellow">
@@ -121,6 +114,19 @@
   @endif {{--Email Has been taken error msg--}} 
 
 
+  <section id="shortDescriptionResilt">
+
+        <div class="col-md-12">
+            {{-- {!! $typeDescription->shortDescription !!} --}}
+            <br>
+            @if (Auth::check())
+                <a href="{{ route('register') }}" class="btn btn-primary">Shiko detajet</a>
+            @else
+                <button id="show_register" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Regjistrohu dhe lexo më shumë</button>
+            @endif
+		</div>
+
+  </section>
 
     <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
         <div class="modal-dialog modal-md" role="document">

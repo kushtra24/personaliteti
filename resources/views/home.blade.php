@@ -96,15 +96,15 @@
         <div class="col-md-12">
           <div class="row">
               <div class="col-md-4">
-                  <h1 class="visible-xs pershendetje"> Pershendetje, {{ Auth::user()->first_name }}</h1>
-                  <img src="{{ URL::to('/') }}/images/{{ $results->finaltype }}.png" alt="personaliteti tipi avatar" class="img-responsive">
+                  <h1 class="visible-xs pershendetje"> Përshendetje, {{ Auth::user()->first_name }}</h1>
+                  <img src="{{ URL::to('/') . "/storage/images/" . $results->finaltype . ".png" }} " alt="personaliteti tipi avatar" class="img-responsive">
               </div>
               <div class="col-md-6">
-                <h1 class="hidden-xs pershendetje"> Pershendetje, {{ Auth::user()->first_name }}</h1>
-                <h4>Resultati i fundit i Vlerësimit është: <a href="/tipi/{{ $results->finaltype }}">{{ $results->finaltype }}</a></h4>
+                <h1 class="hidden-xs pershendetje"> Përshendetje, {{ Auth::user()->first_name }}</h1>
+                <h4>Rezultati i fundit i Vlerësimit është: <a href="/tipi/{{ $results->finaltype }}">{{ $results->finaltype }}</a></h4>
                 <table class="table table-striped table-responsive">
                   <tr>
-                    <td><b>Numri vlersimit:</b></td>
+                    <td><b>Numri vlerësimit:</b></td>
                     <td>{{ $results->id }}</td>
                   </tr>
 

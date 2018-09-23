@@ -11,6 +11,6 @@ return [
     |
     */
 
-    'gjeje' => 'Gjejeni personalitetin tuaj tani!',
+    'gjeje' => 'Gjeje personalitetin tënd tani!',
 
 ];

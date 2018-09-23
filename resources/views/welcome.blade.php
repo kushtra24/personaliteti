@@ -33,9 +33,9 @@
 
 	<section id="heading-welcomepage">
 		<h1>{{ __('homepage.gjeje') }}</h1>
-		<h4>Filloni vlerësimin e personalitetit dhe mahnituni me saktësinë që ofron rezultati i këtij vlerësimi.</h4>
+		<h4>Fillo vlerësimin e personalitetit dhe mahnitu me saktësinë që ofron rezultati i këtij vlerësimi.</h4>
 
-		<a href="{{ route('testi') }}" class="btn btn-primary">Fillo Vlersimin</a>
+		<a href="{{ route('testi') }}" class="btn btn-primary">Fillo vlerësimin</a>
 		<br>
 		<img src="{{ asset('images/homepage.png') }}" class="img-responsive" alt="homepage image">
 	</section>
@@ -43,38 +43,38 @@
 	<section id="welcome-content-middle">
 		<i class="fas fa-heart fa-5x"></i>
 		<h3>Pak rreth teorisë së përgjithshme të vlerësimit</h3>
-		<p>Bazuar në studimet dhe mësimet e Carl Jung-ut mbi tipet e personalitetit, ne kemi ndërtuar këtë pyetësor i cili jep një indikator për orientimin e personalitetit tuaj. </p>
+		<p>Bazuar në studimet dhe mësimet e Carl Jung-ut mbi tipet e personalitetit, ne kemi ndërtuar këtë pyetësor i cili jep një indikator për orientimin e personalitetit tënd.</p>
 	</section>
 	
 	<section id="cka_vlerson" class="col-md-offset-31">
-		<h1>Ku ju ndihmon ky vlerësim</h1>
+		<h1>Ku të ndihmon ky vlerësim:</h1>
 
 		<div class="komunikim col-md-6">
 			<div class="inner-part">
 				<i class="far fa-comments"></i>
 				<h2>KOMUNIKIM</h2>
-				<p>Disa njerëz janë të prirur natyrshëm që të përqëndrohen në pikëpamje kryesore dhe të flasin për idetë e mëdha. Të tjerë përqendrohen në detaje, fakte dhe në atë që duket qartë. Duke kuptuar se si njerëzit marrin dhe shprehin informacione, ju mund të flisni me çdo temë në një mënyrë që rezonon më efektivisht me ta.</p>
+				<p>Disa njerëz janë natyrshëm të prirur që të përqëndrohen në pikëpamje kryesore dhe të flasin për ide të mëdha. Të tjerët përqëndrohen më shumë në detaje, fakte dhe në atë që duket qartë. Duke kuptuar se si njerëzit marrin dhe i shprehin informacionet, ti do ta kesh më të lehtë të diskutosh me ta.</p>
 			</div>
 		</div>
 		<div class="karrier col-md-6">
 			<div class="inner-part">
 				<i class="fab fa-telegram-plane"></i>
 				<h2>PROFESION</h2>
-				<p>Gjetja e një karriere të duhur për ju, mund të jetë një përpjekje e lodhshme dhe frustruese, por vlerësimi i personalitetit mund të ju ndihmojë. Duke e njohur veten, duke njohur nevojat e atyre që janë përreth jush dhe duke identifikuar në çfarë fusha mund të lulëzoni natyrshëm, qasja juaj në zhvillimin e karrierës bëhet shumë më e lehtë.</p>
+				<p>Gjetja e profesionit të duhur mund të jetë një kërkim i lodhshëm dhe sfidues. Sidoqoftë, vlerësimi i personaliteti tënd mund të të ndihmojë pasiqë duke e njohur veten, duke njohur nevojat e atyre qe janë përreth teje dhe duke identifikuar fushat në të cilat mund të lulëzosh natyrshëm, qasja jote në zhvillimin e karrierës bëhet shumë më e lehtë.</p>
 			</div>
 		</div>
 		<div class="lidhje col-md-6">
 			<div class="inner-part">
 				<i class="far fa-heart"></i>
 				<h2>LIDHJE BASHKËSHORTORE</h2>
-				<p>Ndoshta bashkëshorti/ja juaj nuk ju kupton, ose ju e keni të vështirë të kuphoheni me një mik apo një anëtar të familjes. A jeni duke thënë të njëjtat gjëra, por në mënyra të ndryshme? Apo ndoshta po kërkoni të krijoni ekuilibrin në një mënyrë që ju plotëson më shumë. Preferencat e personalitetit tuaj mund të kenë diçka për të thënë për këtë.</p>
+				<p>Ndoshta bashkëshorti/ja jote nuk të kupton dhe e ke të vështirë të komunikosh me të. A jeni duke thënë gjërat e njejta por në mënyra të ndryshme? Apo ndoshta po kërkon të krijosh ekuilibrin në një mënyrë që të plotëson më shumë. Preferencat e personalitetit tënd mund të kenë dicka për të thënë për këtë gjë.</p>
 			</div>
 		</div>
 		<div class="vendimarrje col-md-6">
 			<div class="inner-part">
 				<i class="far fa-compass"></i>
 				<h2>VENDIMMARRJE</h2>
-				<p>Shumë njerëz i afrohen vendimmarrjes në aspektin e rezultateve të drejtpërdrejta dhe implikimeve (p.sh., nëse kthehem në shkollë, do të kushtojë kaq..). Sidoqoftë, rezultatet e nënkuptuara dhe ato që ndikojnë në thelbin tënd nuk janë gjithmonë aq të dukshme (p.sh., a do të përshtatet ky format i mësimdhënjes me mua?). Ne mund t'ju ndihmojmë t'i zbuloni këto.</p>
+				<p>Shumë njerëz i ofrohen vendimmarrjes në aspektin e rezultateve të drejtëpërdrejta dhe implikimeve  (p.sh., nëse kthehem në shkollë, do të kushtojë kaq). Sidoqoftë, rezultatet e nënkuptuara dhe ato që ndikojnë në thelbin tënd nuk janë gjithmonë aq të dukshme (p.sh., a do të përshtatet ky format i mësimdhënies për mua?). Ne mund t'ju ndihmojmë t'i zbuloni këto.</p>
 			</div>
 		</div>
 	</section>

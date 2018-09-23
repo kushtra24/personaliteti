@@ -125,7 +125,7 @@
                     {{--{{ config('app.name', 'Personaliteti') }}--}}
                     <img src="{{asset('images/logo.png')}}" height="40px">
                 </a>
-                <p class="footer-description">Merreni një përshkrim të vetvetes, mësoni më tepër rreth fuqive dhe dobësive tuaja.</p>
+                <p class="footer-description">Merr një përshkrim të vetvetes, mëso më tepër rreth fuqive dhe dobësive tua.</p>
                 <p>Vlersime deri më tani {{ $counter }}</p>
                 <div class="footer-solcial-icons">
                     <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
@@ -176,7 +176,7 @@
                     {{ date("Y") }}. Të gjitha të drejtat e rezervuara. </p>
             </div>
             <div class="designedBy col-md-6">
-                <p> Dizajnuar dhe ndertuar nga: <a href="http://kushtrim.net" target="_blank"> Kushtrim.net</a></p>
+                <p> Dizajnuar dhe ndërtuar nga: <a href="http://kushtrim.net" target="_blank"> Kushtrim.net</a></p>
             </div>
         </div>
     </div>

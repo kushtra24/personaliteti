@@ -30,9 +30,10 @@
                           <label for="featFile" class="col-sm-2 control-label">Type Image</label>
                             <div class="col-sm-10">
 
-                            <input type="file" id="featFile" name="featFile" onchange="readURL(this);"><span id="filename"></span>
+                            <input type="file" id="featFile" name="featFile" onchange="readURL(this);" data-target="1">
+                            <span id="filename"></span>
 
-                          <img src="../{{ $tipi->feat_img }}" alt="Type image" width="50px" id="imediateImage1">
+                          <img src="@if($tipi->hasMedia('thumbnail')) {{ $tipi->firstMedia('thumbnail')->getUrl() }} @endif" width="50px" id="imediateImage1">
                            </div>
                         </div>
                     
@@ -56,9 +57,10 @@
                           <label for="file" class="col-sm-2 control-label">Type Image</label>
                             <div class="col-sm-10">
 
-                        <input type="file" id="file" name="file" onchange="readURL(this);"><span id="filename"></span>
+                        <input type="file" id="file" name="file" onchange="readURL(this);" data-target="2">
+                        <span id="filename"></span>
 
-                          <img src="../{{ $tipi->type_img }}" alt="Type image" width="50px" id="imediateImage1">
+                          <img src="@if($tipi->hasMedia('tipiImg')) {{ $tipi->firstMedia('tipiImg')->getUrl() }} @endif" width="50px" id="imediateImage2">
                            </div>
                         </div>
                         
@@ -140,20 +142,23 @@
 
 @section('adminscripts')
   <script>
-
-
-    //Show image imediately
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-            $('#imediateImage')
-                .attr('src', e.target.result);
-            };
-            reader.readAsDataURL(input.files[0]);
+    
+      function readURL(input, photoTypeId) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    imgId = '#imediateImage' + photoTypeId;
+                    $(imgId).attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
         }
-    }
+
+        $("input[type='file']").change(function () {
+            var photoTypeId = $(this).attr("data-target");
+            readURL(this, photoTypeId);
+        });
+
 </script>
 
 @endsection

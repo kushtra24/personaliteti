@@ -29,175 +29,21 @@ class pageSeeder extends Seeder
         DB::table('pages')->insert([
             'title' => "Politikat privatesise",
             'slug' => "politikat_privatesise",
-            'content' => '<h1>Privacy Policy of personalitetet.com</h1>
-
-            <p>personalitetet.com operates the http://www.personalitetet.com website, which provides the SERVICE.</p>
-            
-            <p>This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the personalitetet.com website.</p>
-            
-            <p>If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
-            
-            <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at http://www.personalitetet.com, unless otherwise defined in this Privacy Policy.</p>
-            
-            <h2>Information Collection and Use</h2>
-            
-            <p>For a better experience while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to your name, phone number, and postal address. The information that we collect will be used to contact or identify you.</p>
-            
-            <h2>Log Data</h2>
-            
-            <p>We want to inform you that whenever you visit our Service, we collect information that your browser sends to us that is called Log Data. This Log Data may include information such as your computer’s Internet Protocol ("IP") address, browser version, pages of our Service that you visit, the time and date of your visit, the time spent on those pages, and other statistics.</p>
-            
-            <h2>Cookies</h2>
-            
-            <p>Cookies are files with small amount of data that is commonly used an anonymous unique identifier. These are sent to your browser from the website that you visit and are stored on your computer’s hard drive.</p>
-            
-            <p>Our website uses these "cookies" to collection information and to improve our Service. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your computer. If you choose to refuse our cookies, you may not be able to use some portions of our Service.</p>
-            
-            <h2>Service Providers</h2>
-            
-            <p>We may employ third-party companies and individuals due to the following reasons:</p>
-            
-            <ul>
-                <li>To facilitate our Service;</li>
-                <li>To provide the Service on our behalf;</li>
-                <li>To perform Service-related services; or</li>
-                <li>To assist us in analyzing how our Service is used.</li>
-            </ul>
-            
-            <p>We want to inform our Service users that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
-            
-            <h2>Security</h2>
-            
-            <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
-            
-            <h2>Links to Other Sites</h2>
-            
-            <p>Our Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-            
-            <p>Children’s Privacy</p>
-            
-            <p>Our Services do not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
-            
-            <h2>Changes to This Privacy Policy</h2>
-            
-            <p>We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page. <a href="https://gdprprivacypolicy.net">This privacy policy was created with the GDPR Generator</a>.</p>
-            
-            <h2>Contact Us</h2>
-            
-            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>',
+            'content' => "
+            <h1>Privacy Policy of personalitetet.com</h1>
+            Informacioni ynë i kontaktit- Kjo politikë e privatësisë është përpiluar për t'i shërbyer më mirë atyre që janë të shqetësuar me mënyrën se si po përdoret në internet informacioni i tyre i identifikueshëm personal (PII). PII, siç përdoret në ligjin e privatësisë së SHBA dhe sigurinë e informacionit, është informacion që mund të përdoret vetë ose me informacione të tjera për të identifikuar, kontaktuar ose gjetur një person të vetëm ose për të identifikuar një individ në kontekst. Ju lutemi lexoni me kujdes politikat e privatësisë për të kuptuar qartë se si mbledhim, përdorim, mbrojmë ose ndryshe trajtojmë informacionin tuaj personal të identifikueshëm në përputhje me faqen tonë të internetit. Cilat informacione personale mbledhim nga njerëzit që vizitojnë blogun, faqen tonë ose aplikacionin tonë? Kur porosisni ose regjistroheni në faqen tonë, sipas rastit, mund t'ju kërkohet të shkruani Kur bëni mbledhjen e informacionit tuaj? Ne mbledhim informacion nga ju kur ju regjistroheni në një buletin, plotësoni një formular ose futni informacion në faqen tonë. Si e përdorim informacionin tuaj? Ne mund të përdorim informacionin që mbledhim nga ju kur regjistroheni, bëni një blerje, regjistroheni për buletinin tonë, përgjigjeni në një sondazh ose komunikim të marketingut, shfletoni faqen e internetit ose përdorni disa veçori të tjera të faqes në mënyrat e mëposhtme: • Për të personalizuar përdoruesit përvojën dhe për të na lejuar të japim llojin e ofertës së përmbajtjes dhe ofertës në të cilën jeni më të interesuar. • Të dërgoni email periodik në lidhje me porosinë tuaj ose produkte dhe shërbime të tjera. Si mbrojmë informacionet e vizitorëve? Faqja jonë e internetit është skanuar në baza të rregullta për vrimat e sigurisë dhe dobësitë e njohura në mënyrë që ta bëni vizitën tuaj në faqen tonë të sigurt sa të jetë e mundur. Ne përdorim skanimin e rregullt të Malware. Ne nuk përdorim një çertifikatë SSL • Ne vetëm sigurojmë artikuj dhe informacione. Asnjëherë nuk kërkojmë informata personale ose private, si adresat e emailit, ose numrat e kartës së kreditit. A përdorim 'cookies'? Po. Cookies janë skedarë të vegjël që një vend ose ofruesi i tij i shërbimit transferon në hard diskun e kompjuterit tuaj përmes shfletuesit tuaj Web (nëse lejon) që mundëson që sistemet e ofruesit të shërbimit ose të shërbimit të njohin shfletuesin tuaj dhe të kapin dhe mbajnë mend informacione të caktuara. Për shembull, ne përdorim cookies për të na ndihmuar të kujtojmë dhe përpunojmë artikujt në karrocat e tua te shoppingut. Ato përdoren gjithashtu për të na ndihmuar të kuptojmë preferencat tuaja në bazë të aktivitetit të mëparshëm ose aktual, gjë që na mundëson t'ju ofrojmë shërbime të përmirësuara. Ne gjithashtu përdorim cookies për të na ndihmuar të përpilojmë të dhëna agregate për ngarkesën e faqes  dhe ndërveprimin e faqes në mënyrë që të mund të ofrojmë përvojat më të mira në vend dhe mjetet në të ardhmen. Ne përdorim cookies për: • Mbani gjurmët e reklamave. Ju mund të zgjidhni që kompjuteri juaj të paralajmërojë çdo herë që një cookie po dërgohet, ose mund të zgjidhni të fikni të gjitha cookies. Këtë e bën përmes shfletuesit tënd (si Internet Explorer). Çdo shfletues është pak më ndryshe, prandaj shikoni menunë e ndihmës së Shfletuesit tuaj për të mësuar mënyrën e duhur për të modifikuar cookies tuaj. Nëse i çaktivizoni cookies, disa veçori do të çaktivizohen. Kjo nuk do të ndikojë në përvojën e përdoruesit që e bën më të efektshëm faqen tuaj të internetit dhe disa nga shërbimet tona nuk do të funksionojnë siç duhet. Megjithatë, ende mund të vendosni porosi. Shpalosja e palëve të treat-Ne nuk i shesim, tregtojmë apo ndryshe transferojmë palët e jashtme informacionin tuaj personalisht të identifikueshëm, përveç nëse ne i japim përdoruesit me njoftim paraprak. Kjo nuk përfshin partnerët e web hosting dhe palët e tjera që na ndihmojnë të veprojmë në faqen tonë të internetit, të kryejmë biznesin tonë ose t'u shërbejmë përdoruesve tanë, përderisa ato palë bien dakord që ta mbajnë këtë informacion konfidencial. Gjithashtu, mund të japim informacione kur lirimi është i përshtatshëm për të respektuar ligjin, për të zbatuar politikat tona të faqes ose për të mbrojtur të drejtat, pasurinë ose sigurinë e të tjerëve. Megjithatë, informatat e vizitorëve të identifikueshëm jo personalisht mund t'u ofrohen palëve të tjera për marketing, reklamim ose përdorime të tjera. Lidhje të palës së tretë Herë pas here, në diskrecionin tonë, ne mund të përfshijmë ose ofrojmë produkte ose shërbime të palëve të treta në faqen tonë të internetit. Këto faqe të palëve të treta kanë politika të ndara dhe të pavarura të privatësisë. Prandaj ne nuk kemi asnjë përgjegjësi për përmbajtjen dhe aktivitetet e këtyre vendeve të lidhura. Megjithatë, ne kërkojmë të mbrojmë integritetin e faqes sonë dhe të mirëpresim çdo reagim në lidhje me këto vende. Kërkesat Google për reklamat e Google mund të përmblidhen nga Parimet e Reklamimit të Google. Ato janë vënë në vend për të siguruar një përvojë pozitive për përdoruesit. https://support.google.com/adwordspolicy/answer/1316548?hl=en Ne nuk e aktivizuam Google AdSense në faqen tonë, por ne mund ta bëjmë këtë në të ardhmen. Kalifornia Online Mbrojtja e Privatësisë Akti CalOPPA është ligji i parë shtetëror në vend që të kërkojë faqet e internetit komerciale dhe shërbimet online për të postuar një politikë privacy. Shtrirja e ligjit shtrihet përtej Kalifornisë për të kërkuar një person apo kompani në Shtetet e Bashkuara (dhe me sa duket në botë) që vepron në faqet e internetit që mbledhin informacion personalisht të identifikueshëm nga konsumatorët e Kalifornisë për të postuar një politikë të dukshme të intimitetit në faqen e saj, duke saktësuar informacionin që mblidhet dhe ata individë me të cilët ajo është duke u ndarë, dhe për të përmbushur këtë politikë. - Shih më shumë në: http://consumercal.org/california-online-privacy-protection-act-caloppa/#sthash.0FdRbT51.dpuf Sipas CalOPPA ne pajtohemi me sa vijon: Përdoruesit mund të vizitojnë faqen tonë në mënyrë anonime. Sapo të krijohet kjo politikë e privatësisë, ne do të shtojmë një lidhje në të në faqen tonë të faqes ose si minimum në faqen e parë të rëndësishme pas hyrjes në faqen tonë të internetit. Lidhja jonë Politika e privatësisë përfshin fjalën 'Privacy' dhe mund të gjenden lehtësisht në faqen e specifikuar më sipër. Përdoruesit do të njoftohen për çdo ndryshim të politikave të privatësisë: • Në faqen tonë të Privacy Policy Përdoruesit janë në gjendje të ndryshojnë të dhënat e tyre personale: • Duke na shkruar email: Si e trajton faqja jonë nuk ndjek sinjale? Ne respektojmë nuk ndjekim sinjale dhe nuk ndjekim, plant cookie, ose përdorim reklamat kur një mekanizëm shfletuesi nuk do të ndjekë (DNT) është në vend. A lejon faqja jonë ndjekjen e sjelljes së palëve të treta? Është gjithashtu e rëndësishme të theksohet se ne lejojmë ndjekjen e sjelljes së palëve të treta COPPA (Akti për Mbrojtjen e Fëmijëve Online Privacy) Kur bëhet fjalë për mbledhjen e të dhënave personale nga fëmijët nën 13 vjeç, Aktit për Mbrojtjen e Privatësisë të Fëmijëve (COPPA) i vë prindërit në kontroll. Komisioni Federal i Tregtisë, agjencia kombëtare e mbrojtjes së konsumatorit, zbaton rregullën COPPA, e cila përcakton se çfarë duhet të bëjnë operatorët e faqeve dhe shërbimeve online për të mbrojtur privatësinë dhe sigurinë e fëmijëve në internet. Ne nuk tregojmë në mënyrë specifike për fëmijët nën 13 vjeç. Praktikat e Tregtisë së Drejtë Parimet e praktikave të drejta të informacionit përbëjnë shtyllën e ligjit të privatësisë në Shtetet e Bashkuara dhe konceptet që ato përfshijnë kanë luajtur një rol të rëndësishëm në zhvillimin e ligjeve për mbrojtjen e të dhënave në mbarë globin. Të kuptuarit e Parimeve të Praktikës së Informacionit të Drejtë dhe mënyra se si duhet të zbatohen është kritike për të respektuar ligjet e ndryshme të privatësisë që mbrojnë informacionin personal. Për të qenë në përputhje me Praktikat e Informacionit të Drejtë ne do të ndërmarrim veprimet e mëposhtme të përgjegjshme, nëse ndodh një shkelje e të dhënave: Ne do të njoftojmë përdoruesit nëpërmjet njoftimit në terren • Brenda 1 dite të punës. Ne gjithashtu pajtohemi me Parimin Individual të Korrigjimit, i cili kërkon që individët kanë të drejtë të ndjekin të drejta të zbatueshme ligjore kundër grumbulluesve dhe përpunuesve të të dhënave që nuk respektojnë ligjin. Ky parim kërkon jo vetëm që individët të kenë të drejta të zbatueshme ndaj përdoruesve të të dhënave, por gjithashtu që individët të regjistrohen në gjykata ose agjenci qeveritare për të hetuar dhe / ose ndjekur penalisht mospërputhjen nga përpunuesit e të dhënave. CAN SPAM Act Akti CAN-SPAM është një ligj që përcakton rregullat për emailin komercial, përcakton kërkesat për mesazhet komerciale, u jep pranuesve të drejtën për të ndaluar emailet nga dërgimi tek ata dhe përcakton dënime të ashpra për shkeljet. Ne mbledhim adresën tuaj të postës elektronike në mënyrë që: Për të qenë në përputhje me CANSPAM ne pajtohemi me sa vijon: Nëse në çdo kohë dëshironi të ç’abonoheni nga marrja e emaileve të ardhshme, ju mund të na dërgoni me email dhe ne do t'ju heqim menjëherë nga korrespondenca e GJITHA. Na kontaktoni Nëse keni ndonjë pyetje në lidhje me këtë politikë të privatësisë ju mund të na kontaktoni duke përdorur informacionin e mëposhtëm.
+            ",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('pages')->insert([
             'title' => "Kushtet perdorimit",
             'slug' => "kushtet_perdorimit",
-            'content' => '<p>
+            'content' => '
+            <h3>Kushtet e Shërbimit ("Kushtet") ========================== Përditësimi i fundit: Maj 27, 2018 </h3>
+<p>Ju lutemi lexoni këto Kushte të Shërbimit me kujdes përpara se të përdorni faqen e internetit të personalitete.com (" Shërbimi ") i operuar nga personalitetet (" neve "," ne "ose" tonë "). Qasja dhe përdorimi i Shërbimit kushtëzohet nga pranimi dhe pajtueshmëria juaj me këto Kushte. Këto Kushte vlejnë për të gjithë vizitorët, përdoruesit dhe të tjerët që kanë qasje ose përdorin Shërbimin. Duke hyrë ose duke përdorur Shërbimin ju pranoni tu përmbaheni këtyre Kushteve. Nëse nuk pajtoheni me ndonjë pjesë të kushteve, atëherë nuk mund të keni qasje në Shërbim. Kjo Marrëveshje e Kushteve të Shërbimit për personalitete bazuar në Termat dhe Kushtet nga [TermsFeed] (https://termsfeed.com/). Llogaritë -------- Kur krijoni një llogari me ne, ju duhet të jepni informacione që janë të sakta, të plota dhe aktuale në çdo kohë. Dështimi për ta bërë këtë gjë përbën një shkelje të kushteve, të cilat mund të çojnë në ndërprerjen e menjëhershme të llogarisë suaj në Shërbimin tonë. Ju jeni përgjegjës për ruajtjen e fjalëkalimit që përdorni për të hyrë në Shërbimin dhe për çdo aktivitet ose veprimtari nën fjalëkalimin tuaj, nëse fjalëkalimi juaj është me Shërbimin tonë ose me një shërbim të palës së tretë. Ju pranoni të mos ia zbuloni fjalëkalimin tuaj  ndonjë pale të tretë. Ju duhet të na njoftoni menjëherë sapo të bëheni të vetëdijshëm për ndonjë shkelje të sigurisë ose përdorimin e paautorizuar të llogarisë suaj. Lidhjet me faqet e tjera të internetit ------------------------ Shërbimi ynë mund të përmbajë lidhje me faqet e internetit të palëve të treta ose shërbimet që nuk janë në pronësi ose kontrollohen nga personalitetet. Personalitetet nuk ka kontroll mbi to dhe nuk merr përgjegjësi për përmbajtjen, politikat e privatësisë ose praktikat e ndonjë skuadre ose shërbime të palëve të treta. Ju gjithashtu pranoni që personalitetet nuk do të jenë përgjegjës, drejtpërdrejt ose tërthorazi, për çdo dëm apo humbje të shkaktuar ose që pretendohet se është shkaktuar nga ose në lidhje me përdorimin ose mbështetje në ndonjë përmbajtje, mall ose shërbim të tillë në dispozicion ose përmes çdo faqe apo shërbim të tillë. Ne ju këshillojmë fuqishëm të lexoni termat dhe kushtet dhe politikat e privatësisë për çdo faqe ose shërbim të palëve të treta që vizitoni. Ndërprerja ----------- Ne mund të ndërpresim ose pezullojmë qasjen në Shërbimin tonë menjëherë, pa njoftim paraprak ose përgjegjësi, për çfarëdo arsye nëse shkelni Kushtet. Të gjitha dispozitat e Termave që sipas natyrës së tyre duhet të mbijetojnë me ndërprerjen, do të mbijetojnë me ndërprerjen, duke përfshirë, pa kufizime, dispozitat e pronësisë, mospranimin e garancisë, dëmshpërblimin dhe kufizimet e përgjegjësisë. Ne mund të ndërpresim ose pezullojmë llogarinë tuaj menjëherë, pa njoftim paraprak ose përgjegjësi, për çfarëdo arsye, duke përfshirë pa kufizim nëse shkelni kushtet. Pas ndërprerjes, e drejta juaj për të përdorur Shërbimin menjëherë do të humbet. Nëse dëshironi të ndërprisni llogarinë tuaj, ju thjesht mund të ndërprisni përdorimin e Shërbimit. Të gjitha dispozitat e Termave që sipas natyrës së tyre duhet të mbijetojnë me ndërprerjen, do të mbijetojnë me ndërprerjen, duke përfshirë, pa kufizime, dispozitat e pronësisë, mospranimin e garancisë, dëmshpërblimin dhe kufizimet e përgjegjësisë. Ligji Qeverisjes ------------- Këto Kushte do të qeverisen dhe interpretohen në përputhje me ligjet e Shqipërisë, pa marrë parasysh dispozitat e saj të konfliktit të ligjit. Dështimi ynë për të zbatuar ndonjë të drejtë ose dispozitë të këtyre Kushteve nuk do të konsiderohet heqje dorë nga këto të drejta. Nëse ndonjë dispozitë e këtyre Kushteve mbahet e pavlefshme ose e pazbatueshme nga një gjykatë, dispozitat e mbetura të këtyre Kushteve do të mbeten në fuqi. Këto Kushtet përbëjnë të gjithë marrëveshjen midis nesh në lidhje me Shërbimin tonë dhe zëvendësojnë dhe zëvendësojnë çdo marrëveshje paraprake që mund të kemi midis nesh në lidhje me Shërbimin. Ndryshimet ------- Ne rezervojmë të drejtën, sipas gjykimit tonë, të modifikojmë ose të i zëvendësojmë këto Kushte në çdo kohë. Nëse një rishikim është material, ne do të përpiqemi të japim njoftimin e së paku 30 ditë përpara se ndonjë kusht i ri të hyjë në fuqi. Ajo që përbën një ndryshim material do të përcaktohet sipas gjykimit tonë të vetëm. Duke vazhduar për të hyrë ose për të përdorur Shërbimin tonë pasi këto rishikime të bëhen efektive, ju pranoni të jeni të lidhur me kushtet e rishikuara. Nëse nuk pajtoheni me kushtet e reja, ndërpritni përdorimin e Shërbimit. Na kontaktoni ---------- Nëse keni ndonjë pyetje në lidhje me këto kushte, ju lutemi na kontaktoni.</p>
 
-            Terms of Service ("Terms")  
-==========================
-
-Last updated: May 27, 2018
-
-
-Please read these Terms of Service ("Terms", "Terms of Service") carefully
-before using the personalitetet.com website (the "Service") operated by
-personalitetet ("us", "we", or "our").
-
-Your access to and use of the Service is conditioned on your acceptance of and
-compliance with these Terms. These Terms apply to all visitors, users and
-others who access or use the Service.
-
-By accessing or using the Service you agree to be bound by these Terms. If you
-disagree with any part of the terms then you may not access the Service.
-
-Accounts  
---------
-
-When you create an account with us, you must provide us information that is
-accurate, complete, and current at all times. Failure to do so constitutes a
-breach of the Terms, which may result in immediate termination of your account
-on our Service.
-
-You are responsible for safeguarding the password that you use to access the
-Service and for any activities or actions under your password, whether your
-password is with our Service or a third-party service.
-
-You agree not to disclose your password to any third party. You must notify us
-immediately upon becoming aware of any breach of security or unauthorized use
-of your account.
-
-Links To Other Web Sites  
-------------------------
-
-Our Service may contain links to third-party web sites or services that are
-not owned or controlled by personalitetet.
-
-personalitetet has no control over, and assumes no responsibility for, the
-content, privacy policies, or practices of any third party web sites or
-services. You further acknowledge and agree that personalitetet shall not be
-responsible or liable, directly or indirectly, for any damage or loss caused
-or alleged to be caused by or in connection with use of or reliance on any
-such content, goods or services available on or through any such web sites or
-services.
-
-We strongly advise you to read the terms and conditions and privacy policies
-of any third-party web sites or services that you visit.
-
-Termination  
------------
-
-We may terminate or suspend access to our Service immediately, without prior
-notice or liability, for any reason whatsoever, including without limitation
-if you breach the Terms.
-
-All provisions of the Terms which by their nature should survive termination
-shall survive termination, including, without limitation, ownership
-provisions, warranty disclaimers, indemnity and limitations of liability.
-
-We may terminate or suspend your account immediately, without prior notice or
-liability, for any reason whatsoever, including without limitation if you
-breach the Terms.
-
-Upon termination, your right to use the Service will immediately cease. If you
-wish to terminate your account, you may simply discontinue using the Service.
-
-All provisions of the Terms which by their nature should survive termination
-shall survive termination, including, without limitation, ownership
-provisions, warranty disclaimers, indemnity and limitations of liability.
-
-Governing Law  
--------------
-
-These Terms shall be governed and construed in accordance with the laws of
-Albania, without regard to its conflict of law provisions.
-
-Our failure to enforce any right or provision of these Terms will not be
-considered a waiver of those rights. If any provision of these Terms is held
-to be invalid or unenforceable by a court, the remaining provisions of these
-Terms will remain in effect. These Terms constitute the entire agreement
-between us regarding our Service, and supersede and replace any prior
-agreements we might have between us regarding the Service.
-
-Changes  
--------
-
-We reserve the right, at our sole discretion, to modify or replace these Terms
-at any time. If a revision is material we will try to provide at least 30 days
-notice prior to any new terms taking effect. What constitutes a material
-change will be determined at our sole discretion.
-
-By continuing to access or use our Service after those revisions become
-effective, you agree to be bound by the revised terms. If you do not agree to
-the new terms, please stop using the Service.
-
-Contact Us  
-----------
-
-If you have any questions about these Terms, please contact us.
-
-
-            
-            </p>',
+            ',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 

@@ -24,7 +24,7 @@
                 
             </li>
             @endforeach
-            <p>{{ $postCounter }} postime deri me tani </p>
+            {{-- <p>{{ $postCounter }} postime deri me tani </p> --}}
         </ul>
     </div>
     <div id="sidebar-categories">

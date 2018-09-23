@@ -14,7 +14,7 @@
     <div class="row">
 
     	<div class="col-md-4">
-			<img src="../images/{{ Auth()->user()->testResults->last()->finaltype }}.png" alt="tipi" class="img-responsive">
+			<img src="{{ URL::to('/') . "/storage/images/" . Auth()->user()->testResults->last()->finaltype . ".png" }}" alt="tipi" class="img-responsive">
     	</div>
         <div class="col-md-6 user-data">        	
 			<h3>{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h3>

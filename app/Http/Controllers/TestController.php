@@ -75,7 +75,11 @@ class TestController extends Controller
 
             $results = DB::table('tests')->latest()->first();
 
-            return view('testi.result', compact('results'));
+            $typeDescription = DB::table('tipis')->latest()->first();
+
+            // dd($typeDescription);
+
+            return view('testi.result', compact('results', 'typeDescription'));
     }
 
 public function introExtroQuestions(CookieJar $cookieJar)
@@ -92,26 +96,19 @@ public function introExtroQuestions(CookieJar $cookieJar)
         $question = Question::find($qid);
         if ($question->purpose == 'IntroExtro') {
             $introExtroResult += $value;
-        }        
+        }     
         elseif($question->purpose == 'intuitionSensing'){
             $intuitionSensingResult += $value;
-        }   
+        }
         elseif($question->purpose == 'feelingThinking'){
             $feelingThinkingResult += $value;
-        } 
+        }
         elseif($question->purpose == 'jundgingPerciving'){
             $jundgingPercivingResult += $value;
         }
 
         // call_user_func($question->purpose);
     }
-
-
-    // foreach (request()->input('q') as $qid => $value) {
-    //     $answer = new Answer();    
-    //     $answer->question_id = $qid;
-    //     $answer->value = $value;
-    // }
    
 
     $this->extrovertOrintrovert($introExtroResult);
@@ -129,6 +126,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
         if (Auth::check()) {
             $store->user_id = Auth::user()->id;
         }
+
         $store->finaltype = $this->finalType;
         $store->intro_extro = $this->introExtro;
         $store->first_final_procent_rez = $this->FirstfinalProcentRez;
