@@ -152,8 +152,8 @@
                 </h4>
                 <ul>
                     <li><a href="/faqe/teoria_jone"><i class="fas fa-caret-right"></i> Teoria Jonë</a></li>
-                    <li><a href="/faqe/pts"><i class="fas fa-caret-right"></i> Pyetje të Shpeshta</a></li>
-                    <li><a href="/faqe/rreth_nesh"><i class="fas fa-caret-right"></i> Rreth nesh</a></li></li>
+                    <li><a href="/faq"><i class="fas fa-caret-right"></i> Pyetje të Shpeshta</a></li>
+                    <li><a href="/about"><i class="fas fa-caret-right"></i> Rreth nesh</a></li></li>
                     <li><a href="{{ route('login') }}"><i class="fas fa-caret-right"></i> Kyqu</a></li>
                 </ul>
             </div>

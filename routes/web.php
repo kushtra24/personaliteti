@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/faq', function () {
+    return view('faq');
+});
+
 Route::get('/blog', 'PostController@blog')->name('blog');
 Route::get('/archiveFilter', 'PostController@archiveFilterd')->name('archiveFilterd');
 Route::get('/categoryfilter/{category}', 'CategoryController@categoryfilter')->name('categoryfilter');
