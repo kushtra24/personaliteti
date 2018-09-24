@@ -8,12 +8,12 @@ class Test extends Model
 {
 
     public function user(){
-        return $this->belongTo(User::Class);
+        return $this->belongTo(User::class);
     }
 
     public function tipi()
     {
-        return $this->belongsTo(Tipi::class);
+        return $this->belongsTo(Tipi::class, 'finaltype', 'type');
     }
 
 }

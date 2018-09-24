@@ -117,7 +117,9 @@
   <section id="shortDescriptionResilt">
 
         <div class="col-md-12">
-            {{-- {!! $typeDescription->shortDescription !!} --}}
+          
+            {!! $results->tipi->shortDescription !!}
+
             <br>
             @if (Auth::check())
                 <a href="{{ route('register') }}" class="btn btn-primary">Shiko detajet</a>

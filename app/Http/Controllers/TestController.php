@@ -73,11 +73,7 @@ class TestController extends Controller
      */
     public function introExtroQuestionsResult(){
 
-            $results = DB::table('tests')->latest()->first();
-
-            $typeDescription = DB::table('tipis')->latest()->first();
-
-            // dd($typeDescription);
+        $results = Test::latest()->first();
 
             return view('testi.result', compact('results', 'typeDescription'));
     }
@@ -121,25 +117,26 @@ public function introExtroQuestions(CookieJar $cookieJar)
 
     $this->finalTypeName($this->introExtro, $this->intuSens, $this->feelingThinking, $this->judgingPerspecting);
 
-        $store = new Test();
+        $test = new Test();
 
         if (Auth::check()) {
-            $store->user_id = Auth::user()->id;
+            $test->user_id = Auth::user()->id;
         }
 
-        $store->finaltype = $this->finalType;
-        $store->intro_extro = $this->introExtro;
-        $store->first_final_procent_rez = $this->FirstfinalProcentRez;
-        $store->intu_sens = $this->intuSens;
-        $store->ns_final_procent_rez = $this->nsfinalProcentRez;
-        $store->feeling_thinking = $this->feelingThinking;
-        $store->ft_final_procent_rez = $this->ftfinalProcentRez;
-        $store->judging_perspecting = $this->judgingPerspecting;
-        $store->jp_final_procent_rez = $this->jpfinalProcentRez;
-        $store->rol_name = $this->rol_name;
-        $store->save();
+        $test->finaltype = $this->finalType;
+        $test->intro_extro = $this->introExtro;
+        $test->first_final_procent_rez = $this->FirstfinalProcentRez;
+        $test->intu_sens = $this->intuSens;
+        $test->ns_final_procent_rez = $this->nsfinalProcentRez;
+        $test->feeling_thinking = $this->feelingThinking;
+        $test->ft_final_procent_rez = $this->ftfinalProcentRez;
+        $test->judging_perspecting = $this->judgingPerspecting;
+        $test->jp_final_procent_rez = $this->jpfinalProcentRez;
+        $test->rol_name = $this->rol_name;
+        $test->save();
 
     // if (!Auth::check()){
+        Cookie::queue(Cookie::make('test_id', $test->id, 3000));
         Cookie::queue(Cookie::make('finaltype', $this->finalType, 3000));
         Cookie::queue(Cookie::make('introExtro', $this->introExtro, 3000));
         Cookie::queue(Cookie::make('FirstfinalProcentRez', $this->FirstfinalProcentRez, 3000));
