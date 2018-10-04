@@ -13,26 +13,26 @@ class questionsSeeder extends Seeder
     public function run()
     {
         DB::table('questions')->insert([
-            'question' => "Të qendroni në mesin e shumë njerëzve ju lodhë mentalisht",
+            'question' => "A ju shkakton lodhje mendore apo ju mbush me energji qëndrimi në mes të shumë njerëzve",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Lodhje mendore",
+            'spajtohem' => "Energji",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Shpesh herë humbeni në mendime sa që harroni se ku ndodheni",
+            'question' => "A humbeni shpesh në mendime apo qëndroni gjithmonë në realitet?",
             'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Mendime",
+            'spajtohem' => "Realitet",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Nëse miku juaj është i mërzitur për diçka ju më parë do t’i jepnit mbështetje emocionale sesa t’i ofroni mënyra për zgjedhjen e problemit",
+            'question' => "Nëse miku juaj është i mërzitur ju më parë i jepni mbështetje emocionale apo ofroni mënyra për zgjidhje të problemit?",
             'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Mbështetje emocionale",
+            'spajtohem' => "Zgjidhje konkrete",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 

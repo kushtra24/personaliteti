@@ -83,9 +83,11 @@ class RegisterController extends Controller
 
         $user->roles()->attach(Role::where('name', 'User')->first());
 
-        $test = Test::find(Cookie::get('test_id'));
-        $test->user_id = $user->id;
-        $test->save();
+        if (!Auth::check()) {
+            $test = Test::find(Cookie::get('test_id'));
+            $test->user_id = $user->id;
+            $test->save();
+        }
 
         return $user;
     }
