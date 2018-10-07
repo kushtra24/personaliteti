@@ -118,7 +118,7 @@
 
         <div class="col-md-12">
           
-            {!! $results->tipi->shortDescription !!}
+            <p>{!! $results->tipi->shortDescription !!}</p>
 
             <br>
             @if (Auth::check())

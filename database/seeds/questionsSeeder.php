@@ -37,330 +37,386 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Provoni t’u pergjigjigjeni emailave sa më parë dhe nuk mund të duroni një inbox të paorganizuar",
+            'question' => "A provoni tu pergjigjigjeni emailave sa më parë apo gjeni një kohë më të përshtatshme për tu përgjigjur?",
             'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Sa më parë",
+            'spajtohem' => "Kohë të përshtatshme",
 	        'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Nëse bëjeni ushtrime fizike ju pelqen të jeni në shtepi vetëm",
+            'question' => "Ku qëndroni në një dhomë të mbushur me njerëz, në qoshe apo në qendër?",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Qoshe",
+            'spajtohem' => "Qendër",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Shpesh ua ngatërroni vendin gjërave",
+            'question' => "A ua ngatërroni shpesh vendin gjërave apo mbani mend mirë ku qëndrojnë?",
             'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Ngatërroj vendin",
+            'spajtohem' => "Mbaj mend",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Nësë veprimet e mia ndikojnë te tjerët mua më mundon mentalisht",
+            'question' => "Nëse veprimet tuaja ndikojnë te personat e tjerë, a ju mundon juve kjo gjë mentalisht apo jeni relativisht të qetë?",
             'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Mundim mental",
+            'spajtohem' => "Relativisht i qetë",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Për ju është më e rëndësishme të jeni i organizuar sesa të improvizoni",
+            'question' => "A është më e rëndësishme të jeni person i organizuar apo të improvizoni?",
             'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Organizim",
+            'spajtohem' => "Improvim",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "E keni të vështirë të prezantoheni te të tjerët që nuk i njifni",
+            'question' => "A e keni të vështirë të prezantoheni te personat që nuk i njihni apo mund të prezantoheni lehtësisht?",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Të vështirë",
+            'spajtohem' => "Të lehtë",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Shpesh ju duket sikur duhet të arsyetoni veten tek të tjerët",
+            'question' => "A jeni të interesuar në gjëra të pazakonta dhe me shumë kuptime, psh. art dhe filma, apo jeni i orientuar më shumë në gjëra konkrete psh. sport apo ekonomi?",
             'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Gjëra të pazakonta",
+            'spajtohem' => "Konkrete",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Për ju është më e rëndësishme të mos mërzitet askush sesa të fitoni një debat",
+            'question' => "Për ju a është më e rëndësishme të mos mërzitet askush apo të fitoni një debat?",
             'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Të mos merzitet askush",
+            'spajtohem' => "Fitoni debatin",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Shtëpia dhe vendi juaj i punës janë të pastërta dhe në gjendje të rregullt",
+            'question' => "A është shtëpia juaj në gjendje të rregullt apo mbani gjërat te paorganizuara?",
             'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Gjendje te rregullt",
+            'spajtohem' => "Pa organizuar",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Nuk e keni zakon të filloni i pari bisedën",
+            'question' => "A jeni i pari që filloni bisedë me të tjerët apo prisni që të tjerët të afrohen te ju?",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Pres që të më afrohen",
+            'spajtohem' => "Filloj unë",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Ju e konsideroni veten më shumë kreativ sesa praktik",
+            'question' => "A e konsideroni veten më shumë kreativ apo praktik?",
             'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Kreativ",
+            'spajtohem' => "Praktik",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Ju besoni e vërteta është më e rëndësishme sesa të jesh i sjellshëm",
+            'question' => "Cila është më e rëndësishme, e vërteta apo te qenit i sjellshëm?",
             'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "I sjellshëm",
+            'spajtohem' => "E vërteta",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Planet e juaja të udhëtimit janë të menduara mirë",
+            'question' => "A janë planet e juaja të udhëtimit të menduara mirë apo vendosni aty per aty?",
             'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Planifikoj",
+            'spajtohem' => "Improvizoj",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Zakonisht jeni i motivuar dhe me shumë energji.",
+            'question' => "A jeni tip energjik apo më i qetë?",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "I qetë",
+            'spajtohem' => "Energjik",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Ju intereson pse është marrë një vëndim se sa cfarë vëndimi është marr",
+            'question' => "A ju intereson më shume pse është marrë një vendim apo cfarë vendimi është marr?",
             'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "pse",
+            'spajtohem' => "çfarë",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Disponimi juaj ndryshon shpesh",
+            'question' => "A ndryshon disponimi juaj shpesh apo është stabil?",
             'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Ndryshon",
+            'spajtohem' => "Stabil",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Është e rëndesishme të kemë një list se cfarë dua të bëjë, jo vetëm të fillojë të bëjë",
+            'question' => "A është e rëndesishme të keni një list me gjëra që dëshironi të bëni apo te filloni atë duke mos e menduar gjithçka?",
             'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Duke mos menduar gjithçka",
+            'spajtohem' => "Listë e menduar",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Ju pengon të jeni në qendër të vëmendjes",
+            'question' => "A ju pëlqen apo ju pengon të jeni në qendër të vëmendjes? ",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Më pengon",
+            'spajtohem' => "Më pëlqen",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Për ta kryër një punë dëshironi të dini Kuptimin e punës para se të filloni",
+            'question' => "Para se të filloni një punë, ju a mundoheni të gjeni kuptimin e saj paraprak apo versuleni drejt saj?",
             'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Gjej kuptimin",
+            'spajtohem' => "Vërsulem",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
          DB::table('questions')->insert([
-            'question' => "Në një diskutim, ndjenjat e njerëzve duhet të jenë më të rëndësishme sesa e vërteta",
+            'question' => "Në një diskutim, a është më e rëndsishme e vërteta apo ndjenjat e njerëzve?",
             'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Ndjenjat",
+            'spajtohem' => "E vërteta",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Doni të ktheni përgjigje menjëherë",
-            'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
-
-        DB::table('questions')->insert([
-            'question' => "Një libër interesant apo një video loje është shpesh më i mirë sesa një ngjarje shoqërore",
+            'question' => "A ju pëlqen me shume një libër ose video lojë apo një ngjarje shoqërore?",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Një libër apo videolojë",
+            'spajtohem' => "Ngjarje shoqërore",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Shpesh humbeni në imagjinatë",
-            'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
-
-        DB::table('questions')->insert([
-            'question' => "Brengoseni se si veprimet e tua ndikojnë tek të tjerët",
+            'question' => "Nëse dikush nuk i përgjigjet emailit tuaj menjëherë, a filloni të brengoseni nëse keni thënë diçka të gabuar apo prisni përgjigjen duke mos u brengosur fare?",
             'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Brengosem",
+            'spajtohem' => "Nuk brengosem",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Nëse dikush nuk i përgjigjet emailit tuaj menjëherë, ju filloni të brengoseni nëse keni thënë diçka të gabuar",
+            'question' => "A qëndroni gjithmonë i vëmendshem apo thelloheni në mendime?",
+            'purpose' => "intuitionSensing",
+            'pajtohem' => "Thellohem në mendime",
+            'spajtohem' => "Qëndroj i/e vëmendshëm/shme",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "Gjatë një shëtitjeje në natyrë, a e shijoni vendin apo thelloheni në mendime?",
+            'purpose' => "intuitionSensing",
+            'pajtohem' => "Thellohem në mendime",
+            'spajtohem' => "Shijoj natyrën",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "Si prind, më shumë do të donit që fëmija juaj të bëhet i sjellshëm apo i mençur",
+            'purpose' => "feelingThinking",
+            'pajtohem' => "I sjellshëm",
+            'spajtohem' => "i mençur",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "A parapëlqeni ti keni gjërat të vendosura apo ti keni opsionet e hapura?",
             'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Të vendosur",
+            'spajtohem' => "E hapura",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Shpesh thelloheni në një botë të juajën në mendjë",
+            'question' => "A ju merr shumë kohë që të bëheni pjesë e aktiviteteve shoqërore në vendin e ri të punës apo ambientoheni shpejt?",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "“Merr kohë”",
+            'spajtohem' => "“Ambientohem”",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Shpesh e gjeni veten të humbur në mendime kur dilni për shëtitje në natyrë",
-            'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
-
-        DB::table('questions')->insert([
-            'question' => "Si prind, më shumë do doje që fëmija juaj të bëhet i mirë sesa i mençur",
+            'question' => "Mendimet tuaja negative ju kontrollojnë më shumë se sa që i kontrolloni ju ato?",
             'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Më kontrollojnë",
+            'spajtohem' => "Unë i kontrolloj ato",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "E kijoni një përshtypje pastajë shiheni se a e këni mirë apo gabim",
+            'question' => "A jeni më shumë një tip improvizues apo një planifikues i kujdesshëm?",
             'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Planifikues",
+            'spajtohem' => "Improvizues",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Ju merr shumë kohë që të bëheni pjesë e aktiviteteve shoqërore në vendin e ri të punës",
+            'question' => "A keni rreth shumë të gjerë të shoqërise apo shoqëroheni me pak persona?",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Pak persona",
+            'spajtohem' => "Shumë shoqëri",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Shpesh harxhoni kohë duke shtjelluar ide te pavërteta dhe jopraktike, por interesante",
+            'question' => "A meditoni shpesh për arsyet e ekzistencës njerëzore apo nuk ju intereson kjo qështje?",
             'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Më intereson “meditoj”",
+            'spajtohem' => "Nuk më intereson",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Emocionet ju kontrollojnë më shumë sesa që ju i kontrolloni ato",
+            'question' => "Nëse do kishit një biznes, a do e kishit të vështirë të largoni nga puna punëtorët besnikë por dembel apo do ti largonit ata pa problem? ",
             'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "E kam të veshtirë ti largoj",
+            'spajtohem' => "I largoj",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Jeni më shumë një planifikues i kujdesshëm sesa një improvizues i natyrshëm",
+            'question' => "A jeni një person i mbyllur dhe i heshtur apo i hapur dhe i zhurmshëm?",
             'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "I mbyllur dhe i heshtur",
+            'spajtohem' => "I hapur dhe zhurmshëm",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Nuk ju pëlqen të shkoni në ngjarje shoqërore ku duhet të visheni në menyre të jashtzakonshme",
+            'question' => "A veproni me zemër apo mendje kur është fjala për vendime të rëndësishme? ",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Zemër",
+            'spajtohem' => "Mendje",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Shpesh meditoni për arsyet e ekzistencës njerëzore",
-            'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
-
-        DB::table('questions')->insert([
-            'question' => "Nëse do kishit një biznes, ju do e kishit të vështirë të largoni nga puna punëtorët besnikë por dembel",
-            'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
-
-        DB::table('questions')->insert([
-            'question' => "Më parë do të harxhonit kohë për një plan të detajuar sesa të imporvizonit",
+            'question' => "A i mbani opsionet e hapura apo keni nje listë te planifikuar?",
             'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Listë të planifikuar",
+            'spajtohem' => "Opsionet e hapura",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Jeni një person pak a shumë i mbyllur dhe i heshtur",
+            'question' => "A mund te qëndroni i qetë dhe i përqendruar edhe nën presion?",
+            'purpose' => "feelingThinking",
+            'pajtohem' => "jo",
+            'spajtohem' => "po",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "A ndiheni më superior se të tjerët?",
+            'purpose' => "jundgingPerciving",
+            'pajtohem' => "po",
+            'spajtohem' => "jo",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "A e keni te lehtë apo te vështirë të kuptoni ndjenjat e të tjerëve?",
+            'purpose' => "feelingThinking",
+            'pajtohem' => "Të lehtë",
+            'spajtohem' => "Të vështire",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "A mendoni se pikëpamjet e të gjithëve duhen respektuar pavarsisht a janë të bazuara në fakte apo jo?",
+            'purpose' => "feelingThinking",
+            'pajtohem' => "po",
+            'spajtohem' => "jo",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "A shkoni gjithmonë me kohë në takime apo vonoheni?",
+            'purpose' => "jundgingPerciving",
+            'pajtohem' => "Me kohë",
+            'spajtohem' => "vonohem nganjëher",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "A besoni se bota është e ndërtuar nga mëshira apo nga logjika?",
+            'purpose' => "feelingThinking",
+            'pajtohem' => "Mëshira ",
+            'spajtohem' => "Logjika",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "A mendoni shpesh per njerëzimin dhe fatin e tij apo preferoni të mos mendoni per këtë gjë?",
+            'purpose' => "intuitionSensing",
+            'pajtohem' => "Mendoj",
+            'spajtohem' => "Nuk mendoj",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "A mendoni shpesh për shkaktarin e një ngjarje apo jo?",
+            'purpose' => "intuitionSensing",
+            'pajtohem' => "Mendoj",
+            'spajtohem' => "Nuk mendoj",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "A i besoni më shumë ndjenjave apo logjikës?",
+            'purpose' => "feelingThinking",
+            'pajtohem' => "Ndjenjave",
+            'spajtohem' => "Logjikës",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "Kohën e lirë a e kaloni me një grup njerëzish apo vetëm?",
             'purpose' => "IntroExtro",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Vetëm",
+            'spajtohem' => "Grup njerëzish",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Ju mendoni se pikëpamjet e të gjithëve duhen respektuar pavarsisht a janë të bazuara në fakte apo jo",
-            'purpose' => "intuitionSensing",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
-
-        DB::table('questions')->insert([
-            'question' => "Zemra është shpesh më e rëndësishme se logjika kur është fjala për vendime të rëndësishme",
+            'question' => "A e keni te lehtë apo të vështire ti shprehni ndjenjat?",
             'purpose' => "feelingThinking",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'pajtohem' => "Të lehtë",
+            'spajtohem' => "Të vështirë",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         DB::table('questions')->insert([
-            'question' => "Të keni një listë është më e rëndësishme se të mbani opsionet e hapura",
-            'purpose' => "jundgingPerciving",
-            'pajtohem' => "djathtas",
-            'spajtohem' => "majtas",
+            'question' => "A e vlerësoni më shumë drejtësinë apo mëshirën?",
+            'purpose' => "feelingThinking",
+            'pajtohem' => "Drejtësinë",
+            'spajtohem' => "Mëshirën",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "A ndjeheni të qetë apo në siklet nëse ju duhet të flisni me shumë njerëz?",
+            'purpose' => "IntroExtro",
+            'pajtohem' => "Të qetë",
+            'spajtohem' => "Në siklet",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
     }

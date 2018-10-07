@@ -9250,6 +9250,12 @@ footer .designedBy {
   background-color: #8eb4cb;
 }
 
+#shortDescriptionResilt p {
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.8;
+}
+
 .item {
   background: white;
   padding: 17px 17px 0 21px;

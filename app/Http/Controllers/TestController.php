@@ -13,6 +13,7 @@ use App\Question;
 use App\TestCounter;
 use Illuminate\Support\Facades\DB;
 use Auth;
+use Illuminate\Support\Collection;
 //use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
 class TestController extends Controller
@@ -32,7 +33,32 @@ class TestController extends Controller
 
     public function doTheTest(){
 
-        $questions = Question::take(44)->inRandomOrder()->get();
+        // $questions = Question::take(11)->Where('purpose', 'introExtro')->inRandomOrder()->get();
+        // $questions = Question::take(44)->get();
+
+        // $fourPurposes = Question::select('purpose')->get()->shuffle()->flatten()->unique();
+        // $questions =  new Collection();
+
+        // for( $i=0; $i < 4; $i++){
+        // $query = Question::where('purpose', $fourPurposes[$i])->limit(11)->get();
+        // $questions->union($query);
+        // }
+
+        $questions = collect();
+        $questions = $questions->merge(Question::where('purpose', 'introExtro')->take(11)->inRandomOrder()->get());
+        $questions = $questions->merge(Question::where('purpose', 'jundgingPerciving')->take(11)->inRandomOrder()->get());
+        $questions = $questions->merge(Question::where('purpose', 'feelingThinking')->take(11)->inRandomOrder()->get());
+        $questions = $questions->merge(Question::where('purpose', 'intuitionSensing')->take(11)->inRandomOrder()->get());
+        $questions = $questions->shuffle();
+        
+        // $fourPurposes = Question::select('purpose')->get()->shuffle()->flatten()->unique();
+
+        // $unions = Question::query();
+        // for($i=0;$i<4;$i++){
+        //   $query = Question::where('purpose', $fourPurposes[$i])->limit(11)->orderBy('id');
+        //   $unions = $unions->union($query);
+        // }
+        // $questions = $unions->get();
 
         return view('testi.create', compact('questions'));
     }

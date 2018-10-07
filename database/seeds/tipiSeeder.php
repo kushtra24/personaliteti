@@ -165,8 +165,8 @@ class tipiSeeder extends Seeder
         ]);
 
         DB::table('tipis')->insert([		
-            'type' => "	ENFJ	",
-            'name' => "	Protagonisti	",
+            'type' => "ENFJ",
+            'name' => "Protagonisti",
             'hyrje' => "",
             'forcatDobesit' => "",
             'lidhjet' => "",
@@ -175,7 +175,7 @@ class tipiSeeder extends Seeder
             'profesioni' => "",
             'vendiPunes' => "",
             'shtese' => "",
-            'shortDescription' => "	Çdo gjë që bën tani paraqitet jashtë dhe ka ndikim te të gjithë. Qëndrimi yt mund të ndriçoj zemra ose të shkaktoj shqetësim. Fryma jote mund të rrezatoj dashuri ose të mbuloj dhomën me depresion. Shikimi yt mund të shkaktoj gëzim. Fjalët e tua mund të inspirojnë liri. Çdo akt i yti mund të hap zemra dhe mendje	",
+            'shortDescription' => "Çdo gjë që bën tani paraqitet jashtë dhe ka ndikim te të gjithë. Qëndrimi yt mund të ndriçoj zemra ose të shkaktoj shqetësim. Fryma jote mund të rrezatoj dashuri ose të mbuloj dhomën me depresion. Shikimi yt mund të shkaktoj gëzim. Fjalët e tua mund të inspirojnë liri. Çdo akt i yti mund të hap zemra dhe mendje	",
             'type_img' => "	images/ENFJ.png	",
             'feat_img' => "	images/feat-ESTP.png	",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),		
@@ -268,8 +268,8 @@ class tipiSeeder extends Seeder
         ]);
 
         DB::table('tipis')->insert([		
-            'type' => "	ESFP",
-            'name' => "	ARGËTUESI",
+            'type' => "ESFP",
+            'name' => "ARGËTUESI",
             'hyrje' => "",
             'forcatDobesit' => "",
             'lidhjet' => "",
