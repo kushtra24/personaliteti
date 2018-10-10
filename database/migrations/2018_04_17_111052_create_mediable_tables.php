@@ -14,6 +14,9 @@ class CreateMediableTables extends Migration
     public function up()
     {
         Schema::create('media', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
+
             $table->increments('id');
             $table->string('disk', 32);
             $table->string('directory');
@@ -30,6 +33,9 @@ class CreateMediableTables extends Migration
         });
 
         Schema::create('mediables', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
+            
             $table->integer('media_id')->unsigned();
             $table->string('mediable_type');
             $table->integer('mediable_id')->unsigned();

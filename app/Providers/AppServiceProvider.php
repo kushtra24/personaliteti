@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        	View::share('counter', TestCounter::first()->test_counter);
+        	View::share('counter', Test::all()->groupBy('id')->count());
            
             View::share('posts', Post::orderBy('id', 'desc')->take(5)->get());
         
