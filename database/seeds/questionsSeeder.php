@@ -167,8 +167,8 @@ class questionsSeeder extends Seeder
         DB::table('questions')->insert([
             'question' => "A është e rëndesishme të keni një list me gjëra që dëshironi të bëni apo te filloni atë duke mos e menduar gjithçka?",
             'purpose' => "jundgingPerciving",
-            'pajtohem' => "Duke mos menduar gjithçka",
-            'spajtohem' => "Listë e menduar",
+            'pajtohem' => "Listë e menduar",
+            'spajtohem' => "Duke mos menduar gjithçka",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
@@ -201,14 +201,6 @@ class questionsSeeder extends Seeder
             'purpose' => "IntroExtro",
             'pajtohem' => "Një libër apo videolojë",
             'spajtohem' => "Ngjarje shoqërore",
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
-
-        DB::table('questions')->insert([
-            'question' => "Nëse dikush nuk i përgjigjet emailit tuaj menjëherë, a filloni të brengoseni nëse keni thënë diçka të gabuar apo prisni përgjigjen duke mos u brengosur fare?",
-            'purpose' => "feelingThinking",
-            'pajtohem' => "Brengosem",
-            'spajtohem' => "Nuk brengosem",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
@@ -325,14 +317,6 @@ class questionsSeeder extends Seeder
         ]);
 
         DB::table('questions')->insert([
-            'question' => "A ndiheni më superior se të tjerët?",
-            'purpose' => "jundgingPerciving",
-            'pajtohem' => "po",
-            'spajtohem' => "jo",
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
-
-        DB::table('questions')->insert([
             'question' => "A e keni te lehtë apo te vështirë të kuptoni ndjenjat e të tjerëve?",
             'purpose' => "feelingThinking",
             'pajtohem' => "Të lehtë",
@@ -415,8 +399,16 @@ class questionsSeeder extends Seeder
         DB::table('questions')->insert([
             'question' => "A ndjeheni të qetë apo në siklet nëse ju duhet të flisni me shumë njerëz?",
             'purpose' => "IntroExtro",
-            'pajtohem' => "Të qetë",
-            'spajtohem' => "Në siklet",
+            'pajtohem' => "Në siklet",
+            'spajtohem' => "Të qetë",
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('questions')->insert([
+            'question' => "Ju deshironi të merrni vedime sa më parë apo deshironi të lejoni hapsirë të lirë për të marr vendimet",
+            'purpose' => "jundgingPerciving",
+            'pajtohem' => "Sa më parë",
+            'spajtohem' => "Lejoje Kohë",
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
     }

@@ -658,6 +658,8 @@ footer a:hover .fa-caret-right{
 }
 
 
+
+
 // __________________________________________________________________________________________ Single post
 
 // Upper progress bar
@@ -697,8 +699,8 @@ progress::-webkit-progress-value, progress::-moz-progress-bar {
 // Upper progress bar
 
 #post{
-	text-align: justify;
-    word-break: break-all;
+		text-align: justify;
+		word-break: break-word;
     &>img{
 		display: block;
 		max-width: 100%;

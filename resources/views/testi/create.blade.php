@@ -45,13 +45,13 @@
                             <div class="hidden-xs spajtohem-lg">{{ $question->spajtohem }}</div>
                         </div>
                         <div class="col-md-6 circles">
-                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3" title="S'pajtohem shum">
-                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2" title="S'pajtohem">
-                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1" title="S'pajtohem pak">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1" class="left" value="-3" title="Shumë">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2" class="left" value="-2" title="Mesatarisht">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3" class="left" value="-1" title="Pak">
                             <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}neotral1" value="0" title="Neotral">
-                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1r" class="right" value="1" title="Pajtohem pak">
-                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2" title="Pajtohem">
-                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3" title="Pajtohem shumë">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option1r" class="right" value="1" title="Pak">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option2r" class="right" value="2" title="Mesatarisht">
+                            <input type="radio" name="q[{{$question->id}}]" id="q{{$question->id}}option3r" class="right" value="3" title="Shumë">
                         </div>
                         <div class="col-md-3 answer-lg">
                             <div class="hidden-xs pajtohem-lg">{{$question->pajtohem}}</div>
@@ -99,10 +99,10 @@
 
 //Form validation
 $('#submit').click(function() {
-    if($("input[type='radio']:checked").each('.circles').hasClass('checked') == false) {
-      $('.alert').removeClass('hide');
-        event.preventDefault();
-    }
+        if($('input[type="radio"]:checked').each('.circles').hasClass('checked') == false) {
+        $('.alert').removeClass('hide');
+            event.preventDefault();
+        }
 });
 //form validation end
 

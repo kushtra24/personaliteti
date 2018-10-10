@@ -35,6 +35,9 @@ class TipetController extends Controller
 
         return view('tipet.admintipet', compact('tipet'));
     }
+
+
+
     
     /**
      * Display the specified resource.
@@ -42,14 +45,21 @@ class TipetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Tipi $name)
+    public function show($id, $slug = null)
     {
-          $tipi = Tipi::find($name);
-
+          $tipi = Tipi::find($id);
+        
             Carbon::setLocale('sq');
             Carbon::setUtf8(true);
 
         return view('tipet.tipi', compact('tipi'));
+
+    //     if ($slug != str_slug($tipi->name, '-')) {
+    //         return Redirect::route('tipi', [
+    //            'id' => $tipi->id,
+    //            'slug' => str_slug($tipi->name, '-'),
+    //           ], 301);
+    //    }
     }
 
      /**

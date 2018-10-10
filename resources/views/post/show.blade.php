@@ -1,12 +1,26 @@
 @extends('layouts.app')
 
+@section('ogurl')
+  http://personaliteti.div/blog/{{ $postet->id }}
+@endsection
+@section('ogTitle') 
+  {{ $postet->title }}
+@endsection
+@section('ogDescription')
+  {!! $postet->content !!}
+@endsection
+
+@section('ogImage')
+  
+@endsection
+
 @section('content')
 <progress value="0"></progress>
 	<section id="post-{{ $postet->id }}">
 		<div class="container">
 			<div class="single-post-title">
 				<h1>{{ $postet->title }}</h1>
-				<p>Autori: {{ $postet->user->first_name . " " . $postet->user->last_name}}
+				<p>Autori: {{ $postet->user->first_name}}
           | {{-- {{ $posted->category }} | --}}
           Me: {{ $postet->created_at->format('d.m.Y') }}
           | @foreach($postet->category as $category) <a href="{{ action('CategoryController@categoryfilter', [$category]) }}">{{ $category->name }}</a><span>,</span> @endforeach</p>
@@ -50,7 +64,7 @@
         <div class="comments">
           @foreach($postet->comments->reverse() as $comment)
               <article>
-                <small><strong><i class="fas fa-user-circle"></i> {{ $comment->user->first_name}} {{-- {{ $comment->user->last_name}} --}} <i class="fas fa-clock"></i> {{ $comment->created_at->diffForHumans() }}</strong></small>
+                <small><strong><i class="fas fa-user-circle"></i> {{ $comment->user->first_name}}<i class="fas fa-clock"></i> {{ $comment->created_at->diffForHumans() }}</strong></small>
                 <p>{{ $comment->body}}</p>
               </article>
           @endforeach

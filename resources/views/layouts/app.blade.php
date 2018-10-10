@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- OG META --}}
-    <meta property="og:url" content="{{ url('/') }}" />
-    <meta property="og:title" content="{{ config('app.name', 'personalitetet') }}" />
-	<meta property="og:description" content="Fillo vlersimin e personalitetit dhe mahnitu me saktesinë që ofron resultati juaj i përsonalitetit" />
-	<meta property="og:image" content="{{asset('images/logo.png')}}" />
+    <meta property="og:url" content="@yield('ogurl')" />
+    <meta property="og:title" content="@yield('ogTitle')" />
+	<meta property="og:description" content="@yield('ogDescription')" />
+	<meta property="og:image" content="@yield('ogImage')" />
 	<meta property="og:image:alt" content="{{ config('app.name', 'personalitetet') }}" />
 	<meta property="og:type" content="personalitet, blog, carl jung, shqip" />
 	<meta property="og:site_name" content="{{ config('app.name', 'personalitetet') }}" />
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

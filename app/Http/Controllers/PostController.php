@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use App\Http\Requests\PostRequest;
 use MediaUploader;
 use DB;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -91,6 +92,8 @@ class PostController extends Controller
     public function show($id)
     {
         $postet = Post::find($id);
+
+        // $slug = makeSlugFromTitle($postet->title);
         
         $archives = Post::archives();
 
@@ -98,7 +101,6 @@ class PostController extends Controller
 
         Carbon::setLocale('sq');
         Carbon::setUtf8(true);
-
 
         return view('post.show', compact('postet', 'archives', 'categories'));
     }
@@ -218,7 +220,7 @@ class PostController extends Controller
         
         // $postCounter = Post::count('id');
 
-        // return view('post.blog', compact('posts', 'archives', 'categories', 'postCounter'));
+        return view('post.blog', compact('posts', 'archives', 'categories'));
     }
 
 
@@ -234,6 +236,21 @@ class PostController extends Controller
         else
             return view ('post.searchResult')->withMessage('No Details found. Try to search again !');
         
+    }
+
+    /**
+     * Create a conversation slug.
+     *
+     * @param  string $title
+     * @return string
+     */
+    public function makeSlugFromTitle($title)
+    {
+        $slug = Str::slug($title);
+
+        $count = Post::whereRaw("slug RLIKE '^{$slug}(-[0-9]+)?$'")->count();
+
+        return $count ? "{$slug}-{$count}" : $slug;
     }
 
 

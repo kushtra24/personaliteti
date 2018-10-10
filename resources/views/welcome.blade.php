@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+@section('ogTitle') 
+	www.Personalitetet.com
+@endsection
+@section('ogDescription')
+Bazuar në studimet dhe mësimet e Carl Jung-ut mbi tipet e personalitetit, ne kemi ndërtuar këtë pyetësor i cili jep një indikator për orientimin e personalitetit tënd.
+@endsection
+
+@section('ogImage')
+{{asset('images/homepage.png')}}
+@endsection
+
 @section('style')
 <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">

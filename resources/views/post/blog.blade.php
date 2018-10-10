@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+@section('ogTitle') 
+	Personalitetet Blog
+@endsection
+@section('ogDescription')
+	Vendi ku mund të lexoni rreth tipeve të personalitetit
+@endsection
+
+@section('ogImage')
+{{asset('images/homepage.png')}}
+@endsection
+
 @section('style')
 <style>
 	.post-container{
@@ -41,7 +52,7 @@
 				@foreach($posts as $post)
 					<div class="featured-image">
 						@if($post->hasMedia('thumbnail'))
-						<img src="{{ $post->firstMedia('thumbnail')->getUrl() }}" alt="featured img" class="img-responsive">
+						<img src="{{$post->getMedia('thumbnail')->first()->getUrl()}}" alt="featured img" class="img-responsive">
 						@else
 						<img src="/images/blog-default.png" alt="featured img" class="img-responsive">
 						@endif
@@ -54,7 +65,7 @@
 						{!! str_limit($post->content, 200) !!}
 						<hr>
 						<p>
-							<b>Autori:</b> {{ $post->user->first_name . " " . $post->user->last_name}} | 
+							<b>Autori:</b> {{ $post->user->first_name}} | 
 							<b>Data e Publikimit:</b> {{ $post->created_at->format('d.m.Y') }} |
 							<b>Kategori:</b> @foreach($post->category as $category) {{ $category->name }}, @endforeach
 						</p>
