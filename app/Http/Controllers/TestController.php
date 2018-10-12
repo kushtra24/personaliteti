@@ -179,7 +179,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
 public function extrovertOrintrovert($result)
 {
 
-    //Determine of the results are introvertet or extrovertet
+    
     if ($result < 0) {
         $this->introExtro = "Extrovert";
 
@@ -204,7 +204,7 @@ public function extrovertOrintrovert($result)
 //Evaluates the section of intuitive or Sensing, working with the partial intuitiveSensing.blade.php testi > partials
 public function intuitiveOrSensing($result){
     
-    //Determine of the results are introvertet or extrovertet
+    
     if ($result < 0) {
         $this->intuSens = "Shqisor";
     }
@@ -226,12 +226,12 @@ public function intuitiveOrSensing($result){
 //Evaluates the section of Feeling or Thinking, working with the partial thinkingFeeling.blade.php testi > partials
     public function feelingOrThinking($result){
 
-        //Determine of the results are introvertet or extrovertet
+        
         if ($result < 0) {
             $this->feelingThinking = "Arsye";
         }
         elseif ($result === 0) {
-            $this->feelingThinking = "Ndjenjë";
+            $this->feelingThinking = "Arsye";
         }
         else{
             $this->feelingThinking = "Ndjenjë";
@@ -248,7 +248,7 @@ public function intuitiveOrSensing($result){
 //Evaluates the section of Judging or Perspekting, working with the partial judgingPerspecting.blade.php testi > partials
     public function judgingOrperspecting($result){
 
-        //Determine of the results are introvertet or extrovertet
+        
         if ($result < 0) {
             $this->judgingPerspecting = "Kërkues";
         }
@@ -350,7 +350,8 @@ public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgin
         $this->rol_name ="Argëtuesi";
     }
     else {
-        $this->finalType = "Pa definim - Nuk ju keni pergjigjur pyetjeve apo keni lene shum pyetje neotrale";
+        $this->finalType = "ESTJ";
+        $this->rol_name ="Zbatuesi";
     }
 
 }

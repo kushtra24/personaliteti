@@ -106,6 +106,15 @@ $('#submit').click(function() {
 });
 //form validation end
 
+// neotral_clicked = 0;
+// $('input[title="Neotral"]').on('click', function(){
+//     neotral_clicked ++;
+//     if (neotral_clicked == 3) {
+//         alert('Jeni Duke Lënë shumë pyetje neotrale');
+//     }
+// });
+
+
 //Progress bar counter
 progressProcent = 0;
 $("input[type='radio']").on('click',function(){
