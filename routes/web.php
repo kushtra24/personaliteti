@@ -60,13 +60,9 @@ Route::post('/admin', 'AdminController@questionResult');
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
-Route::pattern('id', '[0-9]+');
-Route::pattern('slug', '[A-Z0-9-]+');
-Route::get('tipi/{id}/{slug?}', 'TipetController@show')->name('tipi');
-
 Route::group(['tipet' => 'tipet'], function(){
 	Route::get('/tipet', 'TipetController@index')->name('tipet');
-    // Route::get('/tipi/{name}', 'TipetController@show')->name('tipi');
+    Route::get('/tipi/{name}', 'TipetController@show')->name('tipi');
 });
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');

@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section('ogurl')
 http://personaliteti.div/tipi/{{ $tipi->type }}
 @endsection
@@ -14,7 +13,7 @@ http://personaliteti.div/tipi/{{ $tipi->type }}
 @endsection
 
 @section('ogImage')
-{{ $tipi->hasMedia('thumbnail') ? $tipi->firstMedia('thumbnail')->getUrl() : "../../" . $tipi->feat_img }}
+{{ $tipi->hasMedia('thumbnail') ? $tipi->firstMedia('thumbnail')->getUrl() : '/' . $tipi->feat_img }}
 @endsection
 
 
@@ -64,10 +63,25 @@ http://personaliteti.div/tipi/{{ $tipi->type }}
 
 @section('content')
 
+<div class="container">
+
 <div class="container"> 
-			<img src="{{ $tipi->hasMedia('thumbnail') ? $tipi->firstMedia('thumbnail')->getUrl() : "../../" . $tipi->feat_img }}" alt="tipi featured" width="100%" class="img-responsive">
-	</section>
+		<img src="{{ $tipi->hasMedia('thumbnail') ? $tipi->firstMedia('thumbnail')->getUrl() : '/' . $tipi->feat_img }}" alt="tipi featured" width="100%" class="img-responsive">
+</section>
+
+	<section id="type-single">
+	<div class="row">
 	
+		<div class="col-md-4 col-md-offset-1">
+			{{-- <img src="../{{ $tipi->type_img }}" alt="tipi" class="img-responsive"> --}}
+		</div>
+		<div class="col-md-6 single-type-meta">
+			{{-- <h3>Emertimi: <span>{{ $tipi->name }}</span></h3> --}}
+			{{-- <h3>Kodi: <span>{{ $tipi->type }}</span></h3> --}}
+			{{-- <p>{!! $tipi->shortDescription !!}</p> --}}
+		</div>
+	</div>
+
 	<div class="row" id="content">
 		<div class="col-md-9">
 				<h1>Tipi {{ $tipi->type }}</h1>

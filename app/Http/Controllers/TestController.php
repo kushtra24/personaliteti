@@ -33,32 +33,13 @@ class TestController extends Controller
 
     public function doTheTest(){
 
-        // $questions = Question::take(11)->Where('purpose', 'introExtro')->inRandomOrder()->get();
-        // $questions = Question::take(44)->get();
-
-        // $fourPurposes = Question::select('purpose')->get()->shuffle()->flatten()->unique();
-        // $questions =  new Collection();
-
-        // for( $i=0; $i < 4; $i++){
-        // $query = Question::where('purpose', $fourPurposes[$i])->limit(11)->get();
-        // $questions->union($query);
-        // }
-
         $questions = collect();
         $questions = $questions->merge(Question::where('purpose', 'introExtro')->take(11)->inRandomOrder()->get());
         $questions = $questions->merge(Question::where('purpose', 'jundgingPerciving')->take(11)->inRandomOrder()->get());
         $questions = $questions->merge(Question::where('purpose', 'feelingThinking')->take(11)->inRandomOrder()->get());
         $questions = $questions->merge(Question::where('purpose', 'intuitionSensing')->take(11)->inRandomOrder()->get());
         $questions = $questions->shuffle();
-        
-        // $fourPurposes = Question::select('purpose')->get()->shuffle()->flatten()->unique();
 
-        // $unions = Question::query();
-        // for($i=0;$i<4;$i++){
-        //   $query = Question::where('purpose', $fourPurposes[$i])->limit(11)->orderBy('id');
-        //   $unions = $unions->union($query);
-        // }
-        // $questions = $unions->get();
 
         return view('testi.create', compact('questions'));
     }
@@ -314,7 +295,7 @@ public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgin
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Arsye" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ENTJ";
-        $this->rol_name ="Komanderi";
+        $this->rol_name ="Komandanti";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Arsye" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ENTP";
@@ -322,11 +303,11 @@ public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgin
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "INFJ";
-        $this->rol_name ="Diplomati";
+        $this->rol_name ="Këshilluesi";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "INFP";
-        $this->rol_name ="Mediatori";
+        $this->rol_name ="Ndërmjetësuesi";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ENFJ";
@@ -334,39 +315,39 @@ public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgin
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Intuitive" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ENFP";
-        $this->rol_name ="Mikpritesi";
+        $this->rol_name ="Përkrahesi";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ISFJ";
-        $this->rol_name ="Logjistiku";
+        $this->rol_name ="Mbrojtesi";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Arsye" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ISTJ";
-        $this->rol_name ="Mbrojtesi";
+        $this->rol_name ="Inspektori";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ESTJ";
-        $this->rol_name ="Ekzekutivi";
+        $this->rol_name ="Zbatuesi";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ESFJ";
-        $this->rol_name ="Konsulenti";
+        $this->rol_name ="Ofruesi";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Arsye" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ISTP";
-        $this->rol_name ="Virtuozi";
+        $this->rol_name ="I shkathëti";
     }
     elseif ($introExtro == "Introvert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ISFP";
-        $this->rol_name ="Adventuristi";
+        $this->rol_name ="Aventuristi";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Arsye" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ESTP";
-        $this->rol_name ="Ndermarresi";
+        $this->rol_name ="Sipërmarresi";
     }
     elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Kërkues"){
         $this->finalType = "ESFP";
-        $this->rol_name ="Lozenjeri";
+        $this->rol_name ="Argëtuesi";
     }
     else {
         $this->finalType = "Pa definim - Nuk ju keni pergjigjur pyetjeve apo keni lene shum pyetje neotrale";

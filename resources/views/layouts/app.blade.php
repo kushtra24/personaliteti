@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{-- OG META --}}
     <meta property="og:url" content="@yield('ogurl')" />
-    <meta property="og:title" content="@yield('ogTitle')" />
+    <meta property="og:title" content="@yield('title', config('app.name', 'personalitetet'))" />
 	<meta property="og:description" content="@yield('ogDescription')" />
 	<meta property="og:image" content="@yield('ogImage')" />
+
 	<meta property="og:image:alt" content="{{ config('app.name', 'personalitetet') }}" />
 	<meta property="og:type" content="personalitet, blog, carl jung, shqip" />
 	<meta property="og:site_name" content="{{ config('app.name', 'personalitetet') }}" />
