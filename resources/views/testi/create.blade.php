@@ -18,10 +18,10 @@
     <div class="row">
       <div class="test-rules" style="margin: 40px 0">
         <div class="col-md-2 bounce col-md-offset-1"><i class="fas fa-ban fa-4x"></i> <p>Është pa pagesë</p></div>
-        <div class="col-md-2 bounce"> <i class="fab fa-buromobelexperte fa-4x"></i><p>Ndahët në 4 rubrika me nga 11 pyetje</p></div>
+        <div class="col-md-2 bounce"> <i class="fab fa-buromobelexperte fa-4x"></i><p>Ndahet në 4 rubrika me nga 11 pyetje</p></div>
         <div class="col-md-2 bounce"><i class="fas fa-stopwatch fa-4x"></i></i> <p>Nuk merr më shumë kohë se 10 min</p></div>
-        <div class="col-md-2 bounce"><i class="fas fa-street-view fa-4x"></i><p>Përgjigjuni sinqerisht për të marr resultat më të saktë</p> </div>
-        <div class="col-md-2 bounce"><i class="far fa-dot-circle fa-4x"></i> <p>Lëni sa më pakë Pyetje neotrale</p></div>
+        <div class="col-md-2 bounce"><i class="fas fa-street-view fa-4x"></i><p>Përgjigjuni sinqerisht për të marr rezultat më të saktë</p> </div>
+        <div class="col-md-2 bounce"><i class="far fa-dot-circle fa-4x"></i> <p>Leni sa më pak përgjigje neutrale</p></div>
       </div>
     </div>
     <hr>

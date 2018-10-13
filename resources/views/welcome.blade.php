@@ -95,12 +95,12 @@ Bazuar në studimet dhe mësimet e Carl Jung-ut mbi tipet e personalitetit, ne k
 		<i class="fas fa-quote-left fa-5x quote-icon"></i>
 		<div class="owl-carousel">
 		  <div class="col-md-8 col-md-offset-2">
-			<p>Ishte fascinuese të lexojë rreth përsonalitetit tim, ishin tejët të sakta, nuk besoja çfarë isha duke lëxuar. Aq të sakta ishin sa që mendoja që është shkruar posaqërisht për mua</p>
-			<div class="avatar"><img src="{{ asset('images/enfj.png') }}" alt="testimonial avatar"></div>
+			<p>Ishte e mahnitshme të lexoj rreth personalitetit tim, rezultatet ishin tejet të sakta, nuk besoja çfarë isha duke lexuar. Aq të sakta ishin sa që mendoja që është shkruar posaqërisht për mua.</p>
+			<div class="avatar"><img src="{{ asset('images/ENFJ.png') }}" alt="testimonial avatar"></div>
 		  </div>
 
 		  <div class="col-md-8 col-md-offset-2">
-			<p>Jetën e kam kaluar duke menduar se jamë nga një plant tjetër apo diçka të till. Kur e përfundova pyetsorin pash që nuk jamë e vetmja por ka më shumë njerëz sikur unë, që nga ajo ditë jamë më e lumtur në lëkuren time</p>
+			<p>Gjithmonë jam ndier sikur jam nga një planet tjetër apo diçka e tillë. Kur e përfundova testin e personalitetit pash që nuk jam e vetmja por ka shumë njerëz sikur unë. Që nga ajo ditë ndihem shumë më rehat me veten time.</p>
 			<div class="avatar"><img src="{{ asset('images/INFJ.png') }}" alt="testimonial avatar"></div>
 		  </div>
 		</div>
@@ -115,9 +115,9 @@ Bazuar në studimet dhe mësimet e Carl Jung-ut mbi tipet e personalitetit, ne k
   			// $(".owl-carousel").owlCarousel();
   			$('.owl-carousel').owlCarousel({
 			    center: true,
-			    items:1,
-			    loop:true,
-			    margin:10,
+			    items: 1,
+			    loop: true,
+			    margin: 10,
 			    responsive:{
 			        600:{
 			            items:1
