@@ -39,14 +39,14 @@
                           <td>{{ $index +1 }}</td>
                           <td>{{ $question->question }}
                             <div class="setting">
-                              <a class="btn btn-success btn-xs" href="{{ action('QuestionsController@show', ['id' => $question->id]) }}" role="button">View</a>
+                              <a class="btn btn-success btn-xs" href="{{ action('QuestionsController@show', ['id' => $question->id]) }}" role="button">Shiko</a>
 
-                              <a class="btn btn-warning btn-xs" href="{{ action('QuestionsController@edit', ['id' => $question->id]) }}" role="button">Edit</a>
+                              <a class="btn btn-warning btn-xs" href="{{ action('QuestionsController@edit', ['id' => $question->id]) }}" role="button">Përpuno</a>
 
                               <div class="display-inline" style="display: inline-block;">
                                   <form method="POST" action="{{ route('QuestionsController.destroy', [$question->id]) }}">
                                         {{ csrf_field() }}
-                                        <button type="submit" class="btn btn-danger btn-xs">Delete</button>
+                                        <button type="submit" class="btn btn-danger btn-xs">Fshijë</button>
                                   </form>
                               </div>
                             </div>

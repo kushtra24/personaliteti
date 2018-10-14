@@ -23,7 +23,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('id','desc')->paginate(10);
+        $posts = Post::orderBy('id','desc')->paginate('5');
 
         return view('post.index', compact('posts'));
     }
@@ -204,9 +204,9 @@ class PostController extends Controller
 
         $posts = $posts->get();
         
-        // $postCounter = Post::count('id');
+         $postCounter = Post::count('id');
         
-        // return view('post.archiveFilter', compact('posts', 'postCounter'));
+         return view('post.archiveFilter', compact('posts', 'postCounter'));
     }
     
 
@@ -217,8 +217,6 @@ class PostController extends Controller
         $archives = Post::archives();
 
         $categories = Category::all();
-        
-        // $postCounter = Post::count('id');
 
         return view('post.blog', compact('posts', 'archives', 'categories'));
     }

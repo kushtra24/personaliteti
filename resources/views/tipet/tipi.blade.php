@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('ogurl')
-http://personaliteti.div/tipi/{{ $tipi->type }}
+https://personalitetet.com/tipi/{{ $tipi->type }}
 @endsection
 
 @section('ogTitle') 
@@ -162,6 +162,10 @@ http://personaliteti.div/tipi/{{ $tipi->type }}
 					<a href="https://plus.google.com/share?url=https://www.personalitetet.com/tipi/{{$tipi->type }}" target="_blank" class="btn btn-googleplus"><i class="fab fa-google-plus-g"></i></a>
 				</div>
 
+				<div class="facebook-site">
+					<div class="fb-page" data-href="https://www.facebook.com/personalitetet/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/personalitetet/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/personalitetet/">Personalitetet</a></blockquote></div>
+				</div>
+
 				<div id="stickySidebar">
 					<h4>Eksploroje {{ $tipi->name }}n</h4>
 					<ul>
@@ -186,6 +190,14 @@ http://personaliteti.div/tipi/{{ $tipi->type }}
 
 @section('scripts')
 <script>
+
+(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = 'https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v3.1';
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 
 var targetOffset = $("#stickySidebar").offset().top;
 

@@ -10,15 +10,21 @@
 
 @section('content')
 	<section id="index_of_blog">
-		<div id="index-blog-title">
-			<h1>Kategoria </h1>	
-		</div>
+		<section id="heading-welcomepage">
+			<h1>Kategoria</h1>
+			<h4>Këtu mund të shihni artikujt e publikuar sipas kategories së përzgjedhur</h4>
+			<hr>
+		</section>
 
 		<div class="container">
 			@foreach($categories->post as $post)
 				<div class="col-md-4">
 						<div class="featured-image">
-							{{-- <img src="{{ $post->firstMedia('thumbnail')->getUrl() }}" alt="featured img" class="img-responsive"> --}}
+							@if($post->hasMedia('thumbnail'))
+								<img src="{{$post->getMedia('thumbnail')->first()->getUrl()}}" alt="featured img" class="img-responsive">
+							@else
+								<img src="/images/blog-default.png" alt="featured img" class="img-responsive">
+							@endif
 						</div>
 						<div class="post-container">
 							

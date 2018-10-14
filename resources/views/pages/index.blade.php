@@ -28,8 +28,8 @@
                             <th>ID</th>
                             <th>Titulli</th>
                             <th>slug</th>
-                            <th>created_at</th>
-                            <th>updated_at</th>
+                            <th>Krijuar</th>
+                            <th>Përditesuar</th>
                           </tr>
                       </thead>
                       @foreach ($pages as $page)
@@ -40,14 +40,14 @@
                           <td>{{ $page->created_at }}
                             <div class="setting">
 
-                            <a class="btn btn-success btn-xs" href="{{ action('PageController@show', ['id' => $page->id]) }}" role="button">View</a>
+                            <a class="btn btn-success btn-xs" href="{{ action('PageController@show', ['id' => $page->id]) }}" role="button">Shiko</a>
 
-                            <a class="btn btn-warning btn-xs" href="{{ action('PageController@edit', ['id' => $page->id]) }}" role="button">Edit</a>
+                            <a class="btn btn-warning btn-xs" href="{{ action('PageController@edit', ['id' => $page->id]) }}" role="button">Përpuno</a>
 
                             <div class="display-inline" style="display: inline-block;">
                                 <form method="post" action="{{ route('page.destroy', [$page->id]) }}">
                                       {{ csrf_field() }}
-                                      <button type="submit" class="btn btn-danger btn-xs">Delete</button>
+                                      <button type="submit" class="btn btn-danger btn-xs">Fshijë</button>
                                 </form>
                             </div>
                             </div>

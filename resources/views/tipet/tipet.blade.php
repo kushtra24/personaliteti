@@ -5,7 +5,7 @@
 <div class="container">
 
 	<section id="heading-welcomepage">
-		<h1>Tipet e Personaliteteve</h1>
+		<h1>Tipet e personaliteteve</h1>
 		<h4>Këto janë tipet e përsonaliteteve në një vend, shtypni mbi të për të lexuar më shumë</h4>
 		<hr>
 	</section>

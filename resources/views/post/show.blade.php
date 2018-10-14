@@ -10,8 +10,14 @@
   {!! $postet->content !!}
 @endsection
 
-@section('ogImage')
-  
+
+@section('style')
+    <style>
+        .sidebar-facebook{
+            background-color: white;
+            margin-top: 20px;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -20,10 +26,12 @@
 		<div class="container">
 			<div class="single-post-title">
 				<h1>{{ $postet->title }}</h1>
-				<p>Autori: {{ $postet->user->first_name}}
-          | {{-- {{ $posted->category }} | --}}
-          Me: {{ $postet->created_at->format('d.m.Y') }}
-          | @foreach($postet->category as $category) <a href="{{ action('CategoryController@categoryfilter', [$category]) }}">{{ $category->name }}</a><span>,</span> @endforeach</p>
+				<p>
+                    <i class="fas fa-user-edit"></i>&nbsp; {{ $postet->user->first_name}} &nbsp;&nbsp;
+                    <i class="fas fa-pencil-alt"></i> &nbsp;{{ $postet->created_at->format('d.m.Y') }} &nbsp;&nbsp;
+                    <i class="fas fa-swatchbook"></i> &nbsp; @foreach($postet->category as $category) <a href="{{ action('CategoryController@categoryfilter', [$category]) }}">{{ $category->name }}</a><span>,</span> @endforeach &nbsp;&nbsp;
+                    <i class="fas fa-comment-alt"></i> &nbsp; {{ $postet->comments->count() }}
+                </p>
 			</div>
 			<div class="col-md-8" id="post">
         @if($postet->hasMedia('thumbnail'))
@@ -81,6 +89,15 @@
 @section('scripts')
 <script>
 
+    //facebook
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v3.1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
   //replace the english month to Albanian
   $(".archives").each(function() {
     var text = $(this).text();
@@ -115,11 +132,11 @@ if($(window).width() < 600){
   var getValue = function(){
     return $(window).scrollTop();
   }
-    
+
   if ('max' in document.createElement('progress')) {
     // Browser supports progress element
     var progressBar = $('progress');
-        
+
     // Set the Max attr for the first time
     progressBar.attr({ max: getMax() });
 
@@ -127,30 +144,30 @@ if($(window).width() < 600){
       // On scroll only Value attr needs to be calculated
       progressBar.attr({ value: getValue() });
     });
-      
+
     $(window).resize(function(){
       // On resize, both Max/Value attr needs to be calculated
       progressBar.attr({ max: getMax(), value: getValue()});
-    }); 
-  
+    });
+
   } else {
 
-    var progressBar = $('.progress-bar'), 
-        max = getMax(), 
+    var progressBar = $('.progress-bar'),
+        max = getMax(),
         value, width;
-        
+
     var getWidth = function() {
       // Calculate width in percentage
-      value = getValue();            
+      value = getValue();
       width = (value/max) * 100;
       width = width + '%';
       return width;
     }
-        
+
     var setWidth = function(){
       progressBar.css({ width: getWidth() });
     }
-        
+
     $(document).on('scroll', setWidth);
     $(window).on('resize', function(){
       // Need to reset the Max attr

@@ -50,7 +50,7 @@
                         <div class="centered">
                             <input type="radio" id="image-{{ $post->id}}" value="{{ $post->id}}" name="postImage" class="hidden">
                             <label for="image-{{ $post->id }}">
-                              <img src="{{asset('storage/images/'.$post->filename . '.'' . $post->extension)}}" class="{{ $post->id }} img-responsive" alt="{{ $post->id }}" >
+                              <img src="{{asset('storage/images/'.$post->filename . '.' . $post->extension)}}" class="{{ $post->id }} img-responsive" alt="{{ $post->id }}" >
                             </label>
 
                                 <p> <b>{{ $post->filename }}</b></p>

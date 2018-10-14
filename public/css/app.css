@@ -9425,17 +9425,6 @@ footer a:hover .fa-caret-right {
   width: 100%;
 }
 
-#index-blog-title {
-  height: 288px;
-  margin: 0 auto;
-}
-
-#index-blog-title h1 {
-  text-align: center;
-  line-height: 288px;
-  text-transform: uppercase;
-}
-
 progress {
   /* Positioning */
   position: fixed;
@@ -9444,7 +9433,7 @@ progress {
   z-index: 100;
   /* Dimensions */
   width: 100%;
-  height: 2px;
+  height: 7px;
   /* Reset the appearance */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -9463,7 +9452,7 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value,
 progress::-moz-progress-bar {
-  background-color: #ff9100;
+  background-color: #ef6733;
 }
 
 #post {

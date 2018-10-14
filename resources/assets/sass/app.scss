@@ -646,20 +646,6 @@ footer a:hover .fa-caret-right{
 	width: 100%;
 }
 
-#index-blog-title{
-	height: 288px;
-	margin: 0 auto;
-
-}
-#index-blog-title h1{
-	text-align: center;
-	line-height: 288px;
-	text-transform: uppercase;
-}
-
-
-
-
 // __________________________________________________________________________________________ Single post
 
 // Upper progress bar
@@ -672,7 +658,7 @@ progress {
 
   /* Dimensions */
   width: 100%;
-  height: 2px;
+  height: 7px;
 
   /* Reset the appearance */
   -webkit-appearance: none;
@@ -694,7 +680,7 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value, progress::-moz-progress-bar {
-  background-color: $brand-warning;
+  background-color: $brand-danger;
 }
 // Upper progress bar
 

@@ -21,9 +21,9 @@
     <title>{{ config('app.name', 'Personaliteti') }}</title>
 
     <!-- font awesome  -->
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -123,15 +123,14 @@
             <div class="col-md-3">
                 <!-- Branding Image -->
                 <a class="" href="{{ url('/') }}">
-                    {{--{{ config('app.name', 'Personaliteti') }}--}}
                     <img src="{{asset('images/logo.png')}}" height="40px">
                 </a>
                 <p class="footer-description">Merr një përshkrim të vetvetes, mëso më tepër rreth fuqive dhe dobësive tua.</p>
                 <p>Vlersime deri më tani {{ $counter }}</p>
                 <div class="footer-solcial-icons">
-                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a>
-                    <a href="#"><i class="fab fa-youtube-square fa-2x"></i></i></a>
+                    <a href="https://www.facebook.com/personalitetet"><i class="fab fa-facebook fa-2x"></i></a>
+                    {{-- <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a> --}}
+                    {{-- <a href="#"><i class="fab fa-youtube-square fa-2x"></i></i></a> --}}
                 </div>
             <a href="{{ route('testi') }}" class="btn btn-default footer-assesment-button">Fillo Vlersimin</a>
             </div>
@@ -186,5 +185,16 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('scripts')
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116301118-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116301118-1');
+    </script>
+
 </body>
 </html>

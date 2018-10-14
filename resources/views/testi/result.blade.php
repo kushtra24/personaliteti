@@ -1,6 +1,11 @@
 @extends('layouts.app')
 @section('style')
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        #loadingsubmit{
+            display: none;
+        }
+    </style>
 @endsection
 @section('content')
 
@@ -199,7 +204,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Regjistrohu</button>
+                            <img src="{{ asset('images/loading.gif') }}" alt="loading" height="20px" id="loadingsubmit"> <button type="submit" id="registerbutton" class="btn btn-primary">Regjistrohu</button>
                         </div>
                     </form>
                 </div> <!-- /.modal body -->
@@ -214,6 +219,11 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <script>
+
+    // $("button[type=submit]").on('submit', function() {
+    //     $('#loadingsubmit').css('display', 'none');
+    //     console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+    // });
 
     $( document ).ready(function() {
       $('.container').removeAttr('id');
@@ -263,6 +273,9 @@
       yearRange: "-99:-12",
     });
   } );
+
+
+
 
 // event.preventDefault();
 //            var form = new FormData(this); 

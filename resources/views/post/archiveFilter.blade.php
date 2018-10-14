@@ -3,15 +3,25 @@
 
 @section('content')
 	<section id="index_of_blog">
-		<div id="index-blog-title">
-			<h1>Blog</h1>	
-		</div>
 
 		<div class="container">
+			<section id="heading-welcomepage">
+				<h1>Arkiva</h1>
+				<h4>Këtu mund të shihni artikujt e publikuar sipas datës së arkives</h4>
+				<hr>
+			</section>
+
+			<div class="row">
 		@foreach($posts as $post)
 			<div class="col-md-4">
 					<div class="featured-image">
-						<img src="{{ $post->firstMedia('thumbnail')->getUrl() }}" alt="featured img" class="img-responsive">
+						<div class="featured-image">
+							@if($post->hasMedia('thumbnail'))
+								<img src="{{$post->getMedia('thumbnail')->first()->getUrl()}}" alt="featured img" class="img-responsive">
+							@else
+								<img src="/images/blog-default.png" alt="featured img" class="img-responsive">
+							@endif
+						</div>
 					</div>
 					<div class="post-container">
 						
@@ -22,6 +32,7 @@
 					</div>
 			</div>
 		 @endforeach
+			</div>
 		</div>
 	</section>
 

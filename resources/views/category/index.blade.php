@@ -28,7 +28,7 @@
                     <th>ID</th>
                     <th>Emri</th>
                     <th>slug</th>
-                    <th>created_at</th>
+                    <th>Krijuar</th>
                   </tr>
               </thead>
               @foreach ($categories as $category)

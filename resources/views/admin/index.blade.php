@@ -104,7 +104,7 @@
                             </div>
                             
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary" name="submit" id="submit"><i class="fa fa-save"></i> &nbsp; Ruaje</button>
+                                <button type="submit" class="btn btn-primary" name="submit" id="submit"><i class="fa fa-save"></i> &nbsp; Vazhdo</button>
                             </div>
 
                         </form>

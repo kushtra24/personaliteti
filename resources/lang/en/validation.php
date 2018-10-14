@@ -84,7 +84,7 @@ return [
     ],
     'string'               => 'The :attribute must be a string.',
     'timezone'             => 'The :attribute must be a valid zone.',
-    'unique'               => ' :attribute eshte vetem se i regjistruar.',
+    'unique'               => ' :attribute is already registerd',
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'The :attribute format is invalid.',
 

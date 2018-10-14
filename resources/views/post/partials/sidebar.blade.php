@@ -39,8 +39,7 @@
         </ul>
     </div>
 
-@if(Request::is('/blog'))
-@else
+@if(Request::is('blog/*'))
     <div id="sidebar-latest">
         <h4>Të fundit</h4>
         @foreach($posts->slice(0, 5) as $post)
@@ -52,6 +51,8 @@
     </div>
 @endif
 
-
+    <div class="sidebar-facebook">
+        <div class="fb-page" data-href="https://www.facebook.com/personalitetet/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/personalitetet/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/personalitetet/">Personalitetet</a></blockquote></div>
+    </div>
 </div>
 
