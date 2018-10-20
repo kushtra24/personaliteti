@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:url" content="@yield('ogurl')" />
-    <meta property="og:title" content="@yield('title', config('app.name', 'personalitetet'))" />
+    <meta property="og:title" content="@yield('ogTitle', config('app.name', 'personalitetet'))" />
 	<meta property="og:description" content="@yield('ogDescription')" />
 	<meta property="og:image" content="@yield('ogImage')" />
 
@@ -130,7 +130,7 @@
                 <div class="footer-solcial-icons">
                     <a href="https://www.facebook.com/personalitetet"><i class="fab fa-facebook fa-2x"></i></a>
                     {{-- <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a> --}}
-                    {{-- <a href="#"><i class="fab fa-youtube-square fa-2x"></i></i></a> --}}
+                     <a href="https://www.youtube.com/channel/UCVUGCXlw8t5Re4Mtyhssnyw"><i class="fab fa-youtube-square fa-2x"></i></i></a>
                 </div>
             <a href="{{ route('testi') }}" class="btn btn-default footer-assesment-button">Fillo Vlersimin</a>
             </div>

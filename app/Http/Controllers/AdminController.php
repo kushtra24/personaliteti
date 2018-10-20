@@ -8,6 +8,7 @@ use App\Test;
 use DB;
 use App\Answer;
 use App\Question;
+use phpDocumentor\Reflection\Types\Null_;
 
 class AdminController extends Controller
 {
@@ -26,7 +27,13 @@ class AdminController extends Controller
         $comments = DB::table('comments')->count();
 
         $countResults = Test::select(DB::raw('count(*) as Numri, finaltype'))
-                            ->where('finaltype', '<>', 1)
+//                            ->where('finaltype', '<>', 1)
+                            ->groupBy('finaltype')
+                            ->get();
+
+        //select register users only  PROBLEM duplicated tests count as well
+        $registerdCountResults = Test::select(DB::raw('count(*) as Numri, finaltype'))
+                            ->where('user_id', '<>', NULL)
                             ->groupBy('finaltype')
                             ->get();
 
@@ -58,7 +65,7 @@ class AdminController extends Controller
         }
         ])->get();
 
-        return view('admin.index', compact('registerdUsers', 'writtenPosts', 'comments', 'countResults', 'questions', 'answers'));
+        return view('admin.index', compact('registerdUsers', 'writtenPosts', 'comments', 'countResults', 'questions', 'answers', 'registerdCountResults'));
     }
 
     /**

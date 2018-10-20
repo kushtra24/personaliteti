@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Test;
+use App\Tipi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Cookie\CookieJar;
@@ -82,7 +83,9 @@ class TestController extends Controller
 
         $results = Test::latest()->first();
 
-            return view('testi.result', compact('results', 'typeDescription'));
+        $description = Tipi::select('shortDescription')->where('type', Cookie::get('finaltype'))->first();
+
+        return view('testi.result', compact('results', 'description'));
     }
 
 public function introExtroQuestions(CookieJar $cookieJar)
@@ -93,6 +96,8 @@ public function introExtroQuestions(CookieJar $cookieJar)
     $intuitionSensingResult = 0;
     $feelingThinkingResult = 0;
     $jundgingPercivingResult = 0;
+
+
 
     // get all questions and evaluate the perpose   
     foreach(request()->input('q') as $qid => $value){
@@ -121,6 +126,7 @@ public function introExtroQuestions(CookieJar $cookieJar)
     $this->feelingOrThinking($feelingThinkingResult);
 
     $this->judgingOrperspecting($jundgingPercivingResult);
+
 
     $this->finalTypeName($this->introExtro, $this->intuSens, $this->feelingThinking, $this->judgingPerspecting);
 
@@ -206,13 +212,13 @@ public function intuitiveOrSensing($result){
     
     
     if ($result < 0) {
-        $this->intuSens = "Shqisor";
+        $this->intuSens = "Intuitive";
     }
     elseif ($result === 0) {
         $this->intuSens = "Shqisor";
     }
     else{
-        $this->intuSens = "Intuitive";
+        $this->intuSens = "Shqisor";
     }
 
     $this->evaluate($result);
@@ -285,6 +291,7 @@ public function evaluate($result){
 
 // putting out the final 4 letters of the personality type.
 public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgingPerspecting){
+
     if ($introExtro == "Introvert" && $intuSens == "Intuitive" && $feelingThinking == "Arsye" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "INTJ";
         $this->rol_name = "Arkitekti";
@@ -325,7 +332,7 @@ public function finalTypeName($introExtro, $intuSens,  $feelingThinking, $judgin
         $this->finalType = "ISTJ";
         $this->rol_name ="Inspektori";
     }
-    elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Ndjenjë" && $judgingPerspecting == "Gjykues"){
+    elseif ($introExtro == "Extrovert" && $intuSens == "Shqisor" && $feelingThinking == "Arsye" && $judgingPerspecting == "Gjykues"){
         $this->finalType = "ESTJ";
         $this->rol_name ="Zbatuesi";
     }

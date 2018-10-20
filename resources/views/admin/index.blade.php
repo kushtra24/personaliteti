@@ -183,6 +183,26 @@
                     </div>
                 </div>
                 <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="section-block">
+                        <h4>Resultatet Nga te regjistruarit</h4>
+                        <hr>
+                        <table class="table table-striped table-responsive">
+                            <thead>
+                            <th>Kodi</th>
+                            <th>Shuma</th>
+                            </thead>
+                            @foreach($registerdCountResults as $regCountResult)
+                                <tr>
+                                    <td>{{ $regCountResult->finaltype }}</td>
+                                    <td>{{ $regCountResult->Numri }}</td>
+                                    <td>{{ $regCountResult->user_id }}</td>
+                                </tr>
+                            @endforeach
+                        </table>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
             </div>
             <!-- /.row -->
         </div>

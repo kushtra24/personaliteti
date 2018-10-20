@@ -97,11 +97,7 @@
           <div class="row">
               <div class="col-md-4">
                   <h1 class="visible-xs pershendetje"> Përshendetje, {{ Auth::user()->first_name }}</h1>
-<<<<<<< Updated upstream
                   <img src="{{ URL::to('/') }}/images/{{ $results->finaltype }}.png" alt="personaliteti tipi avatar" class="img-responsive">
-=======
-                  <img src="{{ URL::to('/') . "/images/" . $results->finaltype . ".png" }} " alt="personaliteti tipi avatar" class="img-responsive">
->>>>>>> Stashed changes
               </div>
               <div class="col-md-6">
                 <h1 class="hidden-xs pershendetje"> Përshendetje, {{ Auth::user()->first_name }}</h1>

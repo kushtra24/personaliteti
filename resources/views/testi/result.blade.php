@@ -1,4 +1,9 @@
 @extends('layouts.app')
+
+@section('ogTitle')Une jamë {{Cookie::get('finaltype')}}@endsection
+{{--@section('ogDescription'){!! $results->tipi->shortDescription !!}@endsection--}}
+@section('ogImage'){{asset('images/' . Cookie::get('finaltype') . '.png' )}}@endsection
+
 @section('style')
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <style>
@@ -15,15 +20,12 @@
 
 <div class="container result-page" id="hidden">
     <div class="row">
-        <h1>Resultatet</h1>
-        <p><em> Këto resultate tregojnë preferencat e juaja në kater rubrikat e mëposhtme, dhe mund të ndryshojnë kohë pas kohe</em></p>
+        <h1>Rezultatet</h1>
+        <p><em> Këto rezultate tregojnë preferencat t'ua në kater rubrikat e mëposhtme, dhe mund të ndryshojnë kohë pas kohe</em></p>
         <div class="col-sm-5">
-            <h1>Ti je: <b> {{ $results->rol_name }} {{-- {{ Cookie::get('rol_name') }} --}}</b></h1>
+            <h1>Ti je: <b> {{ Cookie::get('rol_name') }} {{-- {{ Cookie::get('rol_name') }} --}}</b></h1>
           @if($results->first_final_procent_rez)
-          <img src="{{ URL::to('/') }}/images/{{ $results->finaltype }}.png" alt="personaliteti tipi avatar" class="img-responsive result-img">
-            <br>
-            {{-- <h4> {!! str_limit($tipi->shortDescription, 450) !!}</h4> --}}
-            <br>
+          <img src="{{ URL::to('/') }}/images/{{ Cookie::get('finaltype') }}.png" alt="personaliteti tipi avatar" class="img-responsive result-img">
           @endif
           @if ($errors->has('email'))
             <span class="help-block">
@@ -40,7 +42,7 @@
 
 @if($results->first_final_procent_rez)
         <div class="col-sm-7" id="animated-results">
-          <h1> Kodi: <b>@if ($results->finaltype == null) {{ Cookie::get('finaltype') }} @else {{ $results->finaltype }} @endif</b></h1>
+          <h1> Kodi: <b>{{Cookie::get('finaltype') != null ? Cookie::get('finaltype') : $results->finaltype }} </b></h1>
           <div class="animated-result">
             <div class="traid">
                 <h3>Mendja</h3>
@@ -50,7 +52,7 @@
             </div>
             <div id="bar-1" class="bar-main-container azure">
                 <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $results->first_final_procent_rez }}" final-type-name="{{ $results->intro_extro }}"></div>
+                    <div class="bar-percentage" data-percentage="{{ Cookie::get('FirstfinalProcentRez') }}" final-type-name="{{ Cookie::get('introExtro') }}"></div>
                     <div class="bar-container">
                         <div class="bar"></div>
                     </div>
@@ -67,7 +69,7 @@
             </div>
              <div id="bar-2" class="bar-main-container emerald">
                 <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $results->ns_final_procent_rez }}" final-type-name="{{ $results->intu_sens }}"></div>
+                    <div class="bar-percentage" data-percentage="{{ Cookie::get('nsfinalProcentRez') }}" final-type-name="{{ Cookie::get('intuSens') }}"></div>
                     <div class="bar-container">
                         <div class="bar"></div>
                     </div>
@@ -85,7 +87,7 @@
 
             <div id="bar-3" class="bar-main-container violet">
                 <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $results->ft_final_procent_rez }}" final-type-name="{{ $results->feeling_thinking }}"></div>
+                    <div class="bar-percentage" data-percentage="{{ Cookie::get('ftfinalProcentRez') }}" final-type-name="{{ Cookie::get('feelingThinking') }}"></div>
                     <div class="bar-container">
                         <div class="bar"></div>
                     </div>
@@ -103,7 +105,7 @@
 
             <div id="bar-4" class="bar-main-container yellow">
                 <div class="wrap">
-                    <div class="bar-percentage" data-percentage="{{ $results->jp_final_procent_rez }}" final-type-name="{{ $results->judging_perspecting }}"></div>
+                    <div class="bar-percentage" data-percentage="{{ Cookie::get('jpfinalProcentRez') }}" final-type-name="{{ Cookie::get('judgingPerspecting') }}"></div>
                     <div class="bar-container">
                         <div class="bar"></div>
                     </div>
@@ -116,14 +118,21 @@
 
   @else
   <div class="alert-info" role="alert">Vazhdo Regjistrimi resultatet e juaja jane ende aktive</div>
-  @endif {{--Email Has been taken error msg--}} 
-
+  @endif {{--Email Has been taken error msg--}}
+    <div class="row">
+        <div class="col-md-12 socialMedia-share">
+            <h2>Shpërndajë Resultatet</h2>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.personalitetet.com/tipi/{{ Cookie::get('finaltype') }}" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.personalitetet.com%2Ftipi%2F{{ Cookie::get('finaltype') }}" target="_blank" class="btn btn-twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://plus.google.com/share?url=https://www.personalitetet.com/tipi/{{ Cookie::get('finaltype') }}" target="_blank" class="btn btn-googleplus"><i class="fab fa-google-plus-g"></i></a>
+        </div>
+    </div>
 
   <section id="shortDescriptionResilt">
 
         <div class="col-md-12">
-          
-            <p>{!! $results->tipi->shortDescription !!}</p>
+          {{--{{ dd($results->tipi) }}--}}
+            <p>{!! $description->shortDescription !!}</p>
 
             <br>
             @if (Auth::check())

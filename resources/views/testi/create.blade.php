@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+@section('ogTitle')
+    www.Personalitetet.com
+@endsection
+@section('ogDescription')
+    Versim mbi personalitetin tuaj, çfar tipi jeni dhe si përballuni me jetën
+@endsection
+
+@section('ogImage')
+    {{asset('images/homepage.png')}}
+@endsection
+
 @section('content')
 <div class="container testing-page">
 
